@@ -1,0 +1,21 @@
+.header {
+    background: #20222b;
+    color: wheat;
+    margin-bottom: 4.8rem;
+    padding: $lg-size;
+}
+
+.header__title {
+    font-family: $Kanit;
+    font-size: $xl-size;
+    font-weight: 900;
+    margin: 0;
+}
+
+.header__subtitle {
+    color: $lemon-light;
+    font-family: $Kanit;
+    font-size: $xl-size;
+    font-weight: 300;
+    margin: 0;
+}

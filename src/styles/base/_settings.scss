@@ -1,0 +1,42 @@
+//Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Kanit:300,400,900|Raleway:200,300,400); /* DISCARD? */
+
+@import url(https://fonts.googleapis.com/css?family=Martel+Sans:200,300,700);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+//Font-Stack
+$Kanit: 'Kanit', sans-serif;
+$Raleway: 'Raleway', sans-serif;
+$Martel: 'Martel Sans', sans-serif;
+$Poiret: 'Poiret One', sans-serif, cursive;
+
+$off-black: #1b1b1b;
+$lemon-light: #fcfae9;
+$brand-color: #1a0202;
+$dark-blue: #252533;
+$green-matte: #3f5c3f;
+
+$spacing: 0.5vw;
+$md-size: 1.6rem;
+$lg-size: 3.2rem;
+$xl-size: 4.8rem;
+
+/** As a rule, the leaves are 10% brighter than the trees & brances themselves**/
+$tree-back: #9b9b9b;
+$tree-back-leaves: #a5a5a5;
+
+$tree-mid: #707070;
+$tree-mid-leaves: #999;
+
+$tree-front: #000;
+$tree-front-leaves: #262626;
+
+$flower-base: #513535;
+$flower-frame: #bd1634;
+$flower-petal: #a90c00;
+$flower-stamen: #fceded;
+
+/* for landing bg and pond blend */
+
+$offset-match: #a8a8a8;
+$bg-right: #fff;
+$water-foreground: #cfcfcf;

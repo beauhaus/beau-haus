@@ -1,0 +1,55 @@
+.btn {
+    border-width: 0;
+    margin: 2%;
+    width: 8vw;
+    height: 100%;
+    color: #cfcbc0;
+    background: linear-gradient(35deg, #5a4e4e 0%, #633030 100%);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.option-delete-single {
+    border-width: 0;
+    float: right;
+    width: 8vw;
+    height: 100%;
+    color: #cfcbc0;
+    background: linear-gradient(35deg, #5a4e4e 0%, #9e5050 100%);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.bg-btn {
+    color: wheat;
+    font-family: $Kanit;
+    font-size: $lg-size;
+    padding: 2.4rem;
+    width: 100%;
+    background: $green-matte;
+}
+
+.bg-btn:disabled {
+    opacity: .5;
+}
+
+
+//modifier
+
+//BEM
+
+.btn--link { //because it looks like a link-based button
+    background: none;
+    border: none;
+    color: $lemon-light;
+}
+
+.btn--remove {
+    background: rgba(214, 48, 48, 0.5);
+    grid-row: 1;
+    height: 4vh;
+    width: 20vw;
+    margin: 1vh auto;
+}
+.del-option {
+    float: right;
+    background: linear-gradient(45deg, #131111 0%, #301d1d 100%);
+}

@@ -1,0 +1,35 @@
+.tree {
+  &-back {
+    fill: $tree-back;
+    &-leaves {
+      fill: $tree-back-leaves;
+    }
+  }
+  &-mid {
+    fill: $tree-mid;
+    &-leaves {
+      fill: $tree-mid-leaves;
+    }
+  }
+  &-front {
+    fill: $tree-front;
+    &-leaves {
+      fill: $tree-front-leaves;
+    }
+  }
+}
+
+.flower {
+  &-base {
+    fill: $flower-base;
+  }
+  &-frame {
+    fill: $flower-frame;
+  }
+  &-petal {
+    fill: $flower-petal;
+  }
+  &-stamen {
+    fill: $flower-stamen;
+  }
+}

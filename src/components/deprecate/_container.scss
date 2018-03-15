@@ -1,0 +1,27 @@
+// Stuff for centering & layout styles
+
+.container {
+    max-width: 60vw;
+    margin: 0 auto;
+    padding: 0 $md-size;
+    position: relative;
+    form {
+        position: absolute;
+        top: -8vh;
+        width: 65vw;
+        left: 0vw;
+        border: 0.5px solid #567777;
+        display: flex;
+        justify-content: space-between;
+        input {
+            height: 3vh;
+            width: 20vw;
+            margin: 2%;
+        }
+        button {
+            height: 3vh;
+            width: 20vw;
+            margin: 2%;
+        }
+    }
+}

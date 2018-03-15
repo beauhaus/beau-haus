@@ -1,0 +1,9 @@
+.options {
+    border: 1px solid pink;
+    // display: flex;
+    // align-items: center;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1;
+    grid-template-rows: auto;
+}
