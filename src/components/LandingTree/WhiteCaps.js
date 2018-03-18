@@ -20,53 +20,33 @@ class WhiteCaps extends React.Component {
     this.renderPoly = this.renderPoly.bind(this);
     this.tl = new TimelineMax({
       repeat: -1,
-      smoothChildTiming: true,
-      repeatDelay: 2
+      repeatDelay: 1
     });
   }
   componentDidMount() {
     const { tl, refs } = this;
 
     var randomNum = (min, max) => Math.random() * (max - min) + min;
-
+    var len = whiteCapsData.length;
+    console.log('len: ', len);
     whiteCapsData.forEach((item, idx) => {
-      tl.set(refs[item.id], { opacity: 0, scale: 0.5 });
-
       tl
-        .from(
-          refs[item.id],
-          randomNum(2, 4),
-          {
-            opacity: 0,
-            delay: randomNum(8, 10)
-          },
-          0
-        )
-        .to(
-          refs[item.id],
-          randomNum(2, 4),
-          {
-            opacity: randomNum(0.5, 1),
-            // scale: 0.5,
-            y: randomNum(14, 15),
-            ease: Power1.easeInOut
-          }
-          ,
-          "+=8"
-          // `-=${randomNum(8, 10)}`
-        )
-        .to(
-          refs[item.id],
-          4,
-          {
-            opacity: 0,
-            x: 10,
-            y: randomNum(5, 15),
-            ease: Power1.easeInOut
-          },
-          `-=${randomNum(9, 10)}`
-        );
-    }); //forEach
+      .from(refs[item.id], 1, {
+        opacity: 0,
+        delay: randomNum(0,5),
+       }, `-=${randomNum((len*.2),len)}`)
+      .to(refs[item.id], 2, {
+        opacity: 1,
+        x:randomNum(-20,20),
+        y:randomNum(0,10),
+        ease: Power1.easeInOut
+        },`-=${randomNum(0,2)}`)
+      .to(refs[item.id], 2, {
+        opacity: 0,
+        ease: Power1.easeInOut
+      }
+    )
+  }); //forEach
   }
 
   renderPoly(item, idx) {
@@ -75,11 +55,9 @@ class WhiteCaps extends React.Component {
 
   render() {
     return (
-      
-        <svg className="test-div" viewBox="0 0 1920 1080">
-          {whiteCapsData.map(this.renderPoly)}
-        </svg>
-      
+      <svg className="test-div" viewBox="0 0 1920 1080">
+        {whiteCapsData.map(this.renderPoly)}
+      </svg>
     );
   }
 }

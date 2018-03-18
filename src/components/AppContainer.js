@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ShorePond from './LandingTree/ShorePond';
+import Pond from './LandingTree/Pond';
 import BackTree from './LandingTree/BackTree';
 import MidTree from './LandingTree/MidTree';
 import FrontTree from './LandingTree/FrontTree';
@@ -24,7 +24,7 @@ class Background extends React.Component {
         <stop className="bg-right" offset="1" stopColor={this.state.bgRight} />
         </linearGradient>
         <path fill="url(#bg-grad)" d="M.5 0h1920v1080H.5z" />
-        <ShorePond foregroundColor={this.state.pondForeground} offset={this.state.offsetMatch}/>
+        <Pond foregroundColor={this.state.pondForeground} offset={this.state.offsetMatch}/>
       </svg>
     );
   }
