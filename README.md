@@ -1,6 +1,22 @@
 # beau-haus
 portfolio site
 
+## Feature-set
+
+|<h3>Feature</h3>|<h3>Notes</h3>|<h3>Status</h3>|
+|:-----------|:-------|:-------|
+|**React**|16.0.0|***√***|
+|**Responsivity**|2 breakpoints|*pending*|
+|**Normalization**|normalize.css|***√***|
+|**Layout**|CSS Grid|*pending*|
+|**CSS Variables**|in :root{} of stylesheet|***√***|
+|**Tooling**|Webpack|***√***|
+|**babel-core**|env,react|***√***|
+|**Animations**|CSS & SVG GSAP library|***√***|
+|**Routes**|React-Router)|*pending*|
+|**TabIndex Attrs**|a-tags and btns|*Pending*|
+
+-----------------
 ![Desktop Wireframe draft](./readmeImg/deskwiredraft.png "desktop wireframe draft") 
 
 ### Wireframe Draft
