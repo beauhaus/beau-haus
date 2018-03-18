@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import WhiteCaps from './WhiteCaps';
 
 /***ShorePond will be vanishing after page transition from Landing */
 class ShorePond extends React.Component {
@@ -10,27 +11,10 @@ class ShorePond extends React.Component {
       onComplete() {
         this.restart();
       }
-    }),
-    waveTime: new TimelineLite({
-      onComplete() {
-        this.restart();
-      }
     })
   };
 
   componentDidMount() {
-    this.state.waveTime
-      .fromTo('#wave-1', 3, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '+=1')
-      .fromTo('#wave-2', 3, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '+=1')
-      .fromTo('#wave-3', 3, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '2')
-      .fromTo('#wave-4', 4, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '3')
-      .fromTo('#wave-5', 5.5, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '3')
-      .fromTo('#wave-6', 4, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '4')
-      .fromTo('#wave-7', 5, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '5')
-      .fromTo('#wave-8', 4, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '6')
-      .fromTo('#wave-9', 4, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '7')
-      .fromTo('#wave-10', 3, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '8')
-      .fromTo('#wave-11', 5, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power1.easeInOut, repeat: -1, yoyo: true }, '8');
 
     this.state.swellTime
       .fromTo(
@@ -132,6 +116,7 @@ class ShorePond extends React.Component {
 
         <path id="swells" fill="url(#swells-grad)" d="M-1 880h1920v200H-1z" opacity=".5" />
 
+        <WhiteCaps/>
         <g className="shore">
           <path
             fill="var(--shore-color-3)"
