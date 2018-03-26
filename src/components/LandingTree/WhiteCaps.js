@@ -37,11 +37,11 @@ class WhiteCaps extends React.Component {
        }, `-=${randomNum((len*.2),len)}`)
       .to(refs[item.id], 2, {
         opacity: 1,
-        x:randomNum(-20,20),
-        y:randomNum(0,10),
         ease: Power1.easeInOut
         },`-=${randomNum(0,2)}`)
       .to(refs[item.id], 2, {
+        x:randomNum(-40,40),
+        y:randomNum(0,10),
         opacity: 0,
         ease: Power1.easeInOut
       }

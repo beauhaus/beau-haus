@@ -30,6 +30,23 @@ class Background extends React.Component {
   }
 }
 
+class Preview extends React.Component {
+  state = {
+    thumbnail: []
+  }
+  render() {
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+    <g id="display">
+      <polygon id="reflection" fill="#73FFFF" points="1614.5 993 850.5 993 840.5 880 1623.5 880"/>
+      <rect id="view" width="784" height="441" x="839.5" y="439" fill="#FF7BAC"/>
+    </g>
+</svg>
+
+    )
+  }
+}
+
 class AppContainer extends React.Component {
   state = {
     options: [],
@@ -41,6 +58,7 @@ class AppContainer extends React.Component {
     return (
       <div className="svg-container">
         <Background />
+        <Preview/>
         <h1 className="beauhaus-banner">BEAUHAUS</h1>
         <BackTree />
         <MidTree />

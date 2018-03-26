@@ -37,7 +37,7 @@ portfolio site
 - intention is to fade in and out each randomly.
 - randomised timing, randomized duration
 
-### Landing Page Draft II with white-caps. (decided to nix all the waves...)
+### Landing Page Draft II with white-caps. (decided to nix the dark waves & kept the white-caps in the distance)
 
 ![waves DraftII](./readmeImg/draft2.jpg "Waves II draft")
 - timing is now random (-ish);
