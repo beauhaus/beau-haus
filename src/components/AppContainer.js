@@ -42,7 +42,7 @@ class Preview extends React.Component {
     return (
       <svg id="brdr1" xmlns="http://www.w3.org/2000/svg" viewBox="300 0 1920 1080">
         <defs>
-          <linearGradient opacity=".5" id="grad" x1="0%" y1="10%" x2="10%" y2="100%">
+          <linearGradient opacity=".2" id="grad" x1="0%" y1="10%" x2="10%" y2="100%">
             <stop stopColor="transparent" offset="0" />
             <stop stopColor="white" stopOpacity="1" offset=".9" />
           </linearGradient>

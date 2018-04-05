@@ -19,6 +19,10 @@ portfolio site
 -----------------
 ![Desktop Wireframe draft](./readmeImg/deskwiredraft.png "desktop wireframe draft") 
 
+### LoFi Landing Wireframe Desktop
+
+![LoFi Landing](./readmeImg/lofilanding.png "Lofi Landing page desk")
+
 ### Wireframe Draft
 
 ![iPad Wireframe draft](./readmeImg/ipadwiredraft.png "iPad wireframe draft")
@@ -40,6 +44,6 @@ portfolio site
 ### Landing Page Draft II with white-caps. (decided to nix the dark waves & kept the white-caps in the distance)
 
 ![waves DraftII](./readmeImg/draft2.jpg "Waves II draft")
-- timing is now random (-ish);
+- timing is now random for whitecaps.
 - slight y-axis displacement to simulate incoming surf.
-- BONUS: proper use of refs with GSAP!   --Finally! --it was a huge pain point. I get it now.🎉 -woohoo!
+- BONUS: proper use of refs with GSAP!🎉 -woohoo!
