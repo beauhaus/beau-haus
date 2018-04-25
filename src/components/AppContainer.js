@@ -5,7 +5,7 @@ import Pond from './LandingTree/Pond';
 import BackTree from './LandingTree/BackTree';
 import MidTree from './LandingTree/MidTree';
 import FrontTree from './LandingTree/FrontTree';
-
+import BHLogo from './Interface/BHLogo'
 class Background extends React.Component {
   state = {
     options: [],
@@ -24,7 +24,7 @@ class Background extends React.Component {
         </linearGradient>
         <path fill="url(#bg-grad)" d="M.5 0h1920v1080H.5z" />
         <Pond foregroundColor={this.state.pondForeground} offset={this.state.offsetMatch} />
-      </svg>
+        </svg>
     );
   }
 }
@@ -33,7 +33,7 @@ class Background extends React.Component {
 /** Do away with viewBox Create new SVG exactly the size of this component
  * and do a transform translate to the image.
  */
-class Preview extends React.Component {
+class Preview extends React.Component {//change name
   state = {
     thumbnail: []
   };
@@ -101,6 +101,7 @@ class AppContainer extends React.Component {
         <BackTree />
         <MidTree />
         <FrontTree />
+        <BHLogo/>
       </div>
     );
   }

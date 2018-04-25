@@ -1,0 +1,17 @@
+//NB: viewBox must remain removed in order to size it.
+// viewBox="0 0 430 325"
+#bh-logo {
+    margin-top: 1vh;
+    margin-left: 300px;
+    width: 160px;
+    height: 100px;
+    & > #logo-h {
+        fill: #4E4D4D;
+    }
+    & > .logo-b {
+        fill: #B7B7B7;
+    }
+    & > #logo-h-blocks {
+        fill: #838383;
+    }
+}
