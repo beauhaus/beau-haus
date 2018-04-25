@@ -12,6 +12,9 @@ class Pond extends React.Component {
   constructor(props) {
     super(props);
   this.state = {
+    skyPondMatch: '#a8a8a8',
+    skyRight: '#fff',
+    pondForeground: '#cfcfcf',
     swellTime: new TimelineLite({
       onComplete() {
         this.restart();

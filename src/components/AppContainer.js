@@ -110,7 +110,7 @@ class AppContainer extends React.Component {
     return (
       <div className="svg-container">
         <Background />
-        <Pond />
+        <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
         <Banner/>
         <BackTree />
         <MidTree />
