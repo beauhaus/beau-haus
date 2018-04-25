@@ -32,7 +32,6 @@ class Background extends React.Component {
 
 /** Do away with viewBox Create new SVG exactly the size of this component
  * and do a transform translate to the image.
- * Do proper math
  */
 class Preview extends React.Component {
   state = {
@@ -88,16 +87,16 @@ points="1614.5 993 850.5 993 840.5 880 1623.5 880"
   <image  width="300" height="300" y="0" x="0" mask="url(#mask1)" xlink:href="https://dl.dropbox.com/s/f6vtd4o0vxx1378/ostrich.jpg?dl=0"/>
   */
 
+//  <Preview />
 class AppContainer extends React.Component {
   state = {
     options: []
   };
-
+  
   render() {
     return (
       <div className="svg-container">
         <Background />
-        <Preview />
         <h1 className="beauhaus-banner">BEAUHAUS</h1>
         <BackTree />
         <MidTree />
