@@ -9,21 +9,21 @@ import BHLogo from './Interface/BHLogo'
 class Background extends React.Component {
   state = {
     options: [],
-    offsetMatch: '#a8a8a8',
-    bgRight: '#fff',
+    skyPondMatch: '#a8a8a8',
+    skyRight: '#fff',
     pondForeground: '#cfcfcf'
   };
 
   render() {
-    // <stop class="offset-match" offset="0" stopColor="var(--offset-match)" />
     return (
       <svg viewBox="0 0 1920 1080" preserveAspectRatio="none">
         <linearGradient id="bg-grad">
-          <stop className="offset-match" offset="0" stopColor={this.state.offsetMatch} />
-          <stop className="bg-right" offset="1" stopColor={this.state.bgRight} />
+          <stop className="offset-match" offset="0" stopColor={this.state.skyPondMatch} />
+          <stop className="bg-right" offset="1" stopColor={this.state.skyRight} />
         </linearGradient>
+        
         <path fill="url(#bg-grad)" d="M.5 0h1920v1080H.5z" />
-        <Pond foregroundColor={this.state.pondForeground} offset={this.state.offsetMatch} />
+        <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
         </svg>
     );
   }
@@ -33,7 +33,7 @@ class Background extends React.Component {
 /** Do away with viewBox Create new SVG exactly the size of this component
  * and do a transform translate to the image.
  */
-class Preview extends React.Component {//change name
+class Preview extends React.Component {//change name ## THIS IS FOR PHOTO OVERLAY ##
   state = {
     thumbnail: []
   };
@@ -96,8 +96,8 @@ class AppContainer extends React.Component {
   render() {
     return (
       <div className="svg-container">
+      <h1 className="beauhaus-banner">BEAU<span className="dot">.</span>HAUS</h1>
         <Background />
-        <h1 className="beauhaus-banner">BEAUHAUS</h1>
         <BackTree />
         <MidTree />
         <FrontTree />

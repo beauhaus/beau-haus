@@ -29,3 +29,39 @@
   filter: FlipV;
 //   -ms-filter: 'FlipV';
 }
+
+.beauhaus-banner {
+  position: absolute;
+  top: 18vh;
+  right: -20vw;
+  font-size: 175px;
+  font-family: $Montserrat;
+  // font-stretch: ultra-expanded;
+
+  color: grey;
+  mix-blend-mode: color-burn; //maybe
+  
+  font-weight: 100;
+  // border: 1px solid blue;
+
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+
+  /* IE */
+  -ms-transform: rotate(-90deg);
+
+  /* Opera */
+  -o-transform: rotate(-90deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  transform: rotate(-90deg);
+  z-index: 10;
+  & > .dot {
+    color: #FF9C2B;
+    font-size: 85px;
+  }
+}
