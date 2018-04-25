@@ -14,6 +14,12 @@
   --bgGradRight: #fff;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 62.5%;
   // This changes the rem to a base-10 system (because 16 * .625 = 10)

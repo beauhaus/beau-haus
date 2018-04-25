@@ -29,5 +29,4 @@ export default BHLogo;
 /*
 width="222" height="168"
 // xmlns="http://www.w3.org/2000/svg"
-
 */
