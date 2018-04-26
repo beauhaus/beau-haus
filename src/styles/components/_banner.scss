@@ -1,18 +1,13 @@
 .banner {
-    // position: absolute;
-    // top: 18vh;
-    // right: -20vw;
-
-    // font-stretch: ultra-expanded;
-    opacity: .5;
-    fill: grey;
-    // mix-blend-mode: color-burn; //maybe
-    // margin-top: 10px;
+    position: absolute;
+    top: -3vh;
+    opacity: 1;
+    fill: #bfbfbf;
     transform: scale(1.04);
     font-weight: 100;
       & > .dot {
-      color: #FF9C2B;
       font-size: 85px;
     }
   }
+  
   

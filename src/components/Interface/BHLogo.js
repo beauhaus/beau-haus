@@ -11,7 +11,7 @@ class BHLogo extends React.Component {
   render() {
       // do I need xmidymid meet here? delete?
     return (
-      <svg id="bh-logo" viewBox="0 0 430 325" preserveAspectRatio="xMidYMid meet">
+      <svg id="bh-logo" viewBox="0 0 860 650" preserveAspectRatio="xMidYMid meet">
         <path id="logo-h" d="M0 0h430v325H0z" />
         <g className="logo-b">
           <ellipse cx="133.7" cy="243.5" rx="79.7" ry="81.2" />

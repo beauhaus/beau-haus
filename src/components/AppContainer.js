@@ -6,6 +6,7 @@ import BackTree from './LandingTree/BackTree';
 import MidTree from './LandingTree/MidTree';
 import FrontTree from './LandingTree/FrontTree';
 import BHLogo from './Interface/BHLogo';
+import Menu from './Interface/Menu';
 
 import Banner from './Banner';
 
@@ -116,6 +117,7 @@ class AppContainer extends React.Component {
         <MidTree />
         <FrontTree />
         <BHLogo />
+        <Menu />
       </div>
     );
   }

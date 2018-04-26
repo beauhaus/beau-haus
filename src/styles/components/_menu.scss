@@ -1,0 +1,24 @@
+.menu {
+    margin-top: 1vh;
+    // margin-left: 300px;
+    width: 160px;
+    height: 100px;
+    & > {
+        path {
+            fill: none;
+        }
+        text {
+            font-family: 'Lato', Tahoma, sans-serif;
+            font-size: 45px;
+            font-weight: 300;        
+        }
+    }
+}
+
+#menu-desktop {
+    width: 180px;
+    height: 300px;
+    position: fixed;
+    left: 60vw;
+    top: 2vh;
+}
