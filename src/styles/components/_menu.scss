@@ -1,8 +1,10 @@
-.menu {
-    margin-top: 1vh;
-    // margin-left: 300px;
-    width: 160px;
-    height: 100px;
+#menu-desktop {
+    width: 12vw;
+    height: 26vh;
+    position: fixed;
+    left: 74vw;
+    top: 0vh;
+    // border: 2px solid deepskyblue;
     & > {
         path {
             fill: none;
@@ -13,12 +15,4 @@
             font-weight: 300;        
         }
     }
-}
-
-#menu-desktop {
-    width: 180px;
-    height: 300px;
-    position: fixed;
-    left: 60vw;
-    top: 2vh;
 }

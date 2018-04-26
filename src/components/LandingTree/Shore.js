@@ -18,3 +18,21 @@ const Shore = () => (
 
 
 export default Shore;
+
+/*
+
+
+
+WaterBG
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <linearGradient id="a" x1="1919.5" x2="-.5" y1="980" y2="980.0002" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset="1" stop-color="#a8a8a8"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M-.5 880h1920v200H-.5z"/>
+</svg>
+
+
+*/

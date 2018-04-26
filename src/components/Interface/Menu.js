@@ -16,7 +16,7 @@ class Menu extends React.Component {
   render() {
     // do I need xmidymid meet here? delete?
     return (
-      <svg id="menu-desktop" className="menu" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet">
+      <svg id="menu-desktop" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet">
         <g transform="translate(277 23)">
           <circle id="home-btn" cx="17.5" cy="27.5" r="27.5" fill={this.state.homeColor} />
           <circle id="create-btn" cx="50.5" cy="127.5" r="27.5" fill={this.state.createColor} />

@@ -5,9 +5,10 @@ import Pond from './LandingTree/Pond';
 import BackTree from './LandingTree/BackTree';
 import MidTree from './LandingTree/MidTree';
 import FrontTree from './LandingTree/FrontTree';
+import PondBG from './LandingTree/PondBG';
+
 import BHLogo from './Interface/BHLogo';
 import Menu from './Interface/Menu';
-
 import Banner from './Banner';
 
 class Background extends React.Component {
@@ -19,13 +20,15 @@ class Background extends React.Component {
   };
 
   //this background covers the whole canvas
+  // <stop className="offset-match" offset="0" stopColor={this.state.skyPondMatch} />
+  // <stop className="bg-right" offset="1" stopColor={this.state.skyRight} />
   render() {
     return (
       <div className="background">
         <svg viewBox="0 0 1920 1080" preserveAspectRatio="none">
           <linearGradient id="bg-grad">
-            <stop className="offset-match" offset="0" stopColor={this.state.skyPondMatch} />
-            <stop className="bg-right" offset="1" stopColor={this.state.skyRight} />
+            <stop offset="0" stopColor="#a8a8a8" />
+            <stop offset="1" stopColor="#fff" />
           </linearGradient>
           <path fill="url(#bg-grad)" d="M.5 0h1920v1080H.5z" />
         </svg>
@@ -106,13 +109,14 @@ class AppContainer extends React.Component {
     skyRight: '#fff',
     pondForeground: '#cfcfcf'
   };
-
+  
   render() {
     return (
       <div className="svg-container">
-        <Background />
+      <Background />
+      <Banner/>
+      <PondBG/>
         <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
-        <Banner/>
         <BackTree />
         <MidTree />
         <FrontTree />
@@ -122,7 +126,5 @@ class AppContainer extends React.Component {
     );
   }
 }
-// <Banner />
 
 export default AppContainer;
-// <h1 className="beauhaus-banner">BEAU<span className="dot">.</span>HAUS</h1>
