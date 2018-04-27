@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import HomeContainer from './HomeContainer';
+import HomeContainer from '../HomeContainer';
 
 class NavMenu extends React.Component {
   constructor(props) {

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import HomeContainer from './HomeContainer';
 import Background from './Background';
-import NavMenu from './NavMenu';
+import NavMenu from './Interface/NavMenu';
 
 class RoutesContainer extends React.Component {
   constructor(props) {
