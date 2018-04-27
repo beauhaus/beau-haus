@@ -16,6 +16,74 @@ class NavMenu extends React.Component {
     };
   }
   render() {
+    const btnConfig = {
+      pos: 'translate(277 23)',
+
+      class: 'btn'
+    };
+
+    const btns = [
+      {
+        muteId: 1,
+        name: 'home',
+        liteId: 2,
+        x: '17.5',
+        y: '27.5',
+        r: '27.5',
+        txtPos: 'translate(107.521 65)',
+        color: '#ebbd89',
+        txtId: 3,
+        lnkId: 4
+      },
+      {
+        muteId: 5,
+        name: 'create',
+        liteId: 6,
+        x: '50.5',
+        y: '127.5',
+        r: '27.5',
+        txtPos: 'translate(127.6519 165)',
+        color: '#9b353a',
+        txtId: 7,
+        lnkId: 8
+      },
+      {
+        muteId: 9,
+        name: 'collect',
+        liteId: 10,
+        x: '84.5',
+        y: '227.5',
+        r: '27.5',
+        txtPos: 'translate(156.7915 266)',
+        color: '#85bb8f',
+        txtId: 11,
+        lnkId: 12
+      },
+      {
+        muteId: 13,
+        name: 'code',
+        liteId: 14,
+        x: '17.5',
+        y: '327.5',
+        r: '27.5',
+        txtPos: 'translate(124.3608 365)',
+        color: '#567ace',
+        txtId: 15,
+        lnkId: 16
+      },
+      {
+        muteId: 17,
+        name: 'connect',
+        liteId: 18,
+        x: '50.5',
+        y: '427.5',
+        r: '27.5',
+        txtPos: 'translate(90.3916 465)',
+        color: '#65aca2',
+        txtId: 19,
+        lnkId: 20
+      }
+    ];
     // do I need xmidymid meet here? delete?
     return (
       <BrowserRouter>
@@ -24,7 +92,50 @@ class NavMenu extends React.Component {
             <filter id="filter-saturate">
               <feColorMatrix type="saturate" values=".2" />
             </filter>
-            <Link to="/">
+            {btns.map(btn => (
+              <Link key={btn.lnkId} to={`/${btn.name}`}>
+                <circle
+                  key={btn.muteId}
+                  transform={btnConfig.pos}
+                  className="btn btn-menu-light"
+                  id={`btn-${btn.name}`}
+                  cx={btn.x}
+                  cy={btn.y}
+                  r={btn.r}
+                  fill={btn.color}
+                />
+                <circle
+                  key={btn.liteId}
+                  transform={btnConfig.pos}
+                  className="btn btn-menu-mute"
+                  id={`btn-${btn.name}`}
+                  cx={btn.x}
+                  cy={btn.y}
+                  r={btn.r}
+                  fill={btn.color}
+                />
+                <text key={btn.txtId} transform={btn.txtPos}>
+                  {btn.name}
+                </text>
+              </Link>
+            ))}
+
+            <Route exact path="/home" component={HomeContainer} />
+            <Route exact path="/create" component={HomeContainer} />
+            <Route exact path="/collect" component={HomeContainer} />
+            <Route exact path="/code" component={HomeContainer} />
+            <Route exact path="/connect" component={HomeContainer} />
+          </svg>
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
+export default NavMenu;
+
+/*
+LINKS
+ <Link to="/">
               <circle
                 transform="translate(277 23)"
                 className="btn btn-menu-light"
@@ -124,16 +235,4 @@ class NavMenu extends React.Component {
               />
               <text transform="translate(90.3916 465)">connect</text>
             </Link>
-
-            <Route exact path="/home" component={HomeContainer} />
-            <Route exact path="/create" component={HomeContainer} />
-            <Route exact path="/collect" component={HomeContainer} />
-            <Route exact path="/code" component={HomeContainer} />
-            <Route exact path="/connect" component={HomeContainer} />
-          </svg>
-        </div>
-      </BrowserRouter>
-    );
-  }
-}
-export default NavMenu;
+            */

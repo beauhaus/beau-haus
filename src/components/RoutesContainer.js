@@ -13,7 +13,6 @@ class RoutesContainer extends React.Component {
     };
   }
   render() {
-    // do I need xmidymid meet here? delete?
     return (
       <div>
         <Background />
@@ -30,18 +29,5 @@ export default RoutesContainer;
 
        
 
-==========
 
-
-
-+++++++++++
- <svg id="menu-desktop" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet">
-      <filter id="filter-saturate">
-          <feColorMatrix type="saturate" values=".2" />
-        </filter>
-        <g transform="translate(277 23)">
-        
-    </g>
-      </svg>
-
-      */
+*/
