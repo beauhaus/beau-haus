@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AppContainer from './components/AppContainer.js';
+import RoutesContainer from './components/RoutesContainer.js';
 
 /*******TESTING */
 // import './sandStyles.css';
@@ -14,7 +14,7 @@ import 'normalize.css/normalize.css';
 const appRoot = document.getElementById('app');
 
 
-ReactDOM.render(<AppContainer />, appRoot);
+ReactDOM.render(<RoutesContainer />, appRoot);
 
 
 /*******TESTING */

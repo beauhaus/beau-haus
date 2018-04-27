@@ -14,19 +14,16 @@ class Background extends React.Component {
   // <stop className="bg-right" offset="1" stopColor={this.state.skyRight} />
   render() {
     return (
-      <div className="background">
-        <svg viewBox="0 0 1920 1080" preserveAspectRatio="none">
-          <linearGradient id="bg-grad">
-            <stop offset="0" stopColor="#a8a8a8" />
-            <stop offset="1" stopColor="#fff" />
-          </linearGradient>
-          <path fill="url(#bg-grad)" d="M.5 0h1920v1080H.5z" />
-        </svg>
-      </div>
+      <svg className="background" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+        <linearGradient id="bg-grad">
+          <stop offset="0" stopColor="#a8a8a8" />
+          <stop offset="1" stopColor="#fff" />
+        </linearGradient>
+        <path fill="url(#bg-grad)" d="M.5 0h1920v1080H.5z" />
+      </svg>
     );
   }
 }
 // <Banner/>
-
 
 export default Background;

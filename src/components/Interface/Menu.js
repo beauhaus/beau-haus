@@ -21,7 +21,6 @@ class Menu extends React.Component {
       <filter id="filter-saturate">
           <feColorMatrix type="saturate" values=".2" />
         </filter>
-
         <g transform="translate(277 23)">
         <circle className="btn-menu-light" id="btn-home" cx="17.5" cy="27.5" r="27.5" fill={this.state.homeColor} />
         <circle className="btn-menu-light" id="btn-create" cx="50.5" cy="127.5" r="27.5" fill={this.state.createColor} />

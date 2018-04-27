@@ -2,23 +2,21 @@
 @import './base/_settings';
 
 @import './components/svgContainer';
+
 @import './components/shorePond';
 
-@import './components/appContainer';
+@import './components/homeContainer';
 @import './components/trees';
 @import './components/bhLogo';
 @import './components/banner';
-@import './components/menu';
+// @import './components/menu';
 @import './components/pondBG';
+@import './components/routesContainer';
+@import './components/navMenu';
 
 
 
 @import './components/background';
 @import './components/pond';
 
-@import './components/sandStyles'; /*testing*/
-
-
-
-
-
+// @import './components/sandStyles'; /*testing*/

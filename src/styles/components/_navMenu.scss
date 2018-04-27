@@ -1,0 +1,64 @@
+#menu-desktop {
+  width: 12vw;
+  height: 26vh;
+  position: absolute;
+  left: 75vw;
+  top: 2vh;
+
+  & {
+    text {
+      font-family: 'Lato', Tahoma, sans-serif;
+      font-size: 45px;
+      font-weight: 300;
+      cursor: pointer;
+    }
+  }
+  & .btn-menu-mute {
+    filter: url(#filter-saturate);
+  }
+  & .btn-menu-mute:hover {
+    cursor: pointer;
+    animation: sat40 0.2s ease-in-out forwards;
+  }
+  & circle {
+    // transform: translate(277 23);
+      }
+  @keyframes sat40 {
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+/**original before routes */
+// #menu-desktop {
+//   width: 12vw;
+//   height: 26vh;
+//   position: absolute;
+//   left: 75vw;
+//   top: 2vh;
+
+//   &   {
+//     text {
+//       font-family: 'Lato', Tahoma, sans-serif;
+//       font-size: 45px;
+//       font-weight: 300;
+//     }
+//   }
+//   & .btn-menu-mute {
+//     filter: url(#filter-saturate);
+//   }
+//   & .btn-menu-mute:hover {
+//       cursor: pointer;
+//     animation: sat40 .2s ease-in-out forwards;
+//   }
+//   @keyframes sat40 {
+//     100% {
+//         opacity: 0;
+//     }
+//   }
+// }
+// .btn {
+//       transform: translate(277 23);
+
+// }
