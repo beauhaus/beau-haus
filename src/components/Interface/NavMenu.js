@@ -3,37 +3,25 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import BtnDB from './menuData.json';
 
+/**NavMenu combines static BtnDB data with state so that colors can be manipulated from state
+ * while keeping the component's code clean & readable
+ */
 class NavMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       btnPos: 'translate(277 23)',
-      page: [
-        {
-          name: 'home',
-          color: "#ebbd89"
-        },
-        {
-          name: 'create',
-          color: "#9b353a"
-        },
-        {
-          name: 'collect',
-          color: "#85bb8f"
-        },
-        {
-          name: 'code',
-          color: "#567ace"
-        },
-        {
-          name: 'connect',
-          color: "#65aca2"
-        },
-      ]
+      page: props.page
     };
+    // this.handleClick = this.handleClick.bind(this);
   }
+
   render() {
-    const {page} = this.state;
+    const { page } = this.props;
+    // console.log(props)
+    // <Link onClick={() => this.handleClick(page[idx].name)}>
+    // onClick={() => this.props.click}
+    // console.log(props)
     return (
       <div>
         <svg id="menu-desktop" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet">
@@ -54,6 +42,7 @@ class NavMenu extends React.Component {
                 fill={page[idx].color}
               />
               <circle
+                onClick={() => this.props.click(page[idx].color)}
                 key={btn.id + 3}
                 transform={this.state.btnPos}
                 className="btn btn-menu-mute"
@@ -62,8 +51,8 @@ class NavMenu extends React.Component {
                 r={btn.r}
                 fill={page[idx].color}
               />
-              <text key={btn.id + 4} transform={btn.txtPos}>
-              {page[idx].name}
+              <text onClick={() => this.props.click(page[idx].name)} key={btn.id + 4} transform={btn.txtPos}>
+                {page[idx].name}
               </text>
             </Link>
           ))}

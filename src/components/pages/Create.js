@@ -13,6 +13,7 @@ class Create extends React.Component {
       <div className="page-create">
       <br/><br/><br/>
       <h1>Create Something!</h1>
+      <h2>Props: {this.props.name}</h2>
       </div>
     );
   }

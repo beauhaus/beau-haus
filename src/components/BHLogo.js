@@ -5,11 +5,10 @@ class BHLogo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dotColor: '#FF9C2B'
+      placeholder: ''
     };
   }
   render() {
-    // do I need xmidymid meet here? delete?
     return (
       <svg id="bh-logo" viewBox="0 0 860 650" preserveAspectRatio="xMidYMid meet">
         <defs>
@@ -23,7 +22,7 @@ class BHLogo extends React.Component {
           <ellipse cx="133.7" cy="81.2" rx="79.7" ry="81.2" />
           <path d="M0 0h133v325H0z" />
         </g>
-        <circle cx="215" cy="293.5" r="31.5" fill={this.state.dotColor} />
+        <circle cx="215" cy="293.5" r="31.5" fill={this.props.dot} />
         <path id="logo-h-blocks" fill="#000" d="M215 0h112v125H215zm0 200h112v125H215z" filter="url(#svg)" />
       </svg>
     );

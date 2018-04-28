@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import NavMenu from './Interface/NavMenu';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import BHLogo from './BHLogo';
+
 // import HomeContainer from './HomeContainer';
+
 import Home from './pages/Home';
 
 import Create from './pages/Create';
@@ -21,20 +25,64 @@ class RoutesContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-          view: ''
+          view: '',
+          name: "beau",
+          pageThemeColor: '#ebbd89',
+          page: [
+            {
+              name: 'home',
+              color: "#ebbd89"
+            },
+            {
+              name: 'create',
+              color: "#9b353a"
+            },
+            {
+              name: 'collect',
+              color: "#85bb8f"
+            },
+            {
+              name: 'code',
+              color: "#567ace"
+            },
+            {
+              name: 'connect',
+              color: "#65aca2"
+            },
+          ]
     };
+    this.menuClickHandler = this.menuClickHandler.bind(this);
+  }
+  menuClickHandler(color) {
+    console.log("color: ", color)
+    this.setState({
+      pageThemeColor:color
+    })
   }
   render() {
+    // <Route path="/create" component={Create} />
     return (
       <BrowserRouter>
         <div className="app-container">
-          <NavMenu />
+        <BHLogo dot={this.state.pageThemeColor}/>
+          <NavMenu click={this.menuClickHandler} page={this.state.page}/>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/create" component={Create} />
-            <Route path="/collect" component={Collect} />
-            <Route path="/code" component={Code} />
-            <Route path="/connect" component={Connect} />
+            <Route exact path="/" render={() =>(
+              <Home name={this.state.name}/>
+            )} />
+            <Route path="/create" render={() =>(
+              <Create name={this.state.name}/>
+            )} />
+            
+            <Route path="/collect" render={() =>(
+              <Collect name={this.state.name}/>
+            )} />
+            <Route path="/code" render={() =>(
+              <Code name={this.state.name}/>
+            )} />
+            <Route path="/connect" render={() =>(
+              <Connect name={this.state.name}/>
+            )} />
             <Route component={FourOhFour} />
           </Switch>
         </div>
