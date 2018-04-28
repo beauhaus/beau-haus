@@ -24,10 +24,3 @@ class RoutesContainer extends React.Component {
 }
 
 export default RoutesContainer;
-
-/*
-
-       
-
-
-*/
