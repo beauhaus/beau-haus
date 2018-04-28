@@ -11,10 +11,10 @@ import Code from './pages/Code';
 import Connect from './pages/Connect';
 
 const FourOhFour = () => (
-  <h1>
-    <span>😭</span>
-    404
-  </h1>
+  <div className="page-404">
+      <br/><br/><br/>
+      <h1>404 (and probably your fault)</h1>
+      </div>
 );
 
 class RoutesContainer extends React.Component {
@@ -30,7 +30,7 @@ class RoutesContainer extends React.Component {
         <div className="app-container">
           <NavMenu />
           <Switch>
-            <Route exact path="/home" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/create" component={Create} />
             <Route path="/collect" component={Collect} />
             <Route path="/code" component={Code} />
