@@ -1,26 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import NavMenu from './Interface/NavMenu';
 
-import HomeContainer from './HomeContainer';
-import Background from './Background';
-import NavMenu from './Interface/NavMenu';
+// class RoutesContainer extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       dotColor: ''
+//     };
+//   }
+//   render() {
+//     return (
+//       <div className="routesCont">
+//         <NavMenu />
+//       </div>
+//     );
+//   }
+// }
+// // <HomeContainer />
 
-class RoutesContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dotColor: ''
-    };
-  }
-  render() {
-    return (
-      <div>
-        <Background />
-        <HomeContainer />
-        <NavMenu />
-      </div>
-    );
-  }
-}
-
-export default RoutesContainer;
+// export default RoutesContainer;
+// import Background from '../Background';
+// <Background />

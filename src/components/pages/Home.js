@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Code extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,12 +10,12 @@ class Code extends React.Component {
   }
   render() {
     return (
-      <div className="page-code">
+      <div className="page-home">
       <br/><br/><br/>
-      <h1>Code Something!</h1>
+      <h1>Home Something!</h1>
       </div>
     );
   }
 }
 
-export default Code;
+export default Home;

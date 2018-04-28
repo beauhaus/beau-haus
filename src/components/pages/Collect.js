@@ -10,7 +10,7 @@ class Collect extends React.Component {
   }
   render() {
     return (
-      <div className="page-Collect">
+      <div className="page-collect">
       <br/><br/><br/>
       <h1>Collect Something!</h1>
       </div>
