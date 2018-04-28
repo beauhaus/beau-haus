@@ -21,7 +21,7 @@ class RoutesContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dotColor: ''
+          view: ''
     };
   }
   render() {

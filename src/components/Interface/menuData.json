@@ -1,54 +1,44 @@
 {
-   "btns":[
-      {
-        "id": 10,
-        "name": "home",
-        "lnk": "",
-        "x": "17.5",
-        "y": "27.5",
-        "r": "27.5",
-        "txtPos": "translate(107.521 65)",
-        "color": "#ebbd89"
-      },
-      {
-        "id": 20,
-        "name": "create",
-        "lnk": "create",
-        "x": "50.5",
-        "y": "127.5",
-        "r": "27.5",
-        "txtPos": "translate(127.6519 165)",
-        "color": "#9b353a"
-      },
-      {
-        "id": 30,
-        "name": "collect",
-        "lnk": "collect",
-        "x": "84.5",
-        "y": "227.5",
-        "r": "27.5",
-        "txtPos": "translate(156.7915 266)",
-        "color": "#85bb8f"
-      },
-      {
-        "id": 40,
-        "name": "code",
-        "lnk": "code",
-        "x": "17.5",
-        "y": "327.5",
-        "r": "27.5",
-        "txtPos": "translate(124.3608 365)",
-        "color": "#567ace"
-      },
-      {
-        "id": 50,
-        "name": "connect",
-        "lnk": "connect",
-        "x": "50.5",
-        "y": "427.5",
-        "r": "27.5",
-        "txtPos": "translate(90.3916 465)",
-        "color": "#65aca2"
-      }
-    ]
+  "btns": [
+    {
+      "id": 10,
+      "lnk": "/",
+      "x": "17.5",
+      "y": "27.5",
+      "r": "27.5",
+      "txtPos": "translate(107.521 65)"
+    },
+    {
+      "id": 20,
+      "lnk": "/create",
+      "x": "50.5",
+      "y": "127.5",
+      "r": "27.5",
+      "txtPos": "translate(127.6519 165)"
+    },
+    {
+      "id": 30,
+      "lnk": "/collect",
+      "x": "84.5",
+      "y": "227.5",
+      "r": "27.5",
+      "txtPos": "translate(156.7915 266)"
+    },
+    {
+      "id": 40,
+      "lnk": "/code",
+      "x": "17.5",
+      "y": "327.5",
+      "r": "27.5",
+      "txtPos": "translate(124.3608 365)"
+    },
+    {
+      "id": 50,
+      "lnk": "/connect",
+      "x": "50.5",
+      "y": "427.5",
+      "r": "27.5",
+      "txtPos": "translate(90.3916 465)"
+    }
+  ]
 }

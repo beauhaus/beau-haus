@@ -7,14 +7,33 @@ class NavMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dotColor: ''
+      btnPos: 'translate(277 23)',
+      page: [
+        {
+          name: 'home',
+          color: "#ebbd89"
+        },
+        {
+          name: 'create',
+          color: "#9b353a"
+        },
+        {
+          name: 'collect',
+          color: "#85bb8f"
+        },
+        {
+          name: 'code',
+          color: "#567ace"
+        },
+        {
+          name: 'connect',
+          color: "#65aca2"
+        },
+      ]
     };
   }
   render() {
-    const btnConfig = {
-      pos: 'translate(277 23)'
-    };
-
+    const {page} = this.state;
     return (
       <div>
         <svg id="menu-desktop" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet">
@@ -22,29 +41,29 @@ class NavMenu extends React.Component {
             <feColorMatrix type="saturate" values=".2" />
           </filter>
 
-          {BtnDB.btns.map(btn => (
-            <Link key={btn.id + 1} to={`/${btn.lnk}`}>
+          {BtnDB.btns.map((btn, idx) => (
+            <Link key={btn.id + 1} to={btn.lnk}>
               <circle
                 key={btn.id + 2}
-                transform={btnConfig.pos}
+                transform={this.state.btnPos}
                 className="btn btn-menu-light"
                 id={`btn-${btn.name}`}
                 cx={btn.x}
                 cy={btn.y}
                 r={btn.r}
-                fill={btn.color}
+                fill={page[idx].color}
               />
               <circle
                 key={btn.id + 3}
-                transform={btnConfig.pos}
+                transform={this.state.btnPos}
                 className="btn btn-menu-mute"
                 cx={btn.x}
                 cy={btn.y}
                 r={btn.r}
-                fill={btn.color}
+                fill={page[idx].color}
               />
               <text key={btn.id + 4} transform={btn.txtPos}>
-                {btn.name}
+              {page[idx].name}
               </text>
             </Link>
           ))}
@@ -56,39 +75,5 @@ class NavMenu extends React.Component {
 export default NavMenu;
 
 /*
-  {
-        "id": 10,
-        "name": "home",
-        "lnk": "/",
-        "x": "17.5",
-        "y": "27.5",
-        "r": "27.5",
-        "txtPos": "translate(107.521 65)",
-        "color": "#ebbd89"
-      },
 
-
--------
-          <Link to="/">
-            <circle
-              transform={btnConfig.pos}
-              className="btn btn-menu-light"
-              id=""
-              cx="17.5"
-              cy="27.5"
-              r="27.5"
-              fill="#ebbd89"
-            />
-            <circle
-              transform={btnConfig.pos}
-              className="btn btn-menu-mute"
-              cx="17.5"
-              cy="27.5"
-              r="27.5"
-              fill="#ebbd89"
-            />
-            <text transform="translate(107.521 65)">home</text>
-          </Link>
-
-
-      */
+*/
