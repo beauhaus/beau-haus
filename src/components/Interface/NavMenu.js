@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import BtnDB from './menuData.json';
 import HomeContainer from '../HomeContainer';
 import Create from '../pages/Create';
 import Collect from '../pages/Collect';
@@ -21,55 +22,8 @@ class NavMenu extends React.Component {
   render() {
     const btnConfig = {
       pos: 'translate(277 23)'    };
+    // const btnArr = JSON.stringify(BtnDB.btns)
 
-    const btns = [
-      {
-        id: 10,
-        name: 'home',
-        x: '17.5',
-        y: '27.5',
-        r: '27.5',
-        txtPos: 'translate(107.521 65)',
-        color: '#ebbd89',
-      },
-      {
-        id: 20,
-        name: 'create',
-        x: '50.5',
-        y: '127.5',
-        r: '27.5',
-        txtPos: 'translate(127.6519 165)',
-        color: '#9b353a',
-      },
-      {
-        id: 30,
-        name: 'collect',
-        x: '84.5',
-        y: '227.5',
-        r: '27.5',
-        txtPos: 'translate(156.7915 266)',
-        color: '#85bb8f',
-      },
-      {
-        id: 40,
-        name: 'code',
-        x: '17.5',
-        y: '327.5',
-        r: '27.5',
-        txtPos: 'translate(124.3608 365)',
-        color: '#567ace',
-      },
-      {
-        id: 50,
-        name: 'connect',
-        x: '50.5',
-        y: '427.5',
-        r: '27.5',
-        txtPos: 'translate(90.3916 465)',
-        color: '#65aca2',
-      }
-    ];
-    // do I need xmidymid meet here? delete?
     return (
       <BrowserRouter>
         <div>
@@ -77,7 +31,7 @@ class NavMenu extends React.Component {
             <filter id="filter-saturate">
               <feColorMatrix type="saturate" values=".2" />
             </filter>
-            {btns.map(btn => (
+            {BtnDB.btns.map(btn => (
               <Link key={btn.id+1} to={`/${btn.name}`}>
                 <circle
                   key={btn.id+2}
@@ -117,3 +71,53 @@ class NavMenu extends React.Component {
   }
 }
 export default NavMenu;
+
+
+    // const btns = [
+    //   {
+    //     id: 10,
+    //     name: 'home',
+    //     x: '17.5',
+    //     y: '27.5',
+    //     r: '27.5',
+    //     txtPos: 'translate(107.521 65)',
+    //     color: '#ebbd89',
+    //   },
+    //   {
+    //     id: 20,
+    //     name: 'create',
+    //     x: '50.5',
+    //     y: '127.5',
+    //     r: '27.5',
+    //     txtPos: 'translate(127.6519 165)',
+    //     color: '#9b353a',
+    //   },
+    //   {
+    //     id: 30,
+    //     name: 'collect',
+    //     x: '84.5',
+    //     y: '227.5',
+    //     r: '27.5',
+    //     txtPos: 'translate(156.7915 266)',
+    //     color: '#85bb8f',
+    //   },
+    //   {
+    //     id: 40,
+    //     name: 'code',
+    //     x: '17.5',
+    //     y: '327.5',
+    //     r: '27.5',
+    //     txtPos: 'translate(124.3608 365)',
+    //     color: '#567ace',
+    //   },
+    //   {
+    //     id: 50,
+    //     name: 'connect',
+    //     x: '50.5',
+    //     y: '427.5',
+    //     r: '27.5',
+    //     txtPos: 'translate(90.3916 465)',
+    //     color: '#65aca2',
+    //   }
+    // ];
+    // do I need xmidymid meet here? delete?

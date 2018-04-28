@@ -1,0 +1,49 @@
+{
+   "btns":[
+      {
+        "id": 10,
+        "name": "home",
+        "x": "17.5",
+        "y": "27.5",
+        "r": "27.5",
+        "txtPos": "translate(107.521 65)",
+        "color": "#ebbd89"
+      },
+      {
+        "id": 20,
+        "name": "create",
+        "x": "50.5",
+        "y": "127.5",
+        "r": "27.5",
+        "txtPos": "translate(127.6519 165)",
+        "color": "#9b353a"
+      },
+      {
+        "id": 30,
+        "name": "collect",
+        "x": "84.5",
+        "y": "227.5",
+        "r": "27.5",
+        "txtPos": "translate(156.7915 266)",
+        "color": "#85bb8f"
+      },
+      {
+        "id": 40,
+        "name": "code",
+        "x": "17.5",
+        "y": "327.5",
+        "r": "27.5",
+        "txtPos": "translate(124.3608 365)",
+        "color": "#567ace"
+      },
+      {
+        "id": 50,
+        "name": "connect",
+        "x": "50.5",
+        "y": "427.5",
+        "r": "27.5",
+        "txtPos": "translate(90.3916 465)",
+        "color": "#65aca2"
+      }
+    ]
+}
