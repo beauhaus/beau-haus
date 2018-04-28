@@ -10,7 +10,7 @@ class BHLogo extends React.Component {
   }
   render() {
     return (
-      <svg id="bh-logo" viewBox="0 0 860 650" preserveAspectRatio="xMidYMid meet">
+      <svg id="bh-logo" viewBox="0 0 440 325">
         <defs>
           <filter id="svg" x="0" y="0">
             <feDropShadow dx="4" dy="2" stdDeviation="4" />

@@ -10,7 +10,7 @@ class Create extends React.Component {
   }
   render() {
     return (
-      <div className="page-create">
+      <div className="tst page-create">
       <br/><br/><br/>
       <h1>Create Something!</h1>
       <h2>Props: {this.props.name}</h2>

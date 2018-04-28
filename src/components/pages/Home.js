@@ -11,8 +11,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="page-home">
-      <br/><br/><br/>
-      <h1>Home Something!</h1>
+      <p>okay well, this is under construction because React--while being lots of fun--makes me sad.</p>
       </div>
     );
   }

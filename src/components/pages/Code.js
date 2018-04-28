@@ -10,7 +10,7 @@ class Code extends React.Component {
   }
   render() {
     return (
-      <div className="page-code">
+      <div className="tst page-code">
       <br/><br/><br/>
       <h1>Code Something!</h1>
       </div>

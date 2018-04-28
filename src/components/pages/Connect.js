@@ -10,7 +10,7 @@ class Connect extends React.Component {
   }
   render() {
     return (
-      <div className="page-connect">
+      <div className="tst page-connect">
       <br/><br/><br/>
       <h1>Connect Something!</h1>
       </div>

@@ -23,7 +23,7 @@ class NavMenu extends React.Component {
     // onClick={() => this.props.click}
     // console.log(props)
     return (
-      <div>
+      <div className="nav-menu">
         <svg id="menu-desktop" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet">
           <filter id="filter-saturate">
             <feColorMatrix type="saturate" values=".2" />

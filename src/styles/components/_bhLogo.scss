@@ -1,10 +1,12 @@
-//NB: viewBox must remain removed in order to size it.
-// I've doubled the viewBox values
 #bh-logo {
     margin-top: 1vh;
     margin-left: 10vw;
-    width: 160px;
+    width: 130px;
     height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
     & > #logo-h {
         fill: #4E4D4D;
     }

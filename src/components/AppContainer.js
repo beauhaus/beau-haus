@@ -5,6 +5,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import BHLogo from './BHLogo';
 
+import Background from './Background';
+import Banner from './Banner';
+import HomeContainer from './HomeContainer';
+
 // import HomeContainer from './HomeContainer';
 
 import Home from './pages/Home';
@@ -17,7 +21,7 @@ import Connect from './pages/Connect';
 const FourOhFour = () => (
   <div className="page-404">
       <br/><br/><br/>
-      <h1>404 (and probably your fault)</h1>
+      <h1>404 (...probably your fault)</h1>
       </div>
 );
 
@@ -60,31 +64,34 @@ class RoutesContainer extends React.Component {
     })
   }
   render() {
-    // <Route path="/create" component={Create} />
     return (
       <BrowserRouter>
         <div className="app-container">
+        <Background/>
+        <HomeContainer/>
+
+        <Banner dot={this.state.pageThemeColor}/>
+        <NavMenu click={this.menuClickHandler} page={this.state.page}/>
+        <Switch>
+        <Route exact path="/" render={() =>(
+          <Home name={this.state.name}/>
+        )} />
+        <Route path="/create" render={() =>(
+          <Create name={this.state.name}/>
+        )} />
+        
+        <Route path="/collect" render={() =>(
+          <Collect name={this.state.name}/>
+        )} />
+        <Route path="/code" render={() =>(
+          <Code name={this.state.name}/>
+        )} />
+        <Route path="/connect" render={() =>(
+          <Connect name={this.state.name}/>
+        )} />
+        <Route component={FourOhFour} />
+        </Switch>
         <BHLogo dot={this.state.pageThemeColor}/>
-          <NavMenu click={this.menuClickHandler} page={this.state.page}/>
-          <Switch>
-            <Route exact path="/" render={() =>(
-              <Home name={this.state.name}/>
-            )} />
-            <Route path="/create" render={() =>(
-              <Create name={this.state.name}/>
-            )} />
-            
-            <Route path="/collect" render={() =>(
-              <Collect name={this.state.name}/>
-            )} />
-            <Route path="/code" render={() =>(
-              <Code name={this.state.name}/>
-            )} />
-            <Route path="/connect" render={() =>(
-              <Connect name={this.state.name}/>
-            )} />
-            <Route component={FourOhFour} />
-          </Switch>
         </div>
       </BrowserRouter>
     );
