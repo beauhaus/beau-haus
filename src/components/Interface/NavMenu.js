@@ -13,23 +13,42 @@ class NavMenu extends React.Component {
       btnPos: 'translate(277 23)',
       page: props.palette
     };
-    // this.handleClick = this.handleClick.bind(this);
+
     this.renderBtns = this.renderBtns.bind(this);
+    this.tl = new TimelineMax({
+			
+			// yoyoEase: true,
+			// smoothChildTiming: true,
+			paused: true
+		});
+  }
+
+  componentDidMount() {
+    const { tl, refs } = this;
+    BtnDB.btns.forEach((item, idx) => {
+			tl.set(refs[item.id], { opacity: 0, scale: 0.5 });
+    });
+    console.log(refs[10])
+
   }
 
   renderBtns(btn, idx) {
     const { palette } = this.props;
     // const btns = BtnDB.btns;
     return (
-      <Link key={btn.id + 1} 
-      onClick={() => this.props.click(palette[idx].color)}
-      to={`/${btn.name!=="home"? btn.name: ''}`}>
-        <text key={btn.id} transform={btn.txtPos}>
-          {' '}
-          {btn.name}{' '}
+      <Link
+        key={btn.id + "L"}
+        onClick={() => this.props.click(palette[idx].color)}
+        to={`/${btn.name !== 'home' ? btn.name : ''}`}
+      >
+        <text key={btn.id+"T"} 
+        transform={btn.txtPos}
+        ref={btn.id}
+        >
+          {btn.name}
         </text>
         <circle
-          key={btn.id + 2}
+          key={"themeBtn"+btn.id}
           transform={this.state.btnPos}
           className="btn btn-menu-light"
           id={`btn-${btn.name}`}
@@ -39,7 +58,7 @@ class NavMenu extends React.Component {
           fill={palette[idx].color}
         />
         <circle
-          key={btn.id + 3}
+          key={"themeBtnCover"+ btn.id }
           transform={this.state.btnPos}
           className="btn btn-menu-mute"
           cx={btn.x}
