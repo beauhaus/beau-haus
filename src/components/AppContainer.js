@@ -32,25 +32,20 @@ class RoutesContainer extends React.Component {
           view: '',
           name: "beau",
           pageThemeColor: '#ebbd89',
-          page: [
+          palette: [
             {
-              name: 'home',
               color: "#ebbd89"
             },
             {
-              name: 'create',
               color: "#9b353a"
             },
             {
-              name: 'collect',
               color: "#85bb8f"
             },
             {
-              name: 'code',
               color: "#567ace"
             },
             {
-              name: 'connect',
               color: "#65aca2"
             },
           ]
@@ -71,7 +66,7 @@ class RoutesContainer extends React.Component {
         <HomeContainer/>
 
         <Banner dot={this.state.pageThemeColor}/>
-        <NavMenu click={this.menuClickHandler} page={this.state.page}/>
+        <NavMenu click={this.menuClickHandler} palette={this.state.palette}/>
         <Switch>
         <Route exact path="/" render={() =>(
           <Home name={this.state.name}/>
