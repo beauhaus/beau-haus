@@ -28,7 +28,7 @@ class WhiteCaps extends React.Component {
 
     var randomNum = (min, max) => Math.random() * (max - min) + min;
     var len = whiteCapsData.length;
-    console.log('len: ', len);
+    // console.log('len: ', len);
     whiteCapsData.forEach((item, idx) => {
       tl
       .from(refs[item.id], 1, {

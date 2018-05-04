@@ -12,7 +12,7 @@ class Code extends React.Component {
     return (
       <div className="tst page-code">
       <br/><br/><br/>
-      <h1>Code Something!</h1>
+      <h1>{this.props.name} Something!</h1>
       </div>
     );
   }
