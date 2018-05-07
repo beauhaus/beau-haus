@@ -33,9 +33,9 @@ class RoutesContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      load: true
+      pageThemeColor:"#FFCC91",
+      page: 'home'
     };
-    // console.log("this.state.test: ", this.state.test)
     this.menuClickHandler = this.menuClickHandler.bind(this);
   }
   componentDidMount(props) {
@@ -44,13 +44,9 @@ class RoutesContainer extends Component {
     })
   }
   menuClickHandler(name, fill) {
-    console.log("name: ", name)
-    console.log("fill: ", fill)
-
     this.setState({
-      pageThemeColor: fill,
       page: name,
-      load: false
+      pageThemeColor: fill
     });
   }
   
@@ -84,39 +80,9 @@ class RoutesContainer extends Component {
     );
   }
 }
-// <HomeContainer />
 
 export default RoutesContainer;
 /*
-
- <Background/>
-        <HomeContainer/>
-
-        <Banner dot={this.state.pageThemeColor}/>
-        <NavMenu click={this.menuClickHandler} palette={this.state.palette}/>
-        <Switch>
-        <Route exact path="/" render={() =>(
-          <Home name={this.state.name}/>
-        )} />
-        <Route path="/create" render={() =>(
-          <Create name={this.state.name}/>
-        )} />
-        
-        <Route path="/collect" render={() =>(
-          <Collect name={this.state.name}/>
-        )} />
-        <Route path="/code" render={() =>(
-          <Code name={this.state.name}/>
-        )} />
-        <Route path="/connect" render={() =>(
-          <Connect name={this.state.name}/>
-        )} />
-        <Route component={FourOhFour} />
-        </Switch>
-        <BHLogo dot={this.state.pageThemeColor}/>
-        </div>
-
-
 
 ///*********************
  <Route path="/" onChange={yourHandler} component={AppContainer}>

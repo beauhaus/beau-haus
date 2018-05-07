@@ -73,16 +73,27 @@
   }
 }
 
-.menu-dot {
-  animation: sat40 1s ease-in-out 0 forwards;
-}
+// .menu-dot {
+//   animation: sat40 1s ease-in-out 0 forwards;
+// }
 
-@keyframes sat40 {
-  100% {
-    opacity: 0;
-  }
-}
+// @keyframes sat40 {
+//   100% {
+//     opacity: 0;
+//   }
+// }
 
 .lo-sat {
   filter: url(#lo-sat);
+}
+
+
+.menu-txt:hover {  
+  animation: txtSpread 1s ease-in-out 0 forwards;
+}
+
+@keyframes txtSpread {
+  100% {
+    opacity: 0;
+  }
 }
