@@ -1,7 +1,23 @@
 .soc-icon-container {
-    opacity: 1;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    // width: 100%;
+  opacity: 1;
+  position: absolute;
+}
+
+.soc-icon-svg > a >rect {
+  opacity: 1;
+  width: 35px;
+  height: 30px;
+  filter: url(#lo-sat);
+  &:hover {
+    filter: none;
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: white;
+    cursor: pointer;
+  }
+}
+
+.icon-text-group {
+  transform: translate(-2px, -3px);
+  filter: url(#sat-adjust);
 }
