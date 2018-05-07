@@ -11,7 +11,7 @@ import {
 import Background from './Background';
 import HomeContainer from './HomeContainer';
 
-import Banner from './Banner';
+// import Banner from './Banner';
 import BHLogo from './BHLogo';
 
 import Home from './pages/Home';
@@ -51,11 +51,11 @@ class RoutesContainer extends Component {
     });
   }
 
+  // <Banner dot={this.state.pageThemeColor} />
   render() {
     return (
       <BrowserRouter>
         <div className="app-container">
-          <Banner dot={this.state.pageThemeColor} />
           <HomeContainer />
           <NavMenu load={this.state.load} page={this.state.page} select={this.menuClickHandler} />
           <Background />
