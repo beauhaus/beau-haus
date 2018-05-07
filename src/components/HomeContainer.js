@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
 import Pond from './LandingTree/Pond';
 import BackTree from './LandingTree/BackTree';
 import MidTree from './LandingTree/MidTree';
 import FrontTree from './LandingTree/FrontTree';
 import PondBG from './LandingTree/PondBG';
 import Preview from './Preview';
-
-
+import SocIcons from './SocIcons';
 //  <Preview />
 class HomeContainer extends React.Component {
   state = {
@@ -21,16 +19,17 @@ class HomeContainer extends React.Component {
   
   render() {
     return (
-      <div className="svg-container">
-      <PondBG/>
-        <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
-        <BackTree />
-        <MidTree />
-        <FrontTree />
-        </div>
-      );
-    }
+      <div className="home-container">
+      <PondBG />
+      <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
+      <BackTree />
+      <MidTree />
+      <FrontTree />
+      <SocIcons/>
+      </div>
+    );
   }
-  // <Menu />
+}
+// <Menu />
 
 export default HomeContainer;

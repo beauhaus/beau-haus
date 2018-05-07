@@ -1,6 +1,20 @@
 // $offset-match
 // $bg-right
 // $water-foreground
+.home-container {
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+}
 
 .offset-match {
   stop-color: #a8a8a8;
