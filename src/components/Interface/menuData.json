@@ -7,7 +7,9 @@
       "y": "27.5",
       "r": "27.5",
       "fill": "#FFCC91",
-      "txtPos": "translate(107.521 65)"
+      "txtPos": "translate(107.521 65)",
+      "btnHoverPos": "translate(277 23)",
+      "btnRestPos": "translate(510 23)"
     },
     {
       "id": 20,
@@ -16,7 +18,9 @@
       "y": "127.5",
       "r": "27.5",
       "fill": "#9b353a",
-      "txtPos": "translate(127.6519 165)"
+      "txtPos": "translate(127.6519 165)",
+      "btnHoverPos": "translate(277 23)",
+      "btnRestPos": "translate(477 23)"
     },
     {
       "id": 30,
@@ -25,7 +29,9 @@
       "y": "227.5",
       "r": "27.5",
       "fill": "#85bb8f",
-      "txtPos": "translate(156.7915 266)"
+      "txtPos": "translate(156.7915 266)",
+      "btnHoverPos": "translate(277 23)",
+      "btnRestPos": "translate(443 23)"
     },
     {
       "id": 40,
@@ -34,7 +40,9 @@
       "y": "327.5",
       "r": "27.5",
       "fill": "#567ace",
-      "txtPos": "translate(124.3608 365)"
+      "txtPos": "translate(124.3608 365)",
+      "btnHoverPos": "translate(277 23)",
+      "btnRestPos": "translate(510 23)"
     },
     {
       "id": 50,
@@ -43,7 +51,9 @@
       "y": "427.5",
       "r": "27.5",
       "fill": "#9c78a8",
-      "txtPos": "translate(90.3916 465)"
+      "txtPos": "translate(90.3916 465)",
+      "btnHoverPos": "translate(277 23)",
+      "btnRestPos": "translate(477 23)"
     }
   ]
 }

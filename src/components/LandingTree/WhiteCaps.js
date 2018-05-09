@@ -14,6 +14,7 @@ const whiteCapsData = [
   { id: '10', coords: '622.8 945 603.3 940.6 583.7 945' }
 ];
 
+
 class WhiteCaps extends React.Component {
   constructor() {
     super();

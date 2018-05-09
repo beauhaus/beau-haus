@@ -3,19 +3,20 @@ import ReactDOM from 'react-dom';
 
 import AppContainer from './components/AppContainer.js';
 
-/*******TESTING */
-// import './sandStyles.css';
+const appRoot = document.getElementById('app');
 
+/********App Start*/
 
 import './styles/styles.scss';
 import 'normalize.css/normalize.css';
-// import Sandbox from './sandbox/Sandbox.js';
-
-const appRoot = document.getElementById('app');
-
 
 ReactDOM.render(<AppContainer />, appRoot);
 
+/********App END*/
 
-/*******TESTING */
+/*******TESTING START*/
+// import Sandbox from './sandbox/Sandbox.js';
+// import './sandbox/test.css';
+
 // ReactDOM.render(<Sandbox />, appRoot);
+/*******TESTING END */

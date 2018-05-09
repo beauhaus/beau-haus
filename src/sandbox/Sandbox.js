@@ -1,116 +1,155 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-const whiteCapsData = [
-  { id: '1', coords: '891.7 886 911.3 881.6 930.8 886' },
-  { id: '2', coords: '704.7 919 724.3 914.6 743.8 919' },
-  { id: '3', coords: '308.7 886 328.3 881.6 347.8 886' },
-  { id: '4', coords: '1331.7 886 1351.3 881.6 1370.8 886' },
-  { id: '5', coords: '1573.7 897 1593.3 892.6 1612.8 897' },
-  { id: '6', coords: '1557.8 890 1538.3 885.6 1518.7 890' },
-  { id: '7', coords: '1744.8 923 1725.3 918.6 1705.7 923' },
-  { id: '8', coords: '1920.8 890 1901.3 885.6 1881.7 890' },
-  { id: '9', coords: '864.8 934 845.3 929.6 825.7 934' },
-  { id: '10', coords: '622.8 945 603.3 940.6 583.7 945' }
+let data = [
+  {
+    id: 10,
+    name: 'home',
+    fill: '#FFCC91',
+    txtPos: 'translate(107.521 65)'
+  },
+  {
+    id: 20,
+    name: 'create',
+    fill: '#9b353a',
+    txtPos: 'translate(127.6519 165)'
+  },
+  {
+    id: 30,
+    name: 'collect',
+    fill: '#85bb8f',
+    txtPos: 'translate(156.7915 266)'
+  }
 ];
+
+// const Card = props => {
+//   return (
+//     <div className="pro-wrapper" onMouseEnter={props.hoverOn(props.name)} onMouseLeave={props.hoverOff(props.name)}>
+//       <h1>{props.fill}</h1>
+//       <div className="pro-name" onClick={props.clicker(props.name)}>
+//         {props.name} <br />
+//       </div>
+//       <div className="pro-company">{props.txtPos}</div>
+//     </div>
+//   );
+// };
+
+class CardList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      place: 'holder',
+      hover: false,
+    };
+    
+    this.handleClick = this.handleClick.bind(this);
+    this.handleCardHoverOn = this.handleCardHoverOn.bind(this);
+    this.handleCardHoverOff = this.handleCardHoverOff.bind(this);
+    this.handleTextHoverOn = this.handleTextHoverOn.bind(this);
+    this.handleTextHoverOff = this.handleTextHoverOff.bind(this);
+    this.renderCard = this.renderCard.bind(this);
+    
+    this.tl = new TimelineMax({repeat: 0});
+  }
+
+  handleClick(e) {
+    console.log('Input: ', e);
+  }
+
+  handleCardHoverOn() {
+    this.setState({ hover: true });
+    console.log('hoverON');
+  }
+
+  handleCardHoverOff() {
+    this.setState({ hover: false });
+    console.log('hoverOFF');
+  }
+  handleTextHoverOn(arg) {
+    this.setState({ hover: true });
+    console.log('hoverON');
+    const { tl, refs } = this;
+      tl
+      .to(refs[arg], 1, {
+          opacity: 1,
+          delay: 2,
+         }, "-=0")
+        
+      console.log("refs[arg]", refs[arg])
+      
+}
+  
+  handleTextHoverOff() {
+    this.setState({ hover: false });
+    console.log('hoverOFF');
+  }
+
+  renderCard(item, idx) {
+    return (
+      // ref={(input) => this.label = input} 
+      <div className="pro-wrapper"
+      onMouseEnter={()=>this.handleCardHoverOn(item.name)}
+      key={item.id}>
+      
+        <div className="pro-name" 
+        onClick={() =>this.handleClick(item.name)} 
+        onMouseEnter={(ref)=>this.handleTextHoverOn(item.id)} 
+        ref={item.id}
+        >
+          {item.name} 
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    // {data.map(this.renderCard)}
+    return (
+    <div className="global-grid">
+    {this.props.cards.map(this.renderCard)}
+    </div>
+    )
+   }
+  }
+
+
+
+// {this.props.cards.map(card => (
+//   <Card
+//     clicker={() => this.handleClick}
+//     hoverOn={() => this.handleHoverOn}
+//     hoverOff={() => this.handleHoverOff}
+//     key={card.name}
+//     {...card}
+//   />
+// ))}
+// ReactDOM.render(<CardList cards={data} />, document.getElementById("app"));
+
+const Sandbox = props => {
+  return (
+    <div className="sandbox-grid">
+      <CardList cards={data} />
+    </div>
+  );
+};
+
+export default Sandbox;
 
 /*
 
 
-*/
 
-class MyApp extends React.Component {
-  constructor() {
-    super();
-    this.renderPoly = this.renderPoly.bind(this);
-    this.tl = new TimelineMax({
-      repeat: -1,
-      // yoyo: true,
-      // yoyoEase: true,
-      smoothChildTiming: true,
-      repeatDelay: 2
-    });
-  }
 
-  componentDidMount() {
-    const { tl, refs } = this;
-
-    var randomNum = (min, max) => Math.random() * (max - min) + min;
-
-    whiteCapsData.forEach((item, idx) => {
-      tl.set(refs[item.id], { opacity: 0, scale: 0.5 });
-
-      tl
-        .from(
-          refs[item.id],
-          randomNum(2, 10),
-          {
-            opacity: 0,
-            delay: randomNum(0, 10)
-          },
-          0
-        )
-        .to(
-          refs[item.id],
-          randomNum(5, 10),
-          {
-            opacity: randomNum(0.5, 1),
-            scale: 1,
-            y: randomNum(5, 15),
-            ease: Power1.easeInOut
-          },
-          `-=${randomNum(2, 10)}`
-        )
-        .to(
-          refs[item.id],
-          4,
-          {
-            opacity: 0,
-            x: 10,
-            y: randomNum(5, 15),
-            // delay: randomNum(0, 10),
-            ease: Power1.easeInOut
-          },
-          `-=${randomNum(5, 10)}`
-        );
-    }); //forEach
-  }
-
-  renderPoly(item, idx) {
+  renderCard(item, idx) {
     return <polygon fill="white" ref={item.id} key={item.id} points={item.coords} />;
   }
 
   render() {
     return (
-      <div>
-        <svg className="test-div" viewBox="0 0 1920 1080">
-          {whiteCapsData.map(this.renderPoly)}
-        </svg>
-      </div>
+      <svg className="test-div" viewBox="0 0 1920 1080">
+        {data.map(this.renderCard)}
+      </svg>
     );
-  }
-}
-
-
-
-
-class Sandbox extends React.Component {
-  state = {
-    options: []
-  };
-
-  render() {
-    return (
-      <div className="svg-container test-div">
-        <MyApp />
-      </div>
-    );
-  }
-}
-
-export default Sandbox;
-
-/*
 
 
 */

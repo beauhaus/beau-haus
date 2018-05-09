@@ -15,3 +15,43 @@
   /* color: #949494; */
   color: #9c78a8;
 }
+body {
+	background: slategrey;
+}
+ .global-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30vw);
+  grid-template-rows: repeat(4, 20vh);
+  background: grey;
+}
+.pro-wrapper {
+  grid-column: auto;
+	position: relative;
+  border: 1px solid burlywood;
+  background: darkgrey;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+}
+.pro-pic {
+  grid-column: 1;
+  grid-row: 1/-1;
+  width: 10vw;
+  min-height: 20vh;
+  border: 1px solid coral;
+}
+.pro-name {
+  border: 1px solid navy;
+  margin-top: 5%;
+  grid-column: 2;
+  grid-row: 1;
+  color: black;
+  font-size: 40px;
+  opacity: 0.5;
+}
+.pro-company {
+  grid-column: 2;
+  grid-row: 2;
+  color: white;
+} 

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import WhiteCaps from './WhiteCaps';
 import MuteButton from './MuteButton';
 import Shore from './Shore';
-import Banner from '../Banner';
+// import Banner from '../Banner';
 /***ShorePond will be vanishing after page transition from Landing */
 
 

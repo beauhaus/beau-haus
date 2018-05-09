@@ -54,22 +54,22 @@ class RoutesContainer extends Component {
   // <Banner dot={this.state.pageThemeColor} />
   render() {
     return (
-      <BrowserRouter>
-        <div className="app-container">
-          <HomeContainer />
-          <NavMenu load={this.state.load} page={this.state.page} select={this.menuClickHandler} />
-          <Background />
-          <Switch>
-            <Route exact path="/" render={() => <Home name="home" />} />
-            <Route path="/create" render={() => <Create name="create" />} />
-            <Route path="/collect" render={() => <Collect name="collect" />} />
-            <Route path="/code" render={() => <Code name="code" />} />
-            <Route path="/connect" render={() => <Connect name="connect" />} />
-            <Route component={FourOhFour} />
-          </Switch>
-          <BHLogo dot={this.state.pageThemeColor} />
-        </div>
-      </BrowserRouter>
+<BrowserRouter>
+  <div className="app-container">
+    <HomeContainer />
+    <NavMenu load={this.state.load} page={this.state.page} select={this.menuClickHandler} />
+    <Background />
+    <Switch>
+      <Route exact path="/" render={() => <Home name="home" />} />
+      <Route path="/create" render={() => <Create name="create" />} />
+      <Route path="/collect" render={() => <Collect name="collect" />} />
+      <Route path="/code" render={() => <Code name="code" />} />
+      <Route path="/connect" render={() => <Connect name="connect" />} />
+      <Route component={FourOhFour} />
+    </Switch>
+    <BHLogo dot={this.state.pageThemeColor} />
+  </div>
+</BrowserRouter>
     );
   }
 }

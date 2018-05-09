@@ -16,16 +16,16 @@ class HomeContainer extends React.Component {
     skyRight: '#fff',
     pondForeground: '#cfcfcf'
   };
-  
+
   render() {
     return (
       <div className="home-container">
-      <PondBG />
-      <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
-      <BackTree />
-      <MidTree />
-      <FrontTree />
-      <SocIcons/>
+        <PondBG />
+        <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
+        <BackTree />
+        <MidTree />
+        <FrontTree />
+        <SocIcons />
       </div>
     );
   }

@@ -10,7 +10,7 @@ class NavMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      btnPos: 'translate(277 23)'
+      place: 'holder'
     };
     this.renderBtns = this.renderBtns.bind(this);
   }
@@ -30,7 +30,7 @@ class NavMenu extends React.Component {
       >
         <g className={btn.name === this.props.page ? '' : 'lo-sat'}>
           <text className="menu-txt" transform={btn.txtPos}>{btn.name}</text>
-          <circle transform={this.state.btnPos} cx={btn.x} cy={btn.y} r={btn.r} fill={btn.fill} />
+          <circle transform={btn.btnHoverPos} cx={btn.x} cy={btn.y} r={btn.r} fill={btn.fill} />
         </g>
       </Link>
     );
