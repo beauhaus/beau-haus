@@ -30,14 +30,16 @@ const FourOhFour = () => (
   </div>
 );
 
-class RoutesContainer extends Component {
+class AppContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pageThemeColor: '#FFCC91',
-      page: 'home'
+      page: 'home',
+      hover: false
     };
     this.menuClickHandler = this.menuClickHandler.bind(this);
+
   }
   componentDidMount(props) {
     this.setState(() => {
@@ -50,14 +52,22 @@ class RoutesContainer extends Component {
       pageThemeColor: fill
     });
   }
+  
 
+  // onMouseEnter={()=>this.handleCardHoverOn(item.name)}
+
+  //onMouseEnter for menu HERE???? or in the component?
   // <Banner dot={this.state.pageThemeColor} />
   render() {
     return (
 <BrowserRouter>
   <div className="app-container">
     <HomeContainer />
-    <NavMenu load={this.state.load} page={this.state.page} select={this.menuClickHandler} />
+    <NavMenu
+    load={this.state.load}
+    page={this.state.page}
+    select={this.menuClickHandler}
+     />
     <Background />
     <Switch>
       <Route exact path="/" render={() => <Home name="home" />} />
@@ -74,7 +84,17 @@ class RoutesContainer extends Component {
   }
 }
 
-export default RoutesContainer;
+/*
+    linkHoverOn={this.linkHoverOn}
+    linkHoverOff={this.linkHoverOff}
+    menuHoverOn={this.menuHoverOn}
+    menuHoverOff={this.menuHoverOff}
+
+
+    */
+
+
+export default AppContainer;
 /*
 
 ///*********************

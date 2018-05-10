@@ -22,18 +22,6 @@ let data = [
   }
 ];
 
-// const Card = props => {
-//   return (
-//     <div className="pro-wrapper" onMouseEnter={props.hoverOn(props.name)} onMouseLeave={props.hoverOff(props.name)}>
-//       <h1>{props.fill}</h1>
-//       <div className="pro-name" onClick={props.clicker(props.name)}>
-//         {props.name} <br />
-//       </div>
-//       <div className="pro-company">{props.txtPos}</div>
-//     </div>
-//   );
-// };
-
 class CardList extends Component {
   constructor(props) {
     super(props);
@@ -137,19 +125,16 @@ export default Sandbox;
 
 /*
 
+this.handleMenuHoverOn = this.handleMenuHoverOn.bind(this);
+this.handleMenuHoverOff = this.handleMenuHoverOff.bind(this);
+
+this.handlelinkHoverOn = this.handlelinkHoverOn.bind(this);
+this.handlelinkHoverOff = this.handlelinkHoverOff.bind(this);
 
 
 
-  renderCard(item, idx) {
-    return <polygon fill="white" ref={item.id} key={item.id} points={item.coords} />;
-  }
-
-  render() {
-    return (
-      <svg className="test-div" viewBox="0 0 1920 1080">
-        {data.map(this.renderCard)}
-      </svg>
-    );
-
-
+this.handleTextHoverOn = this.handleTextHoverOn.bind(this);
+this.handleTextHoverOff = this.handleTextHoverOff.bind(this);
+this.handlelinkHoverOn = this.handlelinkHoverOn.bind(this);
+    
 */

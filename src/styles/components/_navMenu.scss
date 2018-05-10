@@ -1,31 +1,9 @@
-// .nav-menu {
-//   opacity: 0;
-// }
 
-.colors {
-  color: #ebbd89;
-  color: #9b353a;
-  color: #86bb8f;
-  color: #5579cd;
-  color: #66aca3;
-  /*************SATURATION REFERENCE****************/
-  color: hsl(32, 71%, 73%);
-  color: hsl(357, 49%, 41%);
-  color: hsl(131, 28%, 63%);
-  color: hsl(222, 55%, 57%);
-  color: hsl(172, 30%, 54%);
-
-  color: hsl(32, 31%, 73%);
-  color: hsl(357, 9%, 41%);
-  color: hsl(131, 0%, 63%);
-  color: hsl(222, 15%, 57%);
-  color: hsl(172, 0%, 54%);
-}
-.nav-menu {
+.menu-frame {
   position: absolute;
   top: 0;
   left: 0;
-  animation: fadein 1s 2s forwards;
+  // animation: fadein 1s 2s forwards;
   border: 1px solid red;
 }
 
@@ -38,29 +16,15 @@
   }
 }
 
-// #btn-home {
-//   fill: hsl(32, 31%, 73%);
-// }
-// #btn-create {
-//   fill: hsl(357, 9%, 41%);
-// }
-// #btn-collect {
-//   fill: hsl(131, 0%, 63%);
-// }
-// #btn-code {
-//   fill: hsl(222, 15%, 57%);
-// }
-// #btn-connect {
-//   fill: hsl(172, 0%, 54%);
-// }
 .nav-dot {
   font-style: normal; //erase!
 }
 
-// This is the svg within a <div.menu-frame>
+// This is the SVG within a <div.menu-frame>
 #menu-desktop {
-  border: 1px solid orangered;
-  width: 12vw;
+  // opacity: .2;
+  // border: 1px solid orangered;
+  width: 15vw;
   height: 26vh;
   position: absolute;
   left: 75vw;
@@ -71,30 +35,21 @@
     font-size: 45px;
     font-weight: 300;
     cursor: pointer;
+    opacity: 0;
   }
 }
-
-// .menu-dot {
-//   animation: sat40 1s ease-in-out 0 forwards;
-// }
-
-// @keyframes sat40 {
-//   100% {
-//     opacity: 0;
-//   }
-// }
 
 .lo-sat {
   filter: url(#lo-sat);
 }
 
 
-.menu-txt:hover {  
-  animation: txtSpread 1s ease-in-out 0 forwards;
-}
+// .menu-txt:hover {  
+//   animation: txtSpread 1s ease-in-out 0 forwards;
+// }
 
-@keyframes txtSpread {
-  100% {
-    opacity: 0;
-  }
-}
+// @keyframes txtSpread {
+//   100% {
+//     opacity: 0;
+//   }
+// }
