@@ -7,16 +7,29 @@ import ReactDOM from 'react-dom';
  * a feeling of depth.
  */
 const PondBG = () => (
-  <svg id="pond-bg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-    <linearGradient id="pond-bg-grad" x1="1919.5" x2="-.5" y1="980" y2="980.0002" gradientUnits="userSpaceOnUse">
+  // preserveAspectRatio="xMidYMid meet"
+  // viewBox="0 0 1920 200" 
+  // #cfcfcf instead of offset stopColor 1?
+  <svg 
+  id="pond-bg" 
+  >
+    <linearGradient id="pond-bg-grad" x1="1920.5" x2=".5" y1="100" y2="100.0002" gradientUnits="userSpaceOnUse">
       <stop offset="0" stopColor="#fff" />
       <stop offset="1" stopColor="#a8a8a8" />
     </linearGradient>
-    <path fill="url(#pond-bg-grad)" d="M-.5 880h1920v200H-.5z" />
+    <path fill="url(#pond-bg-grad)" d="M.5 0h1920v200H.5z"/>
   </svg>
 );
+
 
 export default PondBG;
 
 /*
+viewBox="0 0 1920 200">
+  <linearGradient id="a" x1="1920.5" x2=".5" y1="100" y2="100.0002" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fff"/>
+    <stop offset="1" stop-color="#a8a8a8"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M.5 0h1920v200H.5z"/>
+</svg>
 */

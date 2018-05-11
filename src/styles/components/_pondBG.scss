@@ -1,10 +1,12 @@
-#pond-bg {
-  width: 102%;
-  margin-left: -2px; //left side has hairline emptiness
-
+#pond-bg { // SVG
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 101vw;
+  bottom: 0;
+}
+
+
+@media screen and (max-width : 768px) {    // tablet query
+  #pond-bg { // SVG
+    // height: 100%;
+  }   
 }

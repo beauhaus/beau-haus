@@ -4,3 +4,9 @@
     margin-left: -2px; //left side has hairline emptiness
 }
 
+
+@media screen and (max-width : 768px) {    // tablet query
+    #pond { // SVG
+      // height: 100%;
+    }   
+  }

@@ -19,11 +19,12 @@ class HomeContainer extends React.Component {
   
   render() {
     // <Preview />
+    // Do we need PondBG without the <Banner/> ??
     return (
       <div className="home-container">
       <PondBG />
-      {/* 
       <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
+      {/* 
         <MediumTree />
         <TallTree />
         <ShortTree />
