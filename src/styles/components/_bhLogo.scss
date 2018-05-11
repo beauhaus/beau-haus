@@ -1,12 +1,9 @@
-#bh-logo {
-    margin-top: 1vh;
-    margin-left: 10vw;
-    width: 100px;
-    height: 75px;
+#bh-logo { //svg    
     position: absolute;
-    top: 0;
-    left: 0;
-    // border: 1px solid red;
+    width: 80px;
+    height: 65px;
+    top: 1vh;
+    left: 20vh;
     
     & > #logo-h {
         fill: #4E4D4D;
@@ -20,4 +17,16 @@
 }
 #logo-dot {
     filter: url(#sat-adjust);
+}
+
+@media screen and (max-width : 768px) {    // tablet query
+    #bh-logo { //SVG
+    position: absolute;
+    width: 14vw;
+    height: 12vh;
+    top: 2vh;
+    left: 50%;
+    margin-left: -7vw;
+    // border: 2px solid fuchsia;
+    }
 }

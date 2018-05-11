@@ -22,11 +22,14 @@ class HomeContainer extends React.Component {
     return (
       <div className="home-container">
       <PondBG />
+      {/* 
       <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
         <MediumTree />
         <TallTree />
         <ShortTree />
         <SocIcons />
+        
+            */}
       </div>
     );
   }

@@ -39,7 +39,6 @@ class AppContainer extends Component {
       hover: false
     };
     this.menuClickHandler = this.menuClickHandler.bind(this);
-
   }
   componentDidMount(props) {
     this.setState(() => {
@@ -52,7 +51,6 @@ class AppContainer extends Component {
       pageThemeColor: fill
     });
   }
-  
 
   // onMouseEnter={()=>this.handleCardHoverOn(item.name)}
 
@@ -60,26 +58,29 @@ class AppContainer extends Component {
   // <Banner dot={this.state.pageThemeColor} />
   render() {
     return (
-<BrowserRouter>
-  <div className="app-container">
-    <HomeContainer />
+      <BrowserRouter>
+        <div className="app-container">
+          
+      <HomeContainer />
+      
     <NavMenu
     load={this.state.load}
     page={this.state.page}
     select={this.menuClickHandler}
-     />
-    <Background />
-    <Switch>
-      <Route exact path="/" render={() => <Home name="home" />} />
-      <Route path="/create" render={() => <Create name="create" />} />
-      <Route path="/collect" render={() => <Collect name="collect" />} />
-      <Route path="/code" render={() => <Code name="code" />} />
-      <Route path="/connect" render={() => <Connect name="connect" />} />
-      <Route component={FourOhFour} />
-    </Switch>
-    <BHLogo dot={this.state.pageThemeColor} />
-  </div>
-</BrowserRouter>
+     /> 
+    
+          <Background />
+          <BHLogo dot={this.state.pageThemeColor} />
+          <Switch>
+            <Route exact path="/" render={() => <Home name="home" />} />
+            <Route path="/create" render={() => <Create name="create" />} />
+            <Route path="/collect" render={() => <Collect name="collect" />} />
+            <Route path="/code" render={() => <Code name="code" />} />
+            <Route path="/connect" render={() => <Connect name="connect" />} />
+            <Route component={FourOhFour} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
@@ -92,7 +93,6 @@ class AppContainer extends Component {
 
 
     */
-
 
 export default AppContainer;
 /*
