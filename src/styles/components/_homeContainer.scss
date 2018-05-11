@@ -1,12 +1,13 @@
-// $offset-match
-// $bg-right
-// $water-foreground
-.home-container {
+/**HomeContainer is a div containing SVG composite components**/
+.home-container { //Container DIV for composite components
     position: absolute;
     overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100vw;
     height: 100vh;
-    position: relative;
     svg {
         position: absolute;
         top: 0;
@@ -22,7 +23,7 @@
 
 // Insert into new component Preview
 #brdr1 {
-    border: 1px solid red;
+    // border: 1px solid red;
 }
 
 #reflection {

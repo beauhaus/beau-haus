@@ -1,4 +1,10 @@
 #pond-bg {
   width: 102%;
   margin-left: -2px; //left side has hairline emptiness
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }

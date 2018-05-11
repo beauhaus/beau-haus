@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 /**Top <path> of the JSX is the tree-trunk */
-class MidTree extends React.Component {
+class TallTree extends React.Component {
   state = {
     options: [],
     selectedOption: undefined
@@ -69,4 +69,4 @@ class MidTree extends React.Component {
   }
 }
 
-export default MidTree;
+export default TallTree;

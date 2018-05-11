@@ -8,8 +8,7 @@
       "r": "27.5",
       "fill": "#FFCC91",
       "txtPos": "translate(107.521 65)",
-      "hoverPos": "-240",
-      "btnRestPos": "translate(510 23)"
+      "hoverPos": "-240"
     },
     {
       "id": 20,
@@ -19,8 +18,7 @@
       "r": "27.5",
       "fill": "#9b353a",
       "txtPos": "translate(127.6519 165)",
-      "hoverPos": "-210",
-      "btnRestPos": "translate(477 23)"
+      "hoverPos": "-210"
     },
     {
       "id": 30,
@@ -30,8 +28,7 @@
       "r": "27.5",
       "fill": "#85bb8f",
       "txtPos": "translate(156.7915 266)",
-      "hoverPos": "-170",
-      "btnRestPos": "translate(443 23)"
+      "hoverPos": "-170"
     },
     {
       "id": 40,
@@ -41,8 +38,7 @@
       "r": "27.5",
       "fill": "#567ace",
       "txtPos": "translate(124.3608 365)",
-      "hoverPos": "-240",
-      "btnRestPos": "translate(510 23)"
+      "hoverPos": "-240"
     },
     {
       "id": 50,
@@ -52,8 +48,7 @@
       "r": "27.5",
       "fill": "#9c78a8",
       "txtPos": "translate(90.3916 465)",
-      "hoverPos": "-210",
-      "btnRestPos": "translate(477 23)"
+      "hoverPos": "-210"
     }
   ]
 }

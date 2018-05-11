@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class FrontTree extends React.Component {
+class ShortTree extends React.Component {
   state = {
     options: [],
     selectedOption: undefined
@@ -21,7 +21,7 @@ class FrontTree extends React.Component {
   }
 }
 
-export default FrontTree;
+export default ShortTree;
 
 /*
 

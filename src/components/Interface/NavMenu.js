@@ -128,7 +128,6 @@ class NavMenu extends React.Component {
         </g>
       </Link>
     );
-    // transform={btn.btnRestPos}
   }
   render() {
     const { btns } = BtnDB;
