@@ -9,15 +9,14 @@ import ReactDOM from 'react-dom';
 const PondBG = () => (
   // preserveAspectRatio="xMidYMid meet"
   // viewBox="0 0 1920 200" 
-  // #cfcfcf instead of offset stopColor 1?
   <svg 
   id="pond-bg" 
   >
-    <linearGradient id="pond-bg-grad" x1="1920.5" x2=".5" y1="100" y2="100.0002" gradientUnits="userSpaceOnUse">
+    <linearGradient id="pond-bg-grad" x1="1920" x2=".5" y1="100" y2="100" gradientUnits="userSpaceOnUse">
       <stop offset="0" stopColor="#fff" />
       <stop offset="1" stopColor="#a8a8a8" />
     </linearGradient>
-    <path fill="url(#pond-bg-grad)" d="M.5 0h1920v200H.5z"/>
+    <path fill="url(#pond-bg-grad)" d="M0 0h1920v200H0z"/>
   </svg>
 );
 

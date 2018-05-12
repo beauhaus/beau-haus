@@ -1,12 +1,15 @@
-#pond-bg { // SVG
+#pond-bg {
+  // SVG
   position: absolute;
-  width: 101vw;
+  width: 100vw;
   bottom: 0;
+  left: 0;
 }
 
-
-@media screen and (max-width : 768px) {    // tablet query
-  #pond-bg { // SVG
-    // height: 100%;
-  }   
+@media screen and (max-width: 768px) {
+  // tablet query
+  #pond-bg {
+    // SVG
+    width: 100vw; //placeholder
+  }
 }

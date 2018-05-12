@@ -14,9 +14,9 @@ class HomeContainer extends React.Component {
     options: [],
     skyPondMatch: '#a8a8a8',
     skyRight: '#fff',
-    pondForeground: '#cfcfcf'
+    pondForeground: 'red'
   };
-  
+  // pondForeground: '#cfcfcf'
   render() {
     // <Preview />
     // Do we need PondBG without the <Banner/> ??
