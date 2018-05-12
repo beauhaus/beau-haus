@@ -246,8 +246,8 @@ class Pond extends React.Component {
         <path id="pond-base" fill="url(#pond-base-grad)" d="M0 0h1920v200H0z" opacity="1" />
         <path fill="url(#swells-gradient)" d="M0 0h1920v200H0z" opacity=".4"/>
         <WhiteCaps />
-        {/*
         <Shore />
+        {/*
         <MuteButton />
   */}
       </svg>
