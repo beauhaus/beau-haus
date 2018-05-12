@@ -10,7 +10,6 @@ import Preview from './Preview';
 import SocIcons from './SocIcons';
 import MuteButton from './LandingTree/MuteButton';
 
-
 class HomeContainer extends React.Component {
   state = {
     options: [],
@@ -24,16 +23,13 @@ class HomeContainer extends React.Component {
     // Do we need PondBG without the <Banner/> ??
     return (
       <div className="home-container">
-      <PondBG />
-      <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
-      <MediumTree />
-      <TallTree />
-      {/* 
+        <PondBG />
+        <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
+        <MediumTree />
+        <TallTree />
         <ShortTree />
         <SocIcons />
-        
-            */}
-            <MuteButton/>
+        <MuteButton />
       </div>
     );
   }
