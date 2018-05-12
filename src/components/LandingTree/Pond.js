@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import WhiteCaps from './WhiteCaps';
-import MuteButton from './MuteButton';
 import Shore from './Shore';
 // import Banner from '../Banner';
 /***ShorePond will be vanishing after page transition from Landing */
@@ -111,7 +110,8 @@ class Pond extends React.Component {
           yoyo: true
         },
         '-=7.5'
-      ).fromTo(
+      )
+      .fromTo(
         '#swell-stop6',
         9,
         {
@@ -128,7 +128,8 @@ class Pond extends React.Component {
           yoyo: true
         },
         '-=0'
-      ).fromTo(
+      )
+      .fromTo(
         '#swell-stop7',
         9,
         {
@@ -145,7 +146,8 @@ class Pond extends React.Component {
           yoyo: true
         },
         '-=3.5'
-      ).fromTo(
+      )
+      .fromTo(
         '#swell-stop8',
         9,
         {
@@ -162,7 +164,8 @@ class Pond extends React.Component {
           yoyo: true
         },
         '-=2.5'
-      ).fromTo(
+      )
+      .fromTo(
         '#swell-stop9',
         9,
         {
@@ -179,7 +182,8 @@ class Pond extends React.Component {
           yoyo: true
         },
         '-=0.5'
-      ).fromTo(
+      )
+      .fromTo(
         '#swell-stop10',
         9,
         {
@@ -196,7 +200,8 @@ class Pond extends React.Component {
           yoyo: true
         },
         '-=0.5'
-      ).fromTo(
+      )
+      .fromTo(
         '#swell-stop11',
         9,
         {
@@ -213,7 +218,7 @@ class Pond extends React.Component {
           yoyo: true
         },
         '-=0.5'
-      )
+      );
   }
 
   render() {
@@ -222,33 +227,39 @@ class Pond extends React.Component {
     // viewBox="0 0 1920 200"
     return (
       <svg id="pond">
-        <defs >
-        <linearGradient id="pond-base-grad" x1="960" x2="960" y1="1080" y2="876" gradientUnits="userSpaceOnUse">
-          <stop id="pond-stop1" offset="0" stopColor={this.props.foregroundColor} stopOpacity="1" />
-          <stop id="pond-stop2" offset="1" stopColor={this.props.offset} stopOpacity="0" />
-        </linearGradient>
-        
-        <linearGradient id="swells-gradient" x1="960.9453" x2="959.0538" y1="208.3691" y2="-8.3697" gradientUnits="userSpaceOnUse">
+        <defs>
+          <linearGradient id="pond-base-grad" x1="960" x2="960" y1="1080" y2="876" gradientUnits="userSpaceOnUse">
+            <stop id="pond-stop1" offset="0" stopColor={this.props.foregroundColor} stopOpacity="1" />
+            <stop id="pond-stop2" offset="1" stopColor={this.props.offset} stopOpacity="0" />
+          </linearGradient>
 
-        <stop id="swell-stop11" offset="0" stopColor="var(--darkMist)" />
-        <stop id="swell-stop10" offset="0.165" stopColor="var(--darkMist)" />
-        <stop id="swell-stop9" offset="0.296" stopColor="var(--darkMist)" />
-        <stop id="swell-stop8" offset="0.436" stopColor="var(--darkMist)" />
-        <stop id="swell-stop7" offset="0.556" stopColor="var(--darkMist)" />
-        <stop id="swell-stop6" offset="0.664" stopColor="var(--darkMist)" />
-        <stop id="swell-stop5" offset="0.746" stopColor="var(--darkMist)" />
-        <stop id="swell-stop4" offset="0.824" stopColor="var(--darkMist)" />
-        <stop id="swell-stop3" offset="0.888" stopColor="var(--darkmist)" />
-        <stop id="swell-stop2" offset="0.947" stopColor="var(--darkmist)" />
-        <stop id="swell-stop1" offset="1" stopColor="var(--darkMist)" />
-        </linearGradient>
+          <linearGradient
+            id="swells-gradient"
+            x1="960.9453"
+            x2="959.0538"
+            y1="208.3691"
+            y2="-8.3697"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop id="swell-stop11" offset="0" stopColor="var(--darkMist)" />
+            <stop id="swell-stop10" offset="0.165" stopColor="var(--darkMist)" />
+            <stop id="swell-stop9" offset="0.296" stopColor="var(--darkMist)" />
+            <stop id="swell-stop8" offset="0.436" stopColor="var(--darkMist)" />
+            <stop id="swell-stop7" offset="0.556" stopColor="var(--darkMist)" />
+            <stop id="swell-stop6" offset="0.664" stopColor="var(--darkMist)" />
+            <stop id="swell-stop5" offset="0.746" stopColor="var(--darkMist)" />
+            <stop id="swell-stop4" offset="0.824" stopColor="var(--darkMist)" />
+            <stop id="swell-stop3" offset="0.888" stopColor="var(--darkmist)" />
+            <stop id="swell-stop2" offset="0.947" stopColor="var(--darkmist)" />
+            <stop id="swell-stop1" offset="1" stopColor="var(--darkMist)" />
+          </linearGradient>
         </defs>
         <path id="pond-base" fill="url(#pond-base-grad)" d="M0 0h1920v200H0z" opacity="1" />
-        <path fill="url(#swells-gradient)" d="M0 0h1920v200H0z" opacity=".4"/>
+        <path fill="url(#swells-gradient)" d="M0 0h1920v200H0z" opacity=".3" />
         <WhiteCaps />
         <Shore />
         {/*
-        <MuteButton />
+          <MuteButton />
   */}
       </svg>
     );
@@ -270,7 +281,6 @@ export default Pond;
 .55 * 1.12359550562 = 0.61797752809
 .89 * 1.12359550562 = 1
 */
-
 
 /*
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 200">

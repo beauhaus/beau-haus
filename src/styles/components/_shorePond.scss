@@ -13,11 +13,10 @@
   stop-opacity: 0;
 }
 
-
-#pond-svg {
-    position: absolute;
-      height: 100%;
-      width: 100%;
-      bottom: 0;
-    left: 0;
-  }
+#shore-svg {
+  position: absolute;
+  width: 100%;
+  bottom: 20vh;
+  left: 200px;
+  // border: 1px solid navy;
+}

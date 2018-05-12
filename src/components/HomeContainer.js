@@ -8,6 +8,8 @@ import ShortTree from './LandingTree/ShortTree';
 import PondBG from './LandingTree/PondBG';
 import Preview from './Preview';
 import SocIcons from './SocIcons';
+import MuteButton from './LandingTree/MuteButton';
+
 
 class HomeContainer extends React.Component {
   state = {
@@ -31,6 +33,7 @@ class HomeContainer extends React.Component {
         <SocIcons />
         
             */}
+            <MuteButton/>
       </div>
     );
   }
