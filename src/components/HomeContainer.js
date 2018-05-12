@@ -26,9 +26,9 @@ class HomeContainer extends React.Component {
       <div className="home-container">
       <PondBG />
       <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
+      <MediumTree />
+      <TallTree />
       {/* 
-        <MediumTree />
-        <TallTree />
         <ShortTree />
         <SocIcons />
         
