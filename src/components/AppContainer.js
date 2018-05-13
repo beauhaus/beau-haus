@@ -7,15 +7,15 @@ import {
   Link, //move to Nav
   Switch
 } from 'react-router-dom';
+import theme from './themes.json';
 
 import Background from './Background';
-import HomeContainer from './HomeContainer';
+import LandingScene from './LandingScene';
 
 // import Banner from './Banner';
 import BHLogo from './BHLogo';
 
 import Home from './pages/Home';
-
 import Create from './pages/Create';
 import Collect from './pages/Collect';
 import Code from './pages/Code';
@@ -57,22 +57,18 @@ class AppContainer extends Component {
   //onMouseEnter for menu HERE???? or in the component?
   // <Banner dot={this.state.pageThemeColor} />
   render() {
+    const {home} = theme;
     return (
       <BrowserRouter>
         <div className="app-container">
-          
-      <HomeContainer />
-      
-    <NavMenu
-    load={this.state.load}
-    page={this.state.page}
-    select={this.menuClickHandler}
-     /> 
-    
+          <LandingScene theme={home}/>
+
+          <NavMenu load={this.state.load} page={this.state.page} select={this.menuClickHandler} />
+
           <Background />
           <BHLogo dot={this.state.pageThemeColor} />
           <Switch>
-            <Route exact path="/" render={() => <Home name="home" />} />
+            <Route exact path="/" render={() => <Home theme={theme.home} name="home" />} />
             <Route path="/create" render={() => <Create name="create" />} />
             <Route path="/collect" render={() => <Collect name="collect" />} />
             <Route path="/code" render={() => <Code name="code" />} />

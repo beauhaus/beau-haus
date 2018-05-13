@@ -118,9 +118,9 @@ class NavMenu extends React.Component {
         onClick={() => this.props.select(btn.name, btn.fill)}
         to={`/${btn.name !== 'home' ? btn.name : ''}`}
         ref={btn.id}
+        theme={btn.theme}
       >
         <g className={btn.name === this.props.page ? '' : 'lo-sat'}>
-          //{' '}
           <text ref={`text-${btn.id}`} className="menu-txt" transform={btn.txtPos}>
             {btn.name}
           </text>
@@ -129,6 +129,7 @@ class NavMenu extends React.Component {
       </Link>
     );
   }
+
   render() {
     const { btns } = BtnDB;
     const menu = { id: 'menu-1' };

@@ -10,30 +10,23 @@ import Preview from './Preview';
 import SocIcons from './SocIcons';
 import MuteButton from './LandingTree/MuteButton';
 
-class HomeContainer extends React.Component {
-  state = {
-    options: [],
-    skyPondMatch: '#a8a8a8',
-    skyRight: '#fff',
-    pondForeground: 'red'
-  };
-  // pondForeground: '#cfcfcf'
-  render() {
+const LandingScene =(props) => {
+  // console.table(props.theme)  
+  const {tall, medium, short} = props.theme.tree;
     // <Preview />
     // Do we need PondBG without the <Banner/> ??
+    
     return (
       <div className="home-container">
         <PondBG />
-        <Pond foregroundColor={this.state.pondForeground} offset={this.state.skyPondMatch} />
-        <MediumTree />
-        <TallTree />
-        <ShortTree />
+        <Pond theme={props.theme} />
+        <MediumTree tree={medium}/>
+        <TallTree tree={tall}/>
+        <ShortTree tree={short}/>
         <SocIcons />
         <MuteButton />
       </div>
     );
   }
-}
-// <Menu />
 
-export default HomeContainer;
+export default LandingScene;

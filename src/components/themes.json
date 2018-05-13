@@ -1,0 +1,152 @@
+{
+  "home": {
+    "id": 10,
+    "name": "home",
+    "fill": "#FFCC91",
+    "pondBase": {
+      "left": "#bcbcbc",
+      "right": "#fff"
+    },
+    "sky": {
+      "left": "#bcbcbc",
+      "right": "#a3a3a3"
+    },
+    "tree": {
+      "tall": {
+        "branches": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      },
+      "medium": {
+        "branches": "#9b9b9b",
+        "leaves": "#a5a5a5",
+        "opacity": "1"
+      },
+      "short": {
+        "branches": "#252525",
+        "leaves": "#363636",
+        "opacity": "1"
+      }
+    }
+  },
+  "create": {
+    "id": 20,
+    "name": "create",
+    "fill": "#9b353a",
+    "pondBase": {
+      "left": "#bcbcbc",
+      "right": "#a3a3a3"
+    },
+    "sky": {
+      "left": "#bcbcbc",
+      "right": "#a3a3a3"
+    },
+    "tree": {
+      "tall": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      },
+      "medium": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      },
+      "short": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      }
+    }
+  },
+  "collect": {
+    "id": 30,
+    "name": "collect",
+    "fill": "#85bb8f",
+    "pondBase": {
+      "left": "#bcbcbc",
+      "right": "#a3a3a3"
+    },
+    "sky": {
+      "left": "#bcbcbc",
+      "right": "#a3a3a3"
+    },
+    "tree": {
+      "tall": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      },
+      "medium": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      },
+      "short": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      }
+    }
+  },
+  "code": {
+    "id": 40,
+    "name": "code",
+    "fill": "#567ace",
+    "pondBase": {
+      "left": "#bcbcbc",
+      "right": "#a3a3a3"
+    },
+    "sky": {
+      "left": "#bcbcbc",
+      "right": "#a3a3a3"
+    },
+    "tree": {
+      "tall": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      },
+      "medium": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      },
+      "short": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      }
+    }
+  },
+  "connect": {
+    "id": 50,
+    "name": "connect",
+    "fill": "#9c78a8",
+    "pondBase": {
+      "left": "#bcbcbc",
+      "right": "#a3a3a3"
+    },
+    "sky": {
+      "left": "#bcbcbc",
+      "right": "#a3a3a3"
+    },
+    "tree": {
+      "tall": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      },
+      "medium": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      },
+      "short": {
+        "bark": "grey",
+        "leaves": "darkgrey",
+        "opacity": "1"
+      }
+    }
+  }
+}
