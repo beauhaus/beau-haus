@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 
 /**Top <path> of the JSX is the tree-trunk */
 
+/**Simple functional stateless comp
+ * taking in colors for branches and leaves & opacity
+ */
 const TallTree = props => {
   const { branches, leaves, opacity } = props.tree;
   console.table(props.tree);

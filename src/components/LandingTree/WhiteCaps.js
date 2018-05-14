@@ -53,7 +53,7 @@ class WhiteCaps extends React.Component {
         ease: Power1.easeInOut
       }
     )
-  }); //forEach
+  }); 
   }
 
   renderPoly(item, idx) {
