@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 const ShortTree = props => {
   // viewBox="0 0 800 1040">
-  console.table(props);
   const { branches, leaves, opacity } = props.tree;
   return (
     <svg id="short-tree" viewBox="0 0 800 1040" opacity={opacity}>

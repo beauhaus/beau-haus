@@ -13,8 +13,8 @@
     },
     "tree": {
       "tall": {
-        "branches": "grey",
-        "leaves": "darkgrey",
+        "branches": "#707070",
+        "leaves": "#999999",
         "opacity": "1"
       },
       "medium": {

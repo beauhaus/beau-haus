@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 /**Top <path> of the JSX is the tree-trunk */
-// class MediumTree extends React.Component {
 const MediumTree = (props) =>{
   const {leaves, opacity, branches} = props.tree;
     // viewBox="0 0 800 1040"
