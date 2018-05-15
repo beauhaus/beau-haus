@@ -7,16 +7,16 @@
 #soc-icon-svg {
   position: absolute;
   left: 5vw;
-  bottom: 0;
-  width: 500px;
-  height: 52px;
+  bottom: .5vh;
+  width: 475px;
+  height: 50px;
 }
 .iconText { 
-  opacity: .2;
+  display: none;
 }
 
 .iconCover {
-  // opacity: 0.2;
+  opacity: 0.8;
 }
 /* use sibling selector? */
 .iconCover:hover {

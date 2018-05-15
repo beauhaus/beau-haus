@@ -34,7 +34,7 @@ class SocIcons extends React.Component {
 
   render() {
     return (
-      <svg id="soc-icon-svg" className="soc-icon-svg" viewBox="0 0 530 60">
+      <svg id="soc-icon-svg" className="soc-icon-svg" viewBox="0 0 475 50">
         {this.icons.map((item, idx) => {
           return item.gradId && this.renderGrad(idx);
         })}
