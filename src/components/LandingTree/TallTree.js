@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
  */
 const TallTree = props => {
   const { branches, leaves, opacity } = props.tree;
-  console.table(props.tree);
+  // console.table(props.tree);
   return (
     <svg id="tall-tree" viewBox="0 0 800 1040" opacity={opacity}>
       <g fill={branches}>

@@ -1,32 +1,47 @@
-.soc-icon-container {
-  opacity: 1;
-  position: absolute;
-  stroke: teal;
-  stroke-width: 1px;
-}
+// .soc-icon-container {
+//   opacity: 1;
+//   position: absolute;
+//   stroke: teal;
+//   stroke-width: 1px;
+// }
 #soc-icon-svg {
   position: absolute;
-  right: -4vw;
-  bottom: -5vh;
-  width: 390px;
-  height: 200px;
+  left: 5vw;
+  bottom: 0;
+  width: 500px;
+  height: 52px;
 }
-.soc-icon-svg > a > rect {
-  opacity: 1;
-  width: 60px;
-  height: 40px;
-  filter: url(#lo-sat);
-  &:hover {
-    filter: none;
-    fill: transparent;
-    stroke-width: 2px;
-    stroke: #3f1b1b;
-    cursor: pointer;
-  }
+.iconText { 
+  opacity: .2;
 }
 
-.icon-text-group {
-  // transform: translate(-2px, -3px);
-  filter: url(#sat-adjust);
-  fill: #3f1b1b;
+.iconCover {
+  // opacity: 0.2;
 }
+/* use sibling selector? */
+.iconCover:hover {
+  opacity: 0;
+}
+
+// .iconText:hover {
+//   opacity: 0;
+// }
+// .soc-icon-svg > a > rect {
+//   opacity: 1;
+//   width: 60px;
+//   height: 40px;
+//   filter: url(#lo-sat);
+//   &:hover {
+//     filter: none;
+//     fill: transparent;
+//     stroke-width: 2px;
+//     stroke: #3f1b1b;
+//     cursor: pointer;
+//   }
+// }
+
+// .icon-text-group {
+//   // transform: translate(-2px, -3px);
+//   filter: url(#sat-adjust);
+//   fill: #3f1b1b;
+// }
