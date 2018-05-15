@@ -15,8 +15,7 @@ class SocIcons extends React.Component {
   renderGrad = i => {
     var gradientedIcon = this.icons[i];
     return (
-      <linearGradient 
-      
+      <linearGradient
         key={`${gradientedIcon.id}+121`}
         id={gradientedIcon.gradId}
         x1={gradientedIcon.x1}
@@ -35,16 +34,34 @@ class SocIcons extends React.Component {
   render() {
     return (
       <svg id="soc-icon-svg" className="soc-icon-svg" viewBox="0 0 475 50">
+        <filter id="inset-shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <feComponentTransfer in="SourceAlpha">
+            <feFuncA type="table" tableValues="1 0" />
+          </feComponentTransfer>
+          <feGaussianBlur stdDeviation="5" />
+          <feOffset dx="12" dy="12" result="offsetblur" />
+          <feFlood flood-color="rgb(20, 0, 0)" result="color"/>
+          <feComposite in2="offsetblur" operator="in" />
+          <feComposite in2="SourceAlpha" operator="in" />
+          <feMerge>
+            <feMergeNode in="SourceGraphic" />
+            <feMergeNode />
+          </feMerge>
+        </filter>
         {this.icons.map((item, idx) => {
           return item.gradId && this.renderGrad(idx);
         })}
 
         {this.icons.map((item, idx) => {
-          return ( item.paths.map((path, i)=> {
-            return <path key={`iconPath-${i}`} className={`${path.class}`} fill={path.fill} d={path.pathData} />
-          })
-
-          );
+          return item.paths.map((path, i) => (
+            <path
+              key={`iconPath-${i}`}
+              className={`${path.class}`}
+              fill={path.fill}
+              filter={path.filter}
+              d={path.pathData}
+            />
+          ));
         })}
       </svg>
     );
