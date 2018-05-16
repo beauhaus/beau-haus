@@ -7,7 +7,7 @@
 #soc-icon-svg {
   position: absolute;
   left: 10vw;
-  bottom: 10px;
+  bottom: 5px;
   width: 20%;
   
   // border: 1px solid red;
@@ -18,12 +18,13 @@
 
 .iconCover {
   stroke-width: 1px;
-  stroke: #000;
+  stroke: #cca293;
   opacity: 1;
 }
 /* use sibling selector? */
 .iconCover:hover {
   opacity: 0;
+  cursor: pointer;
 }
 .gmailBG, .instaBG, .gitBG, .linkedInBG, .codepenBG, .twitterBG {
   stroke-width: 1px;
@@ -32,7 +33,8 @@
 
 
 .test {
-color: #5b5a5a;
+color: #656565;
+color: #1c0000;
 }
 // .iconText:hover {
 //   opacity: 0;

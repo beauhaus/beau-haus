@@ -3,6 +3,7 @@
     {
       "id": 100,
       "name": "instaGram",
+      "href":"https://www.instagram.com/_beauhaus/",
       "grpClass": "instaGroup",
 
       "gradId": "instaGrad",
@@ -62,7 +63,7 @@
         },
         {
           "class": "iconCover instaGroup",
-          "fill": "#5b5b5b",
+          "fill": "#646464",
           "pathData": 
           "M424.5 0h50v50h-50z"
         },
@@ -77,7 +78,9 @@
     {
       "id": 200,
       "name": "gmail",
+      "href":"mailto:beau.html@gmail.com",
       "grpClass": "gmailGroup",
+      "href":"",
 
       "paths": [
         {
@@ -112,7 +115,7 @@
         },
         {
           "class": "iconCover gmailGroup",
-          "fill": "#5b5b5b",
+          "fill": "#646464",
           "pathData": "M339.5 0h50v50h-50z"
         },
         {
@@ -126,6 +129,7 @@
     {
       "id": 300,
       "name": "linkedIn",
+      "href":"https://www.linkedin.com/in/beau-jackson/",
       "grpClass": "linkedInGroup",
 
       "paths": [
@@ -144,7 +148,7 @@
         },
         {
           "class": "iconCover linkedInGroup",
-          "fill": "#5b5b5b",
+          "fill": "#646464",
           "pathData": 
           "M254.5 0h50v50h-50z"
         },
@@ -159,6 +163,7 @@
     {
       "id": 400,
       "name": "github",
+      "href":"https://github.com/Beauhaus",
       "grpClass": "gitGroup",
 
       "paths": [
@@ -291,7 +296,7 @@
 
         {
           "class": "iconCover gitGroup",
-          "fill": "#5b5b5b",
+          "fill": "#646464",
           "pathData": 
           "M169.5 0h50v50h-50z"
         },
@@ -306,6 +311,7 @@
     {
       "id": 500,
       "name": "codepen",
+      "href":"https://codepen.io/beauhaus/",
       "grpClass": "codepenGroup",
 
       "paths": [
@@ -324,7 +330,7 @@
         },
         {
           "class": "iconCover codepenGroup",
-          "fill": "#5b5b5b",
+          "fill": "#646464",
           "pathData": 
           "M84.5 0h50v50h-50z"
         },
@@ -339,6 +345,7 @@
     {
       "id": 600,
       "name": "twitter",
+      "href":"https://twitter.com/_beauhaus",
       "grpClass": "twitterGroup",
 
       "paths": [
@@ -357,7 +364,7 @@
         },
         {
           "class": "iconCover twitterGroup",
-          "fill": "#5b5b5b",
+          "fill": "#646464",
           "pathData": 
           "M.5 0h50v50H.5z"
         },

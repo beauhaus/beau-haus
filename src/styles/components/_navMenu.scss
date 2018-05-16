@@ -15,12 +15,14 @@
     position: absolute;
     left: 75vw;
     top: 2vh;
+    & a {
+      cursor: pointer;
+    }
     
     & text {
       font-family: 'Lato', Tahoma, sans-serif;
       font-size: 45px;
       font-weight: 300;
-      cursor: pointer;
       opacity: 0;
     }
     // border: 1px solid orangered;

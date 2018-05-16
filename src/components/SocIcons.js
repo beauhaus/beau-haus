@@ -10,6 +10,7 @@ class SocIcons extends React.Component {
   constructor(props) {
     super(props);
     this.renderGrad = this.renderGrad.bind(this);
+    this.renderPaths = this.renderPaths.bind(this);
     this.icons = SocIconDB.icons;
   }
   renderGrad = i => {
@@ -30,17 +31,36 @@ class SocIcons extends React.Component {
       </linearGradient>
     );
   };
+  renderPaths = index => {
+    var iconItem = this.icons[index];
+    return (
+      <a key={`link-${iconItem.id}`}
+       href={iconItem.href}
+       target="_blank"
+      >
+      {iconItem.paths.map((path, idx)=>(
+        <path
+              key={`iconPath-${idx}`}
+              className={`${path.class}`}
+              fill={path.fill}
+              filter={path.filter}
+              d={path.pathData}
+            />
+      ))}
+      </a>
+    )
+  }
 
   render() {
     return (
-      <svg id="soc-icon-svg" className="soc-icon-svg" viewBox="0 0 475 50">
-        <filter id="inset-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <svg id="soc-icon-svg" className="soc-icon-svg" viewBox="0 -2.5 475 55">
+        <filter id="inset-shadow" x="-100%" y="-100%" width="200%" height="200%">
           <feComponentTransfer in="SourceAlpha">
             <feFuncA type="table" tableValues="1 0" />
           </feComponentTransfer>
           <feGaussianBlur stdDeviation="5" />
           <feOffset dx="12" dy="12" result="offsetblur" />
-          <feFlood flood-color="rgb(20, 0, 0)" result="color"/>
+          <feFlood floodColor="#1c0000" result="color" />
           <feComposite in2="offsetblur" operator="in" />
           <feComposite in2="SourceAlpha" operator="in" />
           <feMerge>
@@ -52,17 +72,9 @@ class SocIcons extends React.Component {
           return item.gradId && this.renderGrad(idx);
         })}
 
-        {this.icons.map((item, idx) => {
-          return item.paths.map((path, i) => (
-            <path
-              key={`iconPath-${i}`}
-              className={`${path.class}`}
-              fill={path.fill}
-              filter={path.filter}
-              d={path.pathData}
-            />
-          ));
-        })}
+        {this.icons.map((item, idx) => (
+          this.renderPaths(idx)
+        ))}
       </svg>
     );
   }
@@ -71,5 +83,22 @@ class SocIcons extends React.Component {
 export default SocIcons;
 
 /*
+item.paths.map((path, i) => (
+            <path
+              key={`iconPath-${i}`}
+              className={`${path.class}`}
+              fill={path.fill}
+              filter={path.filter}
+              d={path.pathData}
+            />
+          ));
+
+
+
+{item.href && console.log(
+          <a href={item.href}>
+
+          )}
+
 
 */
