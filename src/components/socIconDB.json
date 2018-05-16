@@ -80,8 +80,6 @@
       "name": "gmail",
       "href":"mailto:beau.html@gmail.com",
       "grpClass": "gmailGroup",
-      "href":"",
-
       "paths": [
         {
           "class": "gmailBG gmailGroup",
