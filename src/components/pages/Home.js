@@ -15,7 +15,7 @@ class Home extends React.Component {
         
           <h1>Rome wasn't built in a day...<br/>
           Neither was this site.</h1>
-          <p>Your paitence is appreciated.</p>
+          <p>Your patience is appreciated.</p>
         
       </div>
     );
