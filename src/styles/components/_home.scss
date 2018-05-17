@@ -1,5 +1,5 @@
-.page-home h1 {
-  color: #ebbd89;
+.page-home h1, {
+  // color: red;
   // z-index: 20;
   position: absolute;
   top: 0;
@@ -7,13 +7,28 @@
   width: 400px !important;
   height: 30px !important;
   margin-left: 30vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: lighter;
 }
 p {
-  margin-left: 30vw;
+position: absolute;
+left: 30vw;
+top: 60vh;  
+font-size: 40px;
   color: dimgray;
 }
 .page-home {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#temp-img {
+  position: absolute;
+  top: 20vh;
+  left: 34vw;
+  border: 2px solid skyblue;
+  box-shadow: 4px 4px 10px 0px black;
+  width: 30vw;
+  height: 25vh;
 }
