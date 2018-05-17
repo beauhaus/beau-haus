@@ -1,34 +1,31 @@
-.page-home h1, {
+.page-home {
   // color: red;
   // z-index: 20;
-  position: absolute;
+  position: relative;
   top: 0;
-  font-size: 3em;
-  width: 400px !important;
-  height: 30px !important;
+  font-size: 2em;
+  width: 50vh;
+
+  height: 70vh;
   margin-left: 30vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: lighter;
-}
-p {
-position: absolute;
-left: 30vw;
-top: 60vh;  
-font-size: 40px;
-  color: dimgray;
-}
-.page-home {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
+.page-home h1, p {
+    font-weight: lighter;
+  width: 100%;
+  font-size: .8em; 
+    color: dimgray;
+
+}
+h1 span {
+  font-style: italic;
+  color: black;
+}
 #temp-img {
-  position: absolute;
   top: 20vh;
-  left: 34vw;
+  margin: 10vh auto 1vh auto;
   border: 2px solid skyblue;
   box-shadow: 4px 4px 10px 0px black;
-  width: 30vw;
-  height: 25vh;
+  width: 100%;
 }

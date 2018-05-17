@@ -11,12 +11,15 @@ class Home extends React.Component {
   render() {
     return (
       <div className="page-home">
-      <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
-        
-          <h1>Rome wasn't built in a day...<br/>
-          Neither was this site.</h1>
-          <p>Your patience is appreciated.</p>
-        
+        <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
+
+        <h1>
+        <span>Under Construction...</span>
+        <br/><br/>
+          Rome wasn't built in a day.<br />
+          Neither was this site.
+        </h1>
+        <p>Your patience is appreciated.</p>
       </div>
     );
   }
