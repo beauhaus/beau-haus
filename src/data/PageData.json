@@ -105,7 +105,7 @@
     },
     "create": {
       "pageStyles": {
-        "background": "linear-gradient(45deg, #e7e7e7 0%, #838383 75%)",
+        "background": "linear-gradient(35deg, #535353 0%, #e7e7e7 100%)",
         "color": "navy",
         "fill": "#bb383f"
       },
@@ -121,18 +121,18 @@
       },
       "tree": {
         "short": {
-          "branches": "#363636",
-          "leaves": "#0f0f0f",
-          "opacity": "1"
+          "branches": "#4d4c4c",
+          "leaves": "#494949",
+          "opacity": "0"
         },
         "medium": {
-          "branches": "#bbb",
+          "branches": "#8f8f8f",
           "leaves": "#9b9b9b",
           "opacity": "1"
         },
         "tall": {
-          "branches": "#707070",
-          "leaves": "#999999",
+          "branches": "#727272",
+          "leaves": "#7e7e7e",
           "opacity": "1",
           "flower": {
             "base": "#513535",
@@ -164,17 +164,17 @@
         "short": {
           "branches": "#363636",
           "leaves": "#0f0f0f",
-          "opacity": "1"
+          "opacity": "0"
         },
         "medium": {
-          "branches": "#bbb",
-          "leaves": "#9b9b9b",
+          "branches": "#4b4b4b",
+          "leaves": "#636363",
           "opacity": "1"
         },
         "tall": {
           "branches": "#707070",
           "leaves": "#999999",
-          "opacity": "1",
+          "opacity": "0",
           "flower": {
             "base": "#513535",
             "frame": "#bd1634",
@@ -205,17 +205,17 @@
         "short": {
           "branches": "#363636",
           "leaves": "#0f0f0f",
-          "opacity": "1"
+          "opacity": "0"
         },
         "medium": {
           "branches": "#bbb",
           "leaves": "#9b9b9b",
-          "opacity": "1"
+          "opacity": "0"
         },
         "tall": {
           "branches": "#707070",
           "leaves": "#999999",
-          "opacity": "1",
+          "opacity": "0",
           "flower": {
             "base": "#513535",
             "frame": "#bd1634",
