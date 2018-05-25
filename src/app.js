@@ -1,22 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AppContainer from './components/AppContainer.js';
+// import App from './App';
+import RoutesContainer from './RoutesContainer';
 
-const appRoot = document.getElementById('app');
-
-/********App Start*/
-
-import './styles/styles.scss';
+import './styles/app.css';
 import 'normalize.css/normalize.css';
 
-ReactDOM.render(<AppContainer />, appRoot);
 
-/********App END*/
+const root = document.getElementById('root');
 
-/*******TESTING START*/
-// import Sandbox from './sandbox/Sandbox.js';
-// import './sandbox/test.css';
-
-// ReactDOM.render(<Sandbox />, appRoot);
-/*******TESTING END */
+ReactDOM.render(<RoutesContainer />, root);

@@ -48,3 +48,7 @@ portfolio site
 - timing is now random for whitecaps.
 - slight y-axis displacement to simulate incoming surf.
 - BONUS: proper use of refs with GSAP!🎉 -woohoo!
+
+
+## Pass props thru link
+![pass props thru <Link/>](https://github.com/BEAUHAUS/barebones-animated-route-transitions/blob/master/refImg/propsThruLink.png?raw=true "Pass Props Thru Link")

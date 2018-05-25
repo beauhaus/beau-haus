@@ -1,0 +1,270 @@
+{
+  "navBtns": [
+    {
+      "id": 10,
+      "name": "home",
+      "pathname": "/",
+      "x": "515",
+      "y": "52",
+      "r": "27.5",
+      "fill": "#e47814",
+      "txtPos": "translate(107.521 65)",
+      "hoverPos": "-240"
+    },
+    {
+      "id": 20,
+      "name": "create",
+      "pathname": "/create",
+      "stateObj": "{theme: stylesDB.create}",
+      "x": "515",
+      "y": "155",
+      "r": "27.5",
+      "fill": "#bb383f",
+      "txtPos": "translate(127.6519 165)",
+      "hoverPos": "-210"
+    },
+    {
+      "id": 30,
+      "name": "collect",
+      "pathname": "/collect",
+      "stateObj": "{theme: stylesDB.collect}",
+      "x": "515",
+      "y": "255",
+      "r": "27.5",
+      "fill": "#85bb8f",
+      "txtPos": "translate(156.7915 266)",
+      "hoverPos": "-170"
+    },
+    {
+      "id": 40,
+      "name": "code",
+      "pathname": "/code",
+      "stateObj": "{theme: stylesDB.code}",
+      "x": "515",
+      "y": "355",
+      "r": "27.5",
+      "fill": "#2a37e8",
+      "txtPos": "translate(124.3608 365)",
+      "hoverPos": "-240"
+    },
+    {
+      "id": 50,
+      "name": "connect",
+      "pathname": "/connect",
+      "stateObj": "{theme: stylesDB.connect}",
+      "x": "515",
+      "y": "455",
+      "r": "27.5",
+      "fill": "#caaad4",
+      "txtPos": "translate(90.3916 465)",
+      "hoverPos": "-210"
+    }
+  ],
+  "profile": {
+    "home": {
+      "pageStyles": {
+        "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 75%)",
+        "color": "brown",
+        "fill": "#e47814"
+      },
+
+      "water": {
+        "bgGradient": {
+          "left": "#646464",
+          "right": "#fff"
+        }
+      },
+
+      "skyGradient": {
+        "left": "#646464",
+        "right": "#fff"
+      },
+      "tree": {
+        "short": {
+          "branches": "#363636",
+          "leaves": "#0f0f0f",
+          "opacity": "1"
+        },
+        "medium": {
+          "branches": "#bbb",
+          "leaves": "#9b9b9b",
+          "opacity": "1"
+        },
+        "tall": {
+          "branches": "#707070",
+          "leaves": "#999999",
+          "opacity": "1",
+          "flower": {
+            "base": "#513535",
+            "frame": "#bd1634",
+            "petal": "#a90c00",
+            "stamen": "#fceded"
+          }
+        }
+      }
+    },
+    "create": {
+      "pageStyles": {
+        "background": "linear-gradient(45deg, #e7e7e7 0%, #838383 75%)",
+        "color": "navy",
+        "fill": "#bb383f"
+      },
+      "water": {
+        "bgGradient": {
+          "left": "#646464",
+          "right": "#fff"
+        }
+      },
+      "skyGradient": {
+        "left": "#646464",
+        "right": "#fff"
+      },
+      "tree": {
+        "short": {
+          "branches": "#363636",
+          "leaves": "#0f0f0f",
+          "opacity": "1"
+        },
+        "medium": {
+          "branches": "#bbb",
+          "leaves": "#9b9b9b",
+          "opacity": "1"
+        },
+        "tall": {
+          "branches": "#707070",
+          "leaves": "#999999",
+          "opacity": "1",
+          "flower": {
+            "base": "#513535",
+            "frame": "#bd1634",
+            "petal": "#a90c00",
+            "stamen": "#fceded"
+          }
+        }
+      }
+    },
+
+    "collect": {
+      "pageStyles": {
+        "background": "linear-gradient(90deg, #252525 0%, #b5b5b5 100%)",
+        "color": "navy",
+        "fill": "#85bb8f"
+      },
+      "water": {
+        "bgGradient": {
+          "left": "#646464",
+          "right": "#fff"
+        }
+      },
+      "skyGradient": {
+        "left": "#646464",
+        "right": "#fff"
+      },
+      "tree": {
+        "short": {
+          "branches": "#363636",
+          "leaves": "#0f0f0f",
+          "opacity": "1"
+        },
+        "medium": {
+          "branches": "#bbb",
+          "leaves": "#9b9b9b",
+          "opacity": "1"
+        },
+        "tall": {
+          "branches": "#707070",
+          "leaves": "#999999",
+          "opacity": "1",
+          "flower": {
+            "base": "#513535",
+            "frame": "#bd1634",
+            "petal": "#a90c00",
+            "stamen": "#fceded"
+          }
+        }
+      }
+    },
+
+    "code": {
+      "pageStyles": {
+        "background": "linear-gradient(225deg, #4a4a4a 0%, #9c9c9c 100%)",
+        "color": "navy",
+        "fill": "#2a37e8"
+      },
+      "water": {
+        "bgGradient": {
+          "left": "#646464",
+          "right": "#fff"
+        }
+      },
+      "skyGradient": {
+        "left": "#646464",
+        "right": "#fff"
+      },
+      "tree": {
+        "short": {
+          "branches": "#363636",
+          "leaves": "#0f0f0f",
+          "opacity": "1"
+        },
+        "medium": {
+          "branches": "#bbb",
+          "leaves": "#9b9b9b",
+          "opacity": "1"
+        },
+        "tall": {
+          "branches": "#707070",
+          "leaves": "#999999",
+          "opacity": "1",
+          "flower": {
+            "base": "#513535",
+            "frame": "#bd1634",
+            "petal": "#a90c00",
+            "stamen": "#fceded"
+          }
+        }
+      }
+    },
+
+    "connect": {
+      "pageStyles": {
+        "background": "linear-gradient(135deg, #757575 0%, #838383 100%)",
+        "color": "navy",
+        "fill": "#9c78a8"
+      },
+      "water": {
+        "bgGradient": {
+          "left": "#646464",
+          "right": "#fff"
+        }
+      },
+      "skyGradient": {
+        "left": "#646464",
+        "right": "#fff"
+      },
+      "tree": {
+        "short": {
+          "branches": "#363636",
+          "leaves": "#0f0f0f",
+          "opacity": "1"
+        },
+        "medium": {
+          "branches": "#bbb",
+          "leaves": "#9b9b9b",
+          "opacity": "1"
+        },
+        "tall": {
+          "branches": "#707070",
+          "leaves": "#999999",
+          "opacity": "1",
+          "flower": {
+            "base": "#513535",
+            "frame": "#bd1634",
+            "petal": "#a90c00",
+            "stamen": "#fceded"
+          }
+        }
+      }
+    }
+  }
+}
