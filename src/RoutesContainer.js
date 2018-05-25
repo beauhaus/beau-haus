@@ -31,8 +31,8 @@ class App extends Component {
   }
   menuClickHandler(name, fill) {
     this.setState({
-      page: name,
-      pageThemeColor: fill
+      // page: name,
+      // pageThemeColor: fill
     });
   }
 

@@ -1,79 +1,78 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body {
-    position: fixed;
-    /* border: 5px solid fuchsia; */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  /*  Does root even need styling? */
-  #root {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .App-routes-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-  /**** ABSOLUTELY POSITION THESE ****/
-  .fade-enter {
-    opacity: 0;
-    z-index: 1;
-  }
-  .fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 2000ms ease-in-out;
-  }
-  .fade-enter-active::after {
-    /* content: 'transition test'; */
-    font-size: 30px;
-    color: wheat;
-    background: brown;
-    /* border: 1px solid coral; */
-  }
-  
-  .fade-exit {
-    opacity: 1;
-    transition: opacity 5s ease-in-out;
-    /* position: absolute; */
-  }
-  .fade-exit.fade-exit-active {
-    opacity: 0;
-    transition: opacity 2000ms ease-in-out;
-  }
-  
-  /******* GENERAL STYLES **********/
-  
-  
-  /* #logo { */
-    /* opacity: 1 !important; */
-    /* position: absolute;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  position: fixed;
+  /* border: 5px solid fuchsia; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*  Does root even need styling? */
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.App-routes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+}
+/**** ABSOLUTELY POSITION THESE ****/
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms ease-in-out;
+}
+.fade-enter-active::after {
+  /* content: 'transition test'; */
+  font-size: 30px;
+  color: wheat;
+  background: brown;
+  /* border: 1px solid coral; */
+}
+
+.fade-exit {
+  opacity: 1;
+  transition: opacity 5s ease-in-out;
+  /* position: absolute; */
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 2000ms ease-in-out;
+}
+
+/******* GENERAL STYLES **********/
+
+/* #logo { */
+/* opacity: 1 !important; */
+/* position: absolute;
     top: 0;
     left: 0; */
-    /* z-index: 10; */
-  /* } */
-  
-  /*** Helps with fadein of logo dot*/
-  /* .bh-logo-wrapper {
+/* z-index: 10; */
+/* } */
+
+/*** Helps with fadein of logo dot*/
+/* .bh-logo-wrapper {
     animation: fadein 4s;
   }
   
@@ -82,74 +81,90 @@
       
       100%   { opacity: 1; }
   } */
-  
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .zero {
+
+@keyframes fadein {
+  0% {
     opacity: 0;
   }
-  .fader-landing {
-    opacity: 1 !important;
-    animation: fadein 4s;
-  }
-  .fader-create {
-    opacity: 1 !important;
-    animation: fadein 4s 2s;
-  }
-  
-  .fader-home {
-    opacity: 1 !important;
-    animation: fadein 4s;
-  }
-  
-  /***********TESTING NAV************/
-  .navswrapper {
-    border: 5px solid black;
-  }
-  .menu-link {
-    position: absolute;
-    left: 0;
-    top: 0;
+  100% {
     opacity: 1;
   }
-  a {
-    cursor: pointer;
-  }
+}
+
+.zero {
+  opacity: 0;
+}
+.fader-landing {
+  opacity: 1 !important;
+  animation: fadein 4s;
+}
+.fader-create {
+  opacity: 1 !important;
+  animation: fadein 4s 2s;
+}
+
+.fader-home {
+  opacity: 1 !important;
+  animation: fadein 4s;
+}
+
+/***********TESTING NAV************/
+.navswrapper {
+  border: 5px solid black;
+}
+.menu-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+a {
+  cursor: pointer;
+}
+#menu-desktop {
+  width: 15vw;
+  height: 26vh;
+  position: absolute;
+  left: 75vw;
+  top: 2vh;
+}
+text {
+  font-family: 'Lato', Tahoma, sans-serif;
+  font-size: 45px;
+  font-weight: 300;
+  opacity: 0;
+}
+/* TEST STYLES FOR NAVS CONTAINER */
+
+.nav-txt {
+  /* filter: url(#text-shad); */
+}
+
+
+/* .nav-link-dot:hover {
+  filter: unset;
+} */
+/* .current-link {
+  stroke-width: 2px;
+} */
+.current-link .nav-txt {
+
+}
+.current-link .nav-link-dot {
+  filter: url(#dot-shad);
+}
+
+/* tablet query */
+@media screen and (max-width: 768px) {
   #menu-desktop {
-    width: 15vw;
-    height: 26vh;
     position: absolute;
-    left: 75vw;
-    top: 2vh;
+    width: 35vw;
+    height: 30vh;
+    left: 65vw;
+    top: 0;
   }
-  text {
-    font-family: 'Lato', Tahoma, sans-serif;
-    font-size: 45px;
-    font-weight: 300;
-    opacity: 0;
-  }
-  
-  .lo-sat {
-    filter: url(#lo-saturation);
-  }
-  /* tablet query */
-  @media screen and (max-width: 768px) {
-    #menu-desktop {
-      position: absolute;
-      width: 35vw;
-      height: 30vh;
-      left: 65vw;
-      top: 0;
-    }
-  }
-  
-  test {
-    color: #636363;
-  }
+}
+
+test {
+  color: #636363;
+}

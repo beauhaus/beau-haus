@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { Power1, TimelineMax } from 'gsap';
 
 import styled from 'styled-components';
-// import NavLink from './NavLink';
-// import stylesDB from '../../data/stylesDB.json';
+
 import PageData from '../../data/PageData.json';
 
 const NavsWrapper = styled.div`
@@ -12,17 +11,30 @@ const NavsWrapper = styled.div`
   & > .menu-link {
     z-index: 20;
   }
-
   & > .link {
     z-index: 20;
     width: 20vw;
     height: 20vh;
   }
-  &  .nav-link-dot:hover {
-    filter: unset;
+  & .lo-sat {
+      filter: url(#lo-saturation);
   }
+  & .current-link {
+    stroke-width: 2px;
+    & .nav-txt {
+      stroke: #fff;
+      stroke-width: 2px;
+      filter: url(#txt-shad);
+    }
+    & .nav-link-dot {
+      filter: url(#dot-shad);
+    }
+  }
+ 
 `;
 const { navBtns } = PageData;
+
+/* NavsContainer IS A PORTAL */
 
 class NavsContainer extends Component {
   constructor(props) {
@@ -122,7 +134,7 @@ class NavsContainer extends Component {
         onClick={() => this.props.select('btn.name', 'btn.fill')}
         theme={btn.theme}
       >
-        <g className={this.props.location.pathname === btn.pathname ? '' : 'lo-sat'}>
+        <g className={this.props.location.pathname === btn.pathname ? 'current-link' : 'lo-sat'}>
           <text ref={`text-${btn.id}`} className="nav-txt" transform={btn.txtPos}>
             {btn.name}
           </text>
@@ -142,15 +154,22 @@ class NavsContainer extends Component {
 
     return (
       <NavsWrapper className="menu-frame">
-        <svg className="menu-link"
-        id="menu-desktop"
-        viewBox="0 0 550 500"
-        preserveAspectRatio="xMidYMid meet"
-        ref={menu.id}
-        onMouseEnter={ref => this.handleMenuHoverOn(menu.id)}
-        onMouseLeave={ref => this.handleMenuHoverOff(menu.id)}
+        <svg
+          className="menu-link"
+          id="menu-desktop"
+          viewBox="0 0 550 500"
+          preserveAspectRatio="xMidYMid meet"
+          ref={menu.id}
+          onMouseEnter={ref => this.handleMenuHoverOn(menu.id)}
+          onMouseLeave={ref => this.handleMenuHoverOff(menu.id)}
         >
           <defs>
+            <filter id="dot-shad" x="0" y="0">
+              <feDropShadow dx="2" dy="2" stdDeviation="2" />
+            </filter>
+            <filter id="txt-shad" x="0" y="0">
+              <feDropShadow dx="2" dy="2" stdDeviation="2" />
+            </filter>
             <filter id="lo-saturation">
               <feColorMatrix type="saturate" values=".1" />
             </filter>

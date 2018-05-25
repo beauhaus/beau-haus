@@ -20,12 +20,8 @@ const BHLogoWrapper = styled.svg`
   & > #logo-h-blocks {
     fill: #838383;
   }
-  & > #logo-dot {
-    filter: url(#sat-adjust);
-  }
-  // border: 1px solid yellow;
-`;
-/*
+  `;
+  /*
 @media screen and (max-width : 768px) {    // tablet query
     #bh-logo { //SVG
     position: absolute;
@@ -46,14 +42,11 @@ const BHLogo = props => {
       to={{
         pathname: '/'
       }}
-    >
+      >
       <BHLogoWrapper className="bh-svg-wrapper" id="bh-logo" viewBox="0 0 440 325">
-        <defs>
+      <defs>
           <filter id="logo-shad" x="0" y="0">
             <feDropShadow dx="4" dy="4" stdDeviation="4" />
-          </filter>
-          <filter id="sat-adjust">
-            <feColorMatrix type="saturate" values="1" />
           </filter>
         </defs>
 

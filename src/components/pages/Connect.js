@@ -20,6 +20,37 @@ const ConnectPageCompDiv = styled.div`
   height: 100%;
   z-index: 1;
   overflow: hidden;
+  .page-connect {
+    // color: red;
+    // z-index: 20;
+    position: relative;
+    top: 0;
+    font-size: 2em;
+    width: 50vh;
+
+    height: 70vh;
+    margin-left: 30vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .page-connect h1,
+  p {
+    font-weight: lighter;
+    width: 100%;
+    font-size: 0.8em;
+    color: dimgray;
+  }
+  h1 span {
+    font-style: italic;
+    color: black;
+  }
+  #temp-img {
+    top: 20vh;
+    margin: 10vh auto 1vh auto;
+    border: 2px solid skyblue;
+    box-shadow: 4px 4px 10px 0px black;
+    width: 100%;
+  }
 `;
 
 class Connect extends Component {
@@ -29,7 +60,7 @@ class Connect extends Component {
       init: 'state',
       profile: props.pageStyles
     };
-    
+
     // console.log("props>Connect: ", props);
   }
   // componentDidMount() {
@@ -39,20 +70,31 @@ class Connect extends Component {
   // }
 
   render() {
-    const {pageStyles, tree, water} = this.props.profile;
-    const {fill} = this.props.profile.pageStyles.fill;
-    
+    const { pageStyles, tree, water } = this.props.profile;
+    const { fill } = this.props.profile.pageStyles.fill;
+
     return (
       <ConnectPageCompDiv className="page connect-container" style={pageStyles}>
-        <h1>Connect Something</h1>
+        <div className="page-connect">
+          <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
+
+          <h1>
+            <span>Under Construction...</span>
+            <br />
+            <br />
+            Rome wasn't built in a day.<br />
+            Neither was this site.
+          </h1>
+          <p>Your patience is appreciated.</p>
+        </div>{' '}
         <WaterBg {...water} />
         <WaterBody />
         <Shore />
         <MediumTree db={tree.medium} />
         <TallTree db={tree.tall} />
         <ShortTree db={tree.short} />
-    <MuteBtn /> 
-    <LogoTheme themeFill={fill} />
+        <MuteBtn />
+        <LogoTheme themeFill={fill} />
       </ConnectPageCompDiv>
     );
   }
