@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+
 * {
   padding: 0;
   margin: 0;
@@ -14,7 +17,16 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+a {
+  cursor: pointer;
+}
 
+text {
+  font-family: 'Lato', Tahoma, sans-serif;
+  font-size: 45px;
+  font-weight: 300;
+  opacity: 0;
+}
 /*  Does root even need styling? */
 #root {
   position: absolute;
@@ -34,7 +46,8 @@ body {
   width: 100vw;
   height: 100vh;
 }
-/**** ABSOLUTELY POSITION THESE ****/
+/******* PAGE TRANSITION STYLES **********/
+
 .fade-enter {
   opacity: 0;
   z-index: 1;
@@ -61,43 +74,11 @@ body {
   transition: opacity 2000ms ease-in-out;
 }
 
-/******* GENERAL STYLES **********/
-
-/* #logo { */
-/* opacity: 1 !important; */
-/* position: absolute;
-    top: 0;
-    left: 0; */
-/* z-index: 10; */
-/* } */
-
-/*** Helps with fadein of logo dot*/
-/* .bh-logo-wrapper {
-    animation: fadein 4s;
-  }
-  
-  @keyframes fadein {
-      0% { opacity: 0; }
-      
-      100%   { opacity: 1; }
-  } */
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.zero {
-  opacity: 0;
-}
 .fader-landing {
   opacity: 1 !important;
   animation: fadein 4s;
 }
+
 .fader-create {
   opacity: 1 !important;
   animation: fadein 4s 2s;
@@ -108,63 +89,45 @@ body {
   animation: fadein 4s;
 }
 
-/***********TESTING NAV************/
-.navswrapper {
-  border: 5px solid black;
-}
-.menu-link {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 1;
-}
-a {
-  cursor: pointer;
-}
-#menu-desktop {
-  width: 15vw;
-  height: 26vh;
-  position: absolute;
-  left: 75vw;
-  top: 2vh;
-}
-text {
-  font-family: 'Lato', Tahoma, sans-serif;
-  font-size: 45px;
-  font-weight: 300;
-  opacity: 0;
-}
-/* TEST STYLES FOR NAVS CONTAINER */
-
-.nav-txt {
-  /* filter: url(#text-shad); */
-}
-
-
-/* .nav-link-dot:hover {
-  filter: unset;
-} */
-/* .current-link {
-  stroke-width: 2px;
-} */
-.current-link .nav-txt {
-
-}
-.current-link .nav-link-dot {
-  filter: url(#dot-shad);
-}
-
-/* tablet query */
-@media screen and (max-width: 768px) {
-  #menu-desktop {
-    position: absolute;
-    width: 35vw;
-    height: 30vh;
-    left: 65vw;
-    top: 0;
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-test {
-  color: #636363;
+/***********TESTING NAV************/
+
+.test {
+  color: dimgray;
 }
+/* TEST STYLES FOR NAVS CONTAINER */
+
+/* DEPRECATED RULES (FOR CLEANING) */
+
+/* .current-link .nav-link-dot {
+  filter: url(#dot-shad);
+} */
+
+/* tablet query */
+/* .home-container {
+  background: fuchsia;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 26vw repeat(3, 1fr) 26vw;
+  grid-template-rows: 10vh repeat(4, 20vh) 10vh;
+  z-index: 1;
+} */
+
+/************************/
+

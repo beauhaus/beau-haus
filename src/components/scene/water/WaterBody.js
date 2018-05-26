@@ -11,11 +11,11 @@ import WhiteCaps from './WhiteCaps';
 
 // SVG
 const WaterBodyWrapper = styled.svg`
-    position: absolute;
-    width: 100vw;
-    height: 10vw;
-    bottom: 0;
-    left: 0;
+position: absolute;
+width: 100vw;
+height: 20vh;
+bottom: 0;
+left: 0;
 `
 // No need for state -- However must have lifecycle hooks, therefore class component..
 

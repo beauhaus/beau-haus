@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import {Power1, TimelineMax} from "gsap";
 
@@ -21,7 +22,13 @@ const whiteCapsData = [
   { id: '16', coords: '491.2 114 469.3 111.7 447.3 114' }
 ];
 
-
+const WhiteCapsWrapper = styled.svg`
+  position: absolute;
+  width: 100vw;
+  height: 20vh;
+  bottom: 0;
+  left: 0;
+`
 class WhiteCaps extends React.Component {
   constructor() {
     super();
@@ -64,9 +71,9 @@ class WhiteCaps extends React.Component {
   // viewBox="0 0 1920 200"
   render() {
     return (
-      <svg id="white-caps" >
+      <WhiteCapsWrapper id="white-caps" >
         {whiteCapsData.map(this.renderPoly)}
-      </svg>
+      </WhiteCapsWrapper>
     );
   }
 }

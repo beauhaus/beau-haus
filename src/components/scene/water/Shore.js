@@ -5,9 +5,9 @@ import styled from 'styled-components';
 // viewBox="0 0 1920 200"
 const ShoreWrapper = styled.svg`
   position: absolute;
-  width: 100%;
   bottom: 0;
   left: 0;
+  width: 100%;
 `;
 
 const Shore = () => (

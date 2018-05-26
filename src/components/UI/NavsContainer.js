@@ -8,8 +8,20 @@ import PageData from '../../data/PageData.json';
 
 const NavsWrapper = styled.div`
   position: absolute;
+  & > #menu-desktop {
+    width: 15vw;
+    height: 26vh;
+    position: absolute;
+    left: 75vw;
+    top: 2vh;
+  }
+  
   & > .menu-link {
     z-index: 20;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
   }
   & > .link {
     z-index: 20;
@@ -32,6 +44,20 @@ const NavsWrapper = styled.div`
   }
  
 `;
+
+/* tablet query */
+
+// @media screen and (max-width: 768px) {
+//   #menu-desktop {
+//     position: absolute;
+//     width: 35vw;
+//     height: 30vh;
+//     left: 65vw;
+//     top: 0;
+//   }
+// }
+
+
 const { navBtns } = PageData;
 
 /* NavsContainer IS A PORTAL */
@@ -153,7 +179,7 @@ class NavsContainer extends Component {
     // viewBox="0 0 550 500" preserveAspectRatio="xMidYMid meet"
 
     return (
-      <NavsWrapper className="menu-frame">
+      <NavsWrapper className="navs-wrapper">
         <svg
           className="menu-link"
           id="menu-desktop"

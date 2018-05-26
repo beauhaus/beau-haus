@@ -17,7 +17,7 @@ const LogoThemeWrapper = styled.svg`
 const LogoTheme = props => {
   return (
     <LogoThemeWrapper viewBox="0 0 440 325">
-      <path fill={props.fill} d="M183.5 293.5c0 17.4 14.1 31.5 31.5 31.5v-63c-17.4 0-31.5 14.1-31.5 31.5z" />
+      <path id="logo-theme-dot" fill={props.fill} d="M183.5 293.5c0 17.4 14.1 31.5 31.5 31.5v-63c-17.4 0-31.5 14.1-31.5 31.5z" />
     </LogoThemeWrapper>
   );
 };

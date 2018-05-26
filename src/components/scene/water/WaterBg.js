@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const WaterBgWrapper = styled.svg`
   position: absolute;
-  width: 101vw;
-  height: 10vw;
+  width: 100vw;
+  height: 20vh;
   bottom: 0;
-  left: -1px;
+  left: 0;
 `;
 
 // NB: Height is 10vw!!!
