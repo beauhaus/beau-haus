@@ -4,13 +4,12 @@ import { Link } from 'react-router-dom';
 
 const BHLogoWrapper = styled.svg`
   position: absolute;
-  top: 20vh;
-  left: 20vw;
+  top: 5vh;
+  left: 4vw;
   z-index: 2;
   width: 80px;
   height: 65px;
-  top: 0;
-  opacity: 1;
+  
   & > #logo-h {
     fill: #4e4d4d;
   }

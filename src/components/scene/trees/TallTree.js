@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 const TallTreeWrapper = styled.svg`
   position: absolute;
-  left: 1vh;
+  left: 0;
   bottom: 2vh;
-  height: 100vh;
+  height: 80vh;
 `;
 // width: 400px;
 

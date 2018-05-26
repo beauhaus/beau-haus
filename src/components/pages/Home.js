@@ -28,6 +28,7 @@ const HomePageCompDiv = styled.div`
   grid-template-rows: 20vh 60vh 20vh;
   z-index: 1;
   & > .grid-ctr {
+    
     grid-column: 2;
     grid-row: 2;
     z-index: 20;
@@ -74,19 +75,19 @@ const InitialLoad = {
     },
     tree: {
       short: {
-        branches: '#363636',
-        leaves: '#0f0f0f',
+        branches: '#777',
+        leaves: '#5a5a5a',
         opacity: '1'
       },
       medium: {
-        branches: '#bbb',
-        leaves: '#9b9b9b',
-        opacity: '1'
+        branches: '#afafaf',
+        leaves: '#afafaf',
+        opacity: '0'
       },
       tall: {
-        branches: '#707070',
-        leaves: '#999999',
-        opacity: '1',
+        branches: '#8b8b8b',
+        leaves: '#8b8b8b',
+        opacity: '0',
         flower: {
           base: '#513535',
           frame: '#bd1634',
@@ -145,4 +146,3 @@ class Home extends Component {
 }
 
 export default Home;
-

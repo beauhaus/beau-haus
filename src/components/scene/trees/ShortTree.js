@@ -6,7 +6,7 @@ const ShortTreeWrapper = styled.svg`
   position: absolute;
   left: -0.5vw; // FIXME
   bottom: 2vh;
-  height: 100vh;
+  height: 80vh;
   `
   // border: 1px solid blue;
 // width: 400px;

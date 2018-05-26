@@ -6,16 +6,15 @@ import styled from 'styled-components';
 
 import PageData from '../../data/PageData.json';
 
+/* #nav is pos: rel */
+
 const NavsWrapper = styled.div`
   position: absolute;
-  & > #menu-desktop {
-    width: 15vw;
-    height: 26vh;
-    position: absolute;
-    left: 75vw;
-    top: 2vh;
-  }
-  
+  top: 5vh;
+  right: 4vw;
+  position: absolute;
+  width: 15vw;
+  height: 26vh;  
   & > .menu-link {
     z-index: 20;
     position: absolute;

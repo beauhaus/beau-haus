@@ -89,15 +89,15 @@ class Code extends Component {
         <WaterBg {...water} />
         <WaterBody />
         <Shore />
-        <MediumTree db={tree.medium} />
-        <TallTree db={tree.tall} />
-        <ShortTree db={tree.short} />
-        <MuteBtn />
         <LogoTheme themeFill={fill} />
-      </CodePageCompDiv>
-    );
+        </CodePageCompDiv>
+      );
+    }
   }
-}
+  // <MediumTree db={tree.medium} />
+  // <TallTree db={tree.tall} />
+  // <ShortTree db={tree.short} />
+  // <MuteBtn />
 
 export default Code;
 /*

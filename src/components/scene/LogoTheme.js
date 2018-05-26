@@ -3,15 +3,13 @@ import styled from 'styled-components';
 
 const LogoThemeWrapper = styled.svg`
   position: absolute;
-  top: 20vh;
-  left: 20vw;
+  top: 5vh;
+  left: 4vw;
   z-index: 10;
   width: 80px;
   height: 65px;
-  top: 0;
   opacity: 1;
   z-index: 50;
-  //   overflow: hidden;
 `;
 //This adds a half-circle above the portalled BHLogo Component fading in a particular page's "theme fill" color
 const LogoTheme = props => {

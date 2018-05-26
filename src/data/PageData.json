@@ -63,7 +63,7 @@
   "profile": {
     "home": {
       "pageStyles": {
-        "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 75%)",
+        "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
         "color": "brown",
         "fill": "#e47814"
       },
@@ -81,8 +81,8 @@
       },
       "tree": {
         "short": {
-          "branches": "#363636",
-          "leaves": "#0f0f0f",
+          "branches": "#777",
+          "leaves": "#5a5a5a",
           "opacity": "1"
         },
         "medium": {
@@ -105,7 +105,7 @@
     },
     "create": {
       "pageStyles": {
-        "background": "linear-gradient(35deg, #535353 0%, #e7e7e7 100%)",
+        "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
         "color": "navy",
         "fill": "#bb383f"
       },
@@ -146,7 +146,7 @@
 
     "collect": {
       "pageStyles": {
-        "background": "linear-gradient(90deg, #252525 0%, #b5b5b5 100%)",
+        "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
         "color": "navy",
         "fill": "#85bb8f"
       },
