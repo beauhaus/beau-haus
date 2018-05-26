@@ -22,54 +22,36 @@ const HomePageCompDiv = styled.div`
   height: 100%;
   font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
+  color: #fff;
   display: grid;
-  grid-template-columns: 26vw repeat(3, 1fr) 26vw;
-  grid-template-rows: 20vh repeat(4, 1fr) 20vh;
+  grid-template-columns: 25vw 50vw 25vw;
+  grid-template-rows: 20vh 60vh 20vh;
   z-index: 1;
   & > .grid-ctr {
-    grid-column: 2/5;
-    grid-row: 2/6;
+    grid-column: 2;
+    grid-row: 2;
     z-index: 20;
+    border: 2px solid navy;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    
-    & > .eleven {
-      grid-column: 1/3;
-      text-align: right;
-      padding: 10px;
-    }
-    & > .twelve {
-      grid-column: 3/4;
-      text-align: right;
+    grid-template-rows: repeat(3, 1fr);
 
+    & > .ctr-row-top {
+      grid-column: 1/4;
+      grid-row: 1;
+      border: 2px solid green;
     }
-    & > ten {
-      background: purple;
+    & > .ctr-row-mid {
+      grid-column: 1/4;
+      grid-row: 2;
+      border: 2px solid yellow;
     }
-    & > div {
-      text-align: center;
-      
+    & > .ctr-row-bot {
+      grid-column: 1/4;
+      grid-row: 3;
+      border: 2px solid orangered;
     }
   }
-}
- #temp-img {
-  width: 100%;
-  height: 100%;
-}
-#notice {
-  font-size: 1.5vw;
-  font-weight: 400;
-  color: #000;
-  margin-top: 10px;
-  
-  & > span {
-    letter-spacing: .1vw;
-    color: white;
-    font-weight: 400;
-    font-style: italic;
-  }
-}
 `;
 
 const InitialLoad = {
@@ -139,33 +121,20 @@ class Home extends Component {
     return (
       <HomePageCompDiv className="home-container page" style={this.state.profile.pageStyles}>
         <div className="grid-ctr">
-          <div className="one">.</div>
-          <div className="two">.</div>
-          <div className="three">.</div>
-          <div className="four">.</div>
-          <div className="five">.</div>
-          <div className="six">.</div>
-          <div className="seven">.</div>
-          <div className="eight">.</div>
-          <div className="nine">.</div>
-          <div className="ten">
-            
+          <div className="ctr-row-top">
+            <p className="q1">Learn fast and fix things.</p>
           </div>
-          <div className="eleven">
-          <h3 id="notice">
-              <span>Under Construction:</span>
-              <br /><br/>
-              Rome wasn't built in a day. <br/>Neither was this site.
-            </h3>
-            </div>
-          <div className="twelve">
-          <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
+          <div className="ctr-row-mid">
+            <p className="q2">Learn fast and fix things.</p>
+          </div>
+          <div className="ctr-row-bot">
+            <p className="q3">Learn fast and fix things.</p>
           </div>
         </div>
         <WaterBg {...water} />
         <WaterBody />
-        <Shore />
         <MediumTree db={tree.medium} />
+        <Shore />
         <TallTree db={tree.tall} />
         <ShortTree db={tree.short} />
         <MuteBtn />
@@ -176,3 +145,4 @@ class Home extends Component {
 }
 
 export default Home;
+
