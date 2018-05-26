@@ -17,8 +17,8 @@ import SocIconData from '../../data/SocIconData.json';
 const SocIconWrapper = styled.svg`
 position: absolute;
 left: 10vw;
-bottom: 5px;
-width: 20%;
+bottom: 4vw;
+width: 20vw;
 z-index: 10;
 & .icon-cover {
   stroke-width: 0.2px;

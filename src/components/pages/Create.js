@@ -112,13 +112,7 @@ export default Create;
 
           <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
 
-          <h1>
-            <span>Under Construction...</span>
-            <br />
-            <br />
-            Rome wasn't built in a day.<br />
-            Neither was this site.
-          </h1>
+
           <p>Your patience is appreciated.</p>
 
 

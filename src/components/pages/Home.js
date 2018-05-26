@@ -33,15 +33,44 @@ const HomePageCompDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    border:1px solid brown;
+    
+    & > .eleven {
+      grid-column: 2/3;
+      text-align: left;
+    }
+    & > .twelve {
+      grid-column: 2/4;
+      text-align: right;
+
+    }
+    & > ten {
+      background: purple;
+    }
     & > div {
-      border: 1px dashed teal;
+      text-align: center;
+      border: 1px solid white;
     }
   }
 }
-
+ #temp-img {
+  width: 100%;
+  height: 100%;
+}
+#notice {
+  font-size: 2.2vw;
+  font-weight: 200;
+  
+  color: #000;
+  & > span {
+    letter-spacing: .1vw;
+    font-weight: 200;
+    font-size: 1.5vw;
+    color: coral;
+    font-style: italic;
+    background-color: black;
+  }
+}
 `;
-
 
 const InitialLoad = {
   profile: {
@@ -110,18 +139,25 @@ class Home extends Component {
     return (
       <HomePageCompDiv className="home-container page" style={this.state.profile.pageStyles}>
         <div className="grid-ctr">
-          <div className="one">one</div>
-          <div className="two">two</div>
-          <div className="three">three</div>
-          <div className="four">four</div> 
-          <div className="five">five</div>
-          <div className="six">six</div>
-          <div className="seven">seven</div>
-          <div className="eight">eight</div> 
-          <div className="nine">nine</div>
-          <div className="ten">twen</div>
-          <div className="eleven">eleven</div>
-          <div className="twelve">twelve</div>
+          <div className="one">.</div>
+          <div className="two">.</div>
+          <div className="three">.</div>
+          <div className="four">.</div>
+          <div className="five">.</div>
+          <div className="six">.</div>
+          <div className="seven">.</div>
+          <div className="eight">.</div>
+          <div className="nine">.</div>
+          <div className="ten">
+            <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
+          </div>
+          <div className="twelve">
+            <h3 id="notice">
+              <span>Under Construction...</span>
+              <br />
+              Rome wasn't built in a day. Neither was this site.
+            </h3>
+          </div>
         </div>
         <WaterBg {...water} />
         <WaterBody />
