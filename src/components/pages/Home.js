@@ -35,11 +35,12 @@ const HomePageCompDiv = styled.div`
     grid-template-rows: repeat(4, 1fr);
     
     & > .eleven {
-      grid-column: 2/3;
-      text-align: left;
+      grid-column: 1/3;
+      text-align: right;
+      padding: 10px;
     }
     & > .twelve {
-      grid-column: 2/4;
+      grid-column: 3/4;
       text-align: right;
 
     }
@@ -48,7 +49,7 @@ const HomePageCompDiv = styled.div`
     }
     & > div {
       text-align: center;
-      border: 1px solid white;
+      
     }
   }
 }
@@ -57,17 +58,16 @@ const HomePageCompDiv = styled.div`
   height: 100%;
 }
 #notice {
-  font-size: 2.2vw;
-  font-weight: 200;
-  
+  font-size: 1.5vw;
+  font-weight: 400;
   color: #000;
+  margin-top: 10px;
+  
   & > span {
     letter-spacing: .1vw;
-    font-weight: 200;
-    font-size: 1.5vw;
-    color: coral;
+    color: white;
+    font-weight: 400;
     font-style: italic;
-    background-color: black;
   }
 }
 `;
@@ -149,14 +149,17 @@ class Home extends Component {
           <div className="eight">.</div>
           <div className="nine">.</div>
           <div className="ten">
-            <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
+            
           </div>
-          <div className="twelve">
-            <h3 id="notice">
-              <span>Under Construction...</span>
-              <br />
-              Rome wasn't built in a day. Neither was this site.
+          <div className="eleven">
+          <h3 id="notice">
+              <span>Under Construction:</span>
+              <br /><br/>
+              Rome wasn't built in a day. <br/>Neither was this site.
             </h3>
+            </div>
+          <div className="twelve">
+          <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
           </div>
         </div>
         <WaterBg {...water} />
