@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import HomeTitle from './HomeTitle';
 import ShortTree from '../scene/trees/ShortTree';
 import MediumTree from '../scene/trees/MediumTree';
 import TallTree from '../scene/trees/TallTree';
@@ -27,6 +28,11 @@ const HomePageCompDiv = styled.div`
   grid-template-columns: 25vw 50vw 25vw;
   grid-template-rows: 20vh 60vh 20vh;
   z-index: 1;
+  #short-tree {
+    transform: rotateZ(-5deg);
+    bottom: 8vh;
+    left: -1.5vw;
+  }
   & > .grid-ctr {
     
     grid-column: 2;
@@ -53,6 +59,7 @@ const HomePageCompDiv = styled.div`
       border: 2px solid orangered;
     }
   }
+
 `;
 
 const InitialLoad = {
@@ -132,6 +139,7 @@ class Home extends Component {
             <p className="q3">Learn fast and fix things.</p>
           </div>
         </div>
+        <HomeTitle/>
         <WaterBg {...water} />
         <WaterBody />
         <MediumTree db={tree.medium} />

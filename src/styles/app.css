@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
 
+/* home TITLE TEXT */
+@import url('https://fonts.googleapis.com/css?family=Limelight');
+
 * {
   padding: 0;
   margin: 0;
@@ -21,6 +24,7 @@ a {
   cursor: pointer;
 }
 
+/* FIXME: Make this text more specific to (navbar?) place in component*/
 text {
   font-family: 'Lato', Tahoma, sans-serif;
   font-size: 45px;
@@ -135,9 +139,7 @@ position: relative;
 
 /************************/
 
-.test {
-  color: #afafaf;
-}
+
 .grid-ctr {
   opacity: 0;
 }
@@ -183,5 +185,49 @@ commit
 sprint
 scrum
 
+/* HOME TITLE TEST RULES */
+
+/*
+blend modes
+normal
+ multiply
+ screen
+ overlay
+ darken
+ lighten
+ color-dodge
+ color-burn
+ hard-light
+ soft-light
+ difference 
+  exclusion 
+  hue 
+  saturation 
+  color 
+  luminosity
+*/
+.test {
+  color: #97815f;
+}
+/*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="15" d="M976.5-369v1551"/>
+  <linearGradient id="a" x1="685" x2="2061" y1="481" y2="481" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#7d2424"/>
+    <stop offset="1" stop-color="#b44a4a"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M685 448h1376v66H685z"/>
+  <path fill="none" d="M696 457h670v50H696z"/>
+  <text font-family="'JCHEadA'" font-size="72" letter-spacing="4" transform="translate(696 505.4014)">
+    creative developer
+  </text>
+  <text transform="translate(1001 581)">
+    <tspan x="0" y="0" font-family="'Montserrat-Thin'" font-size="60">code</tspan><tspan x="0" y="72" font-family="'Montserrat-Thin'" font-size="60">design</tspan><tspan x="0" y="144" font-family="'Montserrat-Thin'" font-size="60">education</tspan>
+  </text>
+  <path fill="none" d="M990 331h702v99H990z"/>
+  <text font-family="'Montserrat-Thin'" font-size="125" transform="translate(990 423.7485)">
+    beau.haus
+  </text>
+</svg>
 
 */
