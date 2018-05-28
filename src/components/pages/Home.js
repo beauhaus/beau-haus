@@ -148,9 +148,9 @@ class Home extends Component {
         <ShortTree db={tree.short} />
         <MuteBtn />
         <LogoTheme themeFill={this.props.stylesDB} />
-      </HomePageCompDiv>
-    );
+        </HomePageCompDiv>
+      );
+    }
   }
-}
 
 export default Home;
