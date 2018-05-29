@@ -10,7 +10,7 @@ import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
-const ConnectPageCompDiv = styled.div`
+const ConnectionPageCompDiv = styled.div`
   background: fuchsia;
   position: absolute;
   top: 0;
@@ -53,7 +53,7 @@ const ConnectPageCompDiv = styled.div`
   }
 `;
 
-class Connect extends Component {
+class Connection extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -61,7 +61,7 @@ class Connect extends Component {
       profile: props.pageStyles
     };
 
-    // console.log("props>Connect: ", props);
+    // console.log("props>Connection: ", props);
   }
   // componentDidMount() {
   //   this.props.location.state
@@ -73,7 +73,7 @@ class Connect extends Component {
     const { pageStyles, tree, water } = this.props.profile;
     const { fill } = this.props.profile.pageStyles.fill;
     return (
-      <ConnectPageCompDiv className="page connect-container" style={pageStyles}>
+      <ConnectionPageCompDiv className="page connection-container" style={pageStyles}>
         <div className="grid-ctr">
           <div className="ctr-row-top">
             <p className="q1">Learn fast and fix things.</p>
@@ -93,16 +93,16 @@ class Connect extends Component {
         <ShortTree db={tree.short} />
         <MuteBtn />
         <LogoTheme themeFill={fill} />
-      </ConnectPageCompDiv>
+      </ConnectionPageCompDiv>
     );
   }
 }
 
-export default Connect;
+export default Connection;
 
 /*
 
-<div className="page-connect">
+<div className="page-Connection">
           <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
 
           <h1>

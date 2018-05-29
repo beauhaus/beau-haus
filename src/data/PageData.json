@@ -13,50 +13,50 @@
     },
     {
       "id": 20,
-      "name": "create",
-      "pathname": "/create",
-      "stateObj": "{theme: stylesDB.create}",
+      "name": "creation",
+      "pathname": "/creation",
+      "stateObj": "{theme: stylesDB.creation}",
       "x": "515",
       "y": "155",
       "r": "27.5",
       "fill": "#bb383f",
-      "txtPos": "translate(127.6519 165)",
+      "txtPos": "translate(87.6519 165)",
       "hoverPos": "-210"
     },
     {
       "id": 30,
-      "name": "collect",
-      "pathname": "/collect",
-      "stateObj": "{theme: stylesDB.collect}",
+      "name": "collection",
+      "pathname": "/collection",
+      "stateObj": "{theme: stylesDB.collection}",
       "x": "515",
       "y": "255",
       "r": "27.5",
       "fill": "#85bb8f",
-      "txtPos": "translate(156.7915 266)",
-      "hoverPos": "-170"
+      "txtPos": "translate(92.7915 266)",
+      "hoverPos": "-180"
     },
     {
       "id": 40,
-      "name": "code",
-      "pathname": "/code",
-      "stateObj": "{theme: stylesDB.code}",
+      "name": "reflection",
+      "pathname": "/reflection",
+      "stateObj": "{theme: stylesDB.reflection}",
       "x": "515",
       "y": "355",
       "r": "27.5",
       "fill": "#2a37e8",
-      "txtPos": "translate(124.3608 365)",
+      "txtPos": "translate(34.3608 365)",
       "hoverPos": "-240"
     },
     {
       "id": 50,
-      "name": "connect",
-      "pathname": "/connect",
-      "stateObj": "{theme: stylesDB.connect}",
+      "name": "connection",
+      "pathname": "/connection",
+      "stateObj": "{theme: stylesDB.connection}",
       "x": "515",
       "y": "455",
       "r": "27.5",
       "fill": "#caaad4",
-      "txtPos": "translate(90.3916 465)",
+      "txtPos": "translate(35.3916 465)",
       "hoverPos": "-210"
     }
   ],
@@ -103,7 +103,7 @@
         }
       }
     },
-    "create": {
+    "creation": {
       "pageStyles": {
         "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
         "color": "navy",
@@ -144,7 +144,7 @@
       }
     },
 
-    "collect": {
+    "collection": {
       "pageStyles": {
         "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
         "color": "navy",
@@ -185,7 +185,7 @@
       }
     },
 
-    "code": {
+    "reflection": {
       "pageStyles": {
         "background": "linear-gradient(225deg, #4a4a4a 0%, #9c9c9c 100%)",
         "color": "navy",
@@ -226,7 +226,7 @@
       }
     },
 
-    "connect": {
+    "connection": {
       "pageStyles": {
         "background": "linear-gradient(135deg, #757575 0%, #838383 100%)",
         "color": "navy",

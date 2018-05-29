@@ -10,7 +10,7 @@ import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
-const CollectPageCompDiv = styled.div`
+const ReflectionPageCompDiv = styled.div`
   background: fuchsia;
   position: absolute;
   top: 0;
@@ -53,7 +53,7 @@ const CollectPageCompDiv = styled.div`
   }
 `;
 
-class Collect extends Component {
+class Reflection extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -61,7 +61,7 @@ class Collect extends Component {
       profile: props.pageStyles
     };
 
-    // console.log("props>Collect: ", props);
+    // console.log("props>Reflection: ", props);
   }
   // componentDidMount() {
   //   this.props.location.state
@@ -74,7 +74,7 @@ class Collect extends Component {
     const { fill } = this.props.profile.pageStyles.fill;
 
     return (
-      <CollectPageCompDiv className="page collect-container" style={pageStyles}>
+      <ReflectionPageCompDiv className="page reflection-container" style={pageStyles}>
         <div className="grid-ctr">
           <div className="ctr-row-top">
             <p className="q1">Learn fast and fix things.</p>
@@ -89,14 +89,30 @@ class Collect extends Component {
         <WaterBg {...water} />
         <WaterBody />
         <Shore />
-        <MediumTree db={tree.medium} />
-        <TallTree db={tree.tall} />
-        <ShortTree db={tree.short} />
-        <MuteBtn />
         <LogoTheme themeFill={fill} />
-      </CollectPageCompDiv>
-    );
+        </ReflectionPageCompDiv>
+      );
+    }
   }
-}
+  // <MediumTree db={tree.medium} />
+  // <TallTree db={tree.tall} />
+  // <ShortTree db={tree.short} />
+  // <MuteBtn />
 
-export default Collect;
+export default Reflection;
+/*
+
+        <div className="page-Reflection">
+          <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
+
+          <h1>
+            <span>Under Construction...</span>
+            <br />
+            <br />
+            Rome wasn't built in a day.<br />
+            Neither was this site.
+          </h1>
+          <p>Your patience is appreciated.</p>
+        </div>
+
+        */

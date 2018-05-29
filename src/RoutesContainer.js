@@ -8,10 +8,10 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 // import NavMenu from './components/UI/NavMenu';
 
 import Home from './components/pages/Home';
-import Create from './components/pages/Create';
-import Collect from './components/pages/Collect';
-import Code from './components/pages/Code';
-import Connect from './components/pages/Connect';
+import Creation from './components/pages/Creation';
+import Collection from './components/pages/Collection';
+import Reflection from './components/pages/Reflection';
+import Connection from './components/pages/Connection';
 
 import PageData from './data/PageData.json';
 
@@ -53,27 +53,27 @@ class App extends Component {
                       }}
                     />
                     <Route
-                      path="/create"
+                      path="/creation"
                       render={() => {
-                        return <Create location={location} profile={PageData.profile.create} />;
+                        return <Creation location={location} profile={PageData.profile.creation} />;
                       }}
                     />
                     <Route
-                      path="/collect"
+                      path="/collection"
                       render={() => {
-                        return <Collect location={location} profile={PageData.profile.collect} />;
+                        return <Collection location={location} profile={PageData.profile.collection} />;
                       }}
                     />
                     <Route
-                      path="/code"
+                      path="/reflection"
                       render={() => {
-                        return <Code location={location} profile={PageData.profile.code} />;
+                        return <Reflection location={location} profile={PageData.profile.reflection} />;
                       }}
                     />
                     <Route
-                      path="/connect"
+                      path="/Connection"
                       render={() => {
-                        return <Connect location={location} profile={PageData.profile.connect} />;
+                        return <Connection location={location} profile={PageData.profile.connection} />;
                       }}
                     />
                   </Switch>

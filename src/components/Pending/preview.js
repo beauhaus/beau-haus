@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 
 
-/** Do away with viewBox Create new SVG exactly the size of this component
+/** Do away with viewBox creation new SVG exactly the size of this component
  * and do a transform translate to the image.
  */
 class Preview extends React.Component {

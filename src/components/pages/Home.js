@@ -140,17 +140,17 @@ class Home extends Component {
           </div>
         </div>
         <HomeTitle/>
-        <WaterBg {...water} />
-        <WaterBody />
-        <MediumTree db={tree.medium} />
-        <Shore />
-        <TallTree db={tree.tall} />
-        <ShortTree db={tree.short} />
-        <MuteBtn />
         <LogoTheme themeFill={this.props.stylesDB} />
         </HomePageCompDiv>
       );
     }
   }
-
-export default Home;
+  
+  export default Home;
+  // <WaterBg {...water} />
+  // <WaterBody />
+  // <MediumTree db={tree.medium} />
+  // <Shore />
+  // <TallTree db={tree.tall} />
+  // <ShortTree db={tree.short} />
+  // <MuteBtn />
