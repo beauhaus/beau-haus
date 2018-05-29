@@ -194,9 +194,23 @@ normal
   luminosity
 */
 .test {
+  color: #666;
+  
+  color: #3b3b3b;
+
   color: #585858;
+
+  color: #974c4c;
+  
 }
+
+
 /*
+"background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
+
+
+
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="15" d="M976.5-369v1551"/>
   <linearGradient id="a" x1="685" x2="2061" y1="481" y2="481" gradientUnits="userSpaceOnUse">

@@ -5,8 +5,8 @@
       "name": "home",
       "pathname": "/",
       "x": "515",
-      "y": "52",
-      "r": "27.5",
+      "y": "45",
+      "r": "33.5",
       "fill": "#e47814",
       "txtPos": "translate(107.521 65)",
       "hoverPos": "-240"
@@ -17,8 +17,8 @@
       "pathname": "/creation",
       "stateObj": "{theme: stylesDB.creation}",
       "x": "515",
-      "y": "155",
-      "r": "27.5",
+      "y": "148",
+      "r": "33.5",
       "fill": "#bb383f",
       "txtPos": "translate(87.6519 165)",
       "hoverPos": "-210"
@@ -29,8 +29,8 @@
       "pathname": "/collection",
       "stateObj": "{theme: stylesDB.collection}",
       "x": "515",
-      "y": "255",
-      "r": "27.5",
+      "y": "248",
+      "r": "33.5",
       "fill": "#85bb8f",
       "txtPos": "translate(92.7915 266)",
       "hoverPos": "-180"
@@ -41,8 +41,8 @@
       "pathname": "/reflection",
       "stateObj": "{theme: stylesDB.reflection}",
       "x": "515",
-      "y": "355",
-      "r": "27.5",
+      "y": "348",
+      "r": "33.5",
       "fill": "#2a37e8",
       "txtPos": "translate(34.3608 365)",
       "hoverPos": "-240"
@@ -53,8 +53,8 @@
       "pathname": "/connection",
       "stateObj": "{theme: stylesDB.connection}",
       "x": "515",
-      "y": "455",
-      "r": "27.5",
+      "y": "448",
+      "r": "33.5",
       "fill": "#caaad4",
       "txtPos": "translate(35.3916 465)",
       "hoverPos": "-210"
@@ -146,7 +146,7 @@
 
     "collection": {
       "pageStyles": {
-        "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
+        "background": "linear-gradient(45deg, #fff 0%, #3b3b3b 100%)",
         "color": "navy",
         "fill": "#85bb8f"
       },
@@ -162,19 +162,19 @@
       },
       "tree": {
         "short": {
-          "branches": "#363636",
-          "leaves": "#0f0f0f",
-          "opacity": "0"
+          "branches": "#555555",
+          "leaves": "#616161",
+          "opacity": "1"
         },
         "medium": {
-          "branches": "#4b4b4b",
-          "leaves": "#636363",
+          "branches": "#a3a3a3",
+          "leaves": "#b3b3b3",
           "opacity": "1"
         },
         "tall": {
-          "branches": "#707070",
-          "leaves": "#999999",
-          "opacity": "0",
+          "branches": "#818181",
+          "leaves": "#8f8f8f",
+          "opacity": "1",
           "flower": {
             "base": "#513535",
             "frame": "#bd1634",

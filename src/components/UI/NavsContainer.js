@@ -196,7 +196,7 @@ class NavsContainer extends Component {
               <feDropShadow dx="2" dy="2" stdDeviation="2" />
             </filter>
             <filter id="lo-saturation">
-              <feColorMatrix type="saturate" values=".1" />
+              <feColorMatrix type="saturate" values=".2" />
             </filter>
           </defs>
           {navBtns.map(this.renderLinks)}
