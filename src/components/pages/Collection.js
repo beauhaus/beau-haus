@@ -11,70 +11,72 @@ import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
+import Slideshow from '../UI/Slideshow'
 const CollectionPageCompDiv = styled.div`
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-width: 100%;
-height: 100%;
-font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
-overflow: hidden;
-color: #fff;
-display: grid;
-grid-template-columns: 25vw 50vw 25vw;
-grid-template-rows: 20vh 60vh 20vh;
-z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 25vw 50vw 25vw;
+  grid-template-rows: 20vh 60vh 20vh;
+  z-index: 1;
 
-& > div.topic-container {
-  grid-column: 3;
-  grid-row: 1/4;
-  position: relative;
-  & > img {   /* svg */
-    position: absolute;
-    opacity: 1;
-    bottom: 0;
-    right: -2vw;
-    width: 20vh;
-    height: 100vh;
+  & > div.topic-container {
+    grid-column: 3;
+    grid-row: 1/4;
+    position: relative;
+    & > img {
+      /* svg */
+      position: absolute;
+      opacity: 1;
+      bottom: 0;
+      right: -2vw;
+      width: 20vh;
+      height: 100vh;
+    }
   }
-}
-& > .grid-header {
-  grid-column: 1/4;
-  grid-row: 1;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(5, 4vh);
-}
-& > .grid-ctr {
-  grid-column: 2;
-  grid-row: 2;
-  z-index: 20;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 20px;
-  opacity: 1; /* fixme: during testing this overrides app.css */
-  & img {
-    width: 142px;
-    height: 142px;
-    margin: 0 3vw;
-  }
-  & > .ctr-row-top {
+  & > .grid-header {
     grid-column: 1/4;
     grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 4vh);
   }
-  & > .ctr-row-mid {
-    grid-column: 1/4;
+  & > .grid-ctr {
+    grid-column: 2;
     grid-row: 2;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    opacity: 1; /* fixme: during testing this overrides app.css */
+    & img {
+      width: 142px;
+      height: 142px;
+      margin: 0 3vw;
+    }
   }
-  & > .ctr-row-bot {
-    grid-column:1/4;
-    grid-row: 3;
-  }
-}
 `;
+// & > .ctr-row-top {
+//   grid-column: 1/4;
+//   grid-row: 1;
+// }
+// & > .ctr-row-mid {
+//   grid-column: 1/4;
+//   grid-row: 2;
+// }
+// & > .ctr-row-bot {
+//   grid-column:1/4;
+//   grid-row: 3;
+// }
 
 class Collection extends Component {
   constructor(props) {
@@ -99,33 +101,20 @@ class Collection extends Component {
 
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
-      <div className="grid-header" />
-      <div className="topic-container">
-        <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
-      </div>
-      <div className="grid-ctr">
-        <div className="ctr-row-top">
-          {slides.map((item,idx) => (
-             (idx < 3 &&
-              <img key={item.id} src={item.url} alt={item.alt}/>)
-            
+        <div className="grid-header">header</div>
+        <div className="topic-container">
+          <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
+        </div>
+        
+        <div className="grid-ctr">
+          
+          <Slideshow>
+          
+          {slides.map((item, idx) =>(
+            <img key={item.id} src={item.url} alt={item.alt}/>
           ))}
-        </div>  
-        <div className="ctr-row-mid">
-        {slides.map((item,idx) => (
-          ((idx > 2 && idx < 6) &&
-           <img key={item.id} src={item.url} alt={item.alt}/>)
-         
-       ))}        </div>
-        <div className="ctr-row-bot">
-        {slides.map((item,idx) => (
-          ((idx > 5 && idx < 9) &&
-           <img key={item.id} src={item.url} alt={item.alt}/>)
-         
-       ))}         
-       </div>
-      </div>
-      
+          </Slideshow>
+        </div>
         <WaterBg {...water} />
         <WaterBody />
         <Shore />
