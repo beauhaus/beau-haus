@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import Slides from '../../data/SlideShowData.json';
 import ShortTree from '../scene/trees/ShortTree';
 import MediumTree from '../scene/trees/MediumTree';
 import TallTree from '../scene/trees/TallTree';
@@ -25,6 +26,7 @@ display: grid;
 grid-template-columns: 25vw 50vw 25vw;
 grid-template-rows: 20vh 60vh 20vh;
 z-index: 1;
+
 & > div.topic-container {
   grid-column: 3;
   grid-row: 1/4;
@@ -51,25 +53,25 @@ z-index: 1;
   z-index: 20;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 20px;
   opacity: 1; /* fixme: during testing this overrides app.css */
-  
+  & img {
+    width: 142px;
+    height: 142px;
+    margin: 0 3vw;
+  }
   & > .ctr-row-top {
     grid-column: 1/4;
     grid-row: 1;
-      
   }
   & > .ctr-row-mid {
     grid-column: 1/4;
     grid-row: 2;
-    
   }
   & > .ctr-row-bot {
-    display: none; /* NOTE: TBD */
-    grid-column: 1/4;
+    grid-column:1/4;
     grid-row: 3;
-    border: 2px solid orangered;
   }
 }
 `;
@@ -93,6 +95,7 @@ class Collection extends Component {
   render() {
     const { pageStyles, tree, water } = this.props.profile;
     const { fill } = this.props.profile.pageStyles.fill;
+    const { slides } = Slides;
 
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
@@ -102,12 +105,25 @@ class Collection extends Component {
       </div>
       <div className="grid-ctr">
         <div className="ctr-row-top">
-          
+          {slides.map((item,idx) => (
+             (idx < 3 &&
+              <img key={item.id} src={item.url} alt={item.alt}/>)
+            
+          ))}
         </div>  
         <div className="ctr-row-mid">
-          
-        </div>
-        <div className="ctr-row-bot" />
+        {slides.map((item,idx) => (
+          ((idx > 2 && idx < 6) &&
+           <img key={item.id} src={item.url} alt={item.alt}/>)
+         
+       ))}        </div>
+        <div className="ctr-row-bot">
+        {slides.map((item,idx) => (
+          ((idx > 5 && idx < 9) &&
+           <img key={item.id} src={item.url} alt={item.alt}/>)
+         
+       ))}         
+       </div>
       </div>
       
         <WaterBg {...water} />

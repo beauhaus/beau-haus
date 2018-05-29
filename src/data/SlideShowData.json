@@ -1,0 +1,124 @@
+{
+    "slides": [
+     {
+        "id": 50,
+        "url": "./img/test/mag0.jpg",
+        "alt": "test/mag0",
+        "desc_title": "mag0.jpg",
+        "desc_subtitle": "test/mag0.jpg",
+        "desc_body": "./img/test/mag0.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      },
+      {
+        "id": 51,
+        "url": "./img/test/mag1.jpg",
+        "alt": "test/mag1",
+        "desc_title": "mag1.jpg",
+        "desc_subtitle": "test/mag1.jpg",
+        "desc_body": "./img/test/mag1.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      },
+      {
+        "id": 52,
+        "url": "./img/test/mag2.jpg",
+        "alt": "test/mag2",
+        "desc_title": "mag2.jpg",
+        "desc_subtitle": "test/mag2.jpg",
+        "desc_body": "./img/test/mag2.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      },
+      {
+        "id": 53,
+        "url": "./img/test/mag3.jpg",
+        "alt": "test/mag3",
+        "desc_title": "mag3.jpg",
+        "desc_subtitle": "test/mag3.jpg",
+        "desc_body": "./img/test/mag3.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      },
+      {
+        "id": 54,
+        "url": "./img/test/mag4.jpg",
+        "alt": "test/mag4",
+        "desc_title": "mag4.jpg",
+        "desc_subtitle": "test/mag4.jpg",
+        "desc_body": "./img/test/mag4.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      },
+      {
+        "id": 55,
+        "url": "./img/test/mag5.jpg",
+        "alt": "test/mag5",
+        "desc_title": "mag5.jpg",
+        "desc_subtitle": "test/mag5.jpg",
+        "desc_body": "./img/test/mag5.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      },
+      {
+        "id": 56,
+        "url": "./img/test/mag6.jpg",
+        "alt": "test/mag6",
+        "desc_title": "mag6.jpg",
+        "desc_subtitle": "test/mag6.jpg",
+        "desc_body": "./img/test/mag6.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      },
+      {
+        "id": 57,
+        "url": "./img/test/mag7.jpg",
+        "alt": "test/mag7",
+        "desc_title": "mag7.jpg",
+        "desc_subtitle": "test/mag7.jpg",
+        "desc_body": "./img/test/mag7.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      },
+      {
+        "id": 58,
+        "url": "./img/test/mag8.jpg",
+        "alt": "test/mag8",
+        "desc_title": "mag8.jpg",
+        "desc_subtitle": "test/mag8.jpg",
+        "desc_body": "./img/test/mag8.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      },
+      {
+        "id": 59,
+        "url": "./img/test/mag9.jpg",
+        "alt": "test/mag9",
+        "desc_title": "mag9.jpg",
+        "desc_subtitle": "test/mag9.jpg",
+        "desc_body": "./img/test/mag9.jpg",
+        "desc_link1": "www.link.com",
+        "desc_link_text": "this is link1",
+        "desc_link2": "www.link2.com",
+        "desc_link2_text": "this is link2"
+      }
+    ]
+}
