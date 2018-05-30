@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { CSSTransitionGroup } from 'react-transition-group' // ES6
 
-import Slides from '../../data/SlideShowData.json';
+
 import ShortTree from '../scene/trees/ShortTree';
 import MediumTree from '../scene/trees/MediumTree';
 import TallTree from '../scene/trees/TallTree';
@@ -12,6 +13,8 @@ import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
 import Slideshow from '../UI/Slideshow'
+
+
 const CollectionPageCompDiv = styled.div`
   position: absolute;
   top: 0;
@@ -97,7 +100,6 @@ class Collection extends Component {
   render() {
     const { pageStyles, tree, water } = this.props.profile;
     const { fill } = this.props.profile.pageStyles.fill;
-    const { slides } = Slides;
 
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
@@ -107,13 +109,10 @@ class Collection extends Component {
         </div>
         
         <div className="grid-ctr">
+        
+          <Slideshow/>
           
-          <Slideshow>
-          
-          {slides.map((item, idx) =>(
-            <img key={item.id} src={item.url} alt={item.alt}/>
-          ))}
-          </Slideshow>
+
         </div>
         <WaterBg {...water} />
         <WaterBody />
@@ -124,7 +123,7 @@ class Collection extends Component {
         <MuteBtn />
         <LogoTheme themeFill={fill} />
       </CollectionPageCompDiv>
-    );
+);
   }
 }
 

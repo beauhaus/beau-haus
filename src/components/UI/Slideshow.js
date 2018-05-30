@@ -1,5 +1,7 @@
-import React, {Component, Children} from 'react';
+import React, { Component, Children } from 'react';
 import ReactDOM from 'react-dom';
+
+import Slides from '../../data/SlideShowData.json';
 
 class Slideshow extends React.Component {
   constructor(props) {
@@ -9,38 +11,40 @@ class Slideshow extends React.Component {
       current: 0
     };
     this.showNext = this.showNext.bind(this);
+    this.slides = Slides.slides;
   }
   componentDidMount() {
-    const {children} = this.props;
+    console.log(this.slides);
     this.setState({
-      total: Children.count(children)
-    })
+      total: 10
+    });
   }
   showNext() {
-    const {total, current} = this.state;
-console.log("NEXT!")
-this.setState( {
-  current: current + 1 === total? 0 : current+ 1
-})
+    const { total, current } = this.state;
+    console.log('NEXT!');
+    this.setState({
+      current: current + 1 === total ? 0 : current + 1
+    });
   }
+  // slides.map((item, idx) =>(
+  //   <img key={item.id} src={item.url} alt={item.alt}/>
+
   render() {
-      const cards = Children.map(this.props.children, child => (
-        <div>{child}</div>
-      ))
-      const children = this.props;
+    const { slides } = Slides;
+    const cards = slides.map(item => (
+        <img className="fadeIn" key={item.id} src={item.url} alt={item.alt} />
+    ));
     return (
       <div>
-      <button onClick={this.showNext}>next</button>
-      Children.count() : {Children.count(this.props.children)}
-      {Children.toArray(cards)[this.state.current]}
+        <button onClick={this.showNext}>fwd</button>
+        {cards[this.state.current]}
       </div>
     );
   }
 }
 
+
 export default Slideshow;
 
 /*
-      {Children.only(this.props.children)}
-
 */

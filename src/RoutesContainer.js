@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
+
+
 // import NavsContainer from './components/UI/NavsContainer';
 // import NavLink from './components/UI/NavLink';
-// import NavMenu from './components/UI/NavMenu';
 
 import Home from './components/pages/Home';
 import Creation from './components/pages/Creation';
