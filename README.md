@@ -59,5 +59,4 @@ portfolio site
 
 --For now, the css-grid is set.
 
-![Work on grid for collection view](
-     "work on grid for collection view")
+![Work on grid for collection view](https://raw.githubusercontent.com/BEAUHAUS/beau-haus/master/refImg/reflectionwip.png "work on grid for collection view")
