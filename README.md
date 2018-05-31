@@ -52,3 +52,12 @@ portfolio site
 
 ## Pass props thru link
 ![pass props thru <Link/>](https://github.com/BEAUHAUS/barebones-animated-route-transitions/blob/master/refImg/propsThruLink.png?raw=true "Pass Props Thru Link")
+
+
+
+## In pursuit of water reflection effect employing a filtered mask where the integrity of the image is informed by the lightness or darkness of the greyscale waves beneath the image.
+
+--For now, the css-grid is set.
+
+![Work on grid for collection view](
+     "work on grid for collection view")
