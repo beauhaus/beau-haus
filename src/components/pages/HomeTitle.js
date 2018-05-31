@@ -6,7 +6,10 @@ const HomeTitleWrapper = styled.svg`
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
+  height: 100vh;
   opacity: 0.99;
   & > g {
     text {
@@ -53,10 +56,18 @@ const HomeTitleWrapper = styled.svg`
       opacity: 1;
     }
   }
+  @media screen and (max-width : 768px) {    // tablet query
+    height: 100%;
+    width: 100%;
+    transform-origin: 50% 50%;
+    transform: scale(2.4, 2.4) rotate(-15deg);
+    
+ }
 `;
 const HomeTitle = props => {
   return (
-    <HomeTitleWrapper viewBox="0 0 1920 1080">
+    <HomeTitleWrapper className="home-title-wrapper" viewBox="0 0 1920 1080"               preserveAspectRatio="xMidYMid meet"
+    >
       <linearGradient
         id="flag-grad"
         x1="226.4849"

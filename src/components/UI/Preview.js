@@ -1,19 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import styled from 'styled-components';
 
 
 
 /** Do away with viewBox creation new SVG exactly the size of this component
  * and do a transform translate to the image.
  */
+//change name ## THIS IS FOR PHOTO OVERLAY ##
 class Preview extends React.Component {
-  //change name ## THIS IS FOR PHOTO OVERLAY ##
-  state = {
+constructor(props) {
+  super(props)
+  this.state = {
     thumbnail: []
   };
+  console.log("props> preview: ", props)
+}
   render() {
     return (
-      <svg id="brdr1" xmlns="http://www.w3.org/2000/svg" viewBox="300 0 1920 1080">
+      <svg id="display" xmlns="http://www.w3.org/2000/svg" viewBox="300 200 960 540">
         <defs>
           <linearGradient opacity=".2" id="grad" x1="0%" y1="10%" x2="10%" y2="100%">
             <stop stopColor="transparent" offset="0" />

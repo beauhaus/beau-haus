@@ -7,6 +7,7 @@ const MediumTreeWrapper = styled.svg`
   left: 1vh;
   bottom: 2vh;
   height: 80vh;
+  z-index: 20;
 `;
 // width: 400px;
 
