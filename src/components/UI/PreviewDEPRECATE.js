@@ -31,7 +31,7 @@ constructor(props) {
               height="1"
               width="1"
               preserveAspectRatio="none"
-              href="https://dl.dropbox.com/s/f6vtd4o0vxx1378/ostrich.jpg?dl=0"
+              xlinkHref="https://dl.dropbox.com/s/f6vtd4o0vxx1378/ostrich.jpg?dl=0"
             />
           </pattern>
         </defs>

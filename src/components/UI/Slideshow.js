@@ -4,24 +4,62 @@ import styled from 'styled-components';
 
 // import Slides from '../../data/SlideShowData.json';
 // import Preview from './Preview';
+// width="25vw" height="40vh"
+// transform: scaleX(-1);
+// transform: translateY(530px) scaleY(-1);
+// filter: FlipV;
 
-const SlideshowFrame = styled.svg`
-  grid-row: 3/9;
-  grid-column: 2;
+const SlideshowFrame = styled.div`
+  grid-column: 14/35;
+  grid-row: 1/-1;
+  display: grid;
+  fill: #fabcba;
+  opacity: 0.8;
+  grid-column: 1;
+  grid-row: 1/3;
+  border: 1px solid brown;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 20vh;
+  & > .slide-main-display {
     width: 100%;
-    height: 100%;
-    & rect {
-      width: 25vw;
-    }
+    
+    opacity: 0.5;
+    grid-column:1;
+    grid-row: 1/7;
+    border: 1px solid blue;
+
   }
+  & #display-img {
+  }
+  & #display-img2 {
+    grid-row: 2;
+    opacity: 0.5;
+  }
+`;
+
+/*
+& .graphic > #display-img {
+  width: 100%;
+  height: 40vh;
+}
+& .graphic > image {
+  width: 25vw;
+}
+  & .graphic > .reflected {
+    opacity: 0.5;
+    transform-origin: 50% 50%;
+    transform: scaleY(-1) translateY(-20vh); 
+  }
+}
+
   @media screen and (max-width : 768px) {    // tablet query
     grid-column: 1/3;
     & > .rectangles {
       width: 50vw;
     }
  }
-`;
-
+*/
 class Slideshow extends React.Component {
   constructor(props) {
     super(props);
@@ -51,46 +89,19 @@ class Slideshow extends React.Component {
 
     // const cards = slides.map(item => <image className="fadeIn" key={item.id} href={item.url} alt={item.alt} />);
     // <button onClick={this.showNext}>fwd</button>
-    //   <linearGradient opacity=".2" id="grad" x1="0%" y1="10%" x2="10%" y2="100%">
-    //   <stop stopColor="transparent" offset="0" />
-    //   <stop stopColor="white" stopOpacity="1" offset=".9" />
-    // </linearGradient>
-    <mask id="mask1">
-      <polygon fill="url(#grad)" points="1623 993 841 993 850.5 880 1613.5 880" />
-    </mask>;
-    // <pattern id="pattern1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-    //   <image
-    //     height="1"
-    //     width="1"
-    //     preserveAspectRatio="none"
-    //     href="https://dl.dropbox.com/s/f6vtd4o0vxx1378/ostrich.jpg?dl=0"
-    //   />
-    // </pattern>
-    return (
-      // viewBox="0 0 720 640"
-      <SlideshowFrame id="display" preserveAspectRatio="none">
-        <defs>
-          <linearGradient opacity=".2" id="grad" x1="0%" y1="10%" x2="10%" y2="100%">
-            <stop stopColor="transparent" offset="0" />
-            <stop stopColor="white" stopOpacity="1" offset=".9" />
-          </linearGradient>
-          <mask id="mask1">
-            <rect fill="url(#grad)" height="10vh" y="40vh"/>
-          </mask>
-          <pattern id="pattern1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-          <image
-          height="1"
-          width="1"
-          preserveAspectRatio="none"
-          href="https://dl.dropbox.com/s/f6vtd4o0vxx1378/ostrich.jpg?dl=0"
-        />
-          </pattern>
-        </defs>
 
-        <g className="rectangles">
-          <rect height="40vh" y="0" fill="#0F0" />
-          <rect height="10vh" y="40vh" fill="#29ABE2" />
-        </g>
+    return (
+      <SlideshowFrame className="slideshow-frame">
+        <svg className="slide-main-display" preserveAspectRatio="none">
+          <svg id="display-img" viewBox="0 0 400 400" preserveAspectRatio="none">
+            <image y="0" xlinkHref={slides[4].url} />
+          </svg>
+          {/* 
+          <svg id="display-img2" viewBox="0 0 400 400" preserveAspectRatio="none">
+            <image y="0" xlinkHref={slides[4].url} />
+          </svg>
+          */}
+        </svg>
       </SlideshowFrame>
     );
   }
@@ -101,39 +112,36 @@ export default Slideshow;
 /*
 fill="url(#pattern1)"
 
-
-/****revisited 
- * 
- * <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 640">
-  <rect width="720" height="539" y=".2" fill="#0F0"/>
-  <rect width="720" height="104" y="536.2" fill="#29ABE2"/>
-</svg>
-
-
-
 **************PREVIOUS************
-
 <defs>
-  <linearGradient opacity=".2" id="grad" x1="0%" y1="10%" x2="10%" y2="100%">
-    <stop stopColor="transparent" offset="0" />
-    <stop stopColor="white" stopOpacity="1" offset=".9" />
-  </linearGradient>
-  <mask id="mask1">
-    <polygon fill="url(#grad)" points="1623 993 841 993 850.5 880 1613.5 880" />
-  </mask>
-  <pattern id="pattern1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
-    
-  </pattern>
-</defs>
+          <linearGradient opacity="1" id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop stopColor="black" offset=".1" />
+            <stop stopColor="white" stopOpacity="1" offset="1" />
+          </linearGradient>
+          <mask id="mask1">
+            <rect fill="url(#grad)" height="40vh" width="25vw" y="40vh" />
+          </mask>
+          <pattern id="pattern1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
+            <image
+              height="1"
+              width="1"
+              preserveAspectRatio="none"
+              y="0"
+              xlinkHref={slides[4].url}
+            />
+          </pattern>
+        </defs>
 
-<g id="display">
-  <rect id="view" fill="black" width="784" height="441" x="839.5" y="439" fill="url(#pattern1)" />
-  <polygon
-    id="reflection"
-    mask="url(#mask1)"
-    fill="url(#pattern1)"
-    points="1623 993 841 993 850.5 880 1613.5 880"
-  />
-</g>
+        <g className="graphic" >
+          <svg id="display-img"  viewBox="0 0 400 400" preserveAspectRatio="none">
+            <image  y="0" xlinkHref={slides[4].url} />
+          </svg>
+          <rect className="reflected"
+          mask="url(#mask1)"
+          width="100%"
+          height="20vh"
+          y="40vh"
+          fill="url(#pattern1)"/>
+        </g>
 
 */

@@ -12,7 +12,6 @@ const MediumTreeWrapper = styled.svg`
 // width: 400px;
 
 const MediumTree = props => {
-  console.log('Medium tree props: ', props);
   const { branches, leaves, opacity} = props.db;
   
   return (
