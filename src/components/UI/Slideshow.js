@@ -8,40 +8,42 @@ import styled from 'styled-components';
 // transform: scaleX(-1);
 // transform: translateY(530px) scaleY(-1);
 // filter: FlipV;
+// transform: scaleX(-1);
+
 
 const SlideshowFrame = styled.div`
-  grid-column: 1;
-  grid-row: 1/3;
-  display: grid;
-  opacity: 1;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 45vh 20vh;
-  & > .photo-div {
-    grid-row: 1;
-    & > svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  & > .reflected-div {
-    grid-row: 2;
+grid-column: 1;
+grid-row: 1/3;
+display: grid;
+opacity: 1;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 45vh 20vh;
+& > .photo-div {
+  grid-row: 1;
+  & > svg {
     width: 100%;
-    position: relative;
-    border: 1px solid fuchsia;
-    & > svg {
-      position: absolute;
+    height: 100%;
+  }
+}
+& > .reflected-div {
+  grid-row: 2;
+  transform-origin: 50% 50%;
+  position: relative;
+  transform: scaleY(-1);
+  filter: FlipV;
+  & > svg {
+    position: absolute;
       top: 0;
       left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 20vh;
       stroke: yellow;
-      stroke-width: 1px;
+      stroke-width: 0px;
     }
   }
   `;
-  // transform: scaleX(-1);
-  // transform: translateY(-30px) scaleY(-1);
-  // filter: FlipV;
-
 /*
   @media screen and (max-width : 768px) {    // tablet query
     grid-column: 1/3;
@@ -96,16 +98,17 @@ class Slideshow extends React.Component {
                 <stop stopColor="white" stopOpacity="1" offset="1" />
               </linearGradient>
               <mask id="mask1">
-                <rect fill="url(#grad)" height="20vh" width="100%" y="0vh" />
+                <rect fill="url(#grad)" height="100%" width="100%" y="0vh" />
               </mask>
-              <pattern id="pattern1" height="5vh" width="100%" patternContentUnits="objectBoundingBox">
+              <pattern id="pattern1" height="1" width="1" patternContentUnits="objectBoundingBox">
                 <image height="1" width="1" preserveAspectRatio="none" y="0vh" xlinkHref={slides[4].url} />
               </pattern>
             </defs>
               <rect
+                id="reflected-rect"
                 mask="url(#mask1)"
                 width="100%"
-                height="20vh"
+                height="100%"
                 y="0"
                 fill="grey"
                 fill="url(#pattern1)"

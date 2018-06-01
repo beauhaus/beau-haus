@@ -52,8 +52,8 @@ const CollectionPageCompDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, 4vh);
-    /* background: rgba(120, 50, 112, 1);*/
   }
+
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/4;
@@ -100,18 +100,6 @@ const CollectionPageCompDiv = styled.div`
     opacity: 1;
   }
 `;
-// & > .ctr-row-top {
-//   grid-column: 1/4;
-//   grid-row: 1;
-// }
-// & > .ctr-row-mid {
-//   grid-column: 1/4;
-//   grid-row: 2;
-// }
-// & > .ctr-row-bot {
-//   grid-column:1/4;
-//   grid-row: 3;
-// }
 
 class Collection extends Component {
   constructor(props) {
@@ -167,12 +155,6 @@ class Collection extends Component {
           <div className="display-21-plus">
             <Slideshow slides={this.state.slides} />
           </div>
-          {/*
-          <div className="reflection-container">
-            <div className="reflection-box">
-            </div>
-          </div>
-        */}
         </div>
 
         <MediumTree db={tree.medium} />
