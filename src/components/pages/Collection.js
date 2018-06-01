@@ -30,7 +30,7 @@ const CollectionPageCompDiv = styled.div`
   display: grid;
   /* customized size of grid 60x60  using fr to do fibonacci calculations */
   grid-template-columns: 20vw 60vw 20vw;
-  grid-template-rows: 1fr 46.5vh 20vh; /*CHANGE?*/
+  grid-template-rows: 35vh 45vh 20vh; /*CHANGE?*/
   z-index: 1;
   & > div.topic-container {
     grid-column: 3;
@@ -52,7 +52,7 @@ const CollectionPageCompDiv = styled.div`
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, 4vh);
-    background: rgba(120, 50, 112, 0.2);
+    /* background: rgba(120, 50, 112, 1);*/
   }
   & > .grid-ctr-tall {
     grid-column: 2;
@@ -62,7 +62,6 @@ const CollectionPageCompDiv = styled.div`
     grid-template-columns: repeat(34, 1fr);
     grid-template-rows: repeat(21, 1fr) 20vh;
     opacity: 1; /* fixme: during testing this overrides app.css */
-    border: 1px solid red;
 
     & > .meta-data-thirteen {
       grid-column: 1/14;

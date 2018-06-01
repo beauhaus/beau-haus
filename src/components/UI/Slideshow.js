@@ -10,49 +10,39 @@ import styled from 'styled-components';
 // filter: FlipV;
 
 const SlideshowFrame = styled.div`
-  grid-column: 14/35;
-  grid-row: 1/-1;
-  display: grid;
-  fill: #fabcba;
-  opacity: 0.8;
   grid-column: 1;
   grid-row: 1/3;
-  border: 1px solid brown;
+  display: grid;
+  opacity: 1;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 20vh;
-  & > .slide-main-display {
-    width: 100%;
-    
-    opacity: 0.5;
-    grid-column:1;
-    grid-row: 1/7;
-    border: 1px solid blue;
-
+  grid-template-rows: 45vh 20vh;
+  & > .photo-div {
+    grid-row: 1;
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
   }
-  & #display-img {
-  }
-  & #display-img2 {
+  & > .reflected-div {
     grid-row: 2;
-    opacity: 0.5;
+    width: 100%;
+    position: relative;
+    border: 1px solid fuchsia;
+    & > svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      stroke: yellow;
+      stroke-width: 1px;
+    }
   }
-`;
+  `;
+  // transform: scaleX(-1);
+  // transform: translateY(-30px) scaleY(-1);
+  // filter: FlipV;
 
 /*
-& .graphic > #display-img {
-  width: 100%;
-  height: 40vh;
-}
-& .graphic > image {
-  width: 25vw;
-}
-  & .graphic > .reflected {
-    opacity: 0.5;
-    transform-origin: 50% 50%;
-    transform: scaleY(-1) translateY(-20vh); 
-  }
-}
-
   @media screen and (max-width : 768px) {    // tablet query
     grid-column: 1/3;
     & > .rectangles {
@@ -92,16 +82,37 @@ class Slideshow extends React.Component {
 
     return (
       <SlideshowFrame className="slideshow-frame">
-        <svg className="slide-main-display" preserveAspectRatio="none">
+        <div className="photo-div">
           <svg id="display-img" viewBox="0 0 400 400" preserveAspectRatio="none">
             <image y="0" xlinkHref={slides[4].url} />
           </svg>
-          {/* 
-          <svg id="display-img2" viewBox="0 0 400 400" preserveAspectRatio="none">
-            <image y="0" xlinkHref={slides[4].url} />
+        </div>
+
+        <div className="reflected-div">
+          <svg viewBox="0 0 400 400" preserveAspectRatio="none">
+            <defs>
+              <linearGradient opacity="1" id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop stopColor="black" offset=".1" />
+                <stop stopColor="white" stopOpacity="1" offset="1" />
+              </linearGradient>
+              <mask id="mask1">
+                <rect fill="url(#grad)" height="20vh" width="100%" y="0vh" />
+              </mask>
+              <pattern id="pattern1" height="5vh" width="100%" patternContentUnits="objectBoundingBox">
+                <image height="1" width="1" preserveAspectRatio="none" y="0vh" xlinkHref={slides[4].url} />
+              </pattern>
+            </defs>
+              <rect
+                mask="url(#mask1)"
+                width="100%"
+                height="20vh"
+                y="0"
+                fill="grey"
+                fill="url(#pattern1)"
+              />
           </svg>
-          */}
-        </svg>
+        </div>
+
       </SlideshowFrame>
     );
   }
@@ -114,12 +125,14 @@ fill="url(#pattern1)"
 
 **************PREVIOUS************
 <defs>
+
           <linearGradient opacity="1" id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop stopColor="black" offset=".1" />
             <stop stopColor="white" stopOpacity="1" offset="1" />
           </linearGradient>
+          
           <mask id="mask1">
-            <rect fill="url(#grad)" height="40vh" width="25vw" y="40vh" />
+            <rect fill="url(#grad)" height="20vh" width="100%" y="40vh" />
           </mask>
           <pattern id="pattern1" height="100%" width="100%" patternContentUnits="objectBoundingBox">
             <image
