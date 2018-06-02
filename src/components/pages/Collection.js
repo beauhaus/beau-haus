@@ -46,79 +46,71 @@ const CollectionPageCompDiv = styled.div`
       height: 100vh;
     }
   }
-  & > .grid-header {
-    grid-column: 1/4;
-    grid-row: 1;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(5, 4vh);
-  }
 
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/4;
-    z-index: 19;
-    display: grid;
-    grid-template-columns: repeat(34, 1fr);
-    grid-template-rows: repeat(21, 1fr) 20vh;
-    opacity: 1; /* fixme: during testing this overrides app.css */
-    & > .meta-data-grid {
-      grid-column: 1/14;
-      grid-row: 1/22;
-      background: rgba(5, 5, 5, 0.3);
-    }
-    & > .meta-data-copy {
-      grid-column: 1/14;
-      grid-row: 9/22;
-      background: rgba(255, 255, 255, 0.5);
-    }
-    & > .meta-data-stats {
-      grid-column: 6/14;
-      grid-row: 1/9;
-      background: skyblue;
-    }
-    & > .meta-data-five {
-      grid-column: 1/6;
-      grid-row: 4/9;
-      background: rgba(245, 165, 35, 0.9);
-    }
-    & > .meta-data-three {
-      grid-column: 3/6;
-      grid-row: 1/4;
-      padding: 2%;
+    z-index: 22;
+    position: relative;
 
-      & > button {
-        background: #fff;
-        width: 5vw;
-        height: 6vh;
-        box-shadow: 2px 2px 5px 0px black;
-      }
+    & > button {
+      position: absolute;
+      top: 0;
+      left: 3.5vw;
+      cursor: pointer;
+      background: #fff;
+      width: 5.1vw;
+      height: 6vh;
+      box-shadow: 2px 2px 5px 0px black;
     }
 
-    & > .meta-data-two {
-      grid-column: 1/3;
-      grid-row: 2/4;
-      background: maroon;
-    }
-
-    & > .meta-data-B {
-      grid-column: 2/3;
-      grid-row: 1;
-      background: lightgreen;
-    }
-
-    & > .meta-data-A {
-      grid-column: 1;
-      grid-row: 1;
-      background: fuchsia;
-    }
-    & > .display-21-plus {
-      grid-column: 14/35;
-      grid-row: 1/-1;
-
+    & section {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 22;
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 20vh;
+      grid-template-columns: repeat(34, 1fr);
+      grid-template-rows: repeat(21, 1fr) 20vh;
+      & .meta-data-A {
+        grid-column: 1;
+        grid-row: 1;
+        background: fuchsia;
+      }
+      & > .meta-data-B {
+        grid-column: 2/3;
+        grid-row: 1;
+        background: black;
+      }
+      & > .meta-data-two {
+        grid-column: 1/3;
+        grid-row: 2/4;
+        background: maroon;
+      }
+      & .meta-data-five {
+        grid-column: 1/6;
+        grid-row: 4/9;
+        background: rgba(245, 165, 35, 0.9);
+      }
+      & .meta-data-stats {
+        grid-column: 6/14;
+        grid-row: 1/9;
+        background: skyblue;
+      }
+      & .meta-data-copy {
+        grid-column: 1/14;
+        grid-row: 9/22;
+        background: rgba(255, 255, 255, 0.5);
+      }
+      & > .display-21-plus {
+        grid-column: 14/35;
+        grid-row: 1/-1;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 20vh;
+      }
     }
   }
 `;
@@ -127,18 +119,24 @@ class Collection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      init: 'state',
+      showBegin: true,
       profile: props.pageStyles,
       slides: SlidesData
     };
-
-    // console.log("props>Collection: ", props);
+    this.clickHandler = this.clickHandler.bind(this);
+    console.log('props>Collection: ', props);
   }
   // componentDidMount() {
   //   this.props.location.state
   //     ? this.setState({ profile: this.props.location.state.profile })
   //     : this.setState({ profile: InitialLoad.profile });
   // }
+  clickHandler() {
+    console.log('clicked');
+    this.setState({
+      showBegin: true
+    });
+  }
 
   render() {
     const { pageStyles, tree, water } = this.props.profile;
@@ -146,31 +144,24 @@ class Collection extends Component {
 
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
-        <div className="grid-header">header</div>
         <div className="topic-container">
           <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
         </div>
         <div className="grid-ctr-tall">
-          <div className="meta-data-grid">
-            <div className="gridDiv div8">grid</div>
-          </div>
-          <div className="meta-data-copy">
-            <div>copy</div>
-          </div>
-
-          <div className="meta-data-stats"> 8</div>
-          <div className="meta-data-five"> 5</div>
-          <div id="cycle-btn" className="meta-data-three">
-            <button id="cycle-btn">{'button'}</button>
-          </div>
-          <div className="meta-data-two"> 2</div>
-
-          <div className="meta-data-B"> B</div>
-          <div className="meta-data-A"> A</div>
-
-          <div className="display-21-plus">
-            <Slideshow slides={this.state.slides} />
-          </div>
+          <button onClick={() => this.clickHandler()} id="cycle-btn">
+            button
+          </button>
+          <section>
+            <div className="meta-data-A">A</div>
+            <div className="meta-data-B">B</div>
+            <div className="meta-data-two">2</div>
+            <div className="meta-data-five">5</div>
+            <div className="meta-data-stats">8</div>
+            <div className="meta-data-copy">copy</div>
+            <div className="display-21-plus">
+              <Slideshow slides={this.state.slides} />
+            </div>
+          </section>
         </div>
         <Shore />
         <MediumTree db={tree.medium} />
@@ -189,5 +180,27 @@ class Collection extends Component {
 export default Collection;
 
 /*
+
+discard ******************
+
+& > .meta-data-three {
+      grid-column: 3/6;
+      grid-row: 1/4;
+    }
+
+    display: grid;
+    opacity: 1; 
+
+*********************
+
+
+& > .grid-header {
+  grid-column: 1/4;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 4vh);
+}
+
 
 */

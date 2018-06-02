@@ -101,7 +101,7 @@ class Slideshow extends React.Component {
 
   render() {
     const { slides } = this.props.slides;
-    console.log('props.slides>slideshow: ', slides);
+    // console.log('props.slides>slideshow: ', slides);
 
     // const cards = slides.map(item => <image className="fadeIn" key={item.id} href={item.url} alt={item.alt} />);
     // <button onClick={this.showNext}>fwd</button>
