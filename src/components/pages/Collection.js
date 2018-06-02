@@ -50,7 +50,7 @@ const CollectionPageCompDiv = styled.div`
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/4;
-    z-index: 22;
+    z-index: 15;
     position: relative;
 
     & > button {
@@ -62,6 +62,8 @@ const CollectionPageCompDiv = styled.div`
       width: 5.1vw;
       height: 6vh;
       box-shadow: 2px 2px 5px 0px black;
+      z-index: 25;
+
     }
 
     & section {
@@ -103,7 +105,7 @@ const CollectionPageCompDiv = styled.div`
         grid-row: 9/22;
         background: rgba(255, 255, 255, 0.5);
       }
-      & > .display-21-plus {
+      & > .slideshow-container {
         grid-column: 14/35;
         grid-row: 1/-1;
 
@@ -119,23 +121,21 @@ class Collection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showBegin: true,
       profile: props.pageStyles,
       slides: SlidesData
     };
     this.clickHandler = this.clickHandler.bind(this);
     console.log('props>Collection: ', props);
   }
-  // componentDidMount() {
-  //   this.props.location.state
-  //     ? this.setState({ profile: this.props.location.state.profile })
-  //     : this.setState({ profile: InitialLoad.profile });
-  // }
+  componentDidMount() {
+    this.setState(() => {showBegin: false});
+  }
   clickHandler() {
     console.log('clicked');
-    this.setState({
-      showBegin: true
-    });
+    if (!this.state.showBegin) this.setState({ showBegin: true });
+    if (this.state.showBegin) {
+      console.log("next!")
+    }
   }
 
   render() {
@@ -144,29 +144,31 @@ class Collection extends Component {
 
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
-        <div className="topic-container">
-          <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
-        </div>
+      <div className="topic-container">
+        <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
+      </div>
+      <ShortTree db={tree.short} />
         <div className="grid-ctr-tall">
           <button onClick={() => this.clickHandler()} id="cycle-btn">
             button
           </button>
-          <section>
-            <div className="meta-data-A">A</div>
-            <div className="meta-data-B">B</div>
-            <div className="meta-data-two">2</div>
-            <div className="meta-data-five">5</div>
-            <div className="meta-data-stats">8</div>
-            <div className="meta-data-copy">copy</div>
-            <div className="display-21-plus">
-              <Slideshow slides={this.state.slides} />
-            </div>
-          </section>
+          {this.state.showBegin && (
+            <section>
+              <div className="meta-data-A">A</div>
+              <div className="meta-data-B">B</div>
+              <div className="meta-data-two">2</div>
+              <div className="meta-data-five">5</div>
+              <div className="meta-data-stats">8</div>
+              <div className="meta-data-copy">copy</div>
+              <div className="slideshow-container">
+                <Slideshow slides={this.state.slides} />
+              </div>
+            </section>
+          )}
         </div>
         <Shore />
         <MediumTree db={tree.medium} />
         <TallTree db={tree.tall} />
-        <ShortTree db={tree.short} />
         <MuteBtn />
         <LogoTheme themeFill={fill} />
       </CollectionPageCompDiv>

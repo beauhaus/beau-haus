@@ -6,8 +6,10 @@ const TallTreeWrapper = styled.svg`
   position: absolute;
   left: 0;
   bottom: 2vh;
-  height: 80vh;
-  z-index: 21;
+  width: 23vw;
+  height: 100vh;
+  z-index: 23;
+  border: 1px solid blue;
 `;
 // width: 400px;
 
@@ -17,7 +19,7 @@ const TallTree = props => {
   const { base, frame, petal, stamen } = props.db.flower;
   
   return (
-    <TallTreeWrapper id="tall-tree" viewBox="0 0 800 1040" opacity={opacity}>
+    <TallTreeWrapper id="tall-tree" viewBox="0 170 500 600" opacity={opacity}>
     <g fill={branches}>
       <path d="M68.19929573 900.95836636l31 .09179937-.39769856 134.3-31-.09179937zM95.6 897.5l-29 1.1-6.7-175 28.9-1.1zm-9.5-182.9l-22.9 1.5-10.7-156.9 22.9-1.5zM72 554.9l-19.8 1.3-9.5-138.8 19.8-1.3zM60 415.5L43.5 417 30.4 278.4l16.5-1.5zM41.9 275.4l-11.1 1.3-16.3-134.6 11.2-1.3zM22.3 137.6l-8.1.9L-.2 20l8.1-.9z" />
       <path d="M23.3 681.4l-2.4 1.7L1.3 656l2.5-1.7zm204.3-352.9l-1.3-1.5 55.3-46.5 1.3 1.5zM184 779.2l-.5-1.9 74.6-18.9.5 1.9zm-65.4 33.3l-.9-1.8 57.7-29.4.9 1.7zm-.5-7.2l-.7-.7L148 775l.7.7zm127.8-234.6l.8 2.9-101.6 29.8-.8-2.8zM40.8 300l-2.7-1.3 40.1-85 2.7 1.2zm105.1 119.2l-2.2-1.9 79.4-88.9 2.2 2z" />
