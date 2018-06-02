@@ -30,7 +30,7 @@ const CollectionPageCompDiv = styled.div`
   display: grid;
   /* customized size of grid 60x60  using fr to do fibonacci calculations */
   grid-template-columns: 20vw 60vw 20vw;
-  grid-template-rows: 35vh 45vh 20vh; /*CHANGE?*/
+  grid-template-rows: 35vh 45vh 20vh;
   z-index: 1;
   & > div.topic-container {
     grid-column: 3;
@@ -62,11 +62,55 @@ const CollectionPageCompDiv = styled.div`
     grid-template-columns: repeat(34, 1fr);
     grid-template-rows: repeat(21, 1fr) 20vh;
     opacity: 1; /* fixme: during testing this overrides app.css */
-
-    & > .meta-data-thirteen {
+    & > .meta-data-grid {
       grid-column: 1/14;
       grid-row: 1/22;
-      background: rgba(243, 23, 213, 0.2);
+      background: rgba(5, 5, 5, 0.3);
+    }
+    & > .meta-data-copy {
+      grid-column: 1/14;
+      grid-row: 9/22;
+      background: rgba(255, 255, 255, 0.5);
+    }
+    & > .meta-data-stats {
+      grid-column: 6/14;
+      grid-row: 1/9;
+      background: skyblue;
+    }
+    & > .meta-data-five {
+      grid-column: 1/6;
+      grid-row: 4/9;
+      background: rgba(245, 165, 35, 0.9);
+    }
+    & > .meta-data-three {
+      grid-column: 3/6;
+      grid-row: 1/4;
+      padding: 2%;
+
+      & > button {
+        background: #fff;
+        width: 5vw;
+        height: 6vh;
+        box-shadow: 2px 2px 5px 0px black;
+      }
+    }
+
+    & > .meta-data-two {
+      grid-column: 1/3;
+      grid-row: 2/4;
+      background: maroon;
+    }
+
+    & > .meta-data-B {
+      grid-column: 2/3;
+      grid-row: 1;
+      background: lightgreen;
+    }
+
+    & > .meta-data-A {
+      grid-column: 1;
+      grid-row: 1;
+      background: fuchsia;
     }
     & > .display-21-plus {
       grid-column: 14/35;
@@ -74,30 +118,8 @@ const CollectionPageCompDiv = styled.div`
 
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 20vh; 
-/*      & > .slideshow-cmp {
-        grid-column: 1;
-        grid-row: 2;
-        border: 2px solid yellow;
-      } */
+      grid-template-rows: 1fr 20vh;
     }
-
-    & > .reflection-container {
-      grid-row: 22;
-      grid-column: 1/-1;
-      background: green;
-      display: grid;
-      grid-template-columns: repeat(34, 1fr);
-      & > .reflection-box {
-        grid-column: 14/35;
-        background: yellow;
-        opacity: 0.2;
-      }
-    }
-  }
-  & .gridDiv {
-    border: 1px dashed rgba(121, 20, 88, 0.4);
-    opacity: 1;
   }
 `;
 
@@ -129,34 +151,28 @@ class Collection extends Component {
           <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
         </div>
         <div className="grid-ctr-tall">
-          <div className="meta-data-thirteen">
-            <div className="gridDiv div1">div1</div>
-            <div className="gridDiv div2">div2</div>
-            <div className="gridDiv div3">div3</div>
-            <div className="gridDiv div4">div4</div>
-            <div className="gridDiv div5">div5</div>
-            <div className="gridDiv div6">div6</div>
-            <div className="gridDiv div7">div7</div>
-            <div className="gridDiv div8">div8</div>
-            <div className="gridDiv div1">div9</div>
-            <div className="gridDiv div2">div10</div>
-            <div className="gridDiv div2">div11</div>
-            <div className="gridDiv div2">div12</div>
-            <div className="gridDiv div3">div13</div>
-            <div className="gridDiv div4">div14</div>
-            <div className="gridDiv div5">div15</div>
-            <div className="gridDiv div6">div16</div>
-            <div className="gridDiv div7">div17</div>
-            <div className="gridDiv div8">div18</div>
-            <div className="gridDiv div6">div19</div>
-            <div className="gridDiv div7">div20</div>
-            <div className="gridDiv div8">div21</div>
+          <div className="meta-data-grid">
+            <div className="gridDiv div8">grid</div>
           </div>
+          <div className="meta-data-copy">
+            <div>copy</div>
+          </div>
+
+          <div className="meta-data-stats"> 8</div>
+          <div className="meta-data-five"> 5</div>
+          <div id="cycle-btn" className="meta-data-three">
+            <button id="cycle-btn">{'button'}</button>
+          </div>
+          <div className="meta-data-two"> 2</div>
+
+          <div className="meta-data-B"> B</div>
+          <div className="meta-data-A"> A</div>
+
           <div className="display-21-plus">
             <Slideshow slides={this.state.slides} />
           </div>
         </div>
-
+        <Shore />
         <MediumTree db={tree.medium} />
         <TallTree db={tree.tall} />
         <ShortTree db={tree.short} />
@@ -166,31 +182,12 @@ class Collection extends Component {
     );
   }
 }
-// <Shore />
+
 // <WaterBg {...water} />
 // <WaterBody />
 
 export default Collection;
 
 /*
- <div className="gridDiv div1">div1b</div>
-            <div className="gridDiv div2">div2b</div>
-            <div className="gridDiv div3">div3b</div>
-            <div className="gridDiv div4">div4b</div>
-            <div className="gridDiv div5">div5b</div>
-            <div className="gridDiv div6">div6b</div>
-            <div className="gridDiv div7">div7b</div>
-            <div className="gridDiv div8">div8b</div>
-            <div className="gridDiv div1">div9b</div>
-            <div className="gridDiv div2">div10b</div>
-            <div className="gridDiv div2">div11b</div>
-            <div className="gridDiv div2">div12b</div>
-            <div className="gridDiv div3">div13b</div>
-            <div className="gridDiv div4">div14b</div>
-            <div className="gridDiv div5">div15b</div>
-            <div className="gridDiv div6">div16b</div>
-            <div className="gridDiv div7">div17b</div>
-            <div className="gridDiv div8">div18b</div>
-            <div className="gridDiv div6">div19b</div>
-            <div className="gridDiv div7">div20b</div>
-            */
+
+*/

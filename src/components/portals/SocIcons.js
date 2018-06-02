@@ -7,20 +7,13 @@ import SocIconData from '../../data/SocIconData.json';
 /**NavMenu combines static BtnDB data with state so that colors can be manipulated from state
  * while keeping the component's code clean & readable
 //  */
-// mix-blend-mode: multiply; /*ok*/
-// mix-blend-mode: difference; /*ok*/
-// mix-blend-mode: darken; /*ok*/
-// mix-blend-mode: hard-light; /*nope*/
-// mix-blend-mode: color-burn; /*nope*/
-// mix-blend-mode: overlay; /*nope*/
-// mix-blend-mode: color-dodge; /*ok*/
 const SocIconWrapper = styled.svg`
 position: absolute;
 left: 10vw;
-bottom: 4vw;
+bottom: 2vw;
 width: 20vw;
 z-index: 10;
-& .icon-cover {
+& .icon-cover {/* currently not used*/
   stroke-width: 0.2px;
   stroke: black;
   cursor: pointer;
