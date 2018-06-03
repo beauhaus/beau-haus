@@ -54,18 +54,14 @@ const CollectionPageCompDiv = styled.div`
 
     & > button {
       position: absolute;
-      top: 0;
-      left: 3.5vw;
+      top: -0.2vh;
+      left: 8.8vw;
       cursor: pointer;
-      background: tan;
-      width: 5.1vw;
-      height: 6vh;
-      box-shadow: 2px 2px 5px 0px black;
+      background: #bcbcbc;
+      width: 14.1vw;
+      height: 17.2vh;
+      box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.8);
       z-index: 25;
-      font-family: "Limelight", monospace, sans-serif;
-      font-size: 2em;
-      color: #444;
-      text-shadow: 1px 1px #ecdfcd;
     }
     & section {
       top: 0;
@@ -74,6 +70,8 @@ const CollectionPageCompDiv = styled.div`
       height: 100%;
       z-index: 22;
       display: grid;
+      font-family: "Montserrat", sans-serif;
+      color: black;
       grid-template-columns: repeat(34, 1fr);
       grid-template-rows: repeat(21, 1fr) 20vh;
       & > .slideshow-container {
@@ -86,35 +84,64 @@ const CollectionPageCompDiv = styled.div`
       & .meta-data-A {
         grid-column: 1;
         grid-row: 1;
-        background: fuchsia;
+        background: wheat;
       }
       & > .meta-data-B {
         grid-column: 2/3;
         grid-row: 1;
-        background: black;
+        background: grey;
       }
-      & > .meta-data-icon {
+      & > .meta-data-C {
         grid-column: 1/3;
         grid-row: 2/4;
+        background: pink;
+        
+      }
+      & > .meta-data-number {
+        grid-column: 3/6;
+        grid-row: 1/4;
+        /*background: #666;*/
+        font-family: "Limelight", monospace, sans-serif;
+        text-align: center;
+        padding: 10%;
+        font-size: 1.5vw;
+        color: #888;
+        text-shadow: 2px 2px #ecdfcd;  
+        position: relative;
         & > img {
-          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 4vw;
           height: 100%;
+          margin-left: -2vw;
         }
       }
+      
       & .meta-data-tech {
         grid-column: 1/6;
         grid-row: 4/9;
-        padding: 5%;
-        font-size: 1.2em;
+        padding: 10%;
+        font-size: 1em;
+        & > ul {
+          font-weight: 300;
+          text-align: right;
+          list-style: none;
+        }
       }
-      & .meta-data-title {
-        grid-column: 6/14;
-        grid-row: 1/9;
-        padding: 20%;
-      }
-      & .meta-data-copy {
+      & .meta-data-desc {
         grid-column: 1/14;
         grid-row: 9/22;
+        padding: 2%;
+        text-align: justify;
+        & h3 {
+          margin-top: 1vh;
+        }
+        & p {
+          margin-top: 1.5vh;
+          line-height: 1.6em;
+          font-weight: 200;
+        }
       }
     }
   }
@@ -130,8 +157,6 @@ const CollectionPageCompDiv = styled.div`
       opacity: 1;
     }
   }
-
-
 `;
 
 class Collection extends Component {
@@ -180,29 +205,35 @@ class Collection extends Component {
         <div className="topic-container">
           <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
         </div>
-        <ShortTree db={tree.short} />
-        <div className="grid-ctr-tall">
-          <button onClick={() => this.clickHandler()} id="cycle-btn">
-          {proj_number}
-          </button>
-              <section>
-              <div className="meta-data-A">A</div>
-              <div className="meta-data-B">B</div>
-              {/*
-                <img src={this.state.slides.proj_icon} alt=""/>
-                */}
-                <div className="meta-data-icon"><img src={proj_icon} alt={proj_desc}/></div>
-                <div className="meta-data-tech">{proj_tech}</div>
-                <div className="meta-data-title">{proj_title}</div>
-                <div className="meta-data-copy">copy</div>
-                
-                <div className="slideshow-container">
-                <Slideshow  currentslide={this.state.slides[this.state.current]} />
-                </div>
-                </section>
-          
+        <div className="grid-ctr-tall fading-in">
+        <button onClick={() => this.clickHandler()} id="cycle-btn">
+        
+        </button>
+        <section>
+        <div className="meta-data-A">A</div>
+        <div className="meta-data-B">B</div>
+        <div className="meta-data-C">C</div>
+        <div className="meta-data-number"><h2>{proj_number}</h2></div>
+        {/*
+          <img src={this.state.slides.proj_icon} alt=""/>
+        */}
+          <div className="meta-data-tech"><ul>{proj_tech.map((item, idx)=>
+            <li key={`${item}-${idx}`}>{item}</li>)}</ul></div>
+          {console.log(typeof proj_tech)}
+            
+        <div className="meta-data-desc">
+        <h3>{proj_title}</h3>
+        <p>{proj_desc}</p>
+        </div>
+        
+        <div className="slideshow-container">
+        <Slideshow  currentslide={this.state.slides[this.state.current]} />
+        </div>
+        </section>
+        
         </div>
         <Shore />
+        <ShortTree db={tree.short} />
         <MediumTree db={tree.medium} />
         <TallTree db={tree.tall} />
         <MuteBtn />
