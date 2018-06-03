@@ -57,13 +57,16 @@ const CollectionPageCompDiv = styled.div`
       top: 0;
       left: 3.5vw;
       cursor: pointer;
-      background: #fff;
+      background: tan;
       width: 5.1vw;
       height: 6vh;
       box-shadow: 2px 2px 5px 0px black;
       z-index: 25;
+      font-family: "Limelight", monospace, sans-serif;
+      font-size: 2em;
+      color: #444;
+      text-shadow: 1px 1px #ecdfcd;
     }
-
     & section {
       top: 0;
       left: 0;
@@ -90,25 +93,28 @@ const CollectionPageCompDiv = styled.div`
         grid-row: 1;
         background: black;
       }
-      & > .meta-data-two {
+      & > .meta-data-icon {
         grid-column: 1/3;
         grid-row: 2/4;
-        background: maroon;
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
       }
-      & .meta-data-five {
+      & .meta-data-tech {
         grid-column: 1/6;
         grid-row: 4/9;
-        background: rgba(245, 165, 35, 0.9);
+        padding: 5%;
+        font-size: 1.2em;
       }
-      & .meta-data-stats {
+      & .meta-data-title {
         grid-column: 6/14;
         grid-row: 1/9;
-        background: skyblue;
+        padding: 20%;
       }
       & .meta-data-copy {
         grid-column: 1/14;
         grid-row: 9/22;
-        background: rgba(255, 255, 255, 0.5);
       }
     }
   }
@@ -143,10 +149,10 @@ class Collection extends Component {
     // console.log('props>Collection: ', props);
   }
   componentDidMount() {
-    console.log("this.state.slides.length", this.state.slides.length)
+    // console.log("this.state.slides.length", this.state.total)
   }
   clickHandler() {
-    console.log("total: ", this.state.total)
+    // console.log("total: ", this.state.total)
       this.setState({
         current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
       });
@@ -158,6 +164,17 @@ class Collection extends Component {
   render() {
     const { pageStyles, tree, water } = this.props.profile;
     const { fill } = this.props.profile.pageStyles.fill;
+    const currentslide = this.state.slides[this.state.current];
+    console.log("currentslide", currentslide);
+    const {proj_icon,
+      proj_number,
+      proj_title,
+      proj_tech,
+      proj_desc,
+      proj_link1,
+      proj_link1_text,
+      proj_link2,
+      proj_link2_text} = currentslide;
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
         <div className="topic-container">
@@ -166,14 +183,17 @@ class Collection extends Component {
         <ShortTree db={tree.short} />
         <div className="grid-ctr-tall">
           <button onClick={() => this.clickHandler()} id="cycle-btn">
-            button
+          {proj_number}
           </button>
               <section>
-                <div className="meta-data-A">A</div>
-                <div className="meta-data-B">B</div>
-                <div className="meta-data-two">2</div>
-                <div className="meta-data-five">5</div>
-                <div className="meta-data-stats">8</div>
+              <div className="meta-data-A">A</div>
+              <div className="meta-data-B">B</div>
+              {/*
+                <img src={this.state.slides.proj_icon} alt=""/>
+                */}
+                <div className="meta-data-icon"><img src={proj_icon} alt={proj_desc}/></div>
+                <div className="meta-data-tech">{proj_tech}</div>
+                <div className="meta-data-title">{proj_title}</div>
                 <div className="meta-data-copy">copy</div>
                 
                 <div className="slideshow-container">

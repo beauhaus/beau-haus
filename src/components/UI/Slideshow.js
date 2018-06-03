@@ -14,7 +14,17 @@ const SlideshowFrame = styled.div`
 
   & > .photo-div {
     grid-row: 1;
+    grid-column:1/2;
+    width: 100%;
+    height: 100%;
     position: relative;
+     & > img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
     & > .shad-layer::after {
       content: '';
       position: absolute;
@@ -104,31 +114,20 @@ const SlideshowFrame = styled.div`
       width: 50vw;
     }
  }
+
+  <svg id="display-img" viewBox="0 0 400 400" preserveAspectRatio="none">
+            <image id="main-img" y="0" xlinkHref={props.currentslide.url} />
+            <path id="display-frame-edge" d="M399 400V1H1v399" />
+          </svg>
 */
   const Slideshow =(props) =>{
-    console.log("> slideshow: props.currentslide: ", props.currentslide);
+    console.log("> slideshow: props: ", props);
     return (
       
       <SlideshowFrame className="slideshow-frame">
         <div className="photo-div">
-          <svg id="display-img" viewBox="0 0 400 400" preserveAspectRatio="none">
-            <filter id="inset-shadow-img" x="-100%" y="-100%" width="300%" height="200%">
-              <feComponentTransfer in="SourceAlpha">
-                <feFuncA type="table" tableValues="1 0" />
-              </feComponentTransfer>
-              <feGaussianBlur stdDeviation="8" />
-              <feOffset dx="-9" dy="14" result="offsetblur" />
-              <feFlood floodColor="#1c0000" result="color" />
-              <feComposite in2="offsetblur" operator="in" />
-              <feComposite in2="SourceAlpha" operator="in" />
-              <feMerge>
-                <feMergeNode in="SourceGraphic" />
-                <feMergeNode />
-              </feMerge>
-            </filter>
-            <image y="0" xlinkHref={props.currentslide.url} />
-            <path id="display-frame-edge" d="M399 400V1H1v399" />
-          </svg>
+        <img src={props.currentslide.url} alt=""/>
+         
           <div className="shad-layer"></div>
         </div>
 
@@ -148,7 +147,7 @@ const SlideshowFrame = styled.div`
                   height="1"
                   width="1"
                   preserveAspectRatio="none"
-                  y="0vh"
+                  y="0"
                   xlinkHref={props.currentslide.url}
                 />
               </pattern>
@@ -179,5 +178,20 @@ export default Slideshow;
 **************FAKING FILTER TRANSITION************
 https://codepen.io/beauhaus/pen/PaPEvg?editors=1000
 
+
+<filter id="inset-shadow-img" x="-100%" y="-100%" width="00%" height="200%">
+              <feComponentTransfer in="SourceAlpha">
+                <feFuncA type="table" tableValues="1 0" />
+              </feComponentTransfer>
+              <feGaussianBlur stdDeviation="8" />
+              <feOffset dx="-9" dy="14" result="offsetblur" />
+              <feFlood floodColor="#1c0000" result="color" />
+              <feComposite in2="offsetblur" operator="in" />
+              <feComposite in2="SourceAlpha" operator="in" />
+              <feMerge>
+                <feMergeNode in="SourceGraphic" />
+                <feMergeNode />
+              </feMerge>
+            </filter>
 
 */
