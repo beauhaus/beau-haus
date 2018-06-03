@@ -2,15 +2,15 @@
     "slides": [
      {
         "id": 50,
-        "url": "./img/test/mag0.jpg",
-        "alt": "test/mag0",
-        "desc_title": "mag0.jpg",
-        "desc_subtitle": "test/mag0.jpg",
-        "desc_body": "./img/test/mag0.jpg",
-        "desc_link1": "www.link.com",
-        "desc_link_text": "this is link1",
-        "desc_link2": "www.link2.com",
-        "desc_link2_text": "this is link2"
+        "url": "./img/test/blank.png",
+        "alt": ".",
+        "desc_title": ".",
+        "desc_subtitle": "blank",
+        "desc_body": "blank",
+        "desc_link1": "blank",
+        "desc_link_text": "blank",
+        "desc_link2": "blank",
+        "desc_link2_text": "blank"
       },
       {
         "id": 51,

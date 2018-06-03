@@ -9,7 +9,6 @@ const TallTreeWrapper = styled.svg`
   width: 23vw;
   height: 100vh;
   z-index: 23;
-  border: 1px solid blue;
 `;
 // width: 400px;
 

@@ -13,7 +13,6 @@ import LogoTheme from '../scene/LogoTheme';
 
 import Slideshow from '../UI/Slideshow';
 import SlidesData from '../../data/SlideShowData.json';
-
 /* grid is fibonacci @WIDTH 51vw  X 31.5vh (1.5 * 34) X (1.5 X 21)
 so. 16vw 68vw 16vw*/
 const CollectionPageCompDiv = styled.div`
@@ -63,7 +62,6 @@ const CollectionPageCompDiv = styled.div`
       height: 6vh;
       box-shadow: 2px 2px 5px 0px black;
       z-index: 25;
-
     }
 
     & section {
@@ -75,6 +73,13 @@ const CollectionPageCompDiv = styled.div`
       display: grid;
       grid-template-columns: repeat(34, 1fr);
       grid-template-rows: repeat(21, 1fr) 20vh;
+      & > .slideshow-container {
+        grid-column: 14/35;
+        grid-row: 1/-1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 20vh;
+      }
       & .meta-data-A {
         grid-column: 1;
         grid-row: 1;
@@ -105,66 +110,77 @@ const CollectionPageCompDiv = styled.div`
         grid-row: 9/22;
         background: rgba(255, 255, 255, 0.5);
       }
-      & > .slideshow-container {
-        grid-column: 14/35;
-        grid-row: 1/-1;
-
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 20vh;
-      }
     }
   }
+  & .fading-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
 `;
 
 class Collection extends Component {
   constructor(props) {
     super(props);
+    const { slides } = SlidesData;
     this.state = {
+      slides,
       profile: props.pageStyles,
-      slides: SlidesData
+      total: slides.length,
+      current: 0,
     };
     this.clickHandler = this.clickHandler.bind(this);
-    console.log('props>Collection: ', props);
+    // this.changeHandler = this.changeHandler.bind(this);
+    // console.log('props>Collection: ', props);
   }
   componentDidMount() {
-    this.setState(() => {showBegin: false});
+    console.log("this.state.slides.length", this.state.slides.length)
   }
   clickHandler() {
-    console.log('clicked');
-    if (!this.state.showBegin) this.setState({ showBegin: true });
-    if (this.state.showBegin) {
-      console.log("next!")
-    }
+    console.log("total: ", this.state.total)
+      this.setState({
+        current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
+      });
+    console.log("this.state.current", this.state.current);
+  }
+  componentWillUnmount() {
   }
 
   render() {
     const { pageStyles, tree, water } = this.props.profile;
     const { fill } = this.props.profile.pageStyles.fill;
-
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
-      <div className="topic-container">
-        <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
-      </div>
-      <ShortTree db={tree.short} />
+        <div className="topic-container">
+          <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
+        </div>
+        <ShortTree db={tree.short} />
         <div className="grid-ctr-tall">
           <button onClick={() => this.clickHandler()} id="cycle-btn">
             button
           </button>
-          {this.state.showBegin && (
-            <section>
-              <div className="meta-data-A">A</div>
-              <div className="meta-data-B">B</div>
-              <div className="meta-data-two">2</div>
-              <div className="meta-data-five">5</div>
-              <div className="meta-data-stats">8</div>
-              <div className="meta-data-copy">copy</div>
-              <div className="slideshow-container">
-                <Slideshow slides={this.state.slides} />
-              </div>
-            </section>
-          )}
+              <section>
+                <div className="meta-data-A">A</div>
+                <div className="meta-data-B">B</div>
+                <div className="meta-data-two">2</div>
+                <div className="meta-data-five">5</div>
+                <div className="meta-data-stats">8</div>
+                <div className="meta-data-copy">copy</div>
+                
+                <div className="slideshow-container">
+                <Slideshow  currentslide={this.state.slides[this.state.current]} />
+                </div>
+                </section>
+          
         </div>
         <Shore />
         <MediumTree db={tree.medium} />
