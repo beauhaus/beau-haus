@@ -29,7 +29,7 @@
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     },
@@ -47,7 +47,7 @@
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/QQqgrp/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     },
@@ -64,7 +64,7 @@
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/GyVJyO/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     },
@@ -82,7 +82,7 @@
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     },
@@ -98,11 +98,11 @@
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/rwZPjm/",
-          "text": "codepen link"
+          "text": "codepen"
         },
         {
           "url": "https://github.com/BEAUHAUS/CSSConf17-Entry",
-          "text": "repo link"
+          "text": "github"
         }
       ]
     },
@@ -115,12 +115,12 @@
       "proj_title": "./img/test/mag5.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
-      "proj_desc": "this is link1",
+      "proj_desc": "this is1",
 
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     },
@@ -133,12 +133,12 @@
       "proj_title": "./img/test/mag6.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
-      "proj_desc": "this is link1",
+      "proj_desc": "this is1",
 
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     },
@@ -151,12 +151,12 @@
       "proj_title": "./img/test/mag7.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
-      "proj_desc": "this is link1",
+      "proj_desc": "this is1",
 
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     },
@@ -169,12 +169,12 @@
       "proj_title": "./img/test/mag8.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
-      "proj_desc": "this is link1",
+      "proj_desc": "this is1",
 
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     },
@@ -187,12 +187,12 @@
       "proj_title": "./img/test/mag9.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
-      "proj_desc": "this is link1",
+      "proj_desc": "this is1",
 
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     },
@@ -205,12 +205,12 @@
       "proj_title": "./img/test/mag9.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
-      "proj_desc": "this is link1",
+      "proj_desc": "this is1",
 
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen link"
+          "text": "codepen"
         }
       ]
     }

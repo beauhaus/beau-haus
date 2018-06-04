@@ -27,11 +27,12 @@ const CreationPageCompDiv = styled.div`
   grid-template-columns: 25vw 50vw 25vw;
   grid-template-rows: 20vh 60vh 20vh;
   z-index: 1;
-  & > div.topic-container {
+  & > div.page-banner-container {
     grid-column: 3;
     grid-row: 1/4;
     position: relative;
-    & > img {   /* svg */
+    & > img {
+      /* svg */
       position: absolute;
       opacity: 1;
       bottom: 0;
@@ -39,6 +40,10 @@ const CreationPageCompDiv = styled.div`
       width: 20vh;
       height: 100vh;
     }
+  }
+  hr {
+    width: 70%;
+    margin: 0 auto;
   }
   & > .grid-header {
     grid-column: 1/4;
@@ -53,30 +58,38 @@ const CreationPageCompDiv = styled.div`
     z-index: 20;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-template-rows: repeat(1fr 2px 1fr);
     opacity: 1; /* fixme: during testing this overrides app.css */
     & .creation-proj-desc {
+      color: #333;
       padding: 2%;
-      color: #444;
       & h1 {
-        font-weight: 300;
-        font-style: italic;
+        font-weight: 200;
       }
       & h2 {
-        margin: 0 auto;
-        font-weight: 400;
+        margin: -2vh auto 1vh auto;
+        font-weight: 300;
+        font-size: 1.2em;
+        font-family: 'Lato', sans-serif;
       }
       & p {
-        margin: 3vh auto;
+        margin: 1rem auto 0 auto;
+        font-family: 'Lato', sans-serif;
+        line-height: 2rem;
       }
       & ul {
         text-align: center;
       }
       & li {
-        margin: 0 1vw;
+        margin: 2vh 1vw;
         display: inline-block;
+        color: black;
       }
+    }
+    .project-img {
+      width: 100%;
+      height: 100%;
+      top: 4vh;
     }
     & > .ctr-row-top {
       grid-column: 1/4;
@@ -90,9 +103,14 @@ const CreationPageCompDiv = styled.div`
         text-align: right;
       }
     }
-    & > .ctr-row-mid {
+    & > .horiz-rule {
       grid-column: 1/4;
       grid-row: 2;
+      background: black;
+    }
+    & > .ctr-row-bot {
+      grid-column: 1/4;
+      grid-row: 3;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr;
@@ -100,22 +118,39 @@ const CreationPageCompDiv = styled.div`
         text-align: left;
         grid-column: 2/4;
       }
-      & > .mid-proj-img {
+      & > .bot-proj-img {
         position: relative;
         & > img {
           position: absolute;
-          top: 0;
+          top: 0vh;
           left: 2vw;
-          width: 9vw;
-          height: 14vh;
+          width: 12vw;
+          height: 18vh;
         }
       }
     }
-    & > .ctr-row-bot {
-      display: none; /* NOTE: TBD */
-      grid-column: 1/4;
-      grid-row: 3;
-      border: 2px solid orangered;
+  }
+
+  /* THIS IS TEMPORARY USED FOR UNDER CONSTRUCTION MESSAGE*/
+
+  .under-construction {
+    .page-creation h1,
+    p {
+      font-weight: 300;
+      font-size: 1.8rem;
+      color: black;
+    }
+    h2,
+    h3,
+    h4 {
+      color: black;
+    }
+    #temp-img {
+      top: 20vh;
+      margin: 10vh auto 1vh auto;
+      border: 1px solid skyblue;
+      box-shadow: 4px 4px 10px 0px black;
+      width: 70%;
     }
   }
 `;
@@ -143,7 +178,7 @@ class Creation extends Component {
     return (
       <CreationPageCompDiv className="page creation-container" style={pageStyles}>
         <div className="grid-header" />
-        <div className="topic-container">
+        <div className="page-banner-container">
           <img src="./img/pagesimg/creationbanner.svg" alt="current creation" />
         </div>
         <div className="grid-ctr">
@@ -152,8 +187,8 @@ class Creation extends Component {
               <h1>Meet 'n' Eat</h1>
               <h2>App scheduling appointments for large teams and companies.</h2>
               <p>
-                Schedules random, one-on-one dates so that, by the end of each cycle, all members will have met each other and will
-                have met and shared a meal.
+                Schedules random, one-on-one dates so that, by the end of each cycle, all members will have met each
+                other and will have met and shared a meal.
               </p>
               <ul>
                 <li>React.js</li>
@@ -161,17 +196,21 @@ class Creation extends Component {
                 <li>mongoDB</li>
               </ul>
             </div>
-            <div className="top-proj-img">
+
+            <div className="top-proj-img project-img">
               <img src="./img/pagesimg/peckish-picker-icon.svg" alt="peckish picker icon" />
             </div>
           </div>
-          <div className="ctr-row-mid">
-            <div className="mid-proj-img">
+          <hr className="horiz-rule" />
+          <div className="ctr-row-bot">
+            <div className="bot-proj-img project-img">
               <img src="./img/pagesimg/codejournal-icon.png" alt="code journal icon" />
             </div>
             <div className="creation-proj-desc mid-text">
               <h1>Code Journal</h1>
-              <h2>Large library of code and tutorials. <br/>(Portage from Angular.js to React)</h2>
+              <h2>
+                Large library of code and tutorials. <br /><i>(Portage from Angular.js to React)</i>
+              </h2>
               <p>This project is curently being ported from Angular.js to React into beau.haus/reflection.</p>
               <ul>
                 <li>React.js</li>
@@ -182,7 +221,12 @@ class Creation extends Component {
           </div>
           <div className="ctr-row-bot" />
         </div>
-
+        <div className="under-construction">
+          <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
+          <h3>Rome wasn't built in a day...</h3>
+          <h4>Site Under Construction.</h4>
+          <p>Your patience is appreciated.</p>
+        </div>
         <LogoTheme themeFill={fill} />
       </CreationPageCompDiv>
     );
@@ -199,30 +243,12 @@ export default Creation;
 // <MuteBtn />
 
 /*
-
-  .page-creation h1,
-  p {
-    font-weight: lighter;
-    width: 100%;
-    font-size: 0.8em;
-    color: dimgray;
-  }
-  h1 span {
-    font-style: italic;
-    color: black;
-  }
-  #temp-img {
-    top: 20vh;
-    margin: 10vh auto 1vh auto;
-    border: 2px solid skyblue;
-    box-shadow: 4px 4px 10px 0px black;
-    width: 100%;
-  }
-
-          <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
-
-
-          <p>Your patience is appreciated.</p>
+    & > .ctr-row-bot {
+      display: none;
+      grid-column: 1/4;
+      grid-row: 3;
+      border: 2px solid orangered;
+    }
 
 
 */

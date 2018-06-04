@@ -21,12 +21,9 @@ const CollectionPageCompDiv = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
-  color: #fff;
   display: grid;
-  /* customized size of grid 60x60  using fr to do fibonacci calculations */
+  /* customized size of grid using fr to do fibonacci calculations */
   grid-template-columns: 20vw 60vw 20vw;
   grid-template-rows: 35vh 45vh 20vh;
   & > div.topic-container {
@@ -50,22 +47,16 @@ const CollectionPageCompDiv = styled.div`
     z-index: 35; /* above trees */
     position: relative;
     & > button {
+      opacity: 1;
       position: absolute;
       top: 0;
-      left: 0;
-      background: #ccc;
-      width: 8.8vw;
-      height: 6.1vh;
+      left: 5.7rem;
+      background: lemonchiffon;
+      width: 8.4rem;
+      height: 6.5vh;
       box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0.8);
       z-index: 100;
       text-align: left;
-      & h2 {
-        margin-left: 0.5vw;
-        font-family: 'Limelight', monospace, sans-serif;
-        font-size: 1.8em;
-        color: #888;
-        text-shadow: -2px 2px #ecdfcd;
-      }
       &:hover {
         cursor: pointer;
         box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.8);
@@ -78,28 +69,49 @@ const CollectionPageCompDiv = styled.div`
       height: 100%;
       display: grid;
       z-index: 100;
-      font-family: 'Montserrat', sans-serif;
-      color: black;
       grid-template-columns: repeat(34, 1fr);
       grid-template-rows: repeat(21, 1fr) 20vh;
+      & > .meta-data-nums {
+        grid-column: 1/3;
+        grid-row: 1/4;
+        text-align: center;
+        & > h1 {
+          margin-top: 1rem;
+          font-family: 'Limelight', monospace, sans-serif;
+          font-size: 2em;
+          color: #444;
+          text-shadow: -2px 2px #ecdfcd;
+        }  
+      }
       & > .slideshow-container {
         grid-column: 14/35;
         grid-row: 1/-1;
         display: grid;
-        
+
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 20vh;
       }
 
       & > .meta-data-links {
-        & > a:hover,
+        grid-row: 4/9;
+        grid-column: 1/6;
+        text-align: left;
+        padding: 1%;
+        font-size: 1em;
+        position: relative;
+        & > .links-banner {
+          height: 100%;
+          top: 0;
+          left: 0;
+          fill: #5f807d;
+        }
+        a,
         a:visited,
         a:link,
         a:active {
           text-decoration: none;
           color: #1d3247;
           text-shadow: -1px 1px wheat;
-          font-size: 1.2em;
           font-weight: 400;
         }
         a:hover {
@@ -107,15 +119,13 @@ const CollectionPageCompDiv = styled.div`
           color: #b45330;
           text-shadow: -1px 1px #1d3247;
         }
-        grid-row: 4/9;
-        grid-column: 1/6;
-        text-align: left;
-        padding: 1%;
-        font-size: 1em;
         ul {
+          position: absolute;
+          top: 1rem;
+          left: 2rem;
           font-weight: 100;
           text-align: left;
-          line-height: 4vh;
+          line-height: 3vh;
         }
       }
 
@@ -179,10 +189,11 @@ const CollectionPageCompDiv = styled.div`
     fill: maroon;
   }
   & .bg {
-    background:  rgba(113, 144, 153, 0.5);
+    background: rgba(113, 144, 153, 0.5);
   }
 `;
 
+// <svg className="links-banner" viewBox="0 0 20 90"
 class Collection extends Component {
   constructor(props) {
     super(props);
@@ -221,11 +232,15 @@ class Collection extends Component {
           <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
         </div>
         <div className="grid-ctr-tall fading-in">
-          <button onClick={() => this.clickHandler()} id="cycle-btn">
-            <h2>{proj_number}</h2>
-          </button>
+          <button onClick={() => this.clickHandler()} id="cycle-btn">.</button>
           <section>
-            <div className="meta-data-links bg">
+          <div className="meta-data-nums">
+          <h1>{proj_number}</h1>
+          </div>
+            <div className="meta-data-links">
+              <svg className="links-banner" preserveAspectRatio="none">
+                <path d="M1.5 84.8v-5.7l12.8 3.1v-8.9l4.2 1V89l-17-4.2zm0-17.3v-5.7l17 4.2v5.7l-17-4.2zm0-9.8v-5.3l9.4-4.6-9.4-2.3v-5.4l17 4.2v5.4l-9.3 4.6 9.3 2.3v5.3l-17-4.2zm0-21.4v-5.7l6.4 1.6-6.4-7.5v-7.6l6.4 8.3L18.5 21v7l-7 2.2 2.8 3.6 4.1 1v5.7L1.5 36.3zm11.4-17.6l-.3-5.5c.8.1 1.4 0 1.9-.3.7-.4 1-1.2 1-2.3 0-.8-.2-1.5-.5-2-.4-.5-.8-.8-1.2-1-.4-.1-.8 0-1.2.3-.3.3-.7 1.2-1 2.7-.5 2.4-1.2 4-2.1 4.8-.9.9-2 1.1-3.3.8-.9-.2-1.7-.7-2.5-1.4s-1.4-1.7-1.8-2.9c-.4-1.2-.7-2.8-.7-4.7 0-2.3.4-4 1.2-5.1.8-1 2.1-1.5 3.9-1.3l.3 5.4c-.8.2-1.3.4-1.7.8-.3.4-.5 1-.5 1.8 0 .7.1 1.2.4 1.6.2.3.5.5.9.6.3.1.5 0 .7-.2.2-.2.4-.8.6-1.8.5-2.4 1-4 1.5-5 .5-.9 1.1-1.6 1.9-1.9.8-.2 1.6-.2 2.6 0 1.1.3 2.1.8 3 1.7.9.9 1.6 2 2.1 3.2.5 1.3.7 2.8.7 4.6 0 3.1-.6 5.2-1.7 6.1-1.1 1-2.5 1.3-4.2 1z" />
+              </svg>
               <ul>
                 {proj_links.map((item, idx) => (
                   <li key={`${item}-${idx}li`}>
@@ -256,7 +271,7 @@ class Collection extends Component {
         <WaterBg {...water} />
         <WaterBody />
         <Shore />
-            
+
         <ShortTree db={tree.short} />
         <MediumTree db={tree.medium} />
         <TallTree db={tree.tall} />
@@ -297,15 +312,8 @@ discard ******************
 links
 
 
-& > a:hover, a:visited, a:link, a:active
-        {
-          text-decoration: none;
-          color: #1d3247;
-          text-shadow: -1px 1px wheat;
-        }
-        a:hover {
-          font-weight: 400;
-          color: #b45330;
-          text-shadow: -1px 1px #1d3247;
-        }
+<svg className="links-banner" viewBox="0 0 20 90">
+  <path fill="#F15A24" d="M1.5 84.8v-5.7l12.8 3.1v-8.9l4.2 1V89l-17-4.2zm0-17.3v-5.7l17 4.2v5.7l-17-4.2zm0-9.8v-5.3l9.4-4.6-9.4-2.3v-5.4l17 4.2v5.4l-9.3 4.6 9.3 2.3v5.3l-17-4.2zm0-21.4v-5.7l6.4 1.6-6.4-7.5v-7.6l6.4 8.3L18.5 21v7l-7 2.2 2.8 3.6 4.1 1v5.7L1.5 36.3zm11.4-17.6l-.3-5.5c.8.1 1.4 0 1.9-.3.7-.4 1-1.2 1-2.3 0-.8-.2-1.5-.5-2-.4-.5-.8-.8-1.2-1-.4-.1-.8 0-1.2.3-.3.3-.7 1.2-1 2.7-.5 2.4-1.2 4-2.1 4.8-.9.9-2 1.1-3.3.8-.9-.2-1.7-.7-2.5-1.4s-1.4-1.7-1.8-2.9c-.4-1.2-.7-2.8-.7-4.7 0-2.3.4-4 1.2-5.1.8-1 2.1-1.5 3.9-1.3l.3 5.4c-.8.2-1.3.4-1.7.8-.3.4-.5 1-.5 1.8 0 .7.1 1.2.4 1.6.2.3.5.5.9.6.3.1.5 0 .7-.2.2-.2.4-.8.6-1.8.5-2.4 1-4 1.5-5 .5-.9 1.1-1.6 1.9-1.9.8-.2 1.6-.2 2.6 0 1.1.3 2.1.8 3 1.7.9.9 1.6 2 2.1 3.2.5 1.3.7 2.8.7 4.6 0 3.1-.6 5.2-1.7 6.1-1.1 1-2.5 1.3-4.2 1z"/>
+</svg>
+
 */

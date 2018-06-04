@@ -23,6 +23,7 @@ body {
   overflow: hidden;
   font-size: 1.6rem; /*16px*/
   font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
 }
 
 a {
@@ -58,10 +59,16 @@ li {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.6em;
+}
+h4 {
+  font-size: 1em;
 }
 
 /******* PAGE TRANSITION STYLES **********/
@@ -99,91 +106,23 @@ h2 {
   }
 }
 
-/***********TESTING NAV************/
+/******* PAGE TRANSITION STYLES END**********/
 
-.test {
-  color: dimgray;
-}
-/* TEST STYLES FOR NAVS CONTAINER */
 
-/* DEPRECATED RULES (FOR CLEANING) */
 
-/* .current-link .nav-link-dot {
-  filter: url(#dot-shad);
-} */
-
-/* tablet query */
-
-/************************/
+/*********TESTING FOR EACH PAGES GRID*********/
 
 .grid-ctr {
   opacity: 0;
 }
 
-/************************/
-/*
 
-   a
-    n
-    i   c
-    m   o
-  l a   d
-creative Development
-  e e
-  a
-  r
-  n
-
-research
-document
-share
-collaborate
-listen
-encourage
-fail
-refactor
-test
-practice
-prototype
-educate
-ask
-persevere
-read
-discover
-experiment
-invent
-plan
-commit
-sprint
-scrum
-
-/* HOME TITLE TEST RULES */
-
-/*
-blend modes
-normal
- multiply
- screen
- overlay
- darken
- lighten
- color-dodge
- color-burn
- hard-light
- soft-light
- difference 
-  exclusion 
-  hue 
-  saturation 
-  color 
-  luminosity
-*/
-.test {
+.testing-colors {
   color: #e9e9e9;
 
   color: #3b3b3b;
 
-  color: #585858;
+  color: #5f807d;
 
   color: rgba(113, 144, 153, 0.486);
   cursor: pointer;
@@ -192,37 +131,12 @@ normal
 
 }
 
-/*
-"background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
-
-
-
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
-  <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="15" d="M976.5-369v1551"/>
-  <linearGradient id="a" x1="685" x2="2061" y1="481" y2="481" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#7d2424"/>
-    <stop offset="1" stop-color="#b44a4a"/>
-  </linearGradient>
-  <path fill="url(#a)" d="M685 448h1376v66H685z"/>
-  <path fill="none" d="M696 457h670v50H696z"/>
-  <text font-family="'JCHEadA'" font-size="72" letter-spacing="4" transform="translate(696 505.4014)">
-    creative developer
-  </text>
-  <text transform="translate(1001 581)">
-    <tspan x="0" y="0" font-family="'Montserrat-Thin'" font-size="60">reflection</tspan><tspan x="0" y="72" font-family="'Montserrat-Thin'" font-size="60">design</tspan><tspan x="0" y="144" font-family="'Montserrat-Thin'" font-size="60">education</tspan>
-  </text>
-  <path fill="none" d="M990 331h702v99H990z"/>
-  <text font-family="'Montserrat-Thin'" font-size="125" transform="translate(990 423.7485)">
-    beau.haus
-  </text>
-</svg>
-
-*/
 
 /* SLIDESHOW CSS */
 
-/* .slideshow-enter {
+/* 
+
+.slideshow-enter {
   opacity: 0.01;
 }
 
@@ -249,4 +163,6 @@ normal
   100% {
     opacity: 1;
   }
-} */
+} 
+
+*/
