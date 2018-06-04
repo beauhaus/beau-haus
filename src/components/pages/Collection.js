@@ -48,7 +48,7 @@ const CollectionPageCompDiv = styled.div`
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/4;
-    z-index: 35;/* above trees */
+    z-index: 35; /* above trees */
     position: relative;
     & > button {
       position: absolute;
@@ -87,6 +87,7 @@ const CollectionPageCompDiv = styled.div`
         grid-column: 14/35;
         grid-row: 1/-1;
         display: grid;
+        
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 20vh;
       }
@@ -109,12 +110,9 @@ const CollectionPageCompDiv = styled.div`
         }
         grid-row: 4/9;
         grid-column: 1/6;
-        text-align: center;
-        padding: auto;
+        text-align: left;
+        padding: 1%;
         font-size: 1em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         ul {
           font-weight: 100;
           text-align: left;
@@ -126,9 +124,9 @@ const CollectionPageCompDiv = styled.div`
         grid-column: 6/14;
         grid-row: 1/9;
         padding: 5%;
-        padding-top: 1%;
-        font-size: 1.9em;
+        font-size: 1.3em;
         & > ul {
+          font-style: italic;
           font-weight: 100;
           text-align: right;
           line-height: 4vh;
@@ -136,6 +134,9 @@ const CollectionPageCompDiv = styled.div`
       }
 
       & .meta-data-desc {
+        border: 0px solid #fafafa;
+        border-top-width: 0px;
+
         grid-column: 1/14;
         grid-row: 9/22;
         padding: 2%;
@@ -143,10 +144,10 @@ const CollectionPageCompDiv = styled.div`
         text-align: justify;
 
         & h3 {
-          text-align: right;
+          text-align: center;
           margin-top: 1vh;
           font-size: 1.8em;
-          font-weight: 400;
+          font-weight: 300;
         }
         & p {
           margin-top: 1vh;
@@ -173,10 +174,13 @@ const CollectionPageCompDiv = styled.div`
     transform-origin: 50% 100%;
     transform: rotate(-9deg);
     left: 1.5vw;
-    }
+  }
   & #btn-mute {
     z-index: 50;
     fill: maroon;
+  }
+  & .bg {
+    background: rgba(156, 83, 83, 0.2);
   }
 `;
 
@@ -222,7 +226,7 @@ class Collection extends Component {
             <h2>{proj_number}</h2>
           </button>
           <section>
-            <div className="meta-data-links">
+            <div className="meta-data-links bg">
               <ul>
                 {proj_links.map((item, idx) => (
                   <li key={`${item}-${idx}li`}>
@@ -234,27 +238,26 @@ class Collection extends Component {
               </ul>
             </div>
 
-            <div className="meta-data-tech">
-            <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
+            <div className="meta-data-tech bg">
+              <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
             </div>
-            
-            <div className="meta-data-desc">
-            <hr />
-            <h3>{proj_title}</h3>
-            <p>{proj_desc}</p>
+
+            <div className="meta-data-desc bg">
+              <h3>{proj_title}</h3>
+              <p>{proj_desc}</p>
             </div>
-            
+
             <div className="slideshow-container">
-            <Slideshow currentslide={this.state.slides[this.state.current]} />
+              <Slideshow currentslide={this.state.slides[this.state.current]} />
             </div>
-            </section>
-            </div>
-            {/*
-            <WaterBg {...water} />
-            <WaterBody />
-            <Shore />
+          </section>
+        </div>
+        {/*
+        <WaterBg {...water} />
+        <WaterBody />
+      */}
+        <Shore />
             
-        */}
         <ShortTree db={tree.short} />
         <MediumTree db={tree.medium} />
         <TallTree db={tree.tall} />

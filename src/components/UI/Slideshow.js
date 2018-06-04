@@ -71,7 +71,7 @@ const SlideshowFrame = styled.div`
       box-shadow: inset -10px 10px 25px 0px rgba(0, 0, 0, 0.2); 
       animation: 3s .8s emboss ease-out forwards;     
     }
-    & > .reflected-svg {
+    &  .reflected-svg {
       position: absolute;
       top: 0;
       left: 0;
@@ -79,6 +79,7 @@ const SlideshowFrame = styled.div`
       width: 100%;
       height: 20vh;
       stroke-width: 0px;
+      
     }
   }
 
@@ -133,16 +134,18 @@ const SlideshowFrame = styled.div`
 
         <div className="reflected-div">
           <div className="shad-layer-reflect"></div>
+
           <svg className="reflected-svg" viewBox="0 0 400 400" preserveAspectRatio="none">
             <defs>
-              <linearGradient opacity="1" id="grad" x1="0%" y1="0%" x2="0%" y2="200%">
-                <stop stopColor="black" offset=".1" />
+              <linearGradient opacity="1" id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop stopColor="black" offset=".5" />
                 <stop stopColor="white" stopOpacity="1" offset="1" />
               </linearGradient>
+           
               <mask id="mask1">
                 <rect fill="url(#grad)" height="100%" width="100%" y="0vh" />
               </mask>
-              <pattern id="pattern1" height="1" width="1" patternContentUnits="objectBoundingBox">
+              <pattern id="pattern1" height="1" width="1" patternContentUnits="objectBoundingBox" >
                 <image
                   height="1"
                   width="1"
