@@ -14,7 +14,13 @@ const NavsWrapper = styled.div`
   right: 4vw;
   position: absolute;
   width: 18vw;
-  height: 28vh;  
+  height: 28vh;
+  text {
+    font-family: 'Lato', Tahoma, sans-serif; /* keep this */
+    font-size: 4.5rem;
+    font-weight: 300;
+    opacity: 0;
+  }
   & > .menu-link {
     z-index: 20;
     position: absolute;

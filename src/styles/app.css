@@ -9,6 +9,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 body {
   position: fixed;
   top: 0;
@@ -18,6 +21,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  font-size: 1.6rem; /*16px*/
+  font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -27,13 +32,6 @@ li {
   list-style: none;
 }
 
-/* FIXME: Make this text more specific to (navbar?) place in component*/
-text {
-  font-family: 'Lato', Tahoma, sans-serif;
-  font-size: 45px;
-  font-weight: 300;
-  opacity: 0;
-}
 /*  Does root even need styling? */
 #root {
   position: absolute;
@@ -59,6 +57,13 @@ text {
   height: 100vh;
 }
 
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.5em;
+}
+
 /******* PAGE TRANSITION STYLES **********/
 .fade-enter {
   opacity: 0;
@@ -69,9 +74,10 @@ text {
   transition: opacity 2000ms ease-in-out;
 }
 .fade-enter-active::after {
-  font-size: 30px;
+  font-size: 3rem;
   color: wheat;
   background: brown;
+  /* FIXME: z-index: ??; */
 }
 
 .fade-exit {
@@ -107,22 +113,6 @@ text {
 } */
 
 /* tablet query */
-/* .home-container {
-  background: fuchsia;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 26vw repeat(3, 1fr) 26vw;
-  grid-template-rows: 10vh repeat(4, 20vh) 10vh;
-  z-index: 1;
-} */
 
 /************************/
 
@@ -133,10 +123,7 @@ text {
 /************************/
 /*
 
-
-"Learn fast and fix everything..."
-
-    a
+   a
     n
     i   c
     m   o
@@ -235,7 +222,7 @@ normal
 
 /* SLIDESHOW CSS */
 
-.slideshow-enter {
+/* .slideshow-enter {
   opacity: 0.01;
 }
 
@@ -262,4 +249,4 @@ normal
   100% {
     opacity: 1;
   }
-}
+} */

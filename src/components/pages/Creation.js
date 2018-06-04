@@ -10,6 +10,9 @@ import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
+/***NOTES
+ * There should be an H1 in the JSX
+ */
 const CreationPageCompDiv = styled.div`
   position: absolute;
   top: 0;
@@ -18,7 +21,6 @@ const CreationPageCompDiv = styled.div`
   bottom: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
   color: #fff;
   display: grid;
@@ -57,19 +59,16 @@ const CreationPageCompDiv = styled.div`
     & .creation-proj-desc {
       padding: 2%;
       color: #444;
+      & h1 {
+        font-weight: 300;
+        font-style: italic;
+      }
       & h2 {
         margin: 0 auto;
-        font-family: 'Segoe UI', sans-serif;
-        font-weight: lighter;
-      }
-      & h3 {
-        margin: 0.5vh auto;
+        font-weight: 400;
       }
       & p {
         margin: 3vh auto;
-      }
-      & h4 {
-        margin: auto auto -2vh;
       }
       & ul {
         text-align: center;
@@ -150,8 +149,8 @@ class Creation extends Component {
         <div className="grid-ctr">
           <div className="ctr-row-top">
             <div className="creation-proj-desc top-text">
-              <h2>Meet & Eat</h2>
-              <h3>App scheduling appointments for large teams and companies.</h3>
+              <h1>Meet 'n' Eat</h1>
+              <h2>App scheduling appointments for large teams and companies.</h2>
               <p>
                 Schedules random, one-on-one dates so that, by the end of each cycle, all members will have met each other and will
                 have met and shared a meal.
@@ -171,8 +170,8 @@ class Creation extends Component {
               <img src="./img/pagesimg/codejournal-icon.png" alt="code journal icon" />
             </div>
             <div className="creation-proj-desc mid-text">
-              <h2>Code Journal</h2>
-              <h3>Large library of code and tutorials. <br/>(Portage from Angular.js to React)</h3>
+              <h1>Code Journal</h1>
+              <h2>Large library of code and tutorials. <br/>(Portage from Angular.js to React)</h2>
               <p>This project is curently being ported from Angular.js to React into beau.haus/reflection.</p>
               <ul>
                 <li>React.js</li>

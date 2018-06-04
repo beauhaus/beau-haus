@@ -21,7 +21,6 @@ const HomePageCompDiv = styled.div`
   bottom: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Lato', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
   color: #fff;
   display: grid;

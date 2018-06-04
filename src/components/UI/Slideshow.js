@@ -162,7 +162,6 @@ const SlideshowFrame = styled.div`
               height="100%"
               y="0"
               fill="url(#pattern1)"
-              filter="url(#inset-shadow-img"
             />
           </svg>
         </div>
