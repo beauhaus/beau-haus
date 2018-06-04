@@ -8,7 +8,7 @@ const ShortTreeWrapper = styled.svg`
   bottom: 2vh;
   width: 24vw;
   height: 100vh;
-  z-index: 23;
+  z-index: 21;
   `
 
 const ShortTree = props => {

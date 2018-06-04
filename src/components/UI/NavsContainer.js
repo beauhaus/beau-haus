@@ -13,8 +13,9 @@ const NavsWrapper = styled.div`
   top: 5vh;
   right: 4vw;
   position: absolute;
-  width: 15vw;
-  height: 26vh;  
+  width: 18vw;
+  height: 28vh;  
+  border: 1px solid teal;
   & > .menu-link {
     z-index: 20;
     position: absolute;
@@ -182,7 +183,7 @@ class NavsContainer extends Component {
         <svg
           className="menu-link"
           id="menu-desktop"
-          viewBox="0 0 550 500"
+          viewBox="-100 0 680 600"
           preserveAspectRatio="xMidYMid meet"
           ref={menu.id}
           onMouseEnter={ref => this.handleMenuHoverOn(menu.id)}

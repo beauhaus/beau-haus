@@ -49,19 +49,22 @@ const CollectionPageCompDiv = styled.div`
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/4;
-    z-index: 15;
+    z-index: 55;
     position: relative;
 
     & > button {
       position: absolute;
-      top: -0.2vh;
-      left: 8.8vw;
-      cursor: pointer;
-      background: #bcbcbc;
-      width: 14.1vw;
+      top: 0;
+      left: 0;
+      background: #ddd;
+      width: 8.8vw;
       height: 17.2vh;
-      box-shadow: -2px 4px 5px 0px rgba(0,0,0,0.8);
-      z-index: 25;
+      box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0.8);
+      z-index: 15;
+      &:hover {
+        cursor: pointer;
+        box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.8);
+      }
     }
     & section {
       top: 0;
@@ -70,7 +73,7 @@ const CollectionPageCompDiv = styled.div`
       height: 100%;
       z-index: 22;
       display: grid;
-      font-family: "Montserrat", sans-serif;
+      font-family: 'Montserrat', sans-serif;
       color: black;
       grid-template-columns: repeat(34, 1fr);
       grid-template-rows: repeat(21, 1fr) 20vh;
@@ -95,18 +98,17 @@ const CollectionPageCompDiv = styled.div`
         grid-column: 1/3;
         grid-row: 2/4;
         background: pink;
-        
       }
       & > .meta-data-number {
         grid-column: 3/6;
         grid-row: 1/4;
-        /*background: #666;*/
-        font-family: "Limelight", monospace, sans-serif;
+        background: pink;
+        font-family: 'Limelight', monospace, sans-serif;
         text-align: center;
         padding: 10%;
         font-size: 1.5vw;
         color: #888;
-        text-shadow: 2px 2px #ecdfcd;  
+        text-shadow: 2px 2px #ecdfcd;
         position: relative;
         & > img {
           position: absolute;
@@ -117,14 +119,15 @@ const CollectionPageCompDiv = styled.div`
           margin-left: -2vw;
         }
       }
-      
+
       & .meta-data-tech {
-        grid-column: 1/6;
-        grid-row: 4/9;
+        grid-column: 6/14;
+        grid-row: 1/9;
         padding: 10%;
         font-size: 1em;
+        background: maroon;
         & > ul {
-          font-weight: 300;
+          font-weight: 400;
           text-align: right;
           list-style: none;
         }
@@ -135,12 +138,13 @@ const CollectionPageCompDiv = styled.div`
         padding: 2%;
         text-align: justify;
         & h3 {
+          text-align: right;
           margin-top: 1vh;
         }
         & p {
           margin-top: 1.5vh;
           line-height: 1.6em;
-          font-weight: 200;
+          font-weight: 300;
         }
       }
     }
@@ -167,7 +171,7 @@ class Collection extends Component {
       slides,
       profile: props.pageStyles,
       total: slides.length,
-      current: 0,
+      current: 0
     };
     this.clickHandler = this.clickHandler.bind(this);
     // this.changeHandler = this.changeHandler.bind(this);
@@ -178,20 +182,20 @@ class Collection extends Component {
   }
   clickHandler() {
     // console.log("total: ", this.state.total)
-      this.setState({
-        current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
-      });
-    console.log("this.state.current", this.state.current);
+    this.setState({
+      current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1
+    });
+    console.log('this.state.current', this.state.current);
   }
-  componentWillUnmount() {
-  }
+  componentWillUnmount() {}
 
   render() {
     const { pageStyles, tree, water } = this.props.profile;
     const { fill } = this.props.profile.pageStyles.fill;
     const currentslide = this.state.slides[this.state.current];
-    console.log("currentslide", currentslide);
-    const {proj_icon,
+    // console.log('currentslide', currentslide);
+    const {
+      proj_icon,
       proj_number,
       proj_title,
       proj_tech,
@@ -199,38 +203,38 @@ class Collection extends Component {
       proj_link1,
       proj_link1_text,
       proj_link2,
-      proj_link2_text} = currentslide;
+      proj_link2_text
+    } = currentslide;
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
         <div className="topic-container">
           <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
         </div>
         <div className="grid-ctr-tall fading-in">
-        <button onClick={() => this.clickHandler()} id="cycle-btn">
-        
-        </button>
-        <section>
-        <div className="meta-data-A">A</div>
-        <div className="meta-data-B">B</div>
-        <div className="meta-data-C">C</div>
-        <div className="meta-data-number"><h2>{proj_number}</h2></div>
-        {/*
+          <button onClick={() => this.clickHandler()} id="cycle-btn" />
+          <section>
+            <div className="meta-data-A">A</div>
+            <div className="meta-data-B">B</div>
+            <div className="meta-data-C">C</div>
+            <div className="meta-data-number">
+              <h2>{proj_number}</h2>
+            </div>
+            {/*
           <img src={this.state.slides.proj_icon} alt=""/>
         */}
-          <div className="meta-data-tech"><ul>{proj_tech.map((item, idx)=>
-            <li key={`${item}-${idx}`}>{item}</li>)}</ul></div>
-          {console.log(typeof proj_tech)}
-            
-        <div className="meta-data-desc">
-        <h3>{proj_title}</h3>
-        <p>{proj_desc}</p>
-        </div>
-        
-        <div className="slideshow-container">
-        <Slideshow  currentslide={this.state.slides[this.state.current]} />
-        </div>
-        </section>
-        
+            <div className="meta-data-tech">
+              <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
+            </div>
+
+            <div className="meta-data-desc">
+              <h3>{proj_title}</h3>
+              <p>{proj_desc}</p>
+            </div>
+
+            <div className="slideshow-container">
+              <Slideshow currentslide={this.state.slides[this.state.current]} />
+            </div>
+          </section>
         </div>
         <Shore />
         <ShortTree db={tree.short} />
