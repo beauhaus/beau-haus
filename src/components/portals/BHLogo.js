@@ -6,7 +6,7 @@ const BHLogoWrapper = styled.svg`
   position: absolute;
   top: 5vh;
   left: 4vw;
-  z-index: 2;
+  z-index: 100;
   width: 80px;
   height: 65px;
   

@@ -5,7 +5,6 @@ const LogoThemeWrapper = styled.svg`
   position: absolute;
   top: 5vh;
   left: 4vw;
-  z-index: 10;
   width: 80px;
   height: 65px;
   opacity: 1;

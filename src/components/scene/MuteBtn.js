@@ -5,8 +5,8 @@ const MuteBtnWrapper = styled.svg`
   position: absolute;
   width: 38px;
   height: 38px;
-  bottom: 20vh;
-  left: 20vw;
+  bottom: 15vh;
+  left: 15vw;
   & > #sound-icon-waves {
     border: 2px solid red;
   }

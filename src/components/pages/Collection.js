@@ -30,7 +30,6 @@ const CollectionPageCompDiv = styled.div`
   /* customized size of grid 60x60  using fr to do fibonacci calculations */
   grid-template-columns: 20vw 60vw 20vw;
   grid-template-rows: 35vh 45vh 20vh;
-  z-index: 1;
   & > div.topic-container {
     grid-column: 3;
     grid-row: 1/4;
@@ -49,7 +48,7 @@ const CollectionPageCompDiv = styled.div`
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/4;
-    z-index: 55;
+    z-index: 35;/* above trees */
     position: relative;
     & > button {
       position: absolute;
@@ -59,7 +58,7 @@ const CollectionPageCompDiv = styled.div`
       width: 8.8vw;
       height: 6.1vh;
       box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0.8);
-      z-index: 15;
+      z-index: 100;
       text-align: left;
       & h2 {
         margin-left: 0.5vw;
@@ -78,9 +77,8 @@ const CollectionPageCompDiv = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 22;
       display: grid;
-      
+      z-index: 100;
       font-family: 'Montserrat', sans-serif;
       color: black;
       grid-template-columns: repeat(34, 1fr);
@@ -94,11 +92,15 @@ const CollectionPageCompDiv = styled.div`
       }
 
       & > .meta-data-links {
-        & > a:hover, a:visited, a:link, a:active
-        {
+        & > a:hover,
+        a:visited,
+        a:link,
+        a:active {
           text-decoration: none;
           color: #1d3247;
           text-shadow: -1px 1px wheat;
+          font-size: 1.2em;
+          font-weight: 400;
         }
         a:hover {
           font-weight: 400;
@@ -113,6 +115,11 @@ const CollectionPageCompDiv = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        ul {
+          font-weight: 100;
+          text-align: left;
+          line-height: 4vh;
+        }
       }
 
       & .meta-data-tech {
@@ -124,18 +131,17 @@ const CollectionPageCompDiv = styled.div`
         & > ul {
           font-weight: 100;
           text-align: right;
-          list-style: none;
           line-height: 4vh;
         }
       }
-      
+
       & .meta-data-desc {
         grid-column: 1/14;
         grid-row: 9/22;
         padding: 2%;
         padding-left: 0;
         text-align: justify;
-        
+
         & h3 {
           text-align: right;
           margin-top: 1vh;
@@ -162,6 +168,15 @@ const CollectionPageCompDiv = styled.div`
     100% {
       opacity: 1;
     }
+  }
+  & #short-tree {
+    transform-origin: 50% 100%;
+    transform: rotate(-9deg);
+    left: 1.5vw;
+    }
+  & #btn-mute {
+    z-index: 50;
+    fill: maroon;
   }
 `;
 
@@ -196,14 +211,7 @@ class Collection extends Component {
     const { fill } = this.props.profile.pageStyles.fill;
     const currentslide = this.state.slides[this.state.current];
     // console.log('currentslide', currentslide);
-    const {
-      proj_icon,
-      proj_number,
-      proj_title,
-      proj_tech,
-      proj_desc,
-      proj_links
-    } = currentslide;
+    const { proj_icon, proj_number, proj_title, proj_tech, proj_desc, proj_links } = currentslide;
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
         <div className="topic-container">
@@ -214,33 +222,39 @@ class Collection extends Component {
             <h2>{proj_number}</h2>
           </button>
           <section>
-            <div className="meta-data-links" >
-            <ul>
-            {proj_links.map((item,idx) => (
-              <a key={`${item}-${idx}`} target="blank_" href={item.url}>{item.text}</a>
-            ))}
-            </ul>
+            <div className="meta-data-links">
+              <ul>
+                {proj_links.map((item, idx) => (
+                  <li key={`${item}-${idx}li`}>
+                    <a key={`${item}-${idx}`} target="blank_" href={item.url}>
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/*
-          <img src={this.state.slides.proj_icon} alt=""/>
-        */}
             <div className="meta-data-tech">
-              <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
+            <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
             </div>
-
+            
             <div className="meta-data-desc">
-            <hr/>
-              <h3>{proj_title}</h3>
-              <p>{proj_desc}</p>
+            <hr />
+            <h3>{proj_title}</h3>
+            <p>{proj_desc}</p>
             </div>
-
+            
             <div className="slideshow-container">
-              <Slideshow currentslide={this.state.slides[this.state.current]} />
+            <Slideshow currentslide={this.state.slides[this.state.current]} />
             </div>
-          </section>
-        </div>
-        <Shore />
+            </section>
+            </div>
+            {/*
+            <WaterBg {...water} />
+            <WaterBody />
+            <Shore />
+            
+        */}
         <ShortTree db={tree.short} />
         <MediumTree db={tree.medium} />
         <TallTree db={tree.tall} />
@@ -250,9 +264,6 @@ class Collection extends Component {
     );
   }
 }
-
-// <WaterBg {...water} />
-// <WaterBody />
 
 export default Collection;
 

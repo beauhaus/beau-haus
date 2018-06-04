@@ -23,6 +23,9 @@ body {
 a {
   cursor: pointer;
 }
+li {
+  list-style: none;
+}
 
 /* FIXME: Make this text more specific to (navbar?) place in component*/
 text {
