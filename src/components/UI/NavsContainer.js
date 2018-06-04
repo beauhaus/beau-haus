@@ -15,7 +15,6 @@ const NavsWrapper = styled.div`
   position: absolute;
   width: 18vw;
   height: 28vh;  
-  border: 1px solid teal;
   & > .menu-link {
     z-index: 20;
     position: absolute;

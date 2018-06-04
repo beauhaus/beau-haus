@@ -51,16 +51,23 @@ const CollectionPageCompDiv = styled.div`
     grid-row: 2/4;
     z-index: 55;
     position: relative;
-
     & > button {
       position: absolute;
       top: 0;
       left: 0;
-      background: #ddd;
+      background: #ccc;
       width: 8.8vw;
-      height: 17.2vh;
+      height: 6.1vh;
       box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0.8);
       z-index: 15;
+      text-align: left;
+      & h2 {
+        margin-left: 0.5vw;
+        font-family: 'Limelight', monospace, sans-serif;
+        font-size: 1.8em;
+        color: #888;
+        text-shadow: -2px 2px #ecdfcd;
+      }
       &:hover {
         cursor: pointer;
         box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.8);
@@ -73,6 +80,7 @@ const CollectionPageCompDiv = styled.div`
       height: 100%;
       z-index: 22;
       display: grid;
+      
       font-family: 'Montserrat', sans-serif;
       color: black;
       grid-template-columns: repeat(34, 1fr);
@@ -84,66 +92,60 @@ const CollectionPageCompDiv = styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 20vh;
       }
-      & .meta-data-A {
-        grid-column: 1;
-        grid-row: 1;
-        background: wheat;
-      }
-      & > .meta-data-B {
-        grid-column: 2/3;
-        grid-row: 1;
-        background: grey;
-      }
-      & > .meta-data-C {
-        grid-column: 1/3;
-        grid-row: 2/4;
-        background: pink;
-      }
-      & > .meta-data-number {
-        grid-column: 3/6;
-        grid-row: 1/4;
-        background: pink;
-        font-family: 'Limelight', monospace, sans-serif;
-        text-align: center;
-        padding: 10%;
-        font-size: 1.5vw;
-        color: #888;
-        text-shadow: 2px 2px #ecdfcd;
-        position: relative;
-        & > img {
-          position: absolute;
-          top: 0;
-          left: 50%;
-          width: 4vw;
-          height: 100%;
-          margin-left: -2vw;
+
+      & > .meta-data-links {
+        & > a:hover, a:visited, a:link, a:active
+        {
+          text-decoration: none;
+          color: #1d3247;
+          text-shadow: -1px 1px wheat;
         }
+        a:hover {
+          font-weight: 400;
+          color: #b45330;
+          text-shadow: -1px 1px #1d3247;
+        }
+        grid-row: 4/9;
+        grid-column: 1/6;
+        text-align: center;
+        padding: auto;
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       & .meta-data-tech {
         grid-column: 6/14;
         grid-row: 1/9;
-        padding: 10%;
-        font-size: 1em;
-        background: maroon;
+        padding: 5%;
+        padding-top: 1%;
+        font-size: 1.9em;
         & > ul {
-          font-weight: 400;
+          font-weight: 100;
           text-align: right;
           list-style: none;
+          line-height: 4vh;
         }
       }
+      
       & .meta-data-desc {
         grid-column: 1/14;
         grid-row: 9/22;
         padding: 2%;
+        padding-left: 0;
         text-align: justify;
+        
         & h3 {
           text-align: right;
           margin-top: 1vh;
+          font-size: 1.8em;
+          font-weight: 400;
         }
         & p {
-          margin-top: 1.5vh;
-          line-height: 1.6em;
+          margin-top: 1vh;
+          line-height: 1.7em;
+          font-size: 1.2em;
           font-weight: 300;
         }
       }
@@ -200,10 +202,7 @@ class Collection extends Component {
       proj_title,
       proj_tech,
       proj_desc,
-      proj_link1,
-      proj_link1_text,
-      proj_link2,
-      proj_link2_text
+      proj_links
     } = currentslide;
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
@@ -211,14 +210,18 @@ class Collection extends Component {
           <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
         </div>
         <div className="grid-ctr-tall fading-in">
-          <button onClick={() => this.clickHandler()} id="cycle-btn" />
+          <button onClick={() => this.clickHandler()} id="cycle-btn">
+            <h2>{proj_number}</h2>
+          </button>
           <section>
-            <div className="meta-data-A">A</div>
-            <div className="meta-data-B">B</div>
-            <div className="meta-data-C">C</div>
-            <div className="meta-data-number">
-              <h2>{proj_number}</h2>
+            <div className="meta-data-links" >
+            <ul>
+            {proj_links.map((item,idx) => (
+              <a key={`${item}-${idx}`} target="blank_" href={item.url}>{item.text}</a>
+            ))}
+            </ul>
             </div>
+
             {/*
           <img src={this.state.slides.proj_icon} alt=""/>
         */}
@@ -227,6 +230,7 @@ class Collection extends Component {
             </div>
 
             <div className="meta-data-desc">
+            <hr/>
               <h3>{proj_title}</h3>
               <p>{proj_desc}</p>
             </div>
@@ -276,4 +280,19 @@ discard ******************
 }
 
 
+
+links
+
+
+& > a:hover, a:visited, a:link, a:active
+        {
+          text-decoration: none;
+          color: #1d3247;
+          text-shadow: -1px 1px wheat;
+        }
+        a:hover {
+          font-weight: 400;
+          color: #b45330;
+          text-shadow: -1px 1px #1d3247;
+        }
 */

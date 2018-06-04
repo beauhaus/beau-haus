@@ -9,10 +9,12 @@
       "proj_title": "",
       "proj_tech": [],
       "proj_desc": "",
-      "proj_link1": "",
-      "proj_link1_text": "",
-      "proj_link2": "",
-      "proj_link2_text": ""
+      "proj_links": [
+        {
+          "url": "",
+          "text": ""
+        }
+      ]
     },
     {
       "id": 101,
@@ -22,11 +24,14 @@
       "proj_number": "I",
       "proj_title": "Pure CSS Windows",
       "proj_tech": ["css grid", "css drawing", "gsap"],
-      "proj_desc": "Drawn in pure CSS, this experiment uses <audio> for atmospheric feel. Looped CSS animations and Filter effects are used on the SVGs while a looped cel animation is used to depict rainfall.",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+      "proj_desc":
+        "Drawn in pure CSS, this experiment uses <audio> for immersion. Looped CSS animations and Filter effects are used on the SVGs while a looped cel animation is used to depict rainfall.",
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen link"
+        }
+      ]
     },
     {
       "id": 102,
@@ -35,12 +40,16 @@
       "proj_icon": "./img/proj/projicons/react.png",
       "proj_number": "II",
       "proj_title": "Plumtree",
-      "proj_tech": ["react", "gsap", "svg filters"],
-      "proj_desc": "Animated opacity on radial-gradients to simulate waves & ripples. React state is used to trigger a pissed-off chickadee's <audio> element as it files away.",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+      "proj_tech": ["react", "gsap", "illustrator", "audacity"],
+      "proj_desc":
+        "Animated opacity on radial-gradients to simulate waves & ripples. React state is used to trigger a pissed-off chickadee's <audio> element as it files away.",
+
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/QQqgrp/",
+          "text": "codepen link"
+        }
+      ]
     },
     {
       "id": 103,
@@ -51,10 +60,13 @@
       "proj_title": "Turbulent Time",
       "proj_tech": ["svg turbulence", "jquery", "gsap"],
       "proj_desc": "FeTurbulence is looped to slowly degrade the integrity of an svg and my laptop's heat-sink fan.",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/GyVJyO/",
+          "text": "codepen link"
+        }
+      ]
     },
     {
       "id": 104,
@@ -62,28 +74,37 @@
       "alt": "state picker alternative to dropdown menu",
       "proj_icon": "mag3.jpg",
       "proj_number": "IV",
-      "proj_title": "Animated state-picker",
-      "proj_tech": ["react", "gsap", "validator.js", "css animation"],
-      "proj_desc": "Multi-layered SVG to create a 50's retro-monitor glitch animation. Project's aim is to mitigate the alienating and brutalist UX of clicking through a state-picker drop-down menu.",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+      "proj_title": "Retro Telescreen",
+      "proj_tech": ["react/gsap", "validator.js", "scss", "CSSanimation"],
+      "proj_desc":
+        "Multi-layered SVG to create a 50's retro-monitor glitch animation. Project's aim is to mitigate the alienating & brutalist user experience of clicking through a state-picker drop-down menu.",
+
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen link"
+        }
+      ]
     },
     {
       "id": 105,
-      "url": "./img/test/mag4.jpg",
-      "alt": "test/mag4",
+      "url": "./img/proj/cssconf.jpg",
+      "alt": "CSSConf17 Entry",
       "proj_icon": "mag4.jpg",
       "proj_number": "V",
-      "proj_title": "./img/test/mag4.jpg",
-      "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
-
-      "proj_desc": "this is link1",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+      "proj_title": "CSSConf Contest Entry",
+      "proj_tech": ["SASS", "CSS Grid", "Pure CSS Drawing"],
+      "proj_desc": "CSSConf 2017 Contest Entry: Runner-up.",
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/rwZPjm/",
+          "text": "codepen link"
+        },
+        {
+          "url": "https://github.com/BEAUHAUS/CSSConf17-Entry",
+          "text": "repo link"
+        }
+      ]
     },
     {
       "id": 106,
@@ -95,10 +116,13 @@
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
       "proj_desc": "this is link1",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen link"
+        }
+      ]
     },
     {
       "id": 107,
@@ -110,10 +134,13 @@
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
       "proj_desc": "this is link1",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen link"
+        }
+      ]
     },
     {
       "id": 108,
@@ -125,10 +152,13 @@
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
       "proj_desc": "this is link1",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen link"
+        }
+      ]
     },
     {
       "id": 109,
@@ -140,10 +170,13 @@
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
       "proj_desc": "this is link1",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen link"
+        }
+      ]
     },
     {
       "id": 110,
@@ -155,10 +188,13 @@
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
       "proj_desc": "this is link1",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen link"
+        }
+      ]
     },
     {
       "id": 111,
@@ -170,10 +206,13 @@
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
       "proj_desc": "this is link1",
-      "proj_link1": "url",
-      "proj_link1_text": "text",
-      "proj_link2": "url",
-      "proj_link2_text": "text"
+
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen link"
+        }
+      ]
     }
   ]
 }
