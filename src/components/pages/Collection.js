@@ -180,7 +180,7 @@ const CollectionPageCompDiv = styled.div`
     fill: maroon;
   }
   & .bg {
-    background: rgba(156, 83, 83, 0.2);
+    background:  rgba(113, 144, 153, 0.5);
   }
 `;
 
@@ -253,9 +253,9 @@ class Collection extends Component {
           </section>
         </div>
         {/*
+        */}
         <WaterBg {...water} />
         <WaterBody />
-      */}
         <Shore />
             
         <ShortTree db={tree.short} />
