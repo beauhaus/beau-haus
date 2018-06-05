@@ -54,17 +54,28 @@ const CollectionPageCompDiv = styled.div`
       top: 0;
       left: 14.1rem;
       background: grey;
-      width: 22.6rem;
+      width: 22.65rem;
       height: 15.3rem;
       box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0.8);
       z-index: 100;
       text-align: center;
+      & > svg {
+        height: 100%;
+        width: 100%;
+        & > rect {
+          fill: #999;
+        }
+      }
       & > h1 {
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
         margin: 0;
         font-family: 'Plaster', monospace, sans-serif;
         font-size: 10rem;
-        color: #444;
-        text-shadow: -2px 2px #ecdfcd;
+        color: #555;
+        text-shadow: -2px 2px 4px #ecdfcd;
+        opacity: 1;
       }
       &:hover {
         cursor: pointer;
@@ -99,11 +110,11 @@ const CollectionPageCompDiv = styled.div`
         position: relative;
         background: hsla(51, 74%, 45%, 0.4);
         svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
         }
         a,
         a:visited,
@@ -112,22 +123,21 @@ const CollectionPageCompDiv = styled.div`
           text-decoration: none;
           color: #ccf1ce;
           text-shadow: -1px 1px 2px #1c1e20;
-          
+
           font-weight: 400;
         }
         a:hover {
           color: #fff;
-          text-shadow: -2px 2px  2px black;
+          text-shadow: -2px 2px 2px black;
         }
         ul {
           position: absolute;
-          top: .5rem;
-          left: .5rem;
+          top: 0.5rem;
+          left: 0.5rem;
           font-weight: 100;
           text-align: center;
           line-height: 2.5rem;
         }
-
       }
       & > .meta-data-techlist {
         grid-row: 4/9;
@@ -135,28 +145,28 @@ const CollectionPageCompDiv = styled.div`
         text-align: left;
         padding: 1%;
         font-size: 1em;
-        position: relative;     
+        position: relative;
         ul li {
           display: block;
         }
         ul {
           font-style: italic;
           font-weight: 300;
-          text-align: right;
+          text-align: left;
           line-height: 2rem;
-          color: white;
+          color: black;
           & > li::after {
             content: url('./img/listdot.svg');
             font-size: 10px;
             width: 10px;
             margin: 0 4px;
             display: inline-block;
-            opacity: .5;
+            opacity: 0.5;
           }
         }
       }
-       
-/*
+
+      /*
       & .meta-data-tech {
         grid-column: 6/14;
         grid-row: 1/9;
@@ -222,24 +232,52 @@ const LinkIconSVG = styled.svg`
 const LinkIcon = props => {
   return (
     <svg viewBox="0 0 77 59" preserveAspectRatio="none">
-  <linearGradient id="a" x1="28.3789" x2="28.3789" y1="37.3262" y2="14.0533" gradientTransform="rotate(-34.694 42.1853408 18.33635557)" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stopColor="#799493"/>
-    <stop offset="1" stopColor="#283030"/>
-  </linearGradient>
-  <path fill="url(#a)" d="M66.1 11.8c3.6 4.8 2.2 11.3-3 14.7L19.4 54.4c-5.3 3.4-12.4 2.2-16-2.5-3.6-4.8-2.2-11.3 3-14.7l43.7-28c5.2-3.3 12.4-2.2 16 2.6z"/>
-  <linearGradient id="b" x1="374.4551" x2="374.4551" y1="-150.9268" y2="-173.6953" gradientTransform="rotate(145.306 183.37515186 -121.07642606)" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stopColor="#945765"/>
-    <stop offset=".9957" stopColor="#240008"/>
-  </linearGradient>
-  <path fill="url(#b)" d="M26.8 36.8c-3.6-4.8-3.3-10.6.6-13.1L59.7 3.1c3.9-2.5 10-.6 13.5 4.1 3.6 4.8 3.3 10.6-.6 13.1L40.4 41c-3.9 2.4-10 .6-13.6-4.2z"/>
-  <linearGradient id="c" x1="18.6953" x2="18.6953" y1="36.5166" y2="14.5469" gradientTransform="rotate(-34.694 42.1853408 18.33635557)" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stopColor="#799493"/>
-    <stop offset="1" stopColor="#283030"/>
-  </linearGradient>
-  <path fill="url(#c)" d="M16.9 56l32.3-20.6c3.9-2.5 4.1-8.4.6-13.1L3.3 51.8c3.6 4.8 9.7 6.6 13.6 4.2z"/>
-</svg>
-
-    
+      <linearGradient
+        id="a"
+        x1="28.3789"
+        x2="28.3789"
+        y1="37.3262"
+        y2="14.0533"
+        gradientTransform="rotate(-34.694 42.1853408 18.33635557)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#799493" />
+        <stop offset="1" stopColor="#283030" />
+      </linearGradient>
+      <path
+        fill="url(#a)"
+        d="M66.1 11.8c3.6 4.8 2.2 11.3-3 14.7L19.4 54.4c-5.3 3.4-12.4 2.2-16-2.5-3.6-4.8-2.2-11.3 3-14.7l43.7-28c5.2-3.3 12.4-2.2 16 2.6z"
+      />
+      <linearGradient
+        id="b"
+        x1="374.4551"
+        x2="374.4551"
+        y1="-150.9268"
+        y2="-173.6953"
+        gradientTransform="rotate(145.306 183.37515186 -121.07642606)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#945765" />
+        <stop offset=".9957" stopColor="#240008" />
+      </linearGradient>
+      <path
+        fill="url(#b)"
+        d="M26.8 36.8c-3.6-4.8-3.3-10.6.6-13.1L59.7 3.1c3.9-2.5 10-.6 13.5 4.1 3.6 4.8 3.3 10.6-.6 13.1L40.4 41c-3.9 2.4-10 .6-13.6-4.2z"
+      />
+      <linearGradient
+        id="c"
+        x1="18.6953"
+        x2="18.6953"
+        y1="36.5166"
+        y2="14.5469"
+        gradientTransform="rotate(-34.694 42.1853408 18.33635557)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#799493" />
+        <stop offset="1" stopColor="#283030" />
+      </linearGradient>
+      <path fill="url(#c)" d="M16.9 56l32.3-20.6c3.9-2.5 4.1-8.4.6-13.1L3.3 51.8c3.6 4.8 9.7 6.6 13.6 4.2z" />
+    </svg>
   );
 };
 class Collection extends Component {
@@ -280,7 +318,21 @@ class Collection extends Component {
           <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
         </div>
         <div className="grid-ctr-tall fading-in">
+          
+
           <button onClick={() => this.clickHandler()} id="cycle-btn">
+
+            <svg id="demo" viewBox="220 0 500 500" preserveAspectRatio="none">
+              <defs>
+                <filter id="grain">
+                  <feTurbulence type="turbulence" numOctaves="1" baseFrequency="3" result="turb" />
+                  <feComposite in="turb" operator="arithmetic" k1="1.3" k2=".5" k3=".5" result="result1" />
+                  <feComposite operator="in" in="result1" in2="SourceGraphic" result="finalFilter" />
+                  <feBlend mode="multiply" in="finalFilter" in2="SourceGraphic" />
+                </filter>
+              </defs>
+              <rect id="view" width="520" height="520" fill="#555" x="210" y="0" filter="url(#grain)" />
+            </svg>
             <h1>{proj_number}</h1>
           </button>
           <section>
@@ -295,16 +347,16 @@ class Collection extends Component {
                     </a>
                   </li>
                 ))}
-                </ul>
-                </div>
-                <div className="meta-data-techlist">
-                <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
+              </ul>
             </div>
-            
+            <div className="meta-data-techlist">
+              <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
+            </div>
+
             {/*
-<div className="meta-data-tech bg">000</div>
-*/}
-            <div className="meta-data-desc bg">
+
+            */}
+            <div className="meta-data-desc">
               <h3>{proj_title}</h3>
               <p>{proj_desc}</p>
             </div>
@@ -334,15 +386,20 @@ export default Collection;
 
 /*
 
-discard ******************
+grain ******************
+<button><svg id="demo" viewBox="220 0 500 500" preserveAspectRatio="none">
+<defs>
+<filter  id="grain">
+<feTurbulence type="turbulence" numOctaves="1" baseFrequency="3"  result="turb"/>
+<feComposite in="turb" operator="arithmetic" k1="1.3" k2=".5" k3=".5" result="result1" />
+<feComposite operator="in" in="result1" in2="SourceGraphic" result="finalFilter"/>
+<feBlend mode="multiply" in="finalFilter" in2="SourceGraphic" />
+</filter>
+</defs>
+  <rect id="view" width="520" height="520" fill="#eee" x="210" y="0" filter="url(#grain)" />
 
-& > .meta-data-three {
-      grid-column: 3/6;
-      grid-row: 1/4;
-    }
-
-    display: grid;
-    opacity: 1; 
+</svg>
+</button>
 
 *********************
 
@@ -383,5 +440,8 @@ links icon
   </linearGradient>
   <path fill="url(#c)" d="M14.9 50.2L49 32.8c4.1-2.1 4.9-7.9 1.8-13l-49 25c3.2 5.1 9 7.5 13.1 5.4z"/>
 </svg>
-
+*****************
+<button onClick={() => this.clickHandler()} id="cycle-btn">
+            <h1>{proj_number}</h1>
+          </button>
 */

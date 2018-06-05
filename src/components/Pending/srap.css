@@ -3,5 +3,12 @@ body {
 }
 
 .test {
-    background: hsl(346, 28%, 20%);
+    color: #ccf1ce;
+        background:#1d3247;
+    background:#1d3247;
+    background:#1d3247;
+    
+}
+li:first-child {
+    /* list-style-image: url('img/listdot.svg') */
 }

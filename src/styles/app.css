@@ -126,7 +126,7 @@ h4 {
 
   color: #5f807d;
 
-  color: rgba(113, 144, 153, 0.486);
+  color: #324743;
   cursor: pointer;
   
   color: #ecdfcd;
@@ -143,9 +143,9 @@ h4 {
   font-size: 1em;
   position: relative;     
 }
-    ul li::after {
+    /* ul li::after {
       content: url(`./img/listdot.svg`);
-    }   
+    }    */
 
 /* SLIDESHOW CSS */
 
