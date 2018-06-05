@@ -53,7 +53,7 @@ const CollectionPageCompDiv = styled.div`
         grid-column: 1/3;
         grid-row: 1/4;
         text-align: center;
-        border: 1px dashed pink;
+        // border: 1px dashed pink;
       }
       & > .meta-data-links {
         /*3x3*/
@@ -61,7 +61,7 @@ const CollectionPageCompDiv = styled.div`
         grid-column: 3/6;
         position: relative;
         background: hsla(51, 74%, 45%, 0.4);
-        border: 1px double blue;
+        // border: 1px double blue;
         svg {
           position: absolute;
           top: 0;
@@ -79,7 +79,7 @@ const CollectionPageCompDiv = styled.div`
           font-weight: 400;
         }
         a:hover {
-          color: #fff;
+          color: #b5ffbb;
           text-shadow: -2px 2px 2px black;
         }
         ul {
@@ -96,8 +96,9 @@ const CollectionPageCompDiv = styled.div`
         grid-column: 1/6;
         grid-row: 4/9;
         padding: 5%;
-        font-size: 1.3em;
-        background: rgba(20,50,129, 0.2);
+        font-size: 1vw;
+        letter-spacing: -1px;
+        background: rgba(20,50,129, 0.1);
         ul li {
           display: block;
         }
@@ -138,13 +139,13 @@ const CollectionPageCompDiv = styled.div`
         & h3 {
           text-align: center;
           margin-top: 1vh;
-          font-size: 1.8em;
+          font-size: 2vw;
           font-weight: 300;
         }
         & p {
           margin-top: 1vh;
-          line-height: 1.7em;
-          font-size: 1.2em;
+          line-height: 2.4vh;
+          font-size: 1vw;
           font-weight: 300;
         }
       }

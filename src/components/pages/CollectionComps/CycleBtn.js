@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const CycleBtn = styled.button`
+
     position: absolute;
     top: 0;
     left: 0;
@@ -9,6 +10,7 @@ const CycleBtn = styled.button`
     bottom: 0;
     width: 100%;
     height: 100%;
+    border-width: 0px;
     box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0.8);
     z-index: 100;
     text-align: center;
@@ -18,43 +20,45 @@ const CycleBtn = styled.button`
     }
     
 overflow: hidden;
-h1 {
+svg {
   position: absolute;
-    top: 2rem;
-    left: 5rem;
-    margin: 0;
+  left:0;
+  right:0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+h1 {
+  mix-blend-mode: multiply;
+  position: absolute;
+    top: -12.5vh;
+    right: 0;
     font-family: 'Plaster', monospace, sans-serif;
-    font-size: 10rem;
-    color: #555;
-    text-shadow: -2px 2px 4px #ecdfcd;
-    opacity: 1;
+    font-size: 10vw;
+    color: #ddd;
+    text-shadow: -2px 2px 3px black;
 }
 
 /*
-    svg {
-      position: absolute;
-      left:0;
-      right:0;
-      bottom: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
+    
     */
 `
 const SlideCycleBtn = props => {
 console.log("props>CycleBtn: ",props);
-//   const testFill = '#99a';
-//   const testFill = '#0b9';
-//   const testFill = '#a04';
-  const testFill = '#fc0';
-//   const testFill = '#0cf';
+  // const testFill = '#99a';
+  // const testFill = '#78989b';
+  // const testFill = '#78989b';
+  // const testFill = '#d8882d';
+const testFill= "#ebddc4";
+  // const testFill = "#daa4a4";
   // const testFill = '#78989b';
 
   
   return (
     <CycleBtn>
-    <svg id="grain-svg" viewBox="0 0 200 200" preserveAspectRatio="none">
+    <svg id="grain-svg" viewBox="0 0 50 50" preserveAspectRatio="none">
     <defs>
     <filter id="grain">
     <feTurbulence type="turbulence" numOctaves="1" baseFrequency="3" result="turb" />
@@ -63,7 +67,7 @@ console.log("props>CycleBtn: ",props);
     <feBlend mode="multiply" in="finalFilter" in2="SourceGraphic" />
     </filter>
     </defs>
-    <rect id="view" width="100%" height="100%" fill={testFill} x="0" y="0" filter="url(#grain)" />
+    <rect id="view" width="100" height="100" fill={testFill} x="0" y="0" filter="url(#grain)" />
     </svg>
     <h1>{props.count}</h1>
     </CycleBtn>

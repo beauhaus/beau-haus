@@ -10,5 +10,11 @@ body {
     
 }
 li:first-child {
-color:rgb(128, 123, 104);
+color:#4b0000;
+mix-blend-mode: multiply;
+color:  orange;
+
+color: #8caab4;
+
 }
+
