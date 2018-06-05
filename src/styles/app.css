@@ -26,6 +26,7 @@ body {
   font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
   color: black;
 }
+button:focus {outline:0;}
 
 a {
   cursor: pointer;
@@ -132,6 +133,19 @@ h4 {
 
 }
 
+
+
+.meta-data-techlist {
+  grid-row: 4/9;
+  grid-column: 1/6;
+  text-align: left;
+  padding: 1%;
+  font-size: 1em;
+  position: relative;     
+}
+    ul li::after {
+      content: url(`./img/listdot.svg`);
+    }   
 
 /* SLIDESHOW CSS */
 

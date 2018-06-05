@@ -93,7 +93,7 @@
       "proj_icon": "mag4.jpg",
       "proj_number": "5",
       "proj_title": "Bourbon Street",
-      "proj_tech": ["SASS", "CSS Grid", "Pure CSS Drawing"],
+      "proj_tech": ["SASS", "CSS Grid", "Pure CSS"],
       "proj_desc": "This mid-century Bourbon Street scene was contest runner-up for CSSConf'17 & was featured in an article by Chris Coiyer. This took 3 weeks--day & night--to complete",
       "proj_links": [
         {

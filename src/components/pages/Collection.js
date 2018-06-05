@@ -15,6 +15,8 @@ import Slideshow from '../UI/Slideshow';
 import SlidesData from '../../data/SlideShowData.json';
 /* grid is fibonacci @WIDTH 51vw  X 31.5vh (1.5 * 34) X (1.5 X 21)
 so. 16vw 68vw 16vw*/
+
+// /Users/beau/Desktop/beauhaus/beau-haus/public/img/listdot.svg
 const CollectionPageCompDiv = styled.div`
   position: absolute;
   top: 0;
@@ -63,7 +65,7 @@ const CollectionPageCompDiv = styled.div`
         font-size: 10rem;
         color: #444;
         text-shadow: -2px 2px #ecdfcd;
-      }  
+      }
       &:hover {
         cursor: pointer;
         box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.8);
@@ -82,7 +84,6 @@ const CollectionPageCompDiv = styled.div`
         grid-column: 1/3;
         grid-row: 1/4;
         text-align: center;
-       
       }
       & > .slideshow-container {
         grid-column: 14/35;
@@ -92,65 +93,78 @@ const CollectionPageCompDiv = styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 20vh;
       }
-      & > .threebythree {
+      & > .meta-data-links {
         grid-row: 1/4;
         grid-column: 3/6;
-        background: slategrey;
-      }
-      & > .meta-data-links {
-        grid-row: 4/9;
-        grid-column: 1/6;
-        text-align: left;
-        padding: 1%;
-        font-size: 1em;
         position: relative;
-        & > .links-banner {
-          height: 100%;
-          top: 0;
-          left: 0;
-          fill: #5f807d;
+        background: hsla(51, 74%, 45%, 0.4);
+        svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         }
         a,
         a:visited,
         a:link,
         a:active {
           text-decoration: none;
-          color: #1d3247;
-          text-shadow: -1px 1px wheat;
+          color: #ccf1ce;
+          text-shadow: -1px 1px 2px #1c1e20;
+          
           font-weight: 400;
         }
         a:hover {
-          font-weight: 400;
-          color: #b45330;
-          text-shadow: -1px 1px #1d3247;
+          color: #fff;
+          text-shadow: -2px 2px  2px black;
         }
         ul {
           position: absolute;
-          top: 1rem;
-          left: 2rem;
+          top: .5rem;
+          left: .5rem;
           font-weight: 100;
-          text-align: left;
-          line-height: 3vh;
+          text-align: center;
+          line-height: 2.5rem;
+        }
+
+      }
+      & > .meta-data-techlist {
+        grid-row: 4/9;
+        grid-column: 1/6;
+        text-align: left;
+        padding: 1%;
+        font-size: 1em;
+        position: relative;     
+        ul li {
+          display: block;
+        }
+        ul {
+          font-style: italic;
+          font-weight: 300;
+          text-align: right;
+          line-height: 2rem;
+          color: white;
+          & > li::after {
+            content: url('./img/listdot.svg');
+            font-size: 10px;
+            width: 10px;
+            margin: 0 4px;
+            display: inline-block;
+            opacity: .5;
+          }
         }
       }
-
+       
+/*
       & .meta-data-tech {
         grid-column: 6/14;
         grid-row: 1/9;
         padding: 5%;
         font-size: 1.3em;
-        & > ul {
-          font-style: italic;
-          font-weight: 300;
-          text-align: right;
-          line-height: 4vh;
-        }
       }
-
+*/
       & .meta-data-desc {
-        border: 1px solid #fafafa;
-        border-top-width: 0px;
-
         grid-column: 1/14;
         grid-row: 9/22;
         padding: 2%;
@@ -198,29 +212,36 @@ const CollectionPageCompDiv = styled.div`
   }
 `;
 
-const LinkIcon = (props) => {
+const LinkIconSVG = styled.svg`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+`;
+const LinkIcon = props => {
   return (
-
-<svg viewBox="0 0 78 52" opacity="0.8">
-<linearGradient id="a" x1="28.8789" x2="28.8789" y1="33.8271" y2="10.5533" gradientTransform="matrix(.8733 -.4871 .4871 .8733 -.7592 23.0815)" gradientUnits="userSpaceOnUse">
-  <stop offset="0" stopColor="#5b9493"/>
-  <stop offset="1" stopColor="#113030"/>
-</linearGradient>
-<path fill="url(#a)" d="M68.2 11c3.1 5.1 1.1 11.5-4.5 14.3L17.5 48.9C12 51.7 5 49.9 1.9 44.8-1.2 39.7.8 33.3 6.4 30.5L52.5 6.9c5.5-2.8 12.6-1 15.7 4.1z"/>
-<linearGradient id="b" x1="374.9551" x2="374.9551" y1="-154.4287" y2="-177.1954" gradientTransform="rotate(150.849 188.89793969 -115.43293178)" gradientUnits="userSpaceOnUse">
-  <stop offset="0" stopColor="#940022"/>
-  <stop offset=".9957" stopColor="#240008"/>
-</linearGradient>
-<path fill="url(#b)" d="M26.7 32.2c-3.1-5.1-2.3-10.9 1.8-13L62.7 1.8c4.1-2.1 10 .3 13.1 5.4 3.1 5.1 2.3 10.9-1.8 13L39.8 37.6c-4.2 2.1-10-.3-13.1-5.4z"/>
-<linearGradient id="c" x1="19.1953" x2="19.1953" y1="33.0186" y2="11.0454" gradientTransform="matrix(.8733 -.4871 .4871 .8733 -.7592 23.0815)" gradientUnits="userSpaceOnUse">
-  <stop offset="0" stopColor="#5b9493"/>
-  <stop offset="1" stopColor="#113030"/>
-</linearGradient>
-<path fill="url(#c)" d="M14.9 50.2L49 32.8c4.1-2.1 4.9-7.9 1.8-13l-49 25c3.2 5.1 9 7.5 13.1 5.4z"/>
+    <svg viewBox="0 0 77 59" preserveAspectRatio="none">
+  <linearGradient id="a" x1="28.3789" x2="28.3789" y1="37.3262" y2="14.0533" gradientTransform="rotate(-34.694 42.1853408 18.33635557)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stopColor="#799493"/>
+    <stop offset="1" stopColor="#283030"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M66.1 11.8c3.6 4.8 2.2 11.3-3 14.7L19.4 54.4c-5.3 3.4-12.4 2.2-16-2.5-3.6-4.8-2.2-11.3 3-14.7l43.7-28c5.2-3.3 12.4-2.2 16 2.6z"/>
+  <linearGradient id="b" x1="374.4551" x2="374.4551" y1="-150.9268" y2="-173.6953" gradientTransform="rotate(145.306 183.37515186 -121.07642606)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stopColor="#945765"/>
+    <stop offset=".9957" stopColor="#240008"/>
+  </linearGradient>
+  <path fill="url(#b)" d="M26.8 36.8c-3.6-4.8-3.3-10.6.6-13.1L59.7 3.1c3.9-2.5 10-.6 13.5 4.1 3.6 4.8 3.3 10.6-.6 13.1L40.4 41c-3.9 2.4-10 .6-13.6-4.2z"/>
+  <linearGradient id="c" x1="18.6953" x2="18.6953" y1="36.5166" y2="14.5469" gradientTransform="rotate(-34.694 42.1853408 18.33635557)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stopColor="#799493"/>
+    <stop offset="1" stopColor="#283030"/>
+  </linearGradient>
+  <path fill="url(#c)" d="M16.9 56l32.3-20.6c3.9-2.5 4.1-8.4.6-13.1L3.3 51.8c3.6 4.8 9.7 6.6 13.6 4.2z"/>
 </svg>
-  )
-}
-// <svg className="links-banner" viewBox="0 0 20 90"
+
+    
+  );
+};
 class Collection extends Component {
   constructor(props) {
     super(props);
@@ -259,18 +280,13 @@ class Collection extends Component {
           <img src="./img/pagesimg/collectionbanner.svg" alt="collection banner" />
         </div>
         <div className="grid-ctr-tall fading-in">
-          <button onClick={() => this.clickHandler()} id="cycle-btn">  <h1>{proj_number}</h1></button>
+          <button onClick={() => this.clickHandler()} id="cycle-btn">
+            <h1>{proj_number}</h1>
+          </button>
           <section>
-          <div className="meta-data-nums">
-        
-          </div>
-            <div className="threebythree">
-            <LinkIcon/>
-            </div>
-            <div className="meta-data-links bg">
-              <svg className="links-banner" preserveAspectRatio="none">
-                <path d="M1.5 84.8v-5.7l12.8 3.1v-8.9l4.2 1V89l-17-4.2zm0-17.3v-5.7l17 4.2v5.7l-17-4.2zm0-9.8v-5.3l9.4-4.6-9.4-2.3v-5.4l17 4.2v5.4l-9.3 4.6 9.3 2.3v5.3l-17-4.2zm0-21.4v-5.7l6.4 1.6-6.4-7.5v-7.6l6.4 8.3L18.5 21v7l-7 2.2 2.8 3.6 4.1 1v5.7L1.5 36.3zm11.4-17.6l-.3-5.5c.8.1 1.4 0 1.9-.3.7-.4 1-1.2 1-2.3 0-.8-.2-1.5-.5-2-.4-.5-.8-.8-1.2-1-.4-.1-.8 0-1.2.3-.3.3-.7 1.2-1 2.7-.5 2.4-1.2 4-2.1 4.8-.9.9-2 1.1-3.3.8-.9-.2-1.7-.7-2.5-1.4s-1.4-1.7-1.8-2.9c-.4-1.2-.7-2.8-.7-4.7 0-2.3.4-4 1.2-5.1.8-1 2.1-1.5 3.9-1.3l.3 5.4c-.8.2-1.3.4-1.7.8-.3.4-.5 1-.5 1.8 0 .7.1 1.2.4 1.6.2.3.5.5.9.6.3.1.5 0 .7-.2.2-.2.4-.8.6-1.8.5-2.4 1-4 1.5-5 .5-.9 1.1-1.6 1.9-1.9.8-.2 1.6-.2 2.6 0 1.1.3 2.1.8 3 1.7.9.9 1.6 2 2.1 3.2.5 1.3.7 2.8.7 4.6 0 3.1-.6 5.2-1.7 6.1-1.1 1-2.5 1.3-4.2 1z" />
-              </svg>
+            <div className="meta-data-nums" />
+            <div className="meta-data-links">
+              <LinkIcon />
               <ul>
                 {proj_links.map((item, idx) => (
                   <li key={`${item}-${idx}li`}>
@@ -279,13 +295,15 @@ class Collection extends Component {
                     </a>
                   </li>
                 ))}
-              </ul>
+                </ul>
+                </div>
+                <div className="meta-data-techlist">
+                <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
             </div>
-
-            <div className="meta-data-tech bg">
-              <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
-            </div>
-
+            
+            {/*
+<div className="meta-data-tech bg">000</div>
+*/}
             <div className="meta-data-desc bg">
               <h3>{proj_title}</h3>
               <p>{proj_desc}</p>
@@ -350,18 +368,18 @@ links icon
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 52">
   <linearGradient id="a" x1="28.8789" x2="28.8789" y1="33.8271" y2="10.5533" gradientTransform="matrix(.8733 -.4871 .4871 .8733 -.7592 23.0815)" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#5b9493"/>
-    <stop offset="1" stop-color="#113030"/>
+    <stop offset="0" stopColor="#5b9493"/>
+    <stop offset="1" stopColor="#113030"/>
   </linearGradient>
   <path fill="url(#a)" d="M68.2 11c3.1 5.1 1.1 11.5-4.5 14.3L17.5 48.9C12 51.7 5 49.9 1.9 44.8-1.2 39.7.8 33.3 6.4 30.5L52.5 6.9c5.5-2.8 12.6-1 15.7 4.1z"/>
   <linearGradient id="b" x1="374.9551" x2="374.9551" y1="-154.4287" y2="-177.1954" gradientTransform="rotate(150.849 188.89793969 -115.43293178)" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#940022"/>
-    <stop offset=".9957" stop-color="#240008"/>
+    <stop offset="0" stopColor="#940022"/>
+    <stop offset=".9957" stopColor="#240008"/>
   </linearGradient>
   <path fill="url(#b)" d="M26.7 32.2c-3.1-5.1-2.3-10.9 1.8-13L62.7 1.8c4.1-2.1 10 .3 13.1 5.4 3.1 5.1 2.3 10.9-1.8 13L39.8 37.6c-4.2 2.1-10-.3-13.1-5.4z"/>
   <linearGradient id="c" x1="19.1953" x2="19.1953" y1="33.0186" y2="11.0454" gradientTransform="matrix(.8733 -.4871 .4871 .8733 -.7592 23.0815)" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#5b9493"/>
-    <stop offset="1" stop-color="#113030"/>
+    <stop offset="0" stopColor="#5b9493"/>
+    <stop offset="1" stopColor="#113030"/>
   </linearGradient>
   <path fill="url(#c)" d="M14.9 50.2L49 32.8c4.1-2.1 4.9-7.9 1.8-13l-49 25c3.2 5.1 9 7.5 13.1 5.4z"/>
 </svg>

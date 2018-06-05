@@ -1,61 +1,7 @@
+body {
+    color: olive;
+}
 
-#Righteous {
-    font-weight: bold;
-    font-family: 'Righteous', cursive;
-}
-#Bungee-Outline {
-    font-weight: bold;
-    font-family: 'Bungee Outline', cursive;
-}
-#Geostar {
-    font-weight: bold;
-    font-family: 'Geostar', cursive;
-}
-#Fascinate {
-    font-weight: bold;
-    font-family: 'Fascinate', cursive;
-}
-#Asset {
-    font-weight: bold;
-    font-family: 'Asset', cursive;
-}
-#Fascinate-Inline {
-    font-weight: bold;
-    font-family: 'Fascinate Inline', cursive;
-}
-#Plaster {
-    font-weight: bold;
-    font-family: 'Plaster', cursive;
-}
-#Elsie {
-    font-weight: bold;
-    font-family: 'Elsie', cursive;
-}
-#Gravitas-One {
-    font-weight: bold;
-    font-family: 'Gravitas One', cursive;
-}
-#Bungee {
-    font-weight: bold;
-    font-family: 'Bungee', cursive;
-}
-#Limelight {
-    font-weight: bold;
-    font-family: 'Limelight', cursive;
-}
-#Bungee-Inline {
-    font-weight: bold;
-    font-family: 'Bungee Inline', cursive;
-}
-#Monoton {
-    font-weight: bold;
-    font-family: 'Monoton', cursive;
-}
-#Poiret-One {
-    font-weight: bold;
-    font-family: 'Poiret One', cursive;
-}
-#Bowlby-One-SC {
-    font-weight: bold;
-    font-family: 'Bowlby One SC', cursive;
+.test {
+    background: hsl(346, 28%, 20%);
 }
