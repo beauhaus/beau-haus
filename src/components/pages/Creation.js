@@ -64,7 +64,7 @@ const CreationPageCompDiv = styled.div`
       color: #333;
       padding: 2%;
       & h1 {
-        font-weight: 200;
+        font-weight: 300;
       }
       & h2 {
         margin: -2vh auto 1vh auto;
@@ -73,7 +73,7 @@ const CreationPageCompDiv = styled.div`
         font-family: 'Lato', sans-serif;
       }
       & p {
-        margin: 1rem auto 0 auto;
+        margin: 1.5rem auto 0 auto;
         font-family: 'Lato', sans-serif;
         line-height: 2rem;
       }
@@ -209,7 +209,7 @@ class Creation extends Component {
             <div className="creation-proj-desc mid-text">
               <h1>Code Journal</h1>
               <h2>
-                Large library of code and tutorials. <br /><i>(Portage from Angular.js to React)</i>
+                Large library of code, advice and tutorials. <br /><i>(Portage from Angular.js to React)</i>
               </h2>
               <p>This project is curently being ported from Angular.js to React into beau.haus/reflection.</p>
               <ul>

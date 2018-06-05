@@ -30,33 +30,6 @@ const HomePageCompDiv = styled.div`
     bottom: 8vh;
     left: -1.5vw;
   }
-  & > .grid-ctr {
-    
-    grid-column: 2;
-    grid-row: 2;
-    z-index: 20;
-    border: 2px solid navy;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
-    & > .ctr-row-top {
-      grid-column: 1/4;
-      grid-row: 1;
-      border: 2px solid green;
-    }
-    & > .ctr-row-mid {
-      grid-column: 1/4;
-      grid-row: 2;
-      border: 2px solid yellow;
-    }
-    & > .ctr-row-bot {
-      grid-column: 1/4;
-      grid-row: 3;
-      border: 2px solid orangered;
-    }
-  }
-
 `;
 
 const InitialLoad = {

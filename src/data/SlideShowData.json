@@ -21,7 +21,7 @@
       "url": "./img/proj/csswindows.jpg",
       "alt": ".",
       "proj_icon": "./img/proj/projicons/css.png",
-      "proj_number": "I",
+      "proj_number": "1",
       "proj_title": "Pure CSS Windows",
       "proj_tech": ["css grid", "css drawing", "gsap"],
       "proj_desc":
@@ -38,7 +38,7 @@
       "url": "./img/proj/plumtree.jpg",
       "alt": "plumtree",
       "proj_icon": "./img/proj/projicons/react.png",
-      "proj_number": "II",
+      "proj_number": "2",
       "proj_title": "Plumtree",
       "proj_tech": ["react", "gsap", "illustrator", "audacity"],
       "proj_desc":
@@ -56,9 +56,9 @@
       "url": "./img/proj/setinterval.jpg",
       "alt": "setinterval",
       "proj_icon": "./img/proj/projicons/gsap.png",
-      "proj_number": "III",
+      "proj_number": "3",
       "proj_title": "Turbulent Time",
-      "proj_tech": ["svg turbulence", "jquery", "gsap"],
+      "proj_tech": ["svg turbulence", "gsap", "jquery"],
       "proj_desc": "FeTurbulence is looped to slowly degrade the integrity of an svg and my laptop's heat-sink fan.",
 
       "proj_links": [
@@ -73,7 +73,7 @@
       "url": "./img/proj/statepicker.jpg",
       "alt": "state picker alternative to dropdown menu",
       "proj_icon": "mag3.jpg",
-      "proj_number": "IV",
+      "proj_number": "4",
       "proj_title": "Retro Telescreen",
       "proj_tech": ["react/gsap", "validator.js", "scss", "CSSanimation"],
       "proj_desc":
@@ -91,7 +91,7 @@
       "url": "./img/proj/cssconf.jpg",
       "alt": "CSSConf17 Entry",
       "proj_icon": "mag4.jpg",
-      "proj_number": "V",
+      "proj_number": "5",
       "proj_title": "Bourbon Street",
       "proj_tech": ["SASS", "CSS Grid", "Pure CSS Drawing"],
       "proj_desc": "This mid-century Bourbon Street scene was contest runner-up for CSSConf'17 & was featured in an article by Chris Coiyer. This took 3 weeks--day & night--to complete",
@@ -111,7 +111,7 @@
       "url": "./img/test/mag5.jpg",
       "alt": "test/mag5",
       "proj_icon": "mag5.jpg",
-      "proj_number": "VI",
+      "proj_number": "6",
       "proj_title": "./img/test/mag5.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
@@ -129,7 +129,7 @@
       "url": "./img/test/mag6.jpg",
       "alt": "test/mag6",
       "proj_icon": "mag6.jpg",
-      "proj_number": "VII",
+      "proj_number": "7",
       "proj_title": "./img/test/mag6.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
@@ -147,7 +147,7 @@
       "url": "./img/test/mag7.jpg",
       "alt": "test/mag7",
       "proj_icon": "mag7.jpg",
-      "proj_number": "VIII",
+      "proj_number": "8",
       "proj_title": "./img/test/mag7.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
@@ -165,7 +165,7 @@
       "url": "./img/test/mag8.jpg",
       "alt": "test/mag8",
       "proj_icon": "mag8.jpg",
-      "proj_number": "IX",
+      "proj_number": "9",
       "proj_title": "./img/test/mag8.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
@@ -183,7 +183,7 @@
       "url": "./img/test/mag9.jpg",
       "alt": "test/mag9",
       "proj_icon": "mag9.jpg",
-      "proj_number": "X",
+      "proj_number": "10",
       "proj_title": "./img/test/mag9.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 
@@ -201,7 +201,7 @@
       "url": "./img/test/fin.jpg",
       "alt": "test/mag9",
       "proj_icon": "mag9.jpg",
-      "proj_number": "XI",
+      "proj_number": "11",
       "proj_title": "./img/test/mag9.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 

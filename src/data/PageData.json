@@ -106,7 +106,7 @@
     "creation": {
       "pageStyles": {
         "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
-        "color": "navy",
+        "color": "black",
         "fill": "#bb383f"
       },
       "water": {
@@ -147,7 +147,7 @@
     "collection": {
       "pageStyles": {
         "background": "linear-gradient(45deg, #777 0%, #ddd 100%)",
-        "color": "navy",
+        "color": "black",
         "fill": "#85bb8f"
       },
       "water": {
@@ -188,7 +188,7 @@
     "reflection": {
       "pageStyles": {
         "background": "linear-gradient(225deg, #4a4a4a 0%, #9c9c9c 100%)",
-        "color": "navy",
+        "color": "black",
         "fill": "#2a37e8"
       },
       "water": {
@@ -229,7 +229,7 @@
     "connection": {
       "pageStyles": {
         "background": "linear-gradient(135deg, #757575 0%, #838383 100%)",
-        "color": "navy",
+        "color": "black",
         "fill": "#9c78a8"
       },
       "water": {
