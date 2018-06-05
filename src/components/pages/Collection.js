@@ -13,6 +13,7 @@ import LogoTheme from '../scene/LogoTheme';
 
 import LinksIcon from './CollectionComps/LinksIcon';
 import PageBanner from './CollectionComps/CollectionPageBanner';
+import CycleBtn from './CollectionComps/CycleBtn';
 
 import Slideshow from '../UI/Slideshow';
 import SlidesData from '../../data/SlideShowData.json';
@@ -20,6 +21,7 @@ import SlidesData from '../../data/SlideShowData.json';
 so. 16vw 68vw 16vw*/
 
 // /Users/beau/Desktop/beauhaus/beau-haus/public/img/listdot.svg
+/* customized size of grid using fr to do fibonacci calculations */
 const CollectionPageCompDiv = styled.div`
   position: absolute;
   top: 0;
@@ -28,63 +30,15 @@ const CollectionPageCompDiv = styled.div`
   bottom: 0;
   overflow: hidden;
   display: grid;
-  /* customized size of grid using fr to do fibonacci calculations */
   grid-template-columns: 20vw 60vw 20vw;
   grid-template-rows: 35vh 45vh 20vh;
-  & > div.page-banner {
-    grid-column: 3;
-    grid-row: 1/4;
-    position: relative;
-    & > img {
-      /* svg */
-      position: absolute;
-      opacity: 1;
-      bottom: 0;
-      right: -2vw;
-      width: 20vh;
-      height: 100vh;
-    }
-  }
 
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/4;
     z-index: 35; /* above trees */
     position: relative;
-    & > button {
-      opacity: 1;
-      position: absolute;
-      top: 0;
-      left: 14.1rem;
-      background: grey;
-      width: 22.65rem;
-      height: 15.3rem;
-      box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0.8);
-      z-index: 100;
-      text-align: center;
-      & > svg {
-        height: 100%;
-        width: 100%;
-        & > rect {
-          fill: #999;
-        }
-      }
-      & > h1 {
-        position: absolute;
-        top: 2rem;
-        left: 5rem;
-        margin: 0;
-        font-family: 'Plaster', monospace, sans-serif;
-        font-size: 10rem;
-        color: #555;
-        text-shadow: -2px 2px 4px #ecdfcd;
-        opacity: 1;
-      }
-      &:hover {
-        cursor: pointer;
-        box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.8);
-      }
-    }
+    
     & section {
       top: 0;
       left: 0;
@@ -94,24 +48,20 @@ const CollectionPageCompDiv = styled.div`
       z-index: 100;
       grid-template-columns: repeat(34, 1fr);
       grid-template-rows: repeat(21, 1fr) 20vh;
-      & > .meta-data-nums {
+      & > .meta-data-112 {
+        /* 1,1,2x2 */
         grid-column: 1/3;
         grid-row: 1/4;
         text-align: center;
-      }
-      & > .slideshow-container {
-        grid-column: 14/35;
-        grid-row: 1/-1;
-        display: grid;
-
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 20vh;
+        border: 1px dashed pink;
       }
       & > .meta-data-links {
+        /*3x3*/
         grid-row: 1/4;
         grid-column: 3/6;
         position: relative;
         background: hsla(51, 74%, 45%, 0.4);
+        border: 1px double blue;
         svg {
           position: absolute;
           top: 0;
@@ -124,9 +74,8 @@ const CollectionPageCompDiv = styled.div`
         a:link,
         a:active {
           text-decoration: none;
-          color: #ccf1ce;
+          color: lemonchiffon;
           text-shadow: -1px 1px 2px #1c1e20;
-
           font-weight: 400;
         }
         a:hover {
@@ -142,13 +91,13 @@ const CollectionPageCompDiv = styled.div`
           line-height: 2.5rem;
         }
       }
-      & > .meta-data-techlist {
-        grid-row: 4/9;
+
+      & .meta-data-techlist {/* 5x5 */
         grid-column: 1/6;
-        text-align: left;
-        padding: 1%;
-        font-size: 1em;
-        position: relative;
+        grid-row: 4/9;
+        padding: 5%;
+        font-size: 1.3em;
+        background: rgba(20,50,129, 0.2);
         ul li {
           display: block;
         }
@@ -168,16 +117,18 @@ const CollectionPageCompDiv = styled.div`
           }
         }
       }
-
-      /*
-      & .meta-data-tech {
-        grid-column: 6/14;
+      & > .meta-data-btn-pos {/* 8x8 */
         grid-row: 1/9;
-        padding: 5%;
-        font-size: 1.3em;
+        grid-column: 6/14;
+        text-align: center;
+        padding: 1%;
+        font-size: 1em;
+        position: relative;
+
       }
-*/
+
       & .meta-data-desc {
+        /* 13x13 */
         grid-column: 1/14;
         grid-row: 9/22;
         padding: 2%;
@@ -196,6 +147,14 @@ const CollectionPageCompDiv = styled.div`
           font-size: 1.2em;
           font-weight: 300;
         }
+      }
+      & > .slideshow-container-tall {
+        /* entire right half */
+        grid-column: 14/35;
+        grid-row: 1/-1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 20vh;
       }
     }
   }
@@ -225,7 +184,6 @@ const CollectionPageCompDiv = styled.div`
   }
 `;
 
-
 class Collection extends Component {
   constructor(props) {
     super(props);
@@ -237,13 +195,13 @@ class Collection extends Component {
       current: 0
     };
     this.clickHandler = this.clickHandler.bind(this);
-    // this.changeHandler = this.changeHandler.bind(this);
     console.log('props>Collection: ', props);
   }
   componentDidMount() {
     // console.log("this.state.slides.length", this.state.total)
   }
   clickHandler() {
+    console.log("Clickety!")
     // console.log("total: ", this.state.total)
     this.setState({
       current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1
@@ -260,27 +218,10 @@ class Collection extends Component {
     const { proj_icon, proj_number, proj_title, proj_tech, proj_desc, proj_links } = currentslide;
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
-       <PageBanner fill={fill}/>
+        <PageBanner fill={fill} />
         <div className="grid-ctr-tall fading-in">
-          
-
-          <button onClick={() => this.clickHandler()} id="cycle-btn">
-
-            <svg id="demo" viewBox="220 0 500 500" preserveAspectRatio="none">
-              <defs>
-                <filter id="grain">
-                  <feTurbulence type="turbulence" numOctaves="1" baseFrequency="3" result="turb" />
-                  <feComposite in="turb" operator="arithmetic" k1="1.3" k2=".5" k3=".5" result="result1" />
-                  <feComposite operator="in" in="result1" in2="SourceGraphic" result="finalFilter" />
-                  <feBlend mode="multiply" in="finalFilter" in2="SourceGraphic" />
-                </filter>
-              </defs>
-              <rect id="view" width="520" height="520" fill="#555" x="210" y="0" filter="url(#grain)" />
-            </svg>
-            <h1>{proj_number}</h1>
-          </button>
           <section>
-            <div className="meta-data-nums" />
+            <div className="meta-data-112">.</div>
             <div className="meta-data-links">
               <LinksIcon />
               <ul>
@@ -296,16 +237,15 @@ class Collection extends Component {
             <div className="meta-data-techlist">
               <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
             </div>
-
-            {/*
-
-            */}
+            <div className="meta-data-btn-pos" onClick={() => this.clickHandler()} >
+              <CycleBtn count={proj_number} id="cycle-btn"/>
+            </div>
             <div className="meta-data-desc">
               <h3>{proj_title}</h3>
               <p>{proj_desc}</p>
             </div>
 
-            <div className="slideshow-container">
+            <div className="slideshow-container-tall">
               <Slideshow currentslide={this.state.slides[this.state.current]} />
             </div>
           </section>

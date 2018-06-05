@@ -3,12 +3,12 @@ body {
 }
 
 .test {
-    color: #ccf1ce;
+    color: #78989b;
         background:#1d3247;
     background:#1d3247;
     background:#1d3247;
     
 }
 li:first-child {
-    /* list-style-image: url('img/listdot.svg') */
+color:rgb(128, 123, 104);
 }
