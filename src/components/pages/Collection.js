@@ -71,6 +71,9 @@ const CollectionPageCompDiv = styled.div`
           height: 100%;
           & > #gauge-needle {
             transform-origin: 50% 50%;
+            stroke-width: 4px;
+            stroke: #C1272D;
+            
           }
         }
       }
@@ -78,7 +81,15 @@ const CollectionPageCompDiv = styled.div`
         /* 1,1,2x2 */
         grid-column: 1/3;
         grid-row: 1/4;
-        text-align: center;
+        svg {
+          width: 100%;
+          height: 100%;
+          & > #gauge-needle {
+            transform-origin: 50% 50%;
+            stroke-width: 4px;
+            stroke: #C1272D;
+          }
+        } 
       }
       & > .meta-data-links {
         /*3x3*/
@@ -252,12 +263,10 @@ class Collection extends Component {
           <div className="meta-data-1a fibonacci">.</div>
           <div className="meta-data-1b fibonacci">.</div>
           <div className="meta-data-2 fibonacci">
-             <ProgressGauge total={this.state.total} count={proj_number}/>
+          <ProgressGauge total={this.state.total} count={proj_number}/>
           </div>
           <div className="meta-data-112">
-          {/*
-            <ProgressGauge/>
-          */}
+          
           </div>
           <div className="meta-data-links fibonacci">
               <LinksIcon />
@@ -287,8 +296,7 @@ class Collection extends Component {
             </div>
           </section>
         </div>
-        {/*
-        */}
+        
         <WaterBg {...water} />
         <WaterBody />
         <Shore />
