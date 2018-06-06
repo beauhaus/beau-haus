@@ -3,18 +3,35 @@ body {
 }
 
 .test {
-    color: #78989b;
+    color: rgba(73, 92, 94, 0.911);
         background:#1d3247;
-    background:#1d3247;
-    background:#1d3247;
+    background:rgba(216, 186, 208, 0.685);
+    background:rgba(255, 246, 79, 0.678);
     
 }
 li:first-child {
-color:#4b0000;
+color:#dddddd;
 mix-blend-mode: multiply;
-color:  orange;
+color:  #ebddc4;
 
-color: #8caab4;
+stroke: hsl(34, 100%, 100%);
+color: rgba(207, 190, 93, 0.733);
+
+/* 1 */
+color: hsl(0, 0%, 7.7%); 
+/* 1 */
+color: hsl(0, 0%, 7.7%); 
+/* 2 */
+color: hsl(0, 0%, 15.4%); 
+/* 3 */
+color: hsl(0, 0%, 23.1%); 
+/* 5 */
+color: hsl(0, 0%, 38.5%); 
+/* 8 */
+color: hsl(0, 0%, 61.5%); 
+/* 13 */
+color: hsl(0, 0%, 100%); 
+
 
 }
 

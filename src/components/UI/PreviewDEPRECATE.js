@@ -60,8 +60,8 @@ points="1614.5 993 850.5 993 840.5 880 1623.5 880"
 </g>
 <defs>
 <linearGradient id="grad" x1="0%" y1="10%" x2="10%" y2="100%">
-<stop stop-color="white" offset="0"/>
-<stop stop-color="transparent" stop-opacity="1" offset=".9"/>
+<stop stopColor="white" offset="0"/>
+<stop stopColor="transparent" stop-opacity="1" offset=".9"/>
 </linearGradient>
 <mask id="mask1">
 <rect width="400" height="400" fill="url(#grad)"/>

@@ -11,12 +11,12 @@ const CycleBtn = styled.button`
     width: 100%;
     height: 100%;
     border-width: 0px;
-    box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0.8);
+    box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0);
     z-index: 100;
     text-align: center;
     &:hover {
       cursor: pointer;
-      box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0.8);
+      box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0);
     }
     
 overflow: hidden;
@@ -37,8 +37,11 @@ h1 {
     right: 0;
     font-family: 'Plaster', monospace, sans-serif;
     font-size: 10vw;
-    color: #ddd;
-    text-shadow: -2px 2px 3px black;
+    color: orangered;
+    &:hover {
+      cursor: pointer;
+      text-shadow: -2px 2px 3px rgba(0,0,0,0.8);
+    }
 }
 
 /*
@@ -46,15 +49,16 @@ h1 {
     */
 `
 const SlideCycleBtn = props => {
-console.log("props>CycleBtn: ",props);
+// console.log("props>CycleBtn: ",props);
   // const testFill = '#99a';
   // const testFill = '#78989b';
   // const testFill = '#78989b';
   // const testFill = '#d8882d';
-const testFill= "#ebddc4";
+const testFill= "hsl(0, 0%, 61.5%)";
   // const testFill = "#daa4a4";
   // const testFill = '#78989b';
-
+  // background-color: hsl(0, 0%, 38.5%); 
+  // color: hsl(0, 0%, 61.5%);
   
   return (
     <CycleBtn>

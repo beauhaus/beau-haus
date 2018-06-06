@@ -17,8 +17,8 @@ const LinksIcon = props => {
         gradientTransform="rotate(-34.694 42.1853408 18.33635557)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#799493" />
-        <stop offset="1" stopColor="#283030" />
+      <stop offset="0" stopColor="#8eaeac"/>
+      <stop offset="1" stopColor="#3d4949"/>
       </linearGradient>
       <path
         fill="url(#a)"
@@ -33,8 +33,8 @@ const LinksIcon = props => {
         gradientTransform="rotate(145.306 183.37515186 -121.07642606)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#945765" />
-        <stop offset=".9957" stopColor="#240008" />
+      <stop offset="0" stopColor="#ae6676"/>
+      <stop offset=".9957" stopColor="#3e000e"/>
       </linearGradient>
       <path
         fill="url(#b)"
@@ -49,8 +49,8 @@ const LinksIcon = props => {
         gradientTransform="rotate(-34.694 42.1853408 18.33635557)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#799493" />
-        <stop offset="1" stopColor="#283030" />
+      <stop offset="0" stopColor="#8eaeac"/>
+      <stop offset="1" stopColor="#3d4949"/>
       </linearGradient>
       <path fill="url(#c)" d="M16.9 56l32.3-20.6c3.9-2.5 4.1-8.4.6-13.1L3.3 51.8c3.6 4.8 9.7 6.6 13.6 4.2z" />
     </LinksIconContainer>

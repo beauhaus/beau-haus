@@ -117,17 +117,17 @@ const SlideshowFrame = styled.div`
  }
 
   <svg id="display-img" viewBox="0 0 400 400" preserveAspectRatio="none">
-            <image id="main-img" y="0" xlinkHref={props.currentslide.url} />
+            <image id="main-img" y="0" xlinkHref={props.currentSlide.url} />
             <path id="display-frame-edge" d="M399 400V1H1v399" />
           </svg>
 */
   const Slideshow =(props) =>{
-    console.log("> slideshow: props: ", props);
+    // console.log("> slideshow: props: ", props);
     return (
       
       <SlideshowFrame className="slideshow-frame">
         <div className="photo-div">
-        <img src={props.currentslide.url} alt=""/>
+        <img src={props.currentSlide.url} alt=""/>
          
           <div className="shad-layer"></div>
         </div>
@@ -151,7 +151,7 @@ const SlideshowFrame = styled.div`
                   width="1"
                   preserveAspectRatio="none"
                   y="0"
-                  xlinkHref={props.currentslide.url}
+                  xlinkHref={props.currentSlide.url}
                 />
               </pattern>
             </defs>
