@@ -142,7 +142,7 @@ const CollectionPageCompDiv = styled.div`
           }
         }
         opacity: 0;
-        animation: fadeIn .5s 1.5s ease-in-out forwards;
+        animation: fadeIn .5s 1.50s ease-in-out forwards;
       }
       & > .meta-data-btn-pos { /* 8x8 */
         grid-row: 1/9;
@@ -155,7 +155,7 @@ const CollectionPageCompDiv = styled.div`
         grid-row: 9/22;
         padding: 2%;
         text-align: justify;
-        background-color: hsl(0, 0%, 100%);
+        background-color: hsl(0, 0%, 80%);
         & h3 {
           text-align: center;
           margin-top: 1vh;
@@ -169,7 +169,7 @@ const CollectionPageCompDiv = styled.div`
           font-weight: 300;
         }
         opacity: 0;
-        animation: fadeIn 2s 2s ease-in-out forwards;    
+        animation: fadeIn 5s 1.75s ease-in-out forwards;    
       }
       & > .slideshow-container-tall {
         /* entire right half */
