@@ -55,14 +55,18 @@ const CollectionPageCompDiv = styled.div`
       & > .meta-data-1a {
         grid-column: 1/2;
         grid-row: 1;
-        background-color: hsl(0, 0%, 7.7%); 
+        background-color: hsl(0, 0%, 7.7%);
+        opacity: 0;
+        animation: fadeIn .5s .5s ease-in-out forwards;
       }
       & > .meta-data-1b {
         grid-column: 2/3;
         grid-row: 1;
         background-color: hsl(0, 0%, 7.7%);  
+        opacity: 0;
+        animation: fadeIn .5s .75s ease-in-out forwards;
       }
-      & > .meta-data-2 {
+      & > .meta-data-gauge {
         grid-column: 1/3;
         grid-row: 2/4;
         background-color: hsl(0, 0%, 15.4%);
@@ -73,24 +77,12 @@ const CollectionPageCompDiv = styled.div`
             transform-origin: 50% 50%;
             stroke-width: 4px;
             stroke: #C1272D;
-            
           }
         }
+        opacity: 0;
+        animation: fadeIn .5s 1s ease-in-out forwards;
       }
-      & > .meta-data-112 {
-        /* 1,1,2x2 */
-        grid-column: 1/3;
-        grid-row: 1/4;
-        svg {
-          width: 100%;
-          height: 100%;
-          & > #gauge-needle {
-            transform-origin: 50% 50%;
-            stroke-width: 4px;
-            stroke: #C1272D;
-          }
-        } 
-      }
+      
       & > .meta-data-links {
         /*3x3*/
         grid-row: 1/4;
@@ -120,9 +112,11 @@ const CollectionPageCompDiv = styled.div`
           color: lemonchiffon;
           text-shadow: -2px 2px 2px black;
         }
+        opacity: 0;
+        animation: fadeIn .5s 1.25s ease-in-out forwards;
       }
 
-      & .meta-data-techlist {/* 5x5 */
+      & .meta-data-techlist { /* 5x5 */
         grid-column: 1/6;
         grid-row: 4/9;
         padding: 4%;
@@ -147,10 +141,13 @@ const CollectionPageCompDiv = styled.div`
             opacity: 0.5;
           }
         }
+        opacity: 0;
+        animation: fadeIn .5s 1.5s ease-in-out forwards;
       }
-      & > .meta-data-btn-pos {/* 8x8 */
+      & > .meta-data-btn-pos { /* 8x8 */
         grid-row: 1/9;
         grid-column: 6/14;
+        box-shadow: -2px 2px 0px 0px black;
       }
       & .meta-data-desc {
         /* 13x13 */
@@ -158,7 +155,7 @@ const CollectionPageCompDiv = styled.div`
         grid-row: 9/22;
         padding: 2%;
         text-align: justify;
-        background-color: hsl(0, 0%, 100%); 
+        background-color: hsl(0, 0%, 100%);
         & h3 {
           text-align: center;
           margin-top: 1vh;
@@ -171,6 +168,8 @@ const CollectionPageCompDiv = styled.div`
           font-size: 1vw;
           font-weight: 300;
         }
+        opacity: 0;
+        animation: fadeIn 2s 2s ease-in-out forwards;    
       }
       & > .slideshow-container-tall {
         /* entire right half */
@@ -180,18 +179,6 @@ const CollectionPageCompDiv = styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 20vh;
       }
-    }
-  }
-  & .fading-in {
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
     }
   }
   & #short-tree {
@@ -206,6 +193,21 @@ const CollectionPageCompDiv = styled.div`
   & .bg {
     background: maroon;
   }
+
+/*
+  & .fader {
+    opacity: 0;
+    animation: fadeIn 1s 5s ease-in-out forwards;
+  }
+  */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 class Collection extends Component {
@@ -216,7 +218,8 @@ class Collection extends Component {
       slides,
       profile: props.pageStyles,
       total: slides.length,
-      current: 0
+      current: 0,
+      slidesEngage: false
     };
     this.clickHandler = this.clickHandler.bind(this);
     // console.log('props>Collection: ', props);
@@ -225,10 +228,9 @@ class Collection extends Component {
     // console.log("this.state.slides.length", this.state.total)
   }
   clickHandler() {
-    // console.log("Clickety!")
-    // console.log("total: ", this.state.total)
     this.setState({
-      current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1
+      current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
+      slidesEngage: true
     });
     console.log('this.state.current', this.state.current);
   }
@@ -243,17 +245,14 @@ class Collection extends Component {
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
         <PageBanner fill={fill} />
-        <div className="grid-ctr-tall fading-in">
+        <div className="grid-ctr-tall">
           <section>
-          <div className="meta-data-1a fibonacci">.</div>
-          <div className="meta-data-1b fibonacci">.</div>
-          <div className="meta-data-2 fibonacci">
+          <div className="meta-data-1a fibonacci ">.</div>
+          <div className="meta-data-1b fibonacci ">.</div>
+          <div className="meta-data-gauge fibonacci ">
           <ProgressGauge total={this.state.total} count={proj_number}/>
           </div>
-          <div className="meta-data-112">
-          
-          </div>
-          <div className="meta-data-links fibonacci">
+          <div className="meta-data-links fibonacci ">
               <LinksIcon />
               <ul>
                 {proj_links.map((item, idx) => (
@@ -271,7 +270,7 @@ class Collection extends Component {
             <div className="meta-data-btn-pos fibonacci" onClick={() => this.clickHandler()} >
               <CycleBtn count={proj_number} id="cycle-btn"/>
             </div>
-            <div className="meta-data-desc fibonacci">
+            <div className="meta-data-desc fibonacci fader">
               <h3>{proj_title}</h3>
               <p>{proj_desc}</p>
             </div>

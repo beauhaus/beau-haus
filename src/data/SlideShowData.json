@@ -89,7 +89,7 @@
     {
       "id": 105,
       "url": "./img/proj/cssconf.jpg",
-      "alt": "CSSConf17 Entry",
+      "alt": "CSSConf17 Entry depicting a house on Bourbon Street with colorful and detailed CSS rendered street facades",
       "proj_icon": "mag4.jpg",
       "proj_number": "5",
       "proj_title": "Bourbon Street",
@@ -108,55 +108,56 @@
     },
     {
       "id": 106,
-      "url": "./img/test/mag5.jpg",
-      "alt": "test/mag5",
+      "url": "./img/proj/curriculum.jpg",
+      "alt": "image of the movie 'Up!' depicting a house flying away in with baloons on a sunny day",
       "proj_icon": "mag5.jpg",
       "proj_number": "6",
-      "proj_title": "./img/test/mag5.jpg",
-      "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
-
-      "proj_desc": "this is1",
-
+      "proj_title": "Up!",
+      "proj_tech": ["illustrator", "illustrator", "gsap", "jquery"],
+      "proj_desc": "Lessons to teach DOM targeting of DOM elements, event listeners, conditionals, etc. Basic principles of animation and their application to coding movement in the browser.",
       "proj_links": [
         {
-          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "url": "https://codepen.io/beauhaus/full/YeydpZ/",
           "text": "codepen"
         }
       ]
     },
     {
       "id": 107,
-      "url": "./img/test/mag6.jpg",
-      "alt": "test/mag6",
+      "url": "./img/proj/wireframes.jpg",
+      "alt": "lo & hifi wireframes depicted",
       "proj_icon": "mag6.jpg",
       "proj_number": "7",
-      "proj_title": "./img/test/mag6.jpg",
-      "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
+      "proj_title": "From napkin to node...",
+      "proj_tech": ["Sketch", "Illustrator", "Pen & Paper", "Post-its"],
 
-      "proj_desc": "this is1",
+      "proj_desc": "Coding is 80% planning, 20% coding. Most projects are planned and iterated on with an eye toward implementing something untried. Full Low-Fidelity & high-fidelity prototypes are available at project repos.",
 
       "proj_links": [
         {
-          "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen"
+          "url": "",
+          "text": ""
         }
       ]
     },
     {
       "id": 108,
-      "url": "./img/test/mag7.jpg",
-      "alt": "test/mag7",
+      "url": "./img/proj/journal.jpg",
+      "alt": "Code Journal image depicting SQL queries & tips and advice",
       "proj_icon": "mag7.jpg",
       "proj_number": "8",
-      "proj_title": "./img/test/mag7.jpg",
-      "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
-
-      "proj_desc": "this is1",
+      "proj_title": "Code Journal",
+      "proj_tech": ["angular.js", "node.js", "Heroku"],
+      "proj_desc": "Library of code, advice, recommendations & snippets in SASS, SQL Queries, Node, GSAP, ES6, Javascript, Angular & React (currently being overhauled)",
 
       "proj_links": [
         {
-          "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen"
+          "url": "https://codekaizen.herokuapp.com/#!/home",
+          "text": "heroku"
+        },
+        {
+          "url": "https://github.com/BEAUHAUS/codejournal",
+          "text": "github"
         }
       ]
     },
