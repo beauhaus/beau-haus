@@ -1,6 +1,4 @@
-body {
-    color: olive;
-}
+
 
 .test {
     color: rgba(73, 92, 94, 0.911);
@@ -12,9 +10,13 @@ body {
 li:first-child {
 color:#dddddd;
 mix-blend-mode: multiply;
-color:  #ebddc4;
+color:  #aaaaaa;
 
-stroke: hsl(34, 100%, 100%);
+stroke: #e1c36f;
+
+stroke: lemonchiffon;
+
+
 color: rgba(207, 190, 93, 0.733);
 
 /* 1 */

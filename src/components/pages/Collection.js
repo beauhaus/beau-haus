@@ -97,41 +97,35 @@ const CollectionPageCompDiv = styled.div`
         grid-column: 3/6;
         position: relative;
         background-color: hsl(0, 0%, 23.1%);
-        // border: 1px double blue;
-        svg {
+        ul {
           position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+          top: 0.5vh;
+          left: 0.2vw;
+          font-weight: 100;
+          line-height: 2.5vh;
+          li {
+            font-size: 1.5rem;
+          }
         }
         a,
         a:visited,
         a:link,
         a:active {
           text-decoration: none;
-          color: lemonchiffon;
+          color: #b9b693;
           text-shadow: -1px 1px 2px #1c1e20;
           font-weight: 400;
         }
         a:hover {
-          color: #b5ffbb;
+          color: lemonchiffon;
           text-shadow: -2px 2px 2px black;
-        }
-        ul {
-          position: absolute;
-          top: 0.5rem;
-          left: 0.5rem;
-          font-weight: 100;
-          text-align: center;
-          line-height: 2.5rem;
         }
       }
 
       & .meta-data-techlist {/* 5x5 */
         grid-column: 1/6;
         grid-row: 4/9;
-        padding: 5%;
+        padding: 4%;
         font-size: 1vw;
         letter-spacing: -1px;
         background-color: hsl(0, 0%, 38.5%); 
@@ -142,8 +136,8 @@ const CollectionPageCompDiv = styled.div`
           font-style: italic;
           font-weight: 300;
           text-align: left;
-          line-height: 2rem;
-          color: black;
+          line-height: 1.6rem;
+          color: #bbb;
           & > li::after {
             content: url('./img/listdot.svg');
             font-size: 10px;
@@ -157,22 +151,14 @@ const CollectionPageCompDiv = styled.div`
       & > .meta-data-btn-pos {/* 8x8 */
         grid-row: 1/9;
         grid-column: 6/14;
-        text-align: center;
-        padding: 1%;
-        font-size: 1em;
-        position: relative;
-
       }
-
       & .meta-data-desc {
         /* 13x13 */
         grid-column: 1/14;
         grid-row: 9/22;
         padding: 2%;
-        padding-left: 0;
         text-align: justify;
         background-color: hsl(0, 0%, 100%); 
-
         & h3 {
           text-align: center;
           margin-top: 1vh;
@@ -193,7 +179,6 @@ const CollectionPageCompDiv = styled.div`
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 20vh;
-        
       }
     }
   }

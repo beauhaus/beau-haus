@@ -11,7 +11,6 @@ import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
 const ConnectionPageCompDiv = styled.div`
-  background: fuchsia;
   position: absolute;
   top: 0;
   left: 0;
@@ -20,7 +19,6 @@ const ConnectionPageCompDiv = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  color: #fff;
   display: grid;
   grid-template-columns: 25vw 50vw 25vw;
   grid-template-rows: 20vh 60vh 20vh;
@@ -101,17 +99,4 @@ export default Connection;
 
 /*
 
-<div className="page-Connection">
-          <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
-
-          <h1>
-            <span>Under Construction...</span>
-            <br />
-            <br />
-            Rome wasn't built in a day.<br />
-            Neither was this site.
-          </h1>
-          <p>Your patience is appreciated.</p>
-        </div>{' '}
-
-        */
+*/

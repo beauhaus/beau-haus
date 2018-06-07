@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-
-
 // import NavsContainer from './components/UI/NavsContainer';
 // import NavLink from './components/UI/NavLink';
 
@@ -19,8 +17,6 @@ import PageData from './data/PageData.json';
 import BHLogo from './components/portals/BHLogo';
 import SocIcons from './components/portals/SocIcons';
 import NavsContainer from './components/UI/NavsContainer';
-
-
 
 // import styled from 'styled-components';
 
@@ -45,8 +41,9 @@ class App extends Component {
             <div location={{ location }} className="App">
               <TransitionGroup>
                 <CSSTransition key={location.key} timeout={4000} classNames="fade">
-                  <Switch location={location}>
-                  <Route
+                  <Switch className="switch" location={location}>
+                    <Route
+                      className="route"
                       exact
                       path="/"
                       render={() => {
@@ -54,24 +51,28 @@ class App extends Component {
                       }}
                     />
                     <Route
+                      className="route"
                       path="/creation"
                       render={() => {
                         return <Creation location={location} profile={PageData.profile.creation} />;
                       }}
                     />
                     <Route
+                      className="route"
                       path="/collection"
                       render={() => {
                         return <Collection location={location} profile={PageData.profile.collection} />;
                       }}
                     />
                     <Route
+                      className="route"
                       path="/reflection"
                       render={() => {
                         return <Reflection location={location} profile={PageData.profile.reflection} />;
                       }}
                     />
                     <Route
+                      className="route"
                       path="/Connection"
                       render={() => {
                         return <Connection location={location} profile={PageData.profile.connection} />;
@@ -82,7 +83,7 @@ class App extends Component {
               </TransitionGroup>
               <NavPortal location={location} />
               <BHLogoPortal location={location} />
-              <SocIcons/>
+              <SocIcons />
             </div>
           )}
         />
@@ -109,9 +110,11 @@ class NavPortal extends Component {
     // console.log(`MenCLickHandle got: ${name} & ${fill}`)
   }
 
-
   render() {
-    return ReactDOM.createPortal(<NavsContainer {...this.props} select={this.menuClickHandler}/>, document.getElementById('nav'));
+    return ReactDOM.createPortal(
+      <NavsContainer {...this.props} select={this.menuClickHandler} />,
+      document.getElementById('nav')
+    );
   }
 }
 

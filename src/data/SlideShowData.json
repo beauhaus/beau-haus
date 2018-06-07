@@ -5,7 +5,7 @@
       "url": "./img/test/blank.png",
       "alt": "blank",
       "proj_icon": "./img/proj/projicons/blank.png",
-      "proj_number": "0",
+      "proj_number": "",
       "proj_title": "",
       "proj_tech": [],
       "proj_desc": "",
@@ -75,7 +75,7 @@
       "proj_icon": "mag3.jpg",
       "proj_number": "4",
       "proj_title": "Retro Telescreen",
-      "proj_tech": ["react/gsap", "validator.js", "scss", "CSSanimation"],
+      "proj_tech": ["react/gsap", "validator.js", "scss", "css animation"],
       "proj_desc":
         "Multi-layered SVG to create a 50's retro-monitor glitch animation. Project's aim is to mitigate the alienating & brutalist user experience of clicking through a state-picker drop-down menu.",
 
@@ -93,7 +93,7 @@
       "proj_icon": "mag4.jpg",
       "proj_number": "5",
       "proj_title": "Bourbon Street",
-      "proj_tech": ["SASS", "CSS Grid", "Pure CSS"],
+      "proj_tech": ["sass", "css grid", "pure css"],
       "proj_desc": "This mid-century Bourbon Street scene was contest runner-up for CSSConf'17 & was featured in an article by Chris Coiyer. This took 3 weeks--day & night--to complete",
       "proj_links": [
         {

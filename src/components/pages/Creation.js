@@ -243,12 +243,5 @@ export default Creation;
 // <MuteBtn />
 
 /*
-    & > .ctr-row-bot {
-      display: none;
-      grid-column: 1/4;
-      grid-row: 3;
-      border: 2px solid orangered;
-    }
-
 
 */

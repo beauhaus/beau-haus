@@ -14,13 +14,14 @@ html {
   font-size: 62.5%;
 }
 body {
+  margin: 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   font-size: 1.6rem; /*16px*/
   font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,7 +37,7 @@ li {
 }
 
 /*  Does root even need styling? */
-#root {
+/* #root {
   position: absolute;
   top: 0;
   left: 0;
@@ -44,7 +45,7 @@ li {
   right: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
 #nav {
   position: relative;
@@ -56,8 +57,8 @@ li {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%; /* from vw & vh */
+  height: 100%;
 }
 
 h1 {
