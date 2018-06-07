@@ -76,7 +76,7 @@ const CollectionPageCompDiv = styled.div`
           & > #gauge-needle {
             transform-origin: 50% 50%;
             stroke-width: 4px;
-            stroke: #C1272D;
+            stroke: #aaa;
           }
         }
         opacity: 0;
