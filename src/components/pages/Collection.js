@@ -147,8 +147,9 @@ const CollectionPageCompDiv = styled.div`
       & > .meta-data-btn-pos { /* 8x8 */
         grid-row: 1/9;
         grid-column: 6/14;
-        box-shadow: -2px 2px 0px 0px black;
+        box-shadow: -5px 5px 10px 0px black;
       }
+
       & .meta-data-desc {
         /* 13x13 */
         grid-column: 1/14;

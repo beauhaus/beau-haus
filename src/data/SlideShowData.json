@@ -18,18 +18,19 @@
     },
     {
       "id": 101,
-      "url": "./img/proj/csswindows.jpg",
-      "alt": ".",
-      "proj_icon": "./img/proj/projicons/css.png",
+      "url": "./img/proj/wireframes.jpg",
+      "alt": "lo & hifi wireframes depicted",
+      "proj_icon": "mag6.jpg",
       "proj_number": "1",
-      "proj_title": "Pure CSS Windows",
-      "proj_tech": ["css grid", "css drawing", "gsap"],
+      "proj_title": "From napkin to node...",
+      "proj_tech": ["Sketch", "Illustrator", "Pen & Paper", "Post-its"],
+
       "proj_desc":
-        "Drawn in pure CSS, this experiment uses <audio> for immersion. Looped CSS animations and Filter effects are used on the SVGs while a looped cel animation is used to depict rainfall.",
+        "Coding is 80% planning, 20% typing. Most projects are planned and iterated on with an eye toward learning and implementing something yet untried. Full Low-Fidelity & high-fidelity prototypes are an integral part of my workflow.",
       "proj_links": [
         {
-          "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen"
+          "url": "",
+          "text": ""
         }
       ]
     },
@@ -127,19 +128,18 @@
     },
     {
       "id": 107,
-      "url": "./img/proj/wireframes.jpg",
-      "alt": "lo & hifi wireframes depicted",
-      "proj_icon": "mag6.jpg",
+      "url": "./img/proj/csswindows.jpg",
+      "alt": ".",
+      "proj_icon": "./img/proj/projicons/css.png",
       "proj_number": "7",
-      "proj_title": "From napkin to node...",
-      "proj_tech": ["Sketch", "Illustrator", "Pen & Paper", "Post-its"],
-
+      "proj_title": "Pure CSS Windows",
+      "proj_tech": ["css grid", "css drawing", "gsap"],
       "proj_desc":
-        "Coding is 80% planning, 20% typing. Most projects are planned and iterated on with an eye toward learning and implementing something yet untried. Full Low-Fidelity & high-fidelity prototypes are an integral part of my workflow.",
+        "Drawn in pure CSS, this experiment uses <audio> for immersion. Looped CSS animations and Filter effects are used on the SVGs while a looped cel animation is used to depict rainfall.",
       "proj_links": [
         {
-          "url": "",
-          "text": ""
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen"
         }
       ]
     },
@@ -150,7 +150,7 @@
       "proj_icon": "mag7.jpg",
       "proj_number": "8",
       "proj_title": "Code Journal",
-      "proj_tech": ["angular.js", "node.js", "Heroku"],
+      "proj_tech": ["angular.js", "node.js", "heroku"],
       "proj_desc":
         "Library of code, advice, recommendations & snippets in SASS, SQL Queries, Node, GSAP, ES6, Javascript, Angular & React (currently being overhauled)",
 
@@ -167,7 +167,7 @@
     },
     {
       "id": 109,
-      "url": "./img/proj/robotsite.png",
+      "url": "./img/proj/robotsite.jpg",
       "alt": "Retro styled panel for user inputs email, state, etc. Done in the style of Kubrick's 2001",
       "proj_icon": "mag8.jpg",
       "proj_number": "9",
@@ -189,15 +189,13 @@
     },
     {
       "id": 110,
-      "url": "./img/test/mag9.jpg",
+      "url": "./img/proj/hamburger.gif",
       "alt": "test/mag9",
       "proj_icon": "mag9.jpg",
       "proj_number": "10",
-      "proj_title": "./img/test/mag9.jpg",
-      "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
-
-      "proj_desc": "this is1",
-
+      "proj_title": "After Effects Work",
+      "proj_tech": ["after effects", "mocha", "chroma screen", "audacity"],
+      "proj_desc": "Filming, compositing, rotoscoping, photo editing and sound editing was a passion of mine for years before learning to code.",
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/NavWog/",
@@ -207,7 +205,7 @@
     },
     {
       "id": 111,
-      "url": "./img/test/fin.jpg",
+      "url": "./img/proj/gwenbed1.gif",
       "alt": "test/mag9",
       "proj_icon": "mag9.jpg",
       "proj_number": "11",

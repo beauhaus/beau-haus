@@ -5,21 +5,15 @@ const CycleBtn = styled.button`
   width: 100%;
   height: 100%;
   position: relative;
-  border-width: 0px;
-  box-shadow: -1px 2px 2px 0px rgba(0, 0, 0, 0);
   z-index: 100;
-  text-align: center;
   overflow: hidden;
   &:hover {
     cursor: pointer;
-    box-shadow: -2px 4px 5px 0px rgba(0, 0, 0, 0);
   }
   svg {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     opacity: 1;
@@ -40,10 +34,7 @@ const CycleBtn = styled.button`
       text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.8);
     }
   }
-
-  /*
-    
-    */
+}
 `;
 const SlideCycleBtn = props => {
   // console.log("props>CycleBtn: ",props);
