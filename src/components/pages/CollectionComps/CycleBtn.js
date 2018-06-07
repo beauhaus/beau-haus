@@ -25,12 +25,15 @@ const CycleBtn = styled.button`
     opacity: 1;
   }
   h1 {
-    mix-blend-mode: multiply;
-    margin-top: 0;
-    font-family: 'Plaster', monospace, sans-serif;
-    font-size: 7.5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -2vh;
     height: 100%;
-    width: 100%;
+    mix-blend-mode: multiply;
+    font-family: 'Plaster', monospace, sans-serif;
+    font-size: 10vw;
     color: orangered;
     &:hover {
       cursor: pointer;
