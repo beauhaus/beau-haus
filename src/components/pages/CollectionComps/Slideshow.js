@@ -2,14 +2,36 @@ import React, { Component, Children } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
+/**For reference:
+ * ENTIRE RIGHT HALF TO BOTTOM
+ grid-column: 14/35;
+ grid-row: 1/-1;
+ display: grid;
+ grid-template-columns: repeat(21, 1fr);
+ grid-template-rows: 1fr 20vh;
+ */
+/*SLIDESHOW FRAME RUNS ALL THE WAY TO BOTTOM*/
 const SlideshowFrame = styled.div`
-  grid-column: 1;
+  grid-column: 1/22;
   grid-row: 1/3;
   display: grid;
   opacity: 1;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 45vh 20vh;
+  grid-template-rows: 50vh 20vh;
+  & > .emboss {
+    opacity: 0;
+    animation: 1.5s 3.4s emboss ease-out forwards;
+  
+  }
+    @keyframes emboss {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
   & > .photo-div {
     grid-row: 1;
@@ -17,6 +39,7 @@ const SlideshowFrame = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
+    border: 1px solid red;
     & > img {
       position: absolute;
       top: 0;
@@ -33,9 +56,9 @@ const SlideshowFrame = styled.div`
       height: 100%;
       box-shadow: inset -10px 10px 25px rgba(0, 0, 0, 0.5);
       opacity: 0;
-      
-      animation: 1.5s 3.4s emboss ease-out forwards;
-      
+    /* 
+     animation: 1.5s 3.4s emboss ease-out forwards;
+      */
     }
     & path#display-frame-edge {
       grid-column: 1;
@@ -63,7 +86,7 @@ const SlideshowFrame = styled.div`
         stroke: transparent;
       }
     }
-  
+
     & > #display-img {
       width: 100%;
       height: 100%;
@@ -85,8 +108,9 @@ const SlideshowFrame = styled.div`
       width: 100%;
       height: 100%;
       box-shadow: inset -10px 10px 25px 0px rgba(0, 0, 0, 0.2);
-      /* animation: 3s 10s emboss ease-out forwards; */
+      /*animation: 3s 10s emboss ease-out forwards; */
     }
+   
     & .reflected-svg {
       position: absolute;
       top: 0;
@@ -99,14 +123,6 @@ const SlideshowFrame = styled.div`
   }
 
 
-  @keyframes emboss {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 `;
 /*
   @media screen and (max-width : 768px) {    // tablet query
@@ -127,14 +143,14 @@ const Slideshow = props => {
       <div className="photo-div">
         <img src={props.currentSlide.url} alt="" />
         <svg id="display-img" viewBox="0 0 400 400" preserveAspectRatio="none">
-        <path id="display-frame-edge" d="M399 400V1H1v399" />
-</svg>
+          <path id="display-frame-edge" d="M399 400V1H1v399" />
+        </svg>
 
-        <div className="shad-layer" />
+        <div className="shad-layer emboss">.</div>
       </div>
 
       <div className="reflected-div">
-        <div className="shad-layer-reflect" />
+        <div className="shad-layer-reflect emboss">.</div>
 
         <svg className="reflected-svg" viewBox="0 0 400 400" preserveAspectRatio="none">
           <defs>
@@ -142,7 +158,6 @@ const Slideshow = props => {
               <stop stopColor="black" offset=".5" />
               <stop stopColor="white" stopOpacity="1" offset="1" />
             </linearGradient>
-
             <mask id="mask1">
               <rect fill="url(#grad)" height="100%" width="100%" y="0vh" />
             </mask>
@@ -156,7 +171,6 @@ const Slideshow = props => {
     </SlideshowFrame>
   );
 };
-
 
 export default Slideshow;
 

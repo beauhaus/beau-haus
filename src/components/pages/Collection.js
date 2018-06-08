@@ -15,7 +15,7 @@ import LinksIcon from './CollectionComps/LinksIcon';
 import PageBanner from './CollectionComps/CollectionPageBanner';
 import CycleBtn from './CollectionComps/CycleBtn';
 import ProgressGauge from './CollectionComps/ProgressGauge';
-import Slideshow from '../UI/Slideshow';
+import Slideshow from './CollectionComps/Slideshow';
 import SlidesData from '../../data/SlideShowData.json';
 /* grid is fibonacci @WIDTH 51vw  X 31.5vh (1.5 * 34) X (1.5 X 21)
 so. 16vw 68vw 16vw*/
@@ -30,8 +30,8 @@ const CollectionPageCompDiv = styled.div`
   bottom: 0;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 20vw 60vw 20vw;
-  grid-template-rows: 35vh 45vh 20vh;
+  grid-template-columns: 24vw 52vw 24vw;
+  grid-template-rows: 30vh 50vh 20vh;
   
 
   & > .grid-ctr-tall {
@@ -39,6 +39,7 @@ const CollectionPageCompDiv = styled.div`
     grid-row: 2/4;
     z-index: 35; /* above trees */
     position: relative;
+    border: 1px solid teal;
     
     & section {
       top: 0;
@@ -50,25 +51,25 @@ const CollectionPageCompDiv = styled.div`
       grid-template-columns: repeat(34, 1fr);
       grid-template-rows: repeat(21, 1fr) 20vh;
       & > .fibonacci {
-        border: 1px solid grey;
+      margin: 4px;
       }
-      & > .meta-data-1a {
-        grid-column: 1/2;
-        grid-row: 1;
+      & > .meta-data-1x1a {
+        grid-column: 10/11;
+        grid-row: 6/7;
         background-color: hsl(0, 0%, 7.7%);
         opacity: 0;
         animation: fadeIn .5s .5s ease-in-out forwards;
       }
-      & > .meta-data-1b {
-        grid-column: 2/3;
-        grid-row: 1;
+      & > .meta-data-1x1b {
+        grid-column: 9/10;
+        grid-row: 6/7;
         background-color: hsl(0, 0%, 7.7%);  
         opacity: 0;
         animation: fadeIn .5s .75s ease-in-out forwards;
       }
-      & > .meta-data-gauge {
-        grid-column: 1/3;
-        grid-row: 2/4;
+      & > .meta-data-gauge-2x2 {
+        grid-column: 9/11;
+        grid-row: 7/9;
         background-color: hsl(0, 0%, 15.4%);
         svg {
           width: 100%;
@@ -83,10 +84,9 @@ const CollectionPageCompDiv = styled.div`
         animation: fadeIn .5s 1s ease-in-out forwards;
       }
       
-      & > .meta-data-links {
-        /*3x3*/
-        grid-row: 1/4;
-        grid-column: 3/6;
+      & > .meta-data-links-3x3 {
+        grid-column: 11/14;
+        grid-row: 6/9;
         position: relative;
         background-color: hsl(0, 0%, 23.1%);
         ul {
@@ -116,9 +116,9 @@ const CollectionPageCompDiv = styled.div`
         animation: fadeIn .5s 1.25s ease-in-out forwards;
       }
 
-      & .meta-data-techlist { /* 5x5 */
-        grid-column: 1/6;
-        grid-row: 4/9;
+      & .meta-data-techlist-5x5 { /* 5x5 */
+        grid-column: 9/14;
+        grid-row: 1/6;
         padding: 4%;
         font-size: 1vw;
         letter-spacing: -1px;
@@ -144,13 +144,14 @@ const CollectionPageCompDiv = styled.div`
         opacity: 0;
         animation: fadeIn .5s 1.50s ease-in-out forwards;
       }
-      & > .meta-data-btn-pos { /* 8x8 */
+      & > .meta-data-btn-8x8 { /* 8x8 */
+        grid-column: 1/9;
         grid-row: 1/9;
-        grid-column: 6/14;
         box-shadow: -5px 5px 10px 0px black;
+        
       }
 
-      & .meta-data-desc {
+      & .meta-data-desc-13x13 {
         /* 13x13 */
         grid-column: 1/14;
         grid-row: 9/22;
@@ -172,21 +173,18 @@ const CollectionPageCompDiv = styled.div`
         opacity: 0;
         animation: fadeIn 5s 1.75s ease-in-out forwards;    
       }
-      & > .slideshow-container-tall {
+      & > .slideshow-container-tall-21x21 {
         /* entire right half */
         grid-column: 14/35;
         grid-row: 1/-1;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 20vh;
+        grid-template-columns: repeat(21, 1fr);
+        grid-template-rows: repeat(21, 1fr) 20vh;
+        border: 1px solid orange;
       }
     }
   }
-  & #short-tree {
-    transform-origin: 50% 100%;
-    transform: rotate(-9deg);
-    left: 1.5vw;
-  }
+
   & #btn-mute {
     z-index: 50;
     fill: maroon;
@@ -248,12 +246,12 @@ class Collection extends Component {
         <PageBanner fill={fill} />
         <div className="grid-ctr-tall">
           <section>
-          <div className="meta-data-1a fibonacci ">.</div>
-          <div className="meta-data-1b fibonacci ">.</div>
-          <div className="meta-data-gauge fibonacci ">
+          <div className="meta-data-1x1a fibonacci ">.</div>
+          <div className="meta-data-1x1b fibonacci ">.</div>
+          <div className="meta-data-gauge-2x2 fibonacci ">
           <ProgressGauge total={this.state.total} count={proj_number}/>
           </div>
-          <div className="meta-data-links fibonacci ">
+          <div className="meta-data-links-3x3 fibonacci ">
               <LinksIcon />
               <ul>
                 {proj_links.map((item, idx) => (
@@ -265,31 +263,32 @@ class Collection extends Component {
                 ))}
               </ul>
             </div>
-            <div className="meta-data-techlist fibonacci">
+            <div className="meta-data-techlist-5x5 fibonacci">
               <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
             </div>
-            <div className="meta-data-btn-pos fibonacci" onClick={() => this.clickHandler()} >
+            <div className="meta-data-btn-8x8 fibonacci" onClick={() => this.clickHandler()} >
               <CycleBtn count={proj_number} id="cycle-btn"/>
             </div>
-            <div className="meta-data-desc fibonacci fader">
+            <div className="meta-data-desc-13x13 fibonacci fader">
               <h3>{proj_title}</h3>
               <p>{proj_desc}</p>
             </div>
 
-            <div className="slideshow-container-tall">
+            <div className="slideshow-container-tall-21x21">
               <Slideshow currentSlide={this.state.slides[this.state.current]} />
             </div>
           </section>
         </div>
         
         <WaterBg {...water} />
+        {/*
         <WaterBody />
         <Shore />
-
         <ShortTree db={tree.short} />
         <MediumTree db={tree.medium} />
         <TallTree db={tree.tall} />
         <MuteBtn />
+        */}
         <LogoTheme themeFill={fill} />
       </CollectionPageCompDiv>
     );
