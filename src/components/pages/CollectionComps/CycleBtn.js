@@ -39,7 +39,7 @@ const CycleBtn = styled.button`
 const SlideCycleBtn = props => {
   // console.log("props>CycleBtn: ",props);
   // const testFill = '#99a';
-  // const testFill = '#78989b';
+  // const testFill = '#FF326F';
   // const testFill = '#78989b';
   // const testFill = '#d8882d';
   const testFill = 'hsl(0, 0%, 61.5%)';

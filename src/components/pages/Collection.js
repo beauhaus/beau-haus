@@ -32,16 +32,16 @@ const CollectionPageCompDiv = styled.div`
   display: grid;
   grid-template-columns: 24vw 52vw 24vw;
   grid-template-rows: 30vh 50vh 20vh;
-  
 
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/4;
     z-index: 35; /* above trees */
     position: relative;
-    border: 1px solid teal;
-    
     & section {
+      & > .fibonacci {
+        margin: 2px;
+      }
       top: 0;
       left: 0;
       width: 100%;
@@ -50,27 +50,33 @@ const CollectionPageCompDiv = styled.div`
       z-index: 100;
       grid-template-columns: repeat(34, 1fr);
       grid-template-rows: repeat(21, 1fr) 20vh;
-      & > .fibonacci {
-      margin: 4px;
-      }
       & > .meta-data-1x1a {
         grid-column: 10/11;
         grid-row: 6/7;
         background-color: hsl(0, 0%, 7.7%);
         opacity: 0;
-        animation: fadeIn .5s .5s ease-in-out forwards;
+        animation: fadeIn 0.5s 0.5s ease-in-out forwards;
+        transform: rotate(-2deg);
       }
       & > .meta-data-1x1b {
+        transform: rotate(8deg);
         grid-column: 9/10;
         grid-row: 6/7;
-        background-color: hsl(0, 0%, 7.7%);  
+        background-color: hsl(0, 0%, 7.7%);
         opacity: 0;
-        animation: fadeIn .5s .75s ease-in-out forwards;
+        animation: fadeIn 0.5s 0.75s ease-in-out forwards;
       }
-      & > .meta-data-gauge-2x2 {
+      & > .meta-data-2x2 {
+        transform: rotate(4deg);
         grid-column: 9/11;
         grid-row: 7/9;
         background-color: hsl(0, 0%, 15.4%);
+        opacity: 0;
+        animation: fadeIn 0.5s 1s ease-in-out forwards;
+      }
+
+      & > .meta-data-3x3 {
+        transform: rotate(-4deg);
         svg {
           width: 100%;
           height: 100%;
@@ -80,15 +86,15 @@ const CollectionPageCompDiv = styled.div`
             stroke: #aaa;
           }
         }
-        opacity: 0;
-        animation: fadeIn .5s 1s ease-in-out forwards;
-      }
-      
-      & > .meta-data-links-3x3 {
+
         grid-column: 11/14;
         grid-row: 6/9;
         position: relative;
         background-color: hsl(0, 0%, 23.1%);
+        opacity: 0;
+        animation: fadeIn 0.5s 1.25s ease-in-out forwards;
+        /*
+        This stuff is for links
         ul {
           position: absolute;
           top: 0.5vh;
@@ -112,17 +118,23 @@ const CollectionPageCompDiv = styled.div`
           color: lemonchiffon;
           text-shadow: -2px 2px 2px black;
         }
-        opacity: 0;
-        animation: fadeIn .5s 1.25s ease-in-out forwards;
+        */
       }
 
-      & .meta-data-techlist-5x5 { /* 5x5 */
+      & .meta-data-5x5 {
+        transform: rotate(-3deg);
         grid-column: 9/14;
         grid-row: 1/6;
         padding: 4%;
         font-size: 1vw;
         letter-spacing: -1px;
-        background-color: hsl(0, 0%, 38.5%); 
+        background-color: hsl(0, 0%, 38.5%);
+        box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.9);
+
+        & #play-arrow {
+          width: 100%;
+          height: 100%;
+        }
         ul li {
           display: block;
         }
@@ -142,13 +154,12 @@ const CollectionPageCompDiv = styled.div`
           }
         }
         opacity: 0;
-        animation: fadeIn .5s 1.50s ease-in-out forwards;
+        animation: fadeIn 0.5s 1.5s ease-in-out forwards;
       }
-      & > .meta-data-btn-8x8 { /* 8x8 */
+      & > .meta-data-8x8 {
         grid-column: 1/9;
         grid-row: 1/9;
         box-shadow: -5px 5px 10px 0px black;
-        
       }
 
       & .meta-data-desc-13x13 {
@@ -171,7 +182,7 @@ const CollectionPageCompDiv = styled.div`
           font-weight: 300;
         }
         opacity: 0;
-        animation: fadeIn 5s 1.75s ease-in-out forwards;    
+        animation: fadeIn 5s 1.75s ease-in-out forwards;
       }
       & > .slideshow-container-tall-21x21 {
         /* entire right half */
@@ -180,7 +191,6 @@ const CollectionPageCompDiv = styled.div`
         display: grid;
         grid-template-columns: repeat(21, 1fr);
         grid-template-rows: repeat(21, 1fr) 20vh;
-        border: 1px solid orange;
       }
     }
   }
@@ -193,7 +203,7 @@ const CollectionPageCompDiv = styled.div`
     background: maroon;
   }
 
-/*
+  /*
   & .fader {
     opacity: 0;
     animation: fadeIn 1s 5s ease-in-out forwards;
@@ -241,45 +251,38 @@ class Collection extends Component {
     const currentSlide = this.state.slides[this.state.current];
     // console.log('currentSlide', currentSlide);
     const { proj_icon, proj_number, proj_title, proj_tech, proj_desc, proj_links } = currentSlide;
+
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
         <PageBanner fill={fill} />
         <div className="grid-ctr-tall">
           <section>
-          <div className="meta-data-1x1a fibonacci ">.</div>
-          <div className="meta-data-1x1b fibonacci ">.</div>
-          <div className="meta-data-gauge-2x2 fibonacci ">
-          <ProgressGauge total={this.state.total} count={proj_number}/>
-          </div>
-          <div className="meta-data-links-3x3 fibonacci ">
-              <LinksIcon />
-              <ul>
-                {proj_links.map((item, idx) => (
-                  <li key={`${item}-${idx}li`}>
-                    <a key={`${item}-${idx}`} target="blank_" href={item.url}>
-                      {item.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <div className="meta-data-1x1a fibonacci ">.</div>
+            <div className="meta-data-1x1b fibonacci ">.</div>
+            <div className="meta-data-2x2 fibonacci " />
+            <div className="meta-data-3x3 fibonacci ">
+              <ProgressGauge total={this.state.total} count={proj_number} />
             </div>
-            <div className="meta-data-techlist-5x5 fibonacci">
-              <ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
+            <div className="meta-data-5x5 fibonacci">
+              <svg id="play-arrow" viewBox="0 40 350 350" preserveAspectRatio="none">
+                <path fill="#FFA321" stroke="#E5B900" stroke-miterlimit="10" d="M274.8 195.8L135 353.9 116.2 56" />
+              </svg>
             </div>
-            <div className="meta-data-btn-8x8 fibonacci" onClick={() => this.clickHandler()} >
-              <CycleBtn count={proj_number} id="cycle-btn"/>
+
+            <div className="meta-data-8x8 fibonacci" onClick={() => this.clickHandler()}>
+              <CycleBtn count={proj_number} id="cycle-btn" />
             </div>
             <div className="meta-data-desc-13x13 fibonacci fader">
               <h3>{proj_title}</h3>
               <p>{proj_desc}</p>
             </div>
 
-            <div className="slideshow-container-tall-21x21">
+            <div className="slideshow-container-tall-21x21 fibonacci">
               <Slideshow currentSlide={this.state.slides[this.state.current]} />
             </div>
           </section>
         </div>
-        
+
         <WaterBg {...water} />
         {/*
         <WaterBody />
@@ -297,6 +300,24 @@ class Collection extends Component {
 
 export default Collection;
 
+/*
+<LinksIcon />
+*************
+<ul>
+  {proj_links.map((item, idx) => (
+</div>
+    <li key={`${item}-${idx}li`}>
+      <a key={`${item}-${idx}`} target="blank_" href={item.url}>
+        {item.text}
+      </a>
+    </li>
+  ))}
+</ul>
+)}
+
+<ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
+              
+              */
 /*
 
 1,1,2,3,5,8,13,21 = 54;
