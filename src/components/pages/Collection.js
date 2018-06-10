@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { CSSTransitionGroup } from 'react-transition-group'; // ES6
+// import { CSSTransitionGroup } from 'react-transition-group';
 
 import ShortTree from '../scene/trees/ShortTree';
 import MediumTree from '../scene/trees/MediumTree';
@@ -11,17 +11,17 @@ import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
-import LinksIcon from './CollectionComps/LinksIcon';
+// import LinksIcon from './CollectionComps/LinksIcon';
 import PageBanner from './CollectionComps/CollectionPageBanner';
-import CycleBtn from './CollectionComps/CycleBtn';
-import ProgressGauge from './CollectionComps/ProgressGauge';
+// import CycleBtn from './CollectionComps/CycleBtn';
 import Slideshow from './CollectionComps/Slideshow';
 import SlidesData from '../../data/SlideShowData.json';
-/* grid is fibonacci @WIDTH 51vw  X 31.5vh (1.5 * 34) X (1.5 X 21)
-so. 16vw 68vw 16vw*/
+import SlideshowUI from './CollectionComps/SlideshowUI';
+
 
 // /Users/beau/Desktop/beauhaus/beau-haus/public/img/listdot.svg
-/* customized size of grid using fr to do fibonacci calculations */
+
+
 const CollectionPageCompDiv = styled.div`
   position: absolute;
   top: 0;
@@ -32,67 +32,166 @@ const CollectionPageCompDiv = styled.div`
   display: grid;
   grid-template-columns: 24vw 52vw 24vw;
   grid-template-rows: 30vh 50vh 20vh;
+  user-select: none;
 
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/4;
-    z-index: 35; /* above trees */
     position: relative;
+
     & section {
-      & > .fibonacci {
-        margin: 2px;
-      }
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       display: grid;
-      z-index: 100;
       grid-template-columns: repeat(34, 1fr);
       grid-template-rows: repeat(21, 1fr) 20vh;
-      & > .meta-data-1x1a {
-        grid-column: 10/11;
-        grid-row: 6/7;
-        background-color: hsl(0, 0%, 7.7%);
-        opacity: 0;
-        animation: fadeIn 0.5s 0.5s ease-in-out forwards;
-        transform: rotate(-2deg);
+      & > div {
+        margin: .5rem;
       }
-      & > .meta-data-1x1b {
-        transform: rotate(8deg);
-        grid-column: 9/10;
-        grid-row: 6/7;
-        background-color: hsl(0, 0%, 7.7%);
-        opacity: 0;
-        animation: fadeIn 0.5s 0.75s ease-in-out forwards;
-      }
-      & > .meta-data-2x2 {
-        transform: rotate(4deg);
-        grid-column: 9/11;
-        grid-row: 7/9;
-        background-color: hsl(0, 0%, 15.4%);
-        opacity: 0;
-        animation: fadeIn 0.5s 1s ease-in-out forwards;
+      & > .slideshow-UI-container {
+        grid-column: 1/14;
+        grid-row: 1/9;
       }
 
-      & > .meta-data-3x3 {
-        transform: rotate(-4deg);
-        svg {
-          width: 100%;
-          height: 100%;
-          & > #gauge-needle {
-            transform-origin: 50% 50%;
-            stroke-width: 4px;
-            stroke: #aaa;
-          }
+      & .meta-data-13x13 {
+        grid-column: 1/14;
+        grid-row: 9/22;
+        text-align: justify;
+        background-color: hsl(0, 0%, 80%);
+        opacity: 0;
+        animation: fadeIn 5s 1.75s ease-in-out forwards;
+
+        & h3 {
+          text-align: center;
+          margin-top: 1vh;
+          font-size: 2vw;
+          font-weight: 300;
         }
 
-        grid-column: 11/14;
-        grid-row: 6/9;
-        position: relative;
-        background-color: hsl(0, 0%, 23.1%);
-        opacity: 0;
-        animation: fadeIn 0.5s 1.25s ease-in-out forwards;
+        & p {
+          margin-top: 1vh;
+          line-height: 2.4vh;
+          font-size: 1vw;
+          font-weight: 300;
+        }
+      }
+
+      & > .slideshow-container-tall-21x21 {  /* entire right half */
+        grid-column: 14/35;
+        grid-row: 1/-1;
+        display: grid;
+        
+        grid-template-columns: repeat(21, 1fr);
+        grid-template-rows: repeat(21, 1fr) 20vh;
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  & #btn-mute {
+    z-index: 50;
+    fill: maroon;
+  }
+`;
+
+class Collection extends Component {
+  constructor(props) {
+    super(props);
+    const { slides } = SlidesData;
+    this.state = {
+      slides,
+      profile: props.pageStyles,
+      total: slides.length,
+      current: 0,
+      slidesEngage: false
+    };
+    this.onStepFwdHandler = this.onStepFwdHandler.bind(this);
+    // console.log('props>Collection: ', props);
+  }
+  componentDidMount() {
+    // console.log("this.state.slides.length", this.state.total)
+  }
+  onStepFwdHandler() {
+    this.setState({
+      current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
+      slidesEngage: true
+    });
+    console.log('this.state.current', this.state.current);
+  }
+  componentWillUnmount() {}
+
+  render() {
+    const { pageStyles, tree, water } = this.props.profile;
+    const { fill } = this.props.profile.pageStyles;
+    const currentSlide = this.state.slides[this.state.current];
+    const { proj_icon, proj_number, proj_title, proj_tech, proj_desc, proj_links } = currentSlide;
+    // console.log('currentSlide', currentSlide);
+    // click={() => this.clickHandler()}
+    return (
+      <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
+        <PageBanner fill={fill} />
+        <div className="grid-ctr-tall">
+          <section>
+            <div className="slideshow-container-tall-21x21">
+              <Slideshow currentSlide={this.state.slides[this.state.current]} />
+            </div>
+            <div className="slideshow-UI-container">
+             <SlideshowUI stepFwd={this.onStepFwdHandler} current={this.state.current} total={this.state.total}/>
+            </div>
+            <div className="meta-data-13x13 fibonacci fader">
+              <h3>{proj_title}</h3>
+              <p>{proj_desc}</p>
+            </div>
+          </section>
+        </div>
+
+        <WaterBg {...water} />
+        <WaterBody />
+        <Shore />
+        {/*
+          <ShortTree db={tree.short} />
+          <MediumTree db={tree.medium} />
+          <TallTree db={tree.tall} />
+        */}
+        <MuteBtn />
+        <LogoTheme themeFill={fill} />
+      </CollectionPageCompDiv>
+    );
+  }
+}
+
+export default Collection;
+
+/*
+<LinksIcon />
+<CycleBtn count={proj_number} id="cycle-btn" />
+*************
+<ul>
+  {proj_links.map((item, idx) => (
+</div>
+    <li key={`${item}-${idx}li`}>
+      <a key={`${item}-${idx}`} target="blank_" href={item.url}>
+        {item.text}
+      </a>
+    </li>
+  ))}
+</ul>
+)}
+
+<ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
+              
+
+*******************LINKS TO PROJECTS CSS*************
+
         /*
         This stuff is for links
         ul {
@@ -118,23 +217,8 @@ const CollectionPageCompDiv = styled.div`
           color: lemonchiffon;
           text-shadow: -2px 2px 2px black;
         }
-        */
-      }
-
-      & .meta-data-5x5 {
-        transform: rotate(-3deg);
-        grid-column: 9/14;
-        grid-row: 1/6;
-        padding: 4%;
-        font-size: 1vw;
-        letter-spacing: -1px;
-        background-color: hsl(0, 0%, 38.5%);
-        box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.9);
-
-        & #play-arrow {
-          width: 100%;
-          height: 100%;
-        }
+        
+        
         ul li {
           display: block;
         }
@@ -153,173 +237,11 @@ const CollectionPageCompDiv = styled.div`
             opacity: 0.5;
           }
         }
-        opacity: 0;
-        animation: fadeIn 0.5s 1.5s ease-in-out forwards;
+    
       }
-      & > .meta-data-8x8 {
-        grid-column: 1/9;
-        grid-row: 1/9;
-        box-shadow: -5px 5px 10px 0px black;
-      }
+    */
 
-      & .meta-data-desc-13x13 {
-        /* 13x13 */
-        grid-column: 1/14;
-        grid-row: 9/22;
-        padding: 2%;
-        text-align: justify;
-        background-color: hsl(0, 0%, 80%);
-        & h3 {
-          text-align: center;
-          margin-top: 1vh;
-          font-size: 2vw;
-          font-weight: 300;
-        }
-        & p {
-          margin-top: 1vh;
-          line-height: 2.4vh;
-          font-size: 1vw;
-          font-weight: 300;
-        }
-        opacity: 0;
-        animation: fadeIn 5s 1.75s ease-in-out forwards;
-      }
-      & > .slideshow-container-tall-21x21 {
-        /* entire right half */
-        grid-column: 14/35;
-        grid-row: 1/-1;
-        display: grid;
-        grid-template-columns: repeat(21, 1fr);
-        grid-template-rows: repeat(21, 1fr) 20vh;
-      }
-    }
-  }
-
-  & #btn-mute {
-    z-index: 50;
-    fill: maroon;
-  }
-  & .bg {
-    background: maroon;
-  }
-
-  /*
-  & .fader {
-    opacity: 0;
-    animation: fadeIn 1s 5s ease-in-out forwards;
-  }
-  */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
-
-class Collection extends Component {
-  constructor(props) {
-    super(props);
-    const { slides } = SlidesData;
-    this.state = {
-      slides,
-      profile: props.pageStyles,
-      total: slides.length,
-      current: 0,
-      slidesEngage: false
-    };
-    this.clickHandler = this.clickHandler.bind(this);
-    // console.log('props>Collection: ', props);
-  }
-  componentDidMount() {
-    // console.log("this.state.slides.length", this.state.total)
-  }
-  clickHandler() {
-    this.setState({
-      current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
-      slidesEngage: true
-    });
-    console.log('this.state.current', this.state.current);
-  }
-  componentWillUnmount() {}
-
-  render() {
-    const { pageStyles, tree, water } = this.props.profile;
-    const { fill } = this.props.profile.pageStyles;
-    const currentSlide = this.state.slides[this.state.current];
-    // console.log('currentSlide', currentSlide);
-    const { proj_icon, proj_number, proj_title, proj_tech, proj_desc, proj_links } = currentSlide;
-
-    return (
-      <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
-        <PageBanner fill={fill} />
-        <div className="grid-ctr-tall">
-          <section>
-            <div className="meta-data-1x1a fibonacci ">.</div>
-            <div className="meta-data-1x1b fibonacci ">.</div>
-            <div className="meta-data-2x2 fibonacci " />
-            <div className="meta-data-3x3 fibonacci ">
-              <ProgressGauge total={this.state.total} count={proj_number} />
-            </div>
-            <div className="meta-data-5x5 fibonacci">
-              <svg id="play-arrow" viewBox="0 40 350 350" preserveAspectRatio="none">
-                <path fill="#FFA321" stroke="#E5B900" stroke-miterlimit="10" d="M274.8 195.8L135 353.9 116.2 56" />
-              </svg>
-            </div>
-
-            <div className="meta-data-8x8 fibonacci" onClick={() => this.clickHandler()}>
-              <CycleBtn count={proj_number} id="cycle-btn" />
-            </div>
-            <div className="meta-data-desc-13x13 fibonacci fader">
-              <h3>{proj_title}</h3>
-              <p>{proj_desc}</p>
-            </div>
-
-            <div className="slideshow-container-tall-21x21 fibonacci">
-              <Slideshow currentSlide={this.state.slides[this.state.current]} />
-            </div>
-          </section>
-        </div>
-
-        <WaterBg {...water} />
-        {/*
-        <WaterBody />
-        <Shore />
-        <ShortTree db={tree.short} />
-        <MediumTree db={tree.medium} />
-        <TallTree db={tree.tall} />
-        <MuteBtn />
-        */}
-        <LogoTheme themeFill={fill} />
-      </CollectionPageCompDiv>
-    );
-  }
-}
-
-export default Collection;
-
-/*
-<LinksIcon />
-*************
-<ul>
-  {proj_links.map((item, idx) => (
-</div>
-    <li key={`${item}-${idx}li`}>
-      <a key={`${item}-${idx}`} target="blank_" href={item.url}>
-        {item.text}
-      </a>
-    </li>
-  ))}
-</ul>
-)}
-
-<ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
-              
-              */
-/*
-
+/************************FIBONACCI NOTES********************
 1,1,2,3,5,8,13,21 = 54;
 
 black to white fibonacci

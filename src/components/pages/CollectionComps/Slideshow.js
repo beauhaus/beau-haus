@@ -13,25 +13,43 @@ import styled from 'styled-components';
 /*SLIDESHOW FRAME RUNS ALL THE WAY TO BOTTOM*/
 const SlideshowFrame = styled.div`
   grid-column: 1/22;
-  grid-row: 1/3;
+  grid-row: 1/-1;
   opacity: 1;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50vh 20vh;
-
+  z-index: 2;
   & > .photo-div {
     grid-row: 1;
     grid-column: 1/2;
     width: 100%;
     height: 100%;
     position: relative;
-
     & > img {
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
+    }
+
+    & path#display-frame-edge {
+      grid-column: 1;
+      grid-row: 1/3;
+      width: 100%;
+      height: 100%;
+      stroke: white;
+      stroke-width: 1;
+      fill: none;
+      stroke: transparent;
+      stroke-dasharray: 1260px;
+      stroke-dashoffset: 0px;
+      animation: 1s 1.5s dash linear forwards;
+    }
+    & > #frame-path {
+      width: 100%;
+      height: 100%;
+      stroke: #fff;
     }
     & > .shad-layer::after {
       content: '';
@@ -42,24 +60,7 @@ const SlideshowFrame = styled.div`
       height: 100%;
       box-shadow: inset -10px 10px 25px rgba(0, 0, 0, 0.5);
       opacity: 0;
-      animation: 1.5s 3.4s emboss ease-out forwards;
-    }
-    & path#display-frame-edge {
-      grid-column: 1;
-      grid-row: 1/3;
-      width: 100%;
-      stroke: white;
-      stroke-width: 2;
-      fill: none;
-      stroke: transparent;
-      stroke-dasharray: 1260px;
-      stroke-dashoffset: 0px;
-      animation: 2s 1.5s dash linear forwards;
-    }
-
-    & > #display-img {
-      width: 100%;
-      height: 100%;
+      animation: emboss 3s 2.5s ease-out forwards;
     }
   }
 
@@ -80,7 +81,7 @@ const SlideshowFrame = styled.div`
       height: 100%;
       box-shadow: inset -10px 10px 25px 0px rgba(0, 0, 0, 0.2);
       opacity: 0;
-      animation: emboss 3s 3s ease-out forwards;
+      animation: emboss 3s 2.5s ease-out forwards;
     }
 
     @keyframes emboss {
@@ -91,7 +92,6 @@ const SlideshowFrame = styled.div`
         opacity: 1;
       }
     }
-
     & .reflected-svg {
       position: absolute;
       top: 0;
@@ -99,9 +99,19 @@ const SlideshowFrame = styled.div`
       bottom: 0;
       width: 100%;
       height: 20vh;
-      stroke-width: 0px;
     }
-    & #display-img-reflect {
+    & #frame-path-reflected-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 20vh;
+      stroke-width: 0px;
+      stroke: #fff;
+    }
+    & #frame-path-reflected {
+      border: 1px solid green;
       position: absolute;
       top: 0;
       left: 0;
@@ -109,13 +119,15 @@ const SlideshowFrame = styled.div`
       width: 100%;
       height: 20vh;
       stroke: white;
-      stroke-width: 2;
+      stroke-width: 1;
       fill: none;
       stroke: transparent;
       stroke-dasharray: 1260px;
       stroke-dashoffset: 0px;
-      animation: 2s 1.5s dash linear forwards;    }
+      animation: 1s 1.5s dash linear forwards;
+    }
   }
+
   @keyframes dash {
     0% {
       stroke: #fff;
@@ -130,31 +142,17 @@ const SlideshowFrame = styled.div`
       stroke: transparent;
     }
   }
-
 `;
 
-/*
-  @media screen and (max-width : 768px) {    // tablet query
-    grid-column: 1/3;
-    & > .rectangles {
-      width: 50vw;
-    }
- }
- <svg id="display-img" viewBox="0 0 400 400" preserveAspectRatio="none">
-           <path id="display-frame-edge" d="M399 400V1H1v399" />
- </svg>
-
- */
 const Slideshow = props => {
   // console.log("> slideshow: props: ", props);
   return (
     <SlideshowFrame className="slideshow-frame">
       <div className="photo-div">
-        <img src={props.currentSlide.url} alt="" />
-        <svg id="display-img" viewBox="0 0 400 400" preserveAspectRatio="none">
+        <svg id="frame-path" viewBox="0 0 400 400" preserveAspectRatio="none">
           <path id="display-frame-edge" d="M399 400V1H1v399" />
         </svg>
-
+        <img src={props.currentSlide.url} alt="" />
         <div className="shad-layer">.</div>
       </div>
 
@@ -164,8 +162,8 @@ const Slideshow = props => {
         <svg className="reflected-svg" viewBox="0 0 400 400" preserveAspectRatio="none">
           <defs>
             <linearGradient opacity="1" id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop stopColor="black" offset=".5" />
-              <stop stopColor="white" stopOpacity="1" offset="1" />
+              <stop stopColor="grey" offset=".5" stopOpacity=".2" />
+              <stop stopColor="grey" stopOpacity=".2" offset="1" />
             </linearGradient>
             <mask id="mask1">
               <rect fill="url(#grad)" height="100%" width="100%" y="0vh" />
@@ -176,8 +174,9 @@ const Slideshow = props => {
           </defs>
           <rect id="reflected-rect" mask="url(#mask1)" width="100%" height="100%" y="0" fill="url(#pattern1)" />
         </svg>
-        <svg id="display-img-reflect" viewBox="0 0 400 400"  preserveAspectRatio="none">
-          <path id="display-frame-edge-reflect" d="M399 400V1H1v399" />
+
+        <svg id="frame-path-reflected-container" viewBox="0 0 400 400" preserveAspectRatio="none">
+          <path id="frame-path-reflected" d="M399 400V1H1v399" />
         </svg>
       </div>
     </SlideshowFrame>

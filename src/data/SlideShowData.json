@@ -5,7 +5,6 @@
       "url": "./img/test/blank.png",
       "alt": "blank",
       "proj_icon": "./img/proj/projicons/blank.png",
-      "proj_number": "",
       "proj_title": "",
       "proj_tech": [],
       "proj_desc": "",
@@ -21,7 +20,6 @@
       "url": "./img/proj/wireframes.jpg",
       "alt": "lo & hifi wireframes depicted",
       "proj_icon": "mag6.jpg",
-      "proj_number": "1",
       "proj_title": "From napkin to node...",
       "proj_tech": ["Sketch", "Illustrator", "Pen & Paper", "Post-its"],
 
@@ -39,7 +37,6 @@
       "url": "./img/proj/plumtree.jpg",
       "alt": "plumtree",
       "proj_icon": "./img/proj/projicons/react.png",
-      "proj_number": "2",
       "proj_title": "Plumtree",
       "proj_tech": ["react", "gsap", "illustrator", "audacity"],
       "proj_desc":
@@ -57,7 +54,6 @@
       "url": "./img/proj/setinterval.jpg",
       "alt": "setinterval",
       "proj_icon": "./img/proj/projicons/gsap.png",
-      "proj_number": "3",
       "proj_title": "Turbulent Time",
       "proj_tech": ["svg turbulence", "gsap", "jquery"],
       "proj_desc": "FeTurbulence is looped to slowly degrade the integrity of an svg and my laptop's heat-sink fan.",
@@ -74,7 +70,6 @@
       "url": "./img/proj/statepicker.jpg",
       "alt": "state picker alternative to dropdown menu",
       "proj_icon": "mag3.jpg",
-      "proj_number": "4",
       "proj_title": "Retro Telescreen",
       "proj_tech": ["react/gsap", "validator.js", "scss", "css animation"],
       "proj_desc":
@@ -93,7 +88,6 @@
       "alt":
         "CSSConf17 Entry depicting a house on Bourbon Street with colorful and detailed CSS rendered street facades",
       "proj_icon": "mag4.jpg",
-      "proj_number": "5",
       "proj_title": "Bourbon Street",
       "proj_tech": ["sass", "css grid", "pure css"],
       "proj_desc":
@@ -114,7 +108,6 @@
       "url": "./img/proj/curriculum.jpg",
       "alt": "image of the movie 'Up!' depicting a house flying away in with baloons on a sunny day",
       "proj_icon": "mag5.jpg",
-      "proj_number": "6",
       "proj_title": "Up!",
       "proj_tech": ["illustrator", "illustrator", "gsap", "jquery"],
       "proj_desc":
@@ -131,7 +124,6 @@
       "url": "./img/proj/csswindows.jpg",
       "alt": ".",
       "proj_icon": "./img/proj/projicons/css.png",
-      "proj_number": "7",
       "proj_title": "Pure CSS Windows",
       "proj_tech": ["css grid", "css drawing", "gsap"],
       "proj_desc":
@@ -148,7 +140,6 @@
       "url": "./img/proj/journal.jpg",
       "alt": "Code Journal image depicting SQL queries & tips and advice",
       "proj_icon": "mag7.jpg",
-      "proj_number": "8",
       "proj_title": "Code Journal",
       "proj_tech": ["angular.js", "node.js", "heroku"],
       "proj_desc":
@@ -170,7 +161,6 @@
       "url": "./img/proj/robotsite.jpg",
       "alt": "Retro styled panel for user inputs email, state, etc. Done in the style of Kubrick's 2001",
       "proj_icon": "mag8.jpg",
-      "proj_number": "9",
       "proj_title": "Robot Companions Site",
       "proj_tech": ["webpack", "react.js", "pure css", "RWD"],
 
@@ -192,7 +182,6 @@
       "url": "./img/proj/hamburger8.gif",
       "alt": "test/mag9",
       "proj_icon": "mag9.jpg",
-      "proj_number": "10",
       "proj_title": "After Effects Work",
       "proj_tech": ["after effects", "mocha", "chroma screen", "audacity"],
       "proj_desc": "Filming, compositing, rotoscoping, photo editing and sound editing was a passion of mine for years before learning to code.",
@@ -208,7 +197,6 @@
       "url": "./img/proj/gwenbed1.gif",
       "alt": "test/mag9",
       "proj_icon": "mag9.jpg",
-      "proj_number": "11",
       "proj_title": "./img/test/mag9.jpg",
       "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
 

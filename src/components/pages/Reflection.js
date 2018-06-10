@@ -24,11 +24,11 @@ const ReflectionPageCompDiv = styled.div`
   display: grid;
   grid-template-columns: 25vw 50vw 25vw;
   grid-template-rows: 20vh 60vh 20vh;
-  z-index: 1;
+  
   & > .grid-ctr {
     grid-column: 2;
     grid-row: 2;
-    z-index: 20;
+    
     border: 2px solid navy;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
