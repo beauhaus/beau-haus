@@ -18,11 +18,6 @@ const CycleButtonWrapper = styled.div`
       mix-blend-mode: screen; 
     }
   }
-&:hover {
-
-// mix-blend-mode: color; /* deep orange, translucent*/
-// mix-blend-mode: luminosity; /* greyed out*/
-}
 `;
 const CycleButton = props => {
   const btnFill = 'hsl(0, 0%, 38.5%)';
@@ -40,7 +35,7 @@ const CycleButton = props => {
         <rect id="view" width="100" height="100" fill={btnFill} x="0" y="0" filter="url(#btn-grain)" />
       </svg>
       <svg id="play-arrow" viewBox="0 40 350 350" preserveAspectRatio="none">
-        <path fill="#FFA321" stroke="#E5B900" strokeMiterlimit="10" d="M274.8 195.8L135 353.9 116.2 56" />
+        <path fill="#FFA321" strokeWidth="0"  d="M274.8 195.8L135 353.9 116.2 56" />
       </svg>
     </CycleButtonWrapper>
   );

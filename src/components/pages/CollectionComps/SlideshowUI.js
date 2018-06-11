@@ -21,6 +21,7 @@ const SlideshowUIWrapper = styled.div`
     animation: fadeIn 0.5s 0.5s ease-in-out forwards;
     transform: translateZ(1px) rotate(-2deg);
   }
+  /*
   & > .meta-data-1x1b {
     transform: translateZ(1px) rotate(8deg);
     grid-column: 9/10;
@@ -37,19 +38,12 @@ const SlideshowUIWrapper = styled.div`
     opacity: 0;
     animation: fadeIn 0.5s 1s ease-in-out forwards;
   }
-  & > .meta-data-3x3 {
-    transform: translateZ(1px) rotate(8deg);
-    svg {
-      width: 100%;
-      height: 100%;
-      & > #gauge-needle {
-        transform-origin: 50% 50%;
-        stroke-width: 4px;
-        stroke: #aaa;
-      }
-    }
 
-    grid-column: 11/14;
+  transform: translateZ(1px) rotate(8deg);
+  */
+  & > .meta-data-3x3 {
+   
+    grid-column: 9/14;
     grid-row: 6/9;
     position: relative;
     /*
@@ -57,9 +51,11 @@ const SlideshowUIWrapper = styled.div`
     */
     opacity: 0;
     animation: fadeIn 0.5s 1.25s ease-in-out forwards;
+    padding: 0;
   }
-
+  
   & .meta-data-5x5 {
+    
     transform: translate(3px, -4px) rotate(-2deg);
     grid-column: 9/14;
     grid-row: 1/6;
@@ -70,7 +66,6 @@ const SlideshowUIWrapper = styled.div`
     box-shadow: -3px 3px 2px 0px rgba(0, 0, 0, 0.9);
     opacity: 0;
     animation: fadeIn 0.5s 1.5s ease-in-out forwards;
-
     &:hover {
       cursor: pointer;
     }
@@ -103,26 +98,25 @@ class SlideshowUI extends Component {
     console.log('props>slideshowUI props: ', props);
   }
   render() {
-    // <ProgressGauge total={this.state.total} count={this.state.projNum} />
-    // onClick={this.props.click}
+
     return (
       <SlideshowUIWrapper className="slideshow-ui">
-        <div className="meta-data-1x1a fib">.</div>
-        <div className="meta-data-1x1b fib">.</div>
-        <div className="meta-data-2x2 fib">.</div>
-        <div className="meta-data-3x3 fib">
-          <ProgressGauge {...this.props} />
-        </div>
-        <div className="meta-data-5x5 fib" onClick={this.props.stepFwd}>
-          <CycleButton />
-        </div>
-        <div className="meta-data-8x8 fib">
-          <NumberDisplay {...this.props} />
-        </div>
+      <div className="meta-data-3x3 fib">
+      <ProgressGauge {...this.props} />
+      </div>
+      <div className="meta-data-5x5 fib" onClick={this.props.stepFwd}>
+      <CycleButton />
+      </div>
+      <div className="meta-data-8x8 fib">
+      <NumberDisplay {...this.props} />
+      </div>
       </SlideshowUIWrapper>
     );
   }
 }
+// <div className="meta-data-1x1a fib">.</div>
+// <div className="meta-data-1x1b fib">.</div>
+// <div className="meta-data-2x2 fib">.</div>
 
 export default SlideshowUI;
 

@@ -18,9 +18,7 @@ import Slideshow from './CollectionComps/Slideshow';
 import SlidesData from '../../data/SlideShowData.json';
 import SlideshowUI from './CollectionComps/SlideshowUI';
 
-
 // /Users/beau/Desktop/beauhaus/beau-haus/public/img/listdot.svg
-
 
 const CollectionPageCompDiv = styled.div`
   position: absolute;
@@ -48,7 +46,7 @@ const CollectionPageCompDiv = styled.div`
       grid-template-columns: repeat(34, 1fr);
       grid-template-rows: repeat(21, 1fr) 20vh;
       & > div {
-        margin: .5rem;
+        margin: 0.5rem;
       }
       & > .slideshow-UI-container {
         grid-column: 1/14;
@@ -62,27 +60,30 @@ const CollectionPageCompDiv = styled.div`
         background-color: hsl(0, 0%, 80%);
         opacity: 0;
         animation: fadeIn 5s 1.75s ease-in-out forwards;
-
-        & h3 {
-          text-align: center;
-          margin-top: 1vh;
-          font-size: 2vw;
-          font-weight: 300;
+        padding: 4%;
+        & > .text-copy {
         }
+          & h3 {
+            text-align: center;
+            margin-top: 1vh;
+            font-size: 2vw;
+            font-weight: 300;
+          }
 
-        & p {
-          margin-top: 1vh;
-          line-height: 2.4vh;
-          font-size: 1vw;
-          font-weight: 300;
-        }
+          & p {
+            margin-top: 1vh;
+            line-height: 2.4vh;
+            font-size: 1vw;
+            font-weight: 300;
+          }
       }
 
-      & > .slideshow-container-tall-21x21 {  /* entire right half */
+      & > .slideshow-container-tall-21x21 {
+        /* entire right half */
         grid-column: 14/35;
         grid-row: 1/-1;
         display: grid;
-        
+
         grid-template-columns: repeat(21, 1fr);
         grid-template-rows: repeat(21, 1fr) 20vh;
       }
@@ -142,14 +143,14 @@ class Collection extends Component {
         <div className="grid-ctr-tall">
           <section>
             <div className="slideshow-container-tall-21x21">
-              <Slideshow currentSlide={this.state.slides[this.state.current]} />
+              <Slideshow currentSlide={this.state.slides[this.state.current]} links={proj_links}/>
             </div>
             <div className="slideshow-UI-container">
-             <SlideshowUI stepFwd={this.onStepFwdHandler} current={this.state.current} total={this.state.total}/>
+              <SlideshowUI stepFwd={this.onStepFwdHandler} current={this.state.current} total={this.state.total} />
             </div>
             <div className="meta-data-13x13 fibonacci fader">
-              <h3>{proj_title}</h3>
-              <p>{proj_desc}</p>
+              <h3 className="text-copy">{proj_title}</h3>
+              <p className="text-copy">{proj_desc}</p>
             </div>
           </section>
         </div>

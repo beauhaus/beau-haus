@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="150">
+  <g>
+  <path fill="gray" d="M250 0v150H0"/>
+  <path fill="#B3B3B3" d="M0 150V0h250"/>
+  <path fill="#FFF" d="M125 33c-38.6 0-73.1 16.3-96 42 22.9 25.7 57.4 42 96 42s73.1-16.3 96-42c-22.9-25.7-57.4-42-96-42z"/>
+  </g>  <g fill="none" stroke-miterlimit="10" stroke-width="2">
+     <line x1="125" x2="125" y1="75" y2="27" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="131" y1="75" y2="27.4" stroke="#FA8E00" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="136.9" y1="75" y2="28.5" stroke="#F58B00" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="142.7" y1="75" y2="30.4" stroke="#F08800" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="148.1" y1="75" y2="32.9" stroke="#EB8500" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="153.2" y1="75" y2="36.2" stroke="#E68300" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="157.9" y1="75" y2="40" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="162" y1="75" y2="44.4" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="165.5" y1="75" y2="49.3" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="168.4" y1="75" y2="54.6" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="170.7" y1="75" y2="60.2" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="172.2" y1="75" y2="66" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="172.9" y1="75" y2="72" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="172.9" y1="75" y2="78" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="172.1" y1="75" y2="84" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="170.6" y1="75" y2="89.8" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="168.4" y1="75" y2="95.5" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="165.5" y1="75" y2="100.7" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="162" y1="75" y2="105.6" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="157.8" y1="75" y2="110" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="153.2" y1="75" y2="113.8" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="148.1" y1="75" y2="117.1" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="142.7" y1="75" y2="119.6" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="136.9" y1="75" y2="121.5" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="131" y1="75" y2="122.6" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="125" y1="75" y2="123" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="119" y1="75" y2="122.6" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="113" y1="75" y2="121.5" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="107.3" y1="75" y2="119.6" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="101.9" y1="75" y2="117" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="96.8" y1="75" y2="113.8" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="92.1" y1="75" y2="110" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="88" y1="75" y2="105.6" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="84.5" y1="75" y2="100.7" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="81.6" y1="75" y2="95.4" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="79.3" y1="75" y2="89.8" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="77.8" y1="75" y2="84" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="77.1" y1="75" y2="78" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="77.1" y1="75" y2="71.9" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="77.9" y1="75" y2="66" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="79.4" y1="75" y2="60.1" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="81.6" y1="75" y2="54.5" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="84.5" y1="75" y2="49.2" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="88" y1="75" y2="44.4" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="92.2" y1="75" y2="40" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="96.8" y1="75" y2="36.1" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="101.9" y1="75" y2="32.9" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="107.4" y1="75" y2="30.3" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="113.1" y1="75" y2="28.5" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+    <line x1="125" x2="119" y1="75" y2="27.4" stroke="#FF9100" stroke-dasharray="0 15 12"/>
+  
+<path stroke="#C1272D" d="M125 75V32"/>
+  </g>
+</svg>
