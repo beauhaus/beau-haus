@@ -13,67 +13,26 @@ const SlideshowUIWrapper = styled.div`
   grid-template-columns: repeat(13, 1fr);
   grid-template-rows: repeat(8, 1fr);
 
-  & > .meta-data-1x1a {
-    grid-column: 10/11;
-    grid-row: 6/7;
-    background-color: hsl(0, 0%, 7.7%);
-    opacity: 0;
-    animation: fadeIn 0.5s 0.5s ease-in-out forwards;
-    transform: translateZ(1px) rotate(-2deg);
-  }
-  /*
-  & > .meta-data-1x1b {
-    transform: translateZ(1px) rotate(8deg);
-    grid-column: 9/10;
-    grid-row: 6/7;
-    background-color: hsl(0, 0%, 7.7%);
-    opacity: 0;
-    animation: fadeIn 0.5s 0.75s ease-in-out forwards;
-  }
-  & > .meta-data-2x2 {
-    transform: translateZ(1px) rotate(4deg);
-    grid-column: 9/11;
-    grid-row: 7/9;
-    background-color: hsl(0, 0%, 15.4%);
-    opacity: 0;
-    animation: fadeIn 0.5s 1s ease-in-out forwards;
-  }
+ 
 
-  transform: translateZ(1px) rotate(8deg);
-  */
   & > .meta-data-3x3 {
-   
     grid-column: 9/14;
     grid-row: 6/9;
     position: relative;
-    /*
-    background-color: hsl(0, 0%, 23.1%);
-    */
     opacity: 0;
+    transform: translate(-2px, 3px) rotate(2deg);
     animation: fadeIn 0.5s 1.25s ease-in-out forwards;
     padding: 0;
   }
-  
+
   & .meta-data-5x5 {
-    
-    transform: translate(3px, -4px) rotate(-2deg);
+    transform: translate(3px, -4px) rotate(-1deg);
     grid-column: 9/14;
     grid-row: 1/6;
-    padding: 4%;
-    font-size: 1vw;
-    letter-spacing: -1px;
-    background-color: hsl(0, 0%, 38.5%);
-    box-shadow: -3px 3px 2px 0px rgba(0, 0, 0, 0.9);
     opacity: 0;
-    animation: fadeIn 0.5s 1.5s ease-in-out forwards;
-    &:hover {
-      cursor: pointer;
-    }
-
-    & #play-arrow {
-      width: 100%;
-      height: 100%;
-    }
+    animation: fadeIn 0.5s 1.25s ease-in-out forwards;
+    box-shadow: -3px 3px 2px 0px rgba(0, 0, 0, 1);
+    
   }
   & > .meta-data-8x8 {
     position: relative;
@@ -82,9 +41,6 @@ const SlideshowUIWrapper = styled.div`
     grid-row: 1/9;
     box-shadow: 0px 4px 3px -2px rgba(0, 0, 0, 0.5);
     background: hsl(0, 0%, 61.5%);
-  }
-  & > .fib {
-    margin: 2px;
   }
 `;
 class SlideshowUI extends Component {
@@ -95,28 +51,24 @@ class SlideshowUI extends Component {
       current: props.current,
       total: props.total
     };
-    console.log('props>slideshowUI props: ', props);
+    // console.log('props>slideshowUI props: ', props);
   }
   render() {
-
     return (
       <SlideshowUIWrapper className="slideshow-ui">
-      <div className="meta-data-3x3 fib">
-      <ProgressGauge {...this.props} />
-      </div>
-      <div className="meta-data-5x5 fib" onClick={this.props.stepFwd}>
-      <CycleButton />
-      </div>
-      <div className="meta-data-8x8 fib">
-      <NumberDisplay {...this.props} />
-      </div>
+        <div className="meta-data-3x3">
+          <ProgressGauge {...this.props} />
+        </div>
+        <div className="meta-data-5x5" onClick={this.props.stepFwd}>
+          <CycleButton />
+        </div>
+        <div className="meta-data-8x8">
+          <NumberDisplay {...this.props} />
+        </div>
       </SlideshowUIWrapper>
     );
   }
 }
-// <div className="meta-data-1x1a fib">.</div>
-// <div className="meta-data-1x1b fib">.</div>
-// <div className="meta-data-2x2 fib">.</div>
 
 export default SlideshowUI;
 

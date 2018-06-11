@@ -4,12 +4,19 @@ import styled from 'styled-components';
 const CycleButtonWrapper = styled.div`
   width: 100%;
   height: 100%;
+  background-color: hsl(0, 0%, 38.5%);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid black;
+
+  &:hover {
+    cursor: pointer;
+  }
   svg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     opacity: 1;
   }
   &  #play-arrow {
@@ -34,7 +41,7 @@ const CycleButton = props => {
         </defs>
         <rect id="view" width="100" height="100" fill={btnFill} x="0" y="0" filter="url(#btn-grain)" />
       </svg>
-      <svg id="play-arrow" viewBox="0 40 350 350" preserveAspectRatio="none">
+      <svg id="play-arrow" viewBox="-40 45 400 400" preserveAspectRatio="none">
         <path fill="#FFA321" strokeWidth="0"  d="M274.8 195.8L135 353.9 116.2 56" />
       </svg>
     </CycleButtonWrapper>
@@ -44,9 +51,5 @@ const CycleButton = props => {
 export default CycleButton;
 
 /*
-<div className="meta-data-5x5 fibonacci">
-</div>
 
- 
-  
-  */
+*/

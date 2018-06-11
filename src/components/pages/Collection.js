@@ -11,13 +11,11 @@ import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
-// import LinksIcon from './CollectionComps/LinksIcon';
 import PageBanner from './CollectionComps/CollectionPageBanner';
-// import CycleBtn from './CollectionComps/CycleBtn';
 import Slideshow from './CollectionComps/Slideshow';
 import SlidesData from '../../data/SlideShowData.json';
 import SlideshowUI from './CollectionComps/SlideshowUI';
-
+import ProjectLinks from './CollectionComps/ProjectLinks';
 // /Users/beau/Desktop/beauhaus/beau-haus/public/img/listdot.svg
 
 const CollectionPageCompDiv = styled.div`
@@ -28,7 +26,7 @@ const CollectionPageCompDiv = styled.div`
   bottom: 0;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 24vw 52vw 24vw;
+  grid-template-columns: 23vw 54vw 23vw;
   grid-template-rows: 30vh 50vh 20vh;
   user-select: none;
 
@@ -63,19 +61,19 @@ const CollectionPageCompDiv = styled.div`
         padding: 4%;
         & > .text-copy {
         }
-          & h3 {
-            text-align: center;
-            margin-top: 1vh;
-            font-size: 2vw;
-            font-weight: 300;
-          }
+        & h3 {
+          text-align: center;
+          margin-top: 1vh;
+          font-size: 2vw;
+          font-weight: 300;
+        }
 
-          & p {
-            margin-top: 1vh;
-            line-height: 2.4vh;
-            font-size: 1vw;
-            font-weight: 300;
-          }
+        & p {
+          margin-top: 1vh;
+          line-height: 2.4vh;
+          font-size: 1vw;
+          font-weight: 300;
+        }
       }
 
       & > .slideshow-container-tall-21x21 {
@@ -83,9 +81,9 @@ const CollectionPageCompDiv = styled.div`
         grid-column: 14/35;
         grid-row: 1/-1;
         display: grid;
-
         grid-template-columns: repeat(21, 1fr);
         grid-template-rows: repeat(21, 1fr) 20vh;
+        position: relative;
       }
     }
   }
@@ -126,7 +124,7 @@ class Collection extends Component {
       current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
       slidesEngage: true
     });
-    console.log('this.state.current', this.state.current);
+    // console.log('this.state.current', this.state.current);
   }
   componentWillUnmount() {}
 
@@ -143,12 +141,13 @@ class Collection extends Component {
         <div className="grid-ctr-tall">
           <section>
             <div className="slideshow-container-tall-21x21">
-              <Slideshow currentSlide={this.state.slides[this.state.current]} links={proj_links}/>
+              <Slideshow currentSlide={this.state.slides[this.state.current]}  />
+              <ProjectLinks links={proj_links} />
             </div>
             <div className="slideshow-UI-container">
               <SlideshowUI stepFwd={this.onStepFwdHandler} current={this.state.current} total={this.state.total} />
             </div>
-            <div className="meta-data-13x13 fibonacci fader">
+            <div className="meta-data-13x13 fader">
               <h3 className="text-copy">{proj_title}</h3>
               <p className="text-copy">{proj_desc}</p>
             </div>
@@ -195,51 +194,7 @@ export default Collection;
 
         /*
         This stuff is for links
-        ul {
-          position: absolute;
-          top: 0.5vh;
-          left: 0.2vw;
-          font-weight: 100;
-          line-height: 2.5vh;
-          li {
-            font-size: 1.5rem;
-          }
-        }
-        a,
-        a:visited,
-        a:link,
-        a:active {
-          text-decoration: none;
-          color: #b9b693;
-          text-shadow: -1px 1px 2px #1c1e20;
-          font-weight: 400;
-        }
-        a:hover {
-          color: lemonchiffon;
-          text-shadow: -2px 2px 2px black;
-        }
-        
-        
-        ul li {
-          display: block;
-        }
-        ul {
-          font-style: italic;
-          font-weight: 300;
-          text-align: left;
-          line-height: 1.6rem;
-          color: #bbb;
-          & > li::after {
-            content: url('./img/listdot.svg');
-            font-size: 10px;
-            width: 10px;
-            margin: 0 4px;
-            display: inline-block;
-            opacity: 0.5;
-          }
-        }
-    
-      }
+       
     */
 
 /************************FIBONACCI NOTES********************

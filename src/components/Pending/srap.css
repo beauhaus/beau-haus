@@ -36,6 +36,36 @@ color: hsl(0, 0%, 61.5%);
 /* 13 */
 color: hsl(0, 0%, 100%); 
 
+background-blend-mode: multiply;
+background-blend-mode: screen;
+background-blend-mode: overlay;
+background-blend-mode: darken;
+background-blend-mode: lighten;
+background-blend-mode: color;
+background-blend-mode: saturation;
+background-blend-mode: color;
+background-blend-mode: luminosity;
+background-blend-mode: 
 
 }
 
+
+
+/*
+
+
+BG BLEND MODES
+
+
+multiply	Sets the blending mode to multiply	
+screen	Sets the blending mode to screen	
+overlay	Sets the blending mode to overlay	
+darken	Sets the blending mode to darken	
+lighten	Sets the blending mode to lighten	
+color-dodge	Sets the blending mode to color-dodge	
+saturation	Sets the blending mode to saturation	
+color	Sets the blending mode to color	
+luminosity
+
+
+*/

@@ -187,25 +187,8 @@
       "proj_desc": "Filming, compositing, rotoscoping, photo editing and sound editing was a passion of mine for years before learning to code.",
       "proj_links": [
         {
-          "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen"
-        }
-      ]
-    },
-    {
-      "id": 111,
-      "url": "./img/proj/gwenbed1.gif",
-      "alt": "test/mag9",
-      "proj_icon": "mag9.jpg",
-      "proj_title": "./img/test/mag9.jpg",
-      "proj_tech": ["Lorem", "Ipsum.js", "Angular.js", "Something.js"],
-
-      "proj_desc": "this is1",
-
-      "proj_links": [
-        {
-          "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen"
+          "url": "",
+          "text": ""
         }
       ]
     }

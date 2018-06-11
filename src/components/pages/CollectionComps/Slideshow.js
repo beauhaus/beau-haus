@@ -145,8 +145,8 @@ const SlideshowFrame = styled.div`
 `;
 
 const Slideshow = props => {
-  console.log("> slideshow: props: ", props);
-  console.log("links> slideshow: props: ", props.links);
+  // console.log("> slideshow: props: ", props);
+  // console.log("links> slideshow: props: ", props.links);
   
   return (
     <SlideshowFrame className="slideshow-frame">
@@ -180,6 +180,8 @@ const Slideshow = props => {
         <svg id="frame-path-reflected-container" viewBox="0 0 400 400" preserveAspectRatio="none">
           <path id="frame-path-reflected" d="M399 400V1H1v399" />
         </svg>
+      </div>
+      <div className="links">
       </div>
     </SlideshowFrame>
   );

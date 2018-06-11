@@ -12,7 +12,7 @@ position: absolute;
 left: 10vw;
 bottom: 2vw;
 width: 20vw;
-z-index: 10;
+z-index: 60;
 & .icon-cover {/* currently not used*/
   stroke-width: 0.2px;
   stroke: black;
