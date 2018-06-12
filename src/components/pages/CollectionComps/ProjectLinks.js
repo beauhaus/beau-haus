@@ -145,10 +145,3 @@ const ProjectLinks = props => {
 };
 
 export default ProjectLinks;
-
-/*
-        
-        
-        }
-    
-      }*/

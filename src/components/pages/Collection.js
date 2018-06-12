@@ -77,7 +77,6 @@ const CollectionPageCompDiv = styled.div`
       }
 
       & > .slideshow-container-tall-21x21 {
-        /* entire right half */
         grid-column: 14/35;
         grid-row: 1/-1;
         display: grid;
@@ -152,46 +151,17 @@ class Collection extends Component {
         <WaterBg {...water} />
         <WaterBody />
         <Shore />
-        {/*
-          <ShortTree db={tree.short} />
-          <MediumTree db={tree.medium} />
-          <TallTree db={tree.tall} />
-        */}
         <MuteBtn />
         <LogoTheme themeFill={fill} />
-      </CollectionPageCompDiv>
-    );
+        </CollectionPageCompDiv>
+      );
+    }
   }
-}
-
-export default Collection;
-
-/*
-
-/************************FIBONACCI NOTES********************
-1,1,2,3,5,8,13,21 = 54;
-
-black to white fibonacci
-
-(1 / 13 ) * 100 = 07.7%
-background-color: hsl(0, 0%, 92.3%); 
-
-(1 / 13 ) * 100 = 07.7% 
-background-color: hsl(0, 0%, 92.3%); 
-
-(2 / 13 ) * 100 = 15.4% 
-background-color: hsl(0, 0%, 84.6%); 
-
-(3 / 13 ) * 100 = 23.1%
-background-color: hsl(0, 0%, 76.9%); 
-
-(5 / 13 ) * 100 = 38.5%
-background-color: hsl(0, 0%, 61.5%); 
-
-(8 / 13 ) * 100 = 61.5%
-background-color: hsl(0, 0%, 38.5%); 
-
-(13 / 13 ) * 100 = 100%
-background-color: hsl(0, 0%, 0%); 
-
-*/
+  
+  export default Collection;
+  
+  /*
+    <ShortTree db={tree.short} />
+    <MediumTree db={tree.medium} />
+    <TallTree db={tree.tall} />
+  */

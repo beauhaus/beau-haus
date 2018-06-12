@@ -1,17 +1,9 @@
 import React, { Component, Children } from 'react';
-import ReactDOM from 'react-dom';
+
 import styled from 'styled-components';
 
-/**For reference:
- * ENTIRE RIGHT HALF TO BOTTOM
- grid-column: 14/35;
- grid-row: 1/-1;
- display: grid;
- grid-template-columns: repeat(21, 1fr);
- grid-template-rows: 1fr 20vh;
- */
-/*SLIDESHOW FRAME RUNS ALL THE WAY TO BOTTOM*/
-const SlideshowFrame = styled.div`
+
+ const SlideshowFrame = styled.div`
   grid-column: 1/22;
   grid-row: 1/-1;
   opacity: 1;
@@ -152,11 +144,11 @@ const Slideshow = props => {
           <path id="display-frame-edge" d="M399 400V1H1v399" />
         </svg>
         <img src={props.currentSlide.url} alt="" />
-        <div className="shad-layer">.</div>
+        <div className="shad-layer"></div>
       </div>
 
       <div className="reflected-div shad-layer">
-        <div className="shad-layer-reflect">.</div>
+        <div className="shad-layer-reflect"></div>
 
         <svg className="reflected-svg" viewBox="0 0 400 400" preserveAspectRatio="none">
           <defs>
