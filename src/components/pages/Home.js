@@ -2,16 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import HomeTitle from './HomeTitle';
-import ShortTree from '../scene/trees/ShortTree';
-import MediumTree from '../scene/trees/MediumTree';
-import TallTree from '../scene/trees/TallTree';
-import WaterBg from '../scene/water/WaterBg';
-import WaterBody from '../scene/water/WaterBody';
-import Shore from '../scene/water/Shore';
-import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
-/* Component is .home-container */
 const HomePageCompDiv = styled.div`
   position: absolute;
   top: 0;
@@ -115,10 +107,3 @@ class Home extends Component {
   }
   
   export default Home;
-  // <WaterBg {...water} />
-  // <WaterBody />
-  // <MediumTree db={tree.medium} />
-  // <Shore />
-  // <TallTree db={tree.tall} />
-  // <ShortTree db={tree.short} />
-  // <MuteBtn />

@@ -57,8 +57,3 @@ class MuteBtn extends Component {
 }
 
 export default MuteBtn;
-
-/*
-
-
-*/

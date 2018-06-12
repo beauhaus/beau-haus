@@ -177,11 +177,3 @@ const Slideshow = props => {
 };
 
 export default Slideshow;
-
-/*
-
-**************FAKING FILTER TRANSITION************
-https://codepen.io/beauhaus/pen/PaPEvg?editors=1000
-
-
-*/

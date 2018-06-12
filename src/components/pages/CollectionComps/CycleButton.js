@@ -49,7 +49,3 @@ const CycleButton = props => {
 };
 
 export default CycleButton;
-
-/*
-
-*/

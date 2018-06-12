@@ -98,6 +98,3 @@ const HomeTitle = props => {
 };
 
 export default HomeTitle;
-
-/*
-*/

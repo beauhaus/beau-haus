@@ -26,8 +26,3 @@ const Shore = () => (
 
 export default Shore;
 
-/*
-  --shore-color-1: #646464;
-  --shore-color-2: #f2f2f2;
-  --shore-color-3: #b08d80;
-*/

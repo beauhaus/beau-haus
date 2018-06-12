@@ -65,6 +65,3 @@ const ProgressGauge = props => {
 };
 
 export default ProgressGauge;
-
-/*
-*/

@@ -7,7 +7,6 @@ import styled from 'styled-components';
 import WhiteCaps from './WhiteCaps';
 // import Shore from './Shore';
 // import Banner from '../Banner';
-/***ShoreWaterBody will be vanishing after page transition from Landing */
 
 // SVG
 const WaterBodyWrapper = styled.svg`
@@ -267,6 +266,3 @@ class WaterBody extends React.Component {
 // <Shore />
 
 export default WaterBody;
-
-/*
-    */

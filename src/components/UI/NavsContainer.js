@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 import PageData from '../../data/PageData.json';
 
-/* #nav is pos: rel */
 
 const NavsWrapper = styled.div`
   position: absolute;
@@ -16,7 +15,7 @@ const NavsWrapper = styled.div`
   width: 18vw;
   height: 28vh;
   text {
-    font-family: 'Lato', Tahoma, sans-serif; /* keep this */
+    font-family: 'Lato', Tahoma, sans-serif;
     font-size: 4.5rem;
     font-weight: 300;
     opacity: 0;
@@ -50,23 +49,10 @@ const NavsWrapper = styled.div`
  
 `;
 
-/* tablet query */
 
-// @media screen and (max-width: 768px) {
-//   #menu-desktop {
-//     position: absolute;
-//     width: 35vw;
-//     height: 30vh;
-//     left: 65vw;
-//     top: 0;
-//   }
-// }
 
 
 const { navBtns } = PageData;
-
-/* NavsContainer IS A PORTAL */
-
 class NavsContainer extends Component {
   constructor(props) {
     super(props);
@@ -85,6 +71,7 @@ class NavsContainer extends Component {
     this.playMenuHoverOff = this.playMenuHoverOff.bind(this);
     this.hoverMenuOnTL = new TimelineMax({ pause: true });
     this.hoverMenuOffTL = new TimelineMax({ pause: true });
+    
   }
   componentDidMount(arg) {
     this.setState(() => ({
@@ -93,6 +80,7 @@ class NavsContainer extends Component {
   }
 
   playMenuHoverOn(command) {
+
     const { hoverMenuOnTL, refs } = this;
     navBtns.forEach((btn, idx) => {
       hoverMenuOnTL.to(
@@ -207,14 +195,3 @@ class NavsContainer extends Component {
 }
 
 export default NavsContainer;
-/*
-
-@media screen and (max-width: 768px) {    // tablet query
-    #menu-desktop {
-      position: absolute;
-      width: 35vw;
-      height: 30vh;
-      left: 65vw;
-      top: 0;
-    }
-*/

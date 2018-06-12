@@ -70,9 +70,3 @@ class SlideshowUI extends Component {
 }
 
 export default SlideshowUI;
-
-/*
-
-
-
-*/

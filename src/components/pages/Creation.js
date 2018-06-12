@@ -11,7 +11,7 @@ import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
 /***NOTES
- * There should be an H1 in the JSX
+ * FIXME: There should be an H1 in the JSX
  */
 const CreationPageCompDiv = styled.div`
   position: absolute;
@@ -32,7 +32,6 @@ const CreationPageCompDiv = styled.div`
     grid-row: 1/4;
     position: relative;
     & > img {
-      /* svg */
       position: absolute;
       opacity: 1;
       bottom: 0;
@@ -128,29 +127,6 @@ const CreationPageCompDiv = styled.div`
           height: 18vh;
         }
       }
-    }
-  }
-
-  /* THIS IS TEMPORARY USED FOR UNDER CONSTRUCTION MESSAGE*/
-
-  .under-construction {
-    .page-creation h1,
-    p {
-      font-weight: 300;
-      font-size: 1.8rem;
-      color: black;
-    }
-    h2,
-    h3,
-    h4 {
-      color: black;
-    }
-    #temp-img {
-      top: 20vh;
-      margin: 10vh auto 1vh auto;
-      border: 1px solid skyblue;
-      box-shadow: 4px 4px 10px 0px black;
-      width: 70%;
     }
   }
 `;

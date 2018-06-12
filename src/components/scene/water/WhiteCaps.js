@@ -79,13 +79,3 @@ class WhiteCaps extends React.Component {
 
 export default WhiteCaps;
 
-/*
- 
-These style rules seem unnecessary
-// SVG
-  position: absolute;
-  width: 100vw;
-  bottom: 0;
-
-
-*/
