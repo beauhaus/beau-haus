@@ -18,7 +18,6 @@ import BHLogo from './components/portals/BHLogo';
 import SocIcons from './components/portals/SocIcons';
 import NavsContainer from './components/UI/NavsContainer';
 
-// import styled from 'styled-components';
 
 class App extends Component {
   constructor(props) {
@@ -100,14 +99,9 @@ class NavPortal extends Component {
     };
     this.menuClickHandler = this.menuClickHandler.bind(this);
 
-    // console.log('Props > NavPortal: ', { ...props });
   }
   menuClickHandler(name, fill) {
-    // this.setState({
-    //   page: name,
-    //   pageThemeColor: fill
-    // });
-    // console.log(`MenCLickHandle got: ${name} & ${fill}`)
+    console.log(`MenCLickHandle got: ${name} & ${fill}`)
   }
 
   render() {

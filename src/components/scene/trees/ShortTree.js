@@ -12,7 +12,7 @@ const ShortTreeWrapper = styled.svg`
   `
 
 const ShortTree = props => {
-    // console.log("Short tree props: ", props)
+
   const { branches, leaves,opacity } = props.db;
   return (
     <ShortTreeWrapper id="short-tree" viewBox="0 180 550 580" opacity={opacity}>

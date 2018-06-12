@@ -28,7 +28,6 @@ const NavLinkDiv = styled.div`
   }
 `;
 const NavLink = props => {
-  console.log("props> Navlink: ", props)
   return (
     <NavLinkDiv className="link-container">
       <Link className="link-component" {...props} />

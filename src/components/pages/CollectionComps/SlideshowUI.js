@@ -51,7 +51,6 @@ class SlideshowUI extends Component {
       current: props.current,
       total: props.total
     };
-    // console.log('props>slideshowUI props: ', props);
   }
   render() {
     return (

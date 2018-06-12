@@ -13,7 +13,7 @@ const TallTreeWrapper = styled.svg`
 // width: 400px;
 
 const TallTree = props => {
-  // console.log('Tall tree props: ', props);
+
   const { branches, leaves, opacity } = props.db;
   const { base, frame, petal, stamen } = props.db.flower;
   

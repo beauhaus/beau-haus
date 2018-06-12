@@ -11,7 +11,7 @@ const WaterBgWrapper = styled.svg`
 
 // NB: Height is 10vw!!!
 const WaterBg = props => {
-  // console.log('props >WaterBg', props);
+
   const { left } = props.bgGradient;
   const { right } = props.bgGradient;
   return (

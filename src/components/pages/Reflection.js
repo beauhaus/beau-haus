@@ -60,13 +60,7 @@ class Reflection extends Component {
       profile: props.pageStyles
     };
 
-    // console.log("props>Reflection: ", props);
-  }
-  // componentDidMount() {
-  //   this.props.location.state
-  //     ? this.setState({ profile: this.props.location.state.profile })
-  //     : this.setState({ profile: InitialLoad.profile });
-  // }
+   }
 
   render() {
     const { pageStyles, tree, water } = this.props.profile;

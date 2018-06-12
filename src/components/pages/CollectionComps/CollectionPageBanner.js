@@ -16,7 +16,6 @@ const PageBannerWrapper= styled.div`
   `;
 
 const CollectionPageBanner =(props) => {
-    // console.log(`Props> CPageBanner: ${props}`);
 // tmpFill will be added to pageData.json file (as part of each pg profile)
 const tmpFill = "#eee";
     return (
@@ -31,8 +30,3 @@ const tmpFill = "#eee";
 
 
 export default CollectionPageBanner;
-
-/*
-      
-
-*/

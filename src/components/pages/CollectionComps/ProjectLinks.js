@@ -71,9 +71,6 @@ const ProjectLinksWrapper = styled.div`
 `;
 
 const ProjectLinks = props => {
-  console.log('props>ProjLinks: ', props);
-  console.log('props>ProjLinks: p.links[0] ', props.links[0]);
-  props.links.map((item, idx) => console.log(item.url, item.text));
   return (
     <ProjectLinksWrapper>
       {props.links[0].url && (

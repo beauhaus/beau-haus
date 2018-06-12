@@ -151,9 +151,7 @@ class NavsContainer extends Component {
     this.setState({ hover: false }); //function?
   }
   renderLinks(btn, idx) {
-    // const { navBtns } = PageData;
-    // console.log("btn.name: ", btn.name)
-    // const match = (location.pathname === btn.pathname);
+    
     return (
       <Link
         className="link"

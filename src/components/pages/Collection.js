@@ -114,17 +114,14 @@ class Collection extends Component {
       slidesEngage: false
     };
     this.onStepFwdHandler = this.onStepFwdHandler.bind(this);
-    // console.log('props>Collection: ', props);
   }
   componentDidMount() {
-    // console.log("this.state.slides.length", this.state.total)
   }
   onStepFwdHandler() {
     this.setState({
       current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
       slidesEngage: true
     });
-    // console.log('this.state.current', this.state.current);
   }
   componentWillUnmount() {}
 
@@ -133,8 +130,6 @@ class Collection extends Component {
     const { fill } = this.props.profile.pageStyles;
     const currentSlide = this.state.slides[this.state.current];
     const { proj_icon, proj_number, proj_title, proj_tech, proj_desc, proj_links } = currentSlide;
-    // console.log('currentSlide', currentSlide);
-    // click={() => this.clickHandler()}
     return (
       <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
         <PageBanner fill={fill} />
@@ -172,30 +167,6 @@ class Collection extends Component {
 export default Collection;
 
 /*
-<LinksIcon />
-<CycleBtn count={proj_number} id="cycle-btn" />
-*************
-<ul>
-  {proj_links.map((item, idx) => (
-</div>
-    <li key={`${item}-${idx}li`}>
-      <a key={`${item}-${idx}`} target="blank_" href={item.url}>
-        {item.text}
-      </a>
-    </li>
-  ))}
-</ul>
-)}
-
-<ul>{proj_tech.map((item, idx) => <li key={`${item}-${idx}`}>{item}</li>)}</ul>
-              
-
-*******************LINKS TO PROJECTS CSS*************
-
-        /*
-        This stuff is for links
-       
-    */
 
 /************************FIBONACCI NOTES********************
 1,1,2,3,5,8,13,21 = 54;

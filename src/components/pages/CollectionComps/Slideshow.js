@@ -145,9 +145,6 @@ const SlideshowFrame = styled.div`
 `;
 
 const Slideshow = props => {
-  // console.log("> slideshow: props: ", props);
-  // console.log("links> slideshow: props: ", props.links);
-  
   return (
     <SlideshowFrame className="slideshow-frame">
       <div className="photo-div">
