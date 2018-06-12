@@ -215,12 +215,6 @@ class Creation extends Component {
           </div>
           <div className="ctr-row-bot" />
         </div>
-        <div className="under-construction">
-          <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
-          <h3>Rome wasn't built in a day...</h3>
-          <h4>Site Under Construction.</h4>
-          <p>Your patience is appreciated.</p>
-        </div>
         <LogoTheme themeFill={fill} />
       </CreationPageCompDiv>
     );

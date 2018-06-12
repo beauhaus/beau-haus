@@ -153,6 +153,7 @@ class NavsContainer extends Component {
   renderLinks(btn, idx) {
     
     return (
+
       <Link
         className="link"
         key={btn.id}
@@ -160,7 +161,6 @@ class NavsContainer extends Component {
         to={{
           pathname: btn.pathname
         }}
-        onClick={() => this.props.select('btn.name', 'btn.fill')}
         theme={btn.theme}
       >
         <g className={this.props.location.pathname === btn.pathname ? 'current-link' : 'lo-sat'}>
@@ -176,11 +176,7 @@ class NavsContainer extends Component {
   render() {
     const { navBtns } = PageData;
     const menu = { id: 'menu-1' };
-    // ref={menu.id}
-    //  onMouseEnter={ref => this.handleMenuHoverOn(menu.id)}
-    //  onMouseLeave={ref => this.handleMenuHoverOff(menu.id)}
-    // viewBox="0 0 550 500" preserveAspectRatio="xMidYMid meet"
-
+   
     return (
       <NavsWrapper className="navs-wrapper">
         <svg
@@ -212,7 +208,6 @@ class NavsContainer extends Component {
 
 export default NavsContainer;
 /*
-
 
 @media screen and (max-width: 768px) {    // tablet query
     #menu-desktop {

@@ -93,19 +93,3 @@ class Reflection extends Component {
   // <MuteBtn />
 
 export default Reflection;
-/*
-
-        <div className="page-Reflection">
-          <img id="temp-img" src="./img/madcoding.gif" alt="woman typing on computer wagging her tongue." />
-
-          <h1>
-            <span>Under Construction...</span>
-            <br />
-            <br />
-            Rome wasn't built in a day.<br />
-            Neither was this site.
-          </h1>
-          <p>Your patience is appreciated.</p>
-        </div>
-
-        */

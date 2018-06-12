@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-// import NavsContainer from './components/UI/NavsContainer';
-// import NavLink from './components/UI/NavLink';
-
 import Home from './components/pages/Home';
 import Creation from './components/pages/Creation';
 import Collection from './components/pages/Collection';
@@ -23,13 +20,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { init: 'state' };
-    this.menuClickHandler = this.menuClickHandler.bind(this);
-  }
-  menuClickHandler(name, fill) {
-    this.setState({
-      // page: name,
-      // pageThemeColor: fill
-    });
   }
 
   render() {
@@ -97,27 +87,17 @@ class NavPortal extends Component {
     this.state = {
       init: 'state'
     };
-    this.menuClickHandler = this.menuClickHandler.bind(this);
-
-  }
-  menuClickHandler(name, fill) {
-    console.log(`MenCLickHandle got: ${name} & ${fill}`)
   }
 
   render() {
     return ReactDOM.createPortal(
-      <NavsContainer {...this.props} select={this.menuClickHandler} />,
+      <NavsContainer {...this.props}  />,
       document.getElementById('nav')
     );
   }
 }
-
 const BHLogoPortal = props => {
   return ReactDOM.createPortal(<BHLogo {...props} />, document.getElementById('logo'));
 };
 
 export default App;
-
-/****REDIRECT*** */
-// import { Redirect } from 'react-router-dom';
-// <Route exact path="/" render={() => <Redirect to="/home" />} />
