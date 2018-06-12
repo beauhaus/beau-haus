@@ -11,14 +11,14 @@ import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
-import PageBanner from './CollectionComps/CollectionPageBanner';
-import Slideshow from './CollectionComps/Slideshow';
+import PageBanner from './CodedComps/CodedPageBanner';
+import Slideshow from './CodedComps/Slideshow';
 import SlidesData from '../../data/SlideShowData.json';
-import SlideshowUI from './CollectionComps/SlideshowUI';
-import ProjectLinks from './CollectionComps/ProjectLinks';
+import SlideshowUI from './CodedComps/SlideshowUI';
+import ProjectLinks from './CodedComps/ProjectLinks';
 // /Users/beau/Desktop/beauhaus/beau-haus/public/img/listdot.svg
 
-const CollectionPageCompDiv = styled.div`
+const CodedPageCompDiv = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -101,7 +101,7 @@ const CollectionPageCompDiv = styled.div`
   }
 `;
 
-class Collection extends Component {
+class Coded extends Component {
   constructor(props) {
     super(props);
     const { slides } = SlidesData;
@@ -130,7 +130,7 @@ class Collection extends Component {
     const currentSlide = this.state.slides[this.state.current];
     const { proj_icon, proj_number, proj_title, proj_tech, proj_desc, proj_links } = currentSlide;
     return (
-      <CollectionPageCompDiv className="page collection-container" style={pageStyles}>
+      <CodedPageCompDiv className="page coded-container" style={pageStyles}>
         <PageBanner fill={fill} />
         <div className="grid-ctr-tall">
           <section>
@@ -153,12 +153,12 @@ class Collection extends Component {
         <Shore />
         <MuteBtn />
         <LogoTheme themeFill={fill} />
-        </CollectionPageCompDiv>
+        </CodedPageCompDiv>
       );
     }
   }
   
-  export default Collection;
+  export default Coded;
   
   /*
     <ShortTree db={tree.short} />

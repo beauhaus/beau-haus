@@ -10,7 +10,7 @@ import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
-const ConnectionPageCompDiv = styled.div`
+const ConnectPageCompDiv = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -50,7 +50,7 @@ const ConnectionPageCompDiv = styled.div`
   }
 `;
 
-class Connection extends Component {
+class Connect extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,7 +64,7 @@ class Connection extends Component {
     const { pageStyles, tree, water } = this.props.profile;
     const { fill } = this.props.profile.pageStyles.fill;
     return (
-      <ConnectionPageCompDiv className="page connection-container" style={pageStyles}>
+      <ConnectPageCompDiv className="page connect-container" style={pageStyles}>
         <div className="grid-ctr">
           <div className="ctr-row-top">
             <p className="q1">Learn fast and fix things.</p>
@@ -84,9 +84,9 @@ class Connection extends Component {
         <ShortTree db={tree.short} />
         <MuteBtn />
         <LogoTheme themeFill={fill} />
-      </ConnectionPageCompDiv>
+      </ConnectPageCompDiv>
     );
   }
 }
 
-export default Connection;
+export default Connect;

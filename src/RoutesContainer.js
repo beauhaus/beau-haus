@@ -5,9 +5,9 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Home from './components/pages/Home';
 import Coding from './components/pages/Coding';
-import Collection from './components/pages/Collection';
-import Reflection from './components/pages/Reflection';
-import Connection from './components/pages/Connection';
+import Coded from './components/pages/Coded';
+import Learning from './components/pages/Learning';
+import Connect from './components/pages/Connect';
 
 import PageData from './data/PageData.json';
 
@@ -48,23 +48,23 @@ class App extends Component {
                     />
                     <Route
                       className="route"
-                      path="/collection"
+                      path="/coded"
                       render={() => {
-                        return <Collection location={location} profile={PageData.profile.collection} />;
+                        return <Coded location={location} profile={PageData.profile.coded} />;
                       }}
                     />
                     <Route
                       className="route"
-                      path="/reflection"
+                      path="/learning"
                       render={() => {
-                        return <Reflection location={location} profile={PageData.profile.reflection} />;
+                        return <Learning location={location} profile={PageData.profile.learning} />;
                       }}
                     />
                     <Route
                       className="route"
-                      path="/Connection"
+                      path="/connect"
                       render={() => {
-                        return <Connection location={location} profile={PageData.profile.connection} />;
+                        return <Connect location={location} profile={PageData.profile.connect} />;
                       }}
                     />
                   </Switch>

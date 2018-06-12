@@ -10,7 +10,7 @@ import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
-const ReflectionPageCompDiv = styled.div`
+const LearningPageCompDiv = styled.div`
   background: fuchsia;
   position: absolute;
   top: 0;
@@ -52,7 +52,7 @@ const ReflectionPageCompDiv = styled.div`
   }
 `;
 
-class Reflection extends Component {
+class Learning extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,7 +67,7 @@ class Reflection extends Component {
     const { fill } = this.props.profile.pageStyles.fill;
 
     return (
-      <ReflectionPageCompDiv className="page reflection-container" style={pageStyles}>
+      <LearningPageCompDiv className="page learning-container" style={pageStyles}>
         <div className="grid-ctr">
           <div className="ctr-row-top">
             <p className="q1">Learn fast and fix things.</p>
@@ -83,7 +83,7 @@ class Reflection extends Component {
         <WaterBody />
         <Shore />
         <LogoTheme themeFill={fill} />
-        </ReflectionPageCompDiv>
+        </LearningPageCompDiv>
       );
     }
   }
@@ -92,4 +92,4 @@ class Reflection extends Component {
   // <ShortTree db={tree.short} />
   // <MuteBtn />
 
-export default Reflection;
+export default Learning;

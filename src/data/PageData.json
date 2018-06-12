@@ -25,9 +25,9 @@
     },
     {
       "id": 30,
-      "name": "collection",
-      "pathname": "/collection",
-      "stateObj": "{theme: stylesDB.collection}",
+      "name": "coded",
+      "pathname": "/coded",
+      "stateObj": "{theme: stylesDB.coded}",
       "x": "515",
       "y": "248",
       "r": "33.5",
@@ -37,9 +37,9 @@
     },
     {
       "id": 40,
-      "name": "reflection",
-      "pathname": "/reflection",
-      "stateObj": "{theme: stylesDB.reflection}",
+      "name": "learning",
+      "pathname": "/learning",
+      "stateObj": "{theme: stylesDB.learning}",
       "x": "515",
       "y": "348",
       "r": "33.5",
@@ -49,9 +49,9 @@
     },
     {
       "id": 50,
-      "name": "connection",
-      "pathname": "/connection",
-      "stateObj": "{theme: stylesDB.connection}",
+      "name": "connect",
+      "pathname": "/connect",
+      "stateObj": "{theme: stylesDB.connect}",
       "x": "515",
       "y": "448",
       "r": "33.5",
@@ -144,7 +144,7 @@
       }
     },
 
-    "collection": {
+    "coded": {
       "pageStyles": {
         "background": "linear-gradient(45deg, #444 0%, #ddd 100%)",
         "color": "black",
@@ -185,7 +185,7 @@
       }
     },
 
-    "reflection": {
+    "learning": {
       "pageStyles": {
         "background": "linear-gradient(225deg, #4a4a4a 0%, #9c9c9c 100%)",
         "color": "black",
@@ -226,7 +226,7 @@
       }
     },
 
-    "connection": {
+    "connect": {
       "pageStyles": {
         "background": "linear-gradient(135deg, #757575 0%, #838383 100%)",
         "color": "black",

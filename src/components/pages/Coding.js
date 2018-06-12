@@ -181,10 +181,10 @@ class Coding extends Component {
               <h2>
                 Large library of code, advice and tutorials. <br /><i>(Portage from Angular.js to React)</i>
               </h2>
-              <p>This project is curently being ported from Angular.js to React into beau.haus/reflection.</p>
+              <p>This project is curently being ported from Angular.js to React into beau.haus/learning.</p>
               <ul>
                 <li>React.js</li>
-                <li>node.js</li>
+                <li>Node.js</li>
                 <li>Webpack</li>
               </ul>
             </div>

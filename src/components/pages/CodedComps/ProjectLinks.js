@@ -10,6 +10,7 @@ const ProjectLinksWrapper = styled.div`
   font-size: 4.3rem;
   font-weight: 100;
   position: relative;
+  
 
   & > svg {
     fill: none;
@@ -23,6 +24,7 @@ const ProjectLinksWrapper = styled.div`
       top: -2.5vh;
       height: 12vh;
       opacity: 1;
+      filter: drop-shadow(-6px 6px 6px rgb(0, 0, 0, 0.5));
     }
   }
   & #project-links {
