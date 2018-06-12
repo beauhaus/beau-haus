@@ -13,9 +13,9 @@
     },
     {
       "id": 20,
-      "name": "creation",
-      "pathname": "/creation",
-      "stateObj": "{theme: stylesDB.creation}",
+      "name": "coding",
+      "pathname": "/coding",
+      "stateObj": "{theme: stylesDB.coding}",
       "x": "515",
       "y": "148",
       "r": "33.5",
@@ -103,7 +103,7 @@
         }
       }
     },
-    "creation": {
+    "coding": {
       "pageStyles": {
         "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
         "color": "black",

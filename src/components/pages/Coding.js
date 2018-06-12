@@ -13,7 +13,7 @@ import LogoTheme from '../scene/LogoTheme';
 /***NOTES
  * FIXME: There should be an H1 in the JSX
  */
-const CreationPageCompDiv = styled.div`
+const CodingPageCompDiv = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -59,7 +59,7 @@ const CreationPageCompDiv = styled.div`
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1fr 2px 1fr);
     opacity: 1; /* fixme: during testing this overrides app.css */
-    & .creation-proj-desc {
+    & .coding-proj-desc {
       color: #333;
       padding: 2%;
       & h1 {
@@ -131,7 +131,7 @@ const CreationPageCompDiv = styled.div`
   }
 `;
 
-class Creation extends Component {
+class Coding extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -146,14 +146,14 @@ class Creation extends Component {
     const { fill } = this.props.profile.pageStyles.fill;
 
     return (
-      <CreationPageCompDiv className="page creation-container" style={pageStyles}>
+      <CodingPageCompDiv className="page coding-container" style={pageStyles}>
         <div className="grid-header" />
         <div className="page-banner-container">
-          <img src="./img/pagesimg/creationbanner.svg" alt="current creation" />
+          <img src="./img/pagesimg/codingbanner.svg" alt="current coding" />
         </div>
         <div className="grid-ctr">
           <div className="ctr-row-top">
-            <div className="creation-proj-desc top-text">
+            <div className="coding-proj-desc top-text">
               <h1>Meet 'n' Eat</h1>
               <h2>App scheduling appointments for large teams and companies.</h2>
               <p>
@@ -176,7 +176,7 @@ class Creation extends Component {
             <div className="bot-proj-img project-img">
               <img src="./img/pagesimg/codejournal-icon.png" alt="code journal icon" />
             </div>
-            <div className="creation-proj-desc mid-text">
+            <div className="coding-proj-desc mid-text">
               <h1>Code Journal</h1>
               <h2>
                 Large library of code, advice and tutorials. <br /><i>(Portage from Angular.js to React)</i>
@@ -192,12 +192,12 @@ class Creation extends Component {
           <div className="ctr-row-bot" />
         </div>
         <LogoTheme themeFill={fill} />
-      </CreationPageCompDiv>
+      </CodingPageCompDiv>
     );
   }
 }
 
-export default Creation;
+export default Coding;
 // <WaterBg {...water} />
 // <WaterBody />
 // <Shore />

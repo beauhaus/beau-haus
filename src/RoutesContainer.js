@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Home from './components/pages/Home';
-import Creation from './components/pages/Creation';
+import Coding from './components/pages/Coding';
 import Collection from './components/pages/Collection';
 import Reflection from './components/pages/Reflection';
 import Connection from './components/pages/Connection';
@@ -41,9 +41,9 @@ class App extends Component {
                     />
                     <Route
                       className="route"
-                      path="/creation"
+                      path="/coding"
                       render={() => {
-                        return <Creation location={location} profile={PageData.profile.creation} />;
+                        return <Coding location={location} profile={PageData.profile.coding} />;
                       }}
                     />
                     <Route
