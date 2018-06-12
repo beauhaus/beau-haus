@@ -20,6 +20,19 @@ const BHLogoWrapper = styled.svg`
     fill: #838383;
   }
   `;
+  /*
+@media screen and (max-width : 768px) {    // tablet query
+    #bh-logo { //SVG
+    position: absolute;
+    width: 14vw;
+    height: 12vh;
+    top: 2vh;
+    left: 50%;
+    margin-left: -7vw;
+    // border: 2px solid fuchsia;
+    }
+ }
+ */
 
 const BHLogo = props => {
   return (
