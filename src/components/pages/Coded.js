@@ -59,8 +59,8 @@ const CodedPageCompDiv = styled.div`
       opacity: 0;
       animation: fadeIn 5s 1.75s ease-in-out forwards;
       text-align: justify;
-      margin: .5rem;
-      margin-left: .2rem;
+      margin: 0.5rem;
+      margin-left: 0.2rem;
       padding: 2%;
       background: #7a7a7a;
       & h3 {
@@ -80,40 +80,9 @@ const CodedPageCompDiv = styled.div`
   }
 
   & .grid-section-right {
-    border: 1px solid navy;
     grid-column: 14/-1;
-    grid-row: 1/22;
-    background: rgba(302, 302, 23, 1);
+    grid-row: 1/-1;
   }
-
-  & .grid-section-bot {
-    border: 1px solid navy;
-    grid-column: 1/-1;
-    grid-row: 23;
-    background: lightblue;
-  }
-
-  /* 
-    
-      & .desc-container {
-        grid-column: 1/14;
-        grid-row: 9/22;
-        text-align: justify;
-        background-color: hsl(0, 0%, 80%);
-      }
-
-      & > .slideshow-container-tall-21x21 {
-        grid-column: 14/35;
-        grid-row: 1/-1;
-        display: grid;
-        grid-template-columns: repeat(21, 1fr);
-        grid-template-rows: repeat(21, 1fr) 20vh;
-        position: relative;
-      }
-    }
-  }
-  */
-
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -171,14 +140,11 @@ class Coded extends Component {
           </section>
 
           <section className="grid-section-right">
-            <div className="slideshow-container-tall-21x21">
-              {/*
             <Slideshow currentSlide={this.state.slides[this.state.current]}  />
+            {/*
             <ProjectLinks links={proj_links} />
           */}
-            </div>
           </section>
-          <section className="grid-section-bot" />
         </div>
 
         <Shore />
