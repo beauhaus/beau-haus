@@ -115,11 +115,12 @@ h4 {
 .testing-colors {
   color: #c9a2a2;
 
-  color: #d8882d;
+  color: #67836c;
 
   color: #37586b;
 
-  color: #404947;
+
+  color: hsl(207, 8%, 45%);
   cursor: pointer;
   
   color: #b8b8b8;

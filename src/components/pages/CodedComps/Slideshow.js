@@ -2,7 +2,7 @@ import React, { Component, Children } from 'react';
 
 import styled from 'styled-components';
 
-
+/* Left Side */
  const SlideshowFrame = styled.div`
   grid-column: 1/22;
   grid-row: 1/-1;
@@ -11,6 +11,7 @@ import styled from 'styled-components';
   grid-template-columns: 1fr;
   grid-template-rows: 50vh 20vh;
   z-index: 2;
+   
   & > .photo-div {
     grid-row: 1;
     grid-column: 1/2;

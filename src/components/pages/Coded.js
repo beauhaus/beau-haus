@@ -26,54 +26,75 @@ const CodedPageCompDiv = styled.div`
   bottom: 0;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 23vw 54vw 23vw;
-  grid-template-rows: 30vh 50vh 20vh;
+  grid-template-columns: 20vw 60vw 20vw;
+  grid-template-rows: 20vh 50vh 10vh 20vh;
   user-select: none;
 
   & > .grid-ctr-tall {
     grid-column: 2;
-    grid-row: 2/4;
-    position: relative;
-
-    & section {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: grid;
-      grid-template-columns: repeat(34, 1fr);
-      grid-template-rows: repeat(21, 1fr) 20vh;
-      & > div {
-        margin: 0.5rem;
+    grid-row: 2/-1;
+    display: grid;
+    grid-template-columns: repeat(34, 1fr);
+    grid-template-rows: repeat(21, 1fr) 15vh 15vh;
+  }
+  & .grid-section-left {
+    grid-column: 1/14;
+    grid-row: 1/22;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    & > .grid-slideshowUI {
+      grid-column: 1/14;
+      grid-row: 1/9;
+      display:grid;
+      grid-template-columns: repeat(13, 1fr);
+      grid-template-rows: repeat(8, 1fr);  
+    }
+    & > .grid-description {
+      background: grey;
+      grid-column: 1/-1;
+      grid-row: 9/-1;
+      opacity: 0;
+      animation: fadeIn 5s 1.75s ease-in-out forwards;
+      text-align: justify;
+      padding: 4%;
+      & h3 {
+        text-align: center;
+        margin-top: 1vh;
+        font-size: 2vw;
+        font-weight: 300;
       }
-      & > .slideshow-UI-container {
-        grid-column: 1/14;
-        grid-row: 1/9;
-      }
 
-      & .meta-data-13x13 {
+      & p {
+        margin-top: 1vh;
+        line-height: 2.4vh;
+        font-size: 1vw;
+        font-weight: 300;
+      }
+    }
+  }
+
+  & .grid-section-right {
+    border: 1px solid navy;
+    grid-column: 14/-1;
+    grid-row: 1/22;
+    background: rgba(302, 302, 23, 1);
+  }
+
+  & .grid-section-bot {
+    border: 1px solid navy;
+    grid-column: 1/-1;
+    grid-row: 23;
+    background: lightblue;
+  }
+
+  /* 
+    
+      & .desc-container {
         grid-column: 1/14;
         grid-row: 9/22;
         text-align: justify;
         background-color: hsl(0, 0%, 80%);
-        opacity: 0;
-        animation: fadeIn 5s 1.75s ease-in-out forwards;
-        padding: 4%;
-        & > .text-copy {
-        }
-        & h3 {
-          text-align: center;
-          margin-top: 1vh;
-          font-size: 2vw;
-          font-weight: 300;
-        }
-
-        & p {
-          margin-top: 1vh;
-          line-height: 2.4vh;
-          font-size: 1vw;
-          font-weight: 300;
-        }
       }
 
       & > .slideshow-container-tall-21x21 {
@@ -86,6 +107,7 @@ const CodedPageCompDiv = styled.div`
       }
     }
   }
+  */
 
   @keyframes fadeIn {
     0% {
@@ -114,8 +136,7 @@ class Coded extends Component {
     };
     this.onStepFwdHandler = this.onStepFwdHandler.bind(this);
   }
-  componentDidMount() {
-  }
+  componentDidMount() {}
   onStepFwdHandler() {
     this.setState({
       current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
@@ -133,34 +154,43 @@ class Coded extends Component {
       <CodedPageCompDiv className="page coded-container" style={pageStyles}>
         <PageBanner fill={fill} />
         <div className="grid-ctr-tall">
-          <section>
-            <div className="slideshow-container-tall-21x21">
-              <Slideshow currentSlide={this.state.slides[this.state.current]}  />
-              <ProjectLinks links={proj_links} />
-            </div>
-            <div className="slideshow-UI-container">
+          <section className="grid-section-left">
+            <div className="grid-slideshowUI">
               <SlideshowUI stepFwd={this.onStepFwdHandler} current={this.state.current} total={this.state.total} />
             </div>
-            <div className="meta-data-13x13 fader">
+
+            <div className="grid-description fader">
               <h3 className="text-copy">{proj_title}</h3>
               <p className="text-copy">{proj_desc}</p>
             </div>
           </section>
+          {/*
+          */}
+
+          <section className="grid-section-right">
+            <div className="slideshow-container-tall-21x21">
+              {/*
+            <Slideshow currentSlide={this.state.slides[this.state.current]}  />
+            <ProjectLinks links={proj_links} />
+          */}
+            </div>
+          </section>
+          <section className="grid-section-bot" />
         </div>
 
-        <WaterBg {...water} />
-        <WaterBody />
         <Shore />
         <MuteBtn />
         <LogoTheme themeFill={fill} />
-        </CodedPageCompDiv>
-      );
-    }
+      </CodedPageCompDiv>
+    );
   }
-  
-  export default Coded;
-  
-  /*
+}
+
+export default Coded;
+
+/*
+  <WaterBg {...water} />
+  <WaterBody />
     <ShortTree db={tree.short} />
     <MediumTree db={tree.medium} />
     <TallTree db={tree.tall} />

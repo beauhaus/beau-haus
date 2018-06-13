@@ -31,7 +31,7 @@
       "x": "515",
       "y": "248",
       "r": "33.5",
-      "fill": "#85bb8f",
+      "fill": "#67836c",
       "txtPos": "translate(92.7915 266)",
       "hoverPos": "-180"
     },
@@ -148,7 +148,7 @@
       "pageStyles": {
         "background": "linear-gradient(45deg, #444 0%, #ddd 100%)",
         "color": "black",
-        "fill": "#85bb8f"
+        "fill": "#67836c"
       },
       "water": {
         "bgGradient": {
