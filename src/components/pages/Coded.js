@@ -141,25 +141,22 @@ class Coded extends Component {
 
           <section className="grid-section-right">
             <Slideshow currentSlide={this.state.slides[this.state.current]}  />
-            {/*
-            <ProjectLinks links={proj_links} />
-          */}
           </section>
         </div>
-
+        
         <Shore />
+        <WaterBg {...water} />
+        <WaterBody />
         <MuteBtn />
         <LogoTheme themeFill={fill} />
-      </CodedPageCompDiv>
-    );
+        </CodedPageCompDiv>
+      );
+    }
   }
-}
-
-export default Coded;
-
-/*
-  <WaterBg {...water} />
-  <WaterBody />
+  
+  export default Coded;
+  
+  /*
     <ShortTree db={tree.short} />
     <MediumTree db={tree.medium} />
     <TallTree db={tree.tall} />
