@@ -20,7 +20,7 @@
       "url": "./img/proj/wireframes.jpg",
       "alt": "lo & hifi wireframes depicted",
       "proj_icon": "mag6.jpg",
-      "proj_title": "From napkin to node...",
+      "proj_title": "From napkin to node.",
       "proj_tech": ["Sketch", "Illustrator", "Pen & Paper", "Post-its"],
 
       "proj_desc":
@@ -161,7 +161,7 @@
       "url": "./img/proj/robotsite.jpg",
       "alt": "Retro styled panel for user inputs email, state, etc. Done in the style of Kubrick's 2001",
       "proj_icon": "mag8.jpg",
-      "proj_title": "Robot Companions Site",
+      "proj_title": "Robot Companions",
       "proj_tech": ["webpack", "react.js", "pure css", "RWD"],
 
       "proj_desc":

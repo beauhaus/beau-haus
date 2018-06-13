@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-// import { CSSTransitionGroup } from 'react-transition-group';
 
 import ShortTree from '../scene/trees/ShortTree';
 import MediumTree from '../scene/trees/MediumTree';
 import TallTree from '../scene/trees/TallTree';
 import WaterBg from '../scene/water/WaterBg';
 import WaterBody from '../scene/water/WaterBody';
+
 import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 
 import PageBanner from './CodedComps/CodedPageBanner';
-import Slideshow from './CodedComps/Slideshow';
 import SlidesData from '../../data/SlideShowData.json';
 import SlideshowUI from './CodedComps/SlideshowUI';
+
+import Slideshow from './CodedComps/Slideshow';
 import ProjectLinks from './CodedComps/ProjectLinks';
-// /Users/beau/Desktop/beauhaus/beau-haus/public/img/listdot.svg
 
 const CodedPageCompDiv = styled.div`
   position: absolute;
@@ -37,38 +37,43 @@ const CodedPageCompDiv = styled.div`
     grid-template-columns: repeat(34, 1fr);
     grid-template-rows: repeat(21, 1fr) 15vh 15vh;
   }
+
   & .grid-section-left {
     grid-column: 1/14;
     grid-row: 1/22;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: repeat(21, 1fr);
+
     & > .grid-slideshowUI {
       grid-column: 1/14;
       grid-row: 1/9;
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(13, 1fr);
-      grid-template-rows: repeat(8, 1fr);  
+      grid-template-rows: repeat(8, 1fr);
     }
+
     & > .grid-description {
-      background: grey;
       grid-column: 1/-1;
       grid-row: 9/-1;
       opacity: 0;
       animation: fadeIn 5s 1.75s ease-in-out forwards;
       text-align: justify;
-      padding: 4%;
+      margin: .5rem;
+      margin-left: .2rem;
+      padding: 2%;
+      background: #7a7a7a;
       & h3 {
         text-align: center;
         margin-top: 1vh;
-        font-size: 2vw;
+        font-size: 2.8rem;
         font-weight: 300;
       }
-
       & p {
-        margin-top: 1vh;
+        margin-top: 1.8rem;
         line-height: 2.4vh;
         font-size: 1vw;
+        color: #ddd;
         font-weight: 300;
       }
     }
@@ -164,8 +169,6 @@ class Coded extends Component {
               <p className="text-copy">{proj_desc}</p>
             </div>
           </section>
-          {/*
-          */}
 
           <section className="grid-section-right">
             <div className="slideshow-container-tall-21x21">

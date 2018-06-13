@@ -9,19 +9,18 @@ const NumberDisplaySVG = styled.svg`
     filter: drop-shadow(-2px 2px 1px black);
     width: 100%;
     height: 100%;
+    padding: 2%;
+    filter: saturate(90%) brightness(.9) drop-shadow(-2px 2px 1px rgba(0,0,0,0.5));
     & > text {
-      fill: #ac5c5c;
+      fill: #555;
       mix-blend-mode: multiply;
       font-family: 'Plaster', monospace, sans-serif;
-      font-size: 3vw;
-      transform-origin: 50% 50%;
-      transform: translate(0, 0) rotate(-5deg);
+      font-size: 2.5vw;
     }
-  border: 1px solid coral;
 `;
 
 const NumberDisplay = props => {
-  const bgFill = 'hsl(0, 0%, 68.5%)';
+  const bgFill = '#545454';
   return (
     <NumberDisplaySVG id="grain-svg" viewBox="0 0 50 50" preserveAspectRatio="none">
         <defs>

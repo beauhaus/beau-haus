@@ -93,6 +93,7 @@ import styled from 'styled-components';
       width: 100%;
       height: 20vh;
     }
+
     & #frame-path-reflected-container {
       position: absolute;
       top: 0;
@@ -103,6 +104,7 @@ import styled from 'styled-components';
       stroke-width: 0px;
       stroke: #fff;
     }
+    
     & #frame-path-reflected {
       border: 1px solid green;
       position: absolute;

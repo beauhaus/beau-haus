@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const CycleButtonSVG = styled.svg`
-  filter: drop-shadow(-5px 5px 2px black);
+  filter: drop-shadow(-2px 2px 1px black);
   position: absolute;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@ const CycleButtonSVG = styled.svg`
   transform: translate(0, 0) rotate(-10deg);
   &:hover {
     cursor: pointer;
-    filter: saturate(200%) brightness(1) drop-shadow(-5px 4px 3px black);
+    filter: saturate(200%) brightness(1) drop-shadow(-4px 4px 2px rgba(0,0,0,0.8));
   }
 `;
 const CycleButton = props => {
