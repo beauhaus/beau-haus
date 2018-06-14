@@ -109,7 +109,7 @@
       "alt": "image of the movie 'Up!' depicting a house flying away in with baloons on a sunny day",
       "proj_icon": "mag5.jpg",
       "proj_title": "Up!",
-      "proj_tech": ["illustrator", "illustrator", "gsap", "jquery"],
+      "proj_tech": ["illustrator", "gsap", "jquery", "javascript"],
       "proj_desc":
         "Lessons to teach DOM targeting of DOM elements, event listeners, conditionals, etc. Basic principles of animation and their application to coding movement in the browser.",
       "proj_links": [

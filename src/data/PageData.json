@@ -8,7 +8,7 @@
       "y": "45",
       "r": "33.5",
       "fill": "#e47814",
-      "txtPos": "translate(107.521 65)",
+      "txtPos": "translate(65 65)",
       "hoverPos": "-240"
     },
     {
@@ -20,7 +20,7 @@
       "y": "148",
       "r": "33.5",
       "fill": "#bb383f",
-      "txtPos": "translate(87.6519 165)",
+      "txtPos": "translate(80 165)",
       "hoverPos": "-210"
     },
     {
@@ -31,8 +31,8 @@
       "x": "515",
       "y": "248",
       "r": "33.5",
-      "fill": "#67836c",
-      "txtPos": "translate(92.7915 266)",
+      "fill": "#2f5f13",
+      "txtPos": "translate(120 266)",
       "hoverPos": "-180"
     },
     {
@@ -56,7 +56,7 @@
       "y": "448",
       "r": "33.5",
       "fill": "#caaad4",
-      "txtPos": "translate(35.3916 465)",
+      "txtPos": "translate(70 465)",
       "hoverPos": "-210"
     }
   ],
@@ -148,7 +148,7 @@
       "pageStyles": {
         "background": "linear-gradient(45deg, #444 0%, #ddd 100%)",
         "color": "black",
-        "fill": "#67836c"
+        "fill": "#2f5f13"
       },
       "water": {
         "bgGradient": {

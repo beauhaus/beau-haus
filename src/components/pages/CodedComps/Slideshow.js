@@ -3,7 +3,6 @@ import React, { Component, Children } from 'react';
 import styled from 'styled-components';
 import InfoLink from './InfoLink';
 
-
 /** FIXME:
  *
  * TODO:
@@ -17,14 +16,27 @@ const SlideshowFrame = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50vh 10vh 20vh;
+  grid-template-rows: 50vh 15vh 15vh;
   z-index: 20;
-  margin: 1.5rem;
-  position: relative;
-  & > .image-container {
+  /* 
+  margin: 1.5rem; FIXME: adjust later 
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  .grid-image-view {
     grid-column: 1;
     grid-row: 1;
     position: relative;
+    & > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      animation: 2s 5s fadeIn linear forwards;
+    }
     & > #frame-path {
       position: absolute;
       left: 0;
@@ -37,14 +49,8 @@ const SlideshowFrame = styled.div`
       stroke: transparent;
       stroke-dasharray: 794;
       stroke-dashoffset: 793;
-      animation: 1s 1.5s dash linear forwards;
-    }
-    & > img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
+      animation: 2s 1.5s dash linear forwards;
+      
     }
     & > .shad-layer::after {
       content: '';
@@ -58,7 +64,6 @@ const SlideshowFrame = styled.div`
       animation: emboss 3s 2.5s ease-out forwards;
     }
   }
-
   & > .reflected-div {
     grid-column: 1;
     grid-row: 3;
@@ -67,7 +72,6 @@ const SlideshowFrame = styled.div`
     transform: scaleY(-1);
     filter: FlipV;
     z-index: 30;
-
     & > .shad-layer-reflect::after {
       position: absolute;
       top: 0;
@@ -82,6 +86,8 @@ const SlideshowFrame = styled.div`
     & > svg.reflected-image {
       height: 100%;
       width: 100%;
+      opacity: 0;
+      animation: 2s 5s fadeIn linear forwards;
     }
     & > #reflected-frame {
       height: 100%;
@@ -97,25 +103,15 @@ const SlideshowFrame = styled.div`
         width: 100%;
         height: 100%;
         stroke: white;
-        stroke-width: 1;
+        stroke-width: 2;
         fill: none;
         stroke: transparent;
         stroke-dasharray: 794;
         stroke-dashoffset: 793;
-        animation: 1s 1.5s dash linear forwards;
+        animation: 2s 1.5s dash linear forwards;
       }
     }
   }
-
-  @keyframes emboss {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   @keyframes dash {
     0% {
       stroke: #888;
@@ -130,19 +126,26 @@ const SlideshowFrame = styled.div`
       stroke: transparent;
     }
   }
+  @keyframes emboss {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
-
+//FIXME: may be a problem with shad-layer not positioning inside of showcasegrid
 const Slideshow = props => {
-  console.log("p>Slideshow: ", props)
   return (
     <SlideshowFrame className="slideshow-frame">
-      <div className="image-container">
-        <svg id="frame-path" viewBox="0 0 250 250" preserveAspectRatio="none">
-          <path id="display-frame-edge" d="M1.5 199h199V1H1.5v199" />
+      <div className="grid-image-view">
+        <img src={props.currentSlide.url} alt="{props.currentSlide.alt}" />
+        <svg id="frame-path" viewBox="0 0 200 200" preserveAspectRatio="none">
+          <path d="M1.5 199h199V1H1.5v199" />
         </svg>
-        <img src={props.currentSlide.url} alt="" />
-        <div className="shad-layer" />
-        <InfoLink {...props}/>
+        <div className="shad-layer img-infolink-container" />
+        {props.currentSlide.proj_tech[0] ? <InfoLink {...props} /> : ''}
       </div>
       <div className="reflected-div">
         <div className="shad-layer-reflect" />
@@ -161,10 +164,11 @@ const Slideshow = props => {
           </defs>
           <rect id="reflected-rect" mask="url(#mask1)" width="100%" height="100%" y="0" fill="url(#pattern1)" />
         </svg>
-
         <svg id="reflected-frame" viewBox="0 0 200 200" preserveAspectRatio="none">
           <path id="frame-path-reflected" fill="none" stroke="#000" strokeWidth="2" d="M1.5 199h199V1H1.5v199" />
         </svg>
+        {/*
+      */}
       </div>
     </SlideshowFrame>
   );

@@ -5,6 +5,7 @@ const PageBannerWrapper= styled.div`
     grid-column: 3;
     grid-row: 1/4;
     position: relative;
+    filter: url(#lo-saturation);
     & > svg {
       position: absolute;
       opacity: 1;
@@ -17,7 +18,7 @@ const PageBannerWrapper= styled.div`
 
 const CodedPageBanner =(props) => {
 // tmpFill will be added to pageData.json file (as part of each pg profile)
-const tmpFill = "#eee";
+const tmpFill = "#aaa";
     return (
         <PageBannerWrapper className="page-banner">
         <svg viewBox="0 0 100 600" width="100%" height="100%">

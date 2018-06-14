@@ -60,3 +60,5 @@ portfolio site
 --For now, the css-grid is set.
 
 ![Work on grid for collection view](https://raw.githubusercontent.com/BEAUHAUS/beau-haus/master/refImg/reflectionwip.png "work on grid for collection view")
+
+TODO: make certain every page banner has desaturation .lo-fi class or     filter: url(#lo-saturation);

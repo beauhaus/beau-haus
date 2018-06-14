@@ -9,15 +9,15 @@ import PageData from '../../data/PageData.json';
 
 const NavsWrapper = styled.div`
   position: absolute;
-  top: 5vh;
-  right: 4vw;
+  top: 2vh;
+  right: 2vw;
   position: absolute;
-  width: 18vw;
-  height: 28vh;
+  width: 16vw;
+  height: 26vh;
   text {
     font-family: 'Lato', Tahoma, sans-serif;
     font-size: 4.5rem;
-    font-weight: 300;
+    font-weight: 400;
     opacity: 0;
   }
   & > .menu-link {
@@ -26,20 +26,23 @@ const NavsWrapper = styled.div`
     left: 0;
     top: 0;
     opacity: 1;
+    height: 100%;
+    width: 100%;
   }
   & > .link {
     z-index: 20;
     width: 20vw;
-    height: 20vh;
+    height: 22vh;
   }
   & .lo-sat {
       filter: url(#lo-saturation);
   }
   & .current-link {
-    stroke-width: 2px;
+    stroke-width: 1px;
     & .nav-txt {
+      fill: #fff;
+      stroke-width: 1px;
       stroke: #fff;
-      stroke-width: 2px;
       filter: url(#txt-shad);
     }
     & .nav-link-dot {
@@ -125,11 +128,9 @@ class NavsContainer extends Component {
     });
   }
   handleMenuHoverOn(arg) {
-    // const { playMenuHoverOn } = this;
     this.playMenuHoverOn();
   }
   handleMenuHoverOff(arg) {
-    // const { playMenuHoverOff } = this;
     this.playMenuHoverOff();
   }
   handleLinkHoverOn(arg) {
@@ -170,7 +171,7 @@ class NavsContainer extends Component {
         <svg
           className="menu-link"
           id="menu-desktop"
-          viewBox="-100 0 680 600"
+          viewBox="-50 0 620 520"
           preserveAspectRatio="xMidYMid meet"
           ref={menu.id}
           onMouseEnter={ref => this.handleMenuHoverOn(menu.id)}
@@ -181,7 +182,7 @@ class NavsContainer extends Component {
               <feDropShadow dx="2" dy="2" stdDeviation="2" />
             </filter>
             <filter id="txt-shad" x="0" y="0">
-              <feDropShadow dx="2" dy="2" stdDeviation="2" />
+              <feDropShadow dx="3" dy="3" stdDeviation="2" />
             </filter>
             <filter id="lo-saturation">
               <feColorMatrix type="saturate" values=".2" />

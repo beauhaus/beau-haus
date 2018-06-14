@@ -31,6 +31,7 @@ const CodingPageCompDiv = styled.div`
     grid-column: 3;
     grid-row: 1/4;
     position: relative;
+    filter: url(#lo-saturation);
     & > img {
       position: absolute;
       opacity: 1;
@@ -144,6 +145,7 @@ class Coding extends Component {
   render() {
     const { pageStyles, tree, water } = this.props.profile;
     const { fill } = this.props.profile.pageStyles.fill;
+   
 
     return (
       <CodingPageCompDiv className="page coding-container" style={pageStyles}>

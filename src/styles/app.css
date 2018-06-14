@@ -62,19 +62,7 @@ h3 {
 h4 {
   font-size: 1em;
 }
-a,
-a:visited,
-a:link,
-a:active {
-  text-decoration: none;
-  color: lemonchiffon;
-  text-shadow: -1px 1px 2px #1c1e20;
-  font-weight: 300;
-}
-a:hover {
-  text-shadow: -2px 2px 2px black;
-  color: #78ada0;
-}
+
 
 
 
@@ -104,7 +92,7 @@ a:hover {
   transition: opacity 2000ms ease-in-out;
 }
 
-@keyframes fadein {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -112,7 +100,7 @@ a:hover {
     opacity: 1;
   }
 }
-@keyframes fadeout {
+@keyframes fadeOut {
   0% {
     opacity: 1;
   }
@@ -138,9 +126,9 @@ a:hover {
 .testing-colors {
   color: #c4c4c4;
 
-  color: hsl(54, 100%, 58%);
+  color: #2f5f13;
 
-  color: #78ada0;
+  color: #a57275;
 
   color: hsl(199, 9%, 58%);
   cursor: pointer;

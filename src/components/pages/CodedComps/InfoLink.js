@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const InfoWrapper = styled.div`
-  grid-row: 1;
-  grid-column: 1;
   position: relative;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  animation: fadeIn 2s 1s ease-in-out forwards;
   & > div,
   svg {
     position: absolute;
@@ -32,7 +32,7 @@ const InfoWrapper = styled.div`
     justify-content: center;
     align-items: center;
     hr {
-      margin: 3vh auto;
+      margin: 5vh auto 1vh auto;
       width: 80%;
     }
     ul {
@@ -57,34 +57,33 @@ const InfoWrapper = styled.div`
   &:hover {
     .info-list-container {
       opacity: 0;
-      animation: fadeIn .5s 0.3s ease-in-out forwards;
+      animation: fadeIn 0.5s 0.3s ease-in-out forwards;
     }
     #info-icon {
       opacity: 1;
-      animation: fadeout 0.5s 0.3s ease-in-out forwards;
+      animation: fadeOut 0.5s 0.3s ease-in-out forwards;
     }
+  }
+  a,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
+    color: lemonchiffon;
+    text-shadow: -1px 1px 2px #1c1e20;
+    font-weight: 300;
+  }
+  a:hover {
+    text-shadow: -2px 2px 2px black;
+    color: #78ada0;
   }
 `;
 
 const InfoLink = props => {
-  //   <div id="info-links">
-  // {props.links[0].url && (
-  // <ul>
-  //   {props.links.map((item, idx) => (
-  //     <li key={idx}>
-  //       <a target="_blank" href={item.url}>
-  //         {item.text}
-  //       </a>
-  //     </li>
-  //   ))}
-  // </ul>
-  //   </div>
-  console.log("p>Infolink: ", props)
-  const {proj_links, proj_tech} = props.currentSlide;
-  console.log("projTec: ", proj_tech);
+  const { proj_links, proj_tech } = props.currentSlide;
   return (
     <InfoWrapper>
-      <div className="info-icon-container">
+    <div className="info-icon-container">
         <svg className="infolink-container" viewBox="0 0 620 400" preserveAspectRatio="none">
           <g id="info-icon">
             <polyline fill="#E8BE62" points="26 0 0 0 0 26" />
@@ -99,9 +98,15 @@ const InfoLink = props => {
       <div className="info-list-container">
         <div className="tech-list">
           <ul>
-            {proj_links.map((link, idx)=><li key={idx}><a target="_blank" key={idx} href={link.url}>{link.text}</a></li>)}
+            {proj_tech.map((tech, idx) => <li key={idx}>{tech}</li>)}
             <hr />
-            {proj_tech.map((tech, idx)=><li key={idx}>{tech}</li>)}
+            {proj_links.map((link, idx) => (
+              <li key={idx}>
+                <a target="_blank" key={idx} href={link.url}>
+                  {link.text}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <svg className="infolist-bg" opacity=".7" viewBox="0 0 620 400" preserveAspectRatio="none">

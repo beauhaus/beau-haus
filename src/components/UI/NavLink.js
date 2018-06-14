@@ -4,27 +4,24 @@ import styled from 'styled-components';
 
 const NavLinkDiv = styled.div`
   position: relative;
-  border: 1px solid palegreen;
   z-index: 5;
   width: 8vw;
   margin-top: 4%;
-  height: 30px;
-  
-  background: #463d3d;
+  height: 3rem;
   text-align: left;
-  & > a {
+  .link-component {
     font-family: "Trebuchet MS", sans-serif;
     font-weight: lighter;
-    font-size: 30px;
+    font-size: 30rem;
     z-index: 10;
-    color: white;
     text-decoration: none;
   }
   & > a:link, a:hover, a:visited, a:active {
-    color: white;
-  }
-  & >  a:hover {
-    color: skyblue;
+    text-shadow: none;
+    &:hover {
+      color: skyblue;
+      text-shadow: none;
+    }
   }
 `;
 const NavLink = props => {
