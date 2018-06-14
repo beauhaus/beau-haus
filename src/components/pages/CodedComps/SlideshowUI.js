@@ -19,6 +19,8 @@ const SlideshowUIWrapper = styled.div`
     position: relative;
     opacity: 0;
     animation: fadeIn 0.5s 1.25s ease-in-out forwards;
+    margin: 1rem;
+
   }
 
   & .play-btn-grid {

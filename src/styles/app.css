@@ -62,6 +62,21 @@ h3 {
 h4 {
   font-size: 1em;
 }
+a,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: lemonchiffon;
+  text-shadow: -1px 1px 2px #1c1e20;
+  font-weight: 300;
+}
+a:hover {
+  text-shadow: -2px 2px 2px black;
+  color: #78ada0;
+}
+
+
 
 /******* PAGE TRANSITION STYLES **********/
 .fade-enter {
@@ -97,6 +112,14 @@ h4 {
     opacity: 1;
   }
 }
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 /******* PAGE TRANSITION STYLES END**********/
 
@@ -117,8 +140,7 @@ h4 {
 
   color: hsl(54, 100%, 58%);
 
-  color: #37586b;
-
+  color: #78ada0;
 
   color: hsl(199, 9%, 58%);
   cursor: pointer;

@@ -16,7 +16,6 @@ import SlidesData from '../../data/SlideShowData.json';
 import SlideshowUI from './CodedComps/SlideshowUI';
 
 import Slideshow from './CodedComps/Slideshow';
-import ProjectLinks from './CodedComps/ProjectLinks';
 
 const CodedPageCompDiv = styled.div`
   position: absolute;
@@ -26,10 +25,9 @@ const CodedPageCompDiv = styled.div`
   bottom: 0;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 20vw 60vw 20vw;
+  grid-template-columns: 15vw 70vw 15vw;
   grid-template-rows: 20vh 50vh 10vh 20vh;
   user-select: none;
-
   & > .grid-ctr-tall {
     grid-column: 2;
     grid-row: 2/-1;
@@ -59,8 +57,7 @@ const CodedPageCompDiv = styled.div`
       opacity: 0;
       animation: fadeIn 5s 1.75s ease-in-out forwards;
       text-align: justify;
-      margin: 0.5rem;
-      margin-left: 0.2rem;
+      margin: 1.5rem .2rem -1.5rem .2rem;
       padding: 2%;
       background: #7a7a7a;
       & h3 {
@@ -140,19 +137,21 @@ class Coded extends Component {
           </section>
 
           <section className="grid-section-right">
-            <Slideshow currentSlide={this.state.slides[this.state.current]}  />
+          <Slideshow currentSlide={this.state.slides[this.state.current]}  />
+          
           </section>
-        </div>
-        
-        <Shore />
-        <WaterBg {...water} />
-        <WaterBody />
-        <MuteBtn />
-        <LogoTheme themeFill={fill} />
-        </CodedPageCompDiv>
-      );
+          </div>
+          
+          <Shore />
+          <WaterBg {...water} />
+          <WaterBody />
+          <MuteBtn />
+          <LogoTheme themeFill={fill} />
+          </CodedPageCompDiv>
+        );
+      }
     }
-  }
+    // <InfoLink/>
   
   export default Coded;
   

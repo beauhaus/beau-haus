@@ -1,6 +1,8 @@
 import React, { Component, Children } from 'react';
 
 import styled from 'styled-components';
+import InfoLink from './InfoLink';
+
 
 /** FIXME:
  *
@@ -17,6 +19,8 @@ const SlideshowFrame = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 50vh 10vh 20vh;
   z-index: 20;
+  margin: 1.5rem;
+  position: relative;
   & > .image-container {
     grid-column: 1;
     grid-row: 1;
@@ -99,7 +103,7 @@ const SlideshowFrame = styled.div`
         stroke-dasharray: 794;
         stroke-dashoffset: 793;
         animation: 1s 1.5s dash linear forwards;
-        }
+      }
     }
   }
 
@@ -127,21 +131,21 @@ const SlideshowFrame = styled.div`
     }
   }
 `;
-// stroke-dashoffset: 2660px;
 
 const Slideshow = props => {
+  console.log("p>Slideshow: ", props)
   return (
     <SlideshowFrame className="slideshow-frame">
       <div className="image-container">
-        <svg id="frame-path" viewBox="0 0 200 200" preserveAspectRatio="none">
+        <svg id="frame-path" viewBox="0 0 250 250" preserveAspectRatio="none">
           <path id="display-frame-edge" d="M1.5 199h199V1H1.5v199" />
         </svg>
         <img src={props.currentSlide.url} alt="" />
         <div className="shad-layer" />
+        <InfoLink {...props}/>
       </div>
       <div className="reflected-div">
         <div className="shad-layer-reflect" />
-
         <svg className="reflected-image" viewBox="0 0 400 400" preserveAspectRatio="none">
           <defs>
             <linearGradient opacity="1" id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -159,7 +163,7 @@ const Slideshow = props => {
         </svg>
 
         <svg id="reflected-frame" viewBox="0 0 200 200" preserveAspectRatio="none">
-          <path id="frame-path-reflected" fill="none" stroke="#000" stroke-width="2" d="M1.5 199h199V1H1.5v199" />
+          <path id="frame-path-reflected" fill="none" stroke="#000" strokeWidth="2" d="M1.5 199h199V1H1.5v199" />
         </svg>
       </div>
     </SlideshowFrame>
