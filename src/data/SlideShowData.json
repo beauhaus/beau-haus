@@ -194,6 +194,20 @@
           "text": ""
         }
       ]
+    },
+    {
+      "id": 112,
+      "url": "./img/proj/thisapprwd.jpg",
+      "alt": "This application responsive web design in desktop, iPad & mobile",
+      "proj_title": "this portfolio in rwd",
+      "proj_tech": ["nginx", "linux(ubuntu)", "react", "svg", "node.js", "styled components"],
+      "proj_desc": "This portfolio was built in react, hosted using nginx as a reverse proxy & uses a Let's Encrypt SSL Cert.",
+      "proj_links": [
+        {
+          "url": "https://github.com/beauhaus/beau-haus",
+          "text": "Github"
+        }
+      ]
     }
   ]
 }

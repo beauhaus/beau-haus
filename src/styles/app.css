@@ -27,7 +27,9 @@ body {
   font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
   color: black;
 }
-button:focus {outline:0;}
+button:focus {
+  outline: 0;
+}
 
 a {
   cursor: pointer;
@@ -46,7 +48,7 @@ li {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
 }
 
@@ -62,9 +64,6 @@ h3 {
 h4 {
   font-size: 1em;
 }
-
-
-
 
 /******* PAGE TRANSITION STYLES **********/
 .fade-enter {
@@ -122,17 +121,25 @@ h4 {
   opacity: 0;
 }
 
-
 .testing-colors {
-  color: #c4c4c4;
+  color: #3f463c;
 
   color: #c7bba2;
 
-  color: #7d2424;
+  color: #d18080;
 
-  color: hsl(199, 9%, 58%);
+  color: #4f2020;
   cursor: pointer;
-  
-  color: #545454;
 
+  color: #545454;
+}
+
+/* MEDIA QUERIES GLOBAL*/
+
+@media screen and (max-width: 768px) {
+  width: 12vw;
+  height: 10vh;
+  top: 2vh;
+  left: 50%;
+  margin-left: -7vw;
 }

@@ -9,8 +9,7 @@ const BHLogoWrapper = styled.svg`
   z-index: 100;
   width: 80px;
   height: 65px;
-  
-  & > #logo-h {
+   & > #logo-h {
     fill: #4e4d4d;
   }
   & > .logo-b {
@@ -19,20 +18,16 @@ const BHLogoWrapper = styled.svg`
   & > #logo-h-blocks {
     fill: #838383;
   }
-  `;
-  /*
-@media screen and (max-width : 768px) {    // tablet query
-    #bh-logo { //SVG
-    position: absolute;
-    width: 14vw;
-    height: 12vh;
-    top: 2vh;
-    left: 50%;
-    margin-left: -7vw;
-    // border: 2px solid fuchsia;
-    }
- }
- */
+  @media screen and (max-width : 768px) {    /* TABLET QUERY */
+      width: 12vw;
+      height: 10vh;
+      top: 2vh;
+      left: 50%;
+      margin-left: -7vw;
+   }
+`;
+  
+
 
 const BHLogo = props => {
   return (

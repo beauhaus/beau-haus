@@ -11,17 +11,13 @@ const NavsWrapper = styled.div`
   position: absolute;
   top: 2vh;
   right: 2vw;
-  position: absolute;
   width: 16vw;
   height: 26vh;
-  /*
-  filter: drop-shadow(-1px 1px 1px rgba(0,0,0,0.8));
-  */
   text {
     font-family: 'Lato', Tahoma, sans-serif;
     font-size: 4.5rem;
     font-weight: 400;
-    fill: #333;
+    fill: #ddd;
   }
   & > .menu-link {
     z-index: 20;
@@ -52,7 +48,10 @@ const NavsWrapper = styled.div`
       filter: url(#dot-shad);
     }
   }
- 
+  @media screen and (max-width : 768px) {    /* TABLET QUERY */
+    width: 36vw;
+    height: 30vh;
+ }
 `;
 
 
