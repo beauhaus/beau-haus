@@ -14,11 +14,14 @@ const NavsWrapper = styled.div`
   position: absolute;
   width: 16vw;
   height: 26vh;
+  /*
+  filter: drop-shadow(-1px 1px 1px rgba(0,0,0,0.8));
+  */
   text {
     font-family: 'Lato', Tahoma, sans-serif;
     font-size: 4.5rem;
     font-weight: 400;
-    fill: #ddd;
+    fill: #333;
   }
   & > .menu-link {
     z-index: 20;

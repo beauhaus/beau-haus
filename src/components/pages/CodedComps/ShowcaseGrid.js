@@ -33,7 +33,7 @@ const ShowCaseGridWrapper = styled.div`
     }
     & > p {
       margin-top: 1.8rem;
-      line-height: 2.4vh;
+      line-height: 2.8vh;
       font-size: 1vw;
       color: #ddd;
       font-weight: 300;
