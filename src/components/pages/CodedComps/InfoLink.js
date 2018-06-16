@@ -6,7 +6,8 @@ const InfoWrapper = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: fadeIn 2s 1s ease-in-out forwards;
+  animation: 2s 6s fadeIn linear forwards;
+
   & > div,
   svg {
     position: absolute;

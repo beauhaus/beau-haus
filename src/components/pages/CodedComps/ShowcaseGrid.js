@@ -23,7 +23,7 @@ const ShowCaseGridWrapper = styled.div`
     padding: 2%;
     background: #7a7a7a;
     opacity: 0;
-    animation: fadeIn 2s 1.5s ease-in-out forwards;
+    animation: fadeIn 1.5s .8s ease-in-out forwards;
     text-align: justify;
     & > h3 {
       text-align: center;

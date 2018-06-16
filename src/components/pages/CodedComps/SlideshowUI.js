@@ -12,22 +12,23 @@ const SlideshowUIWrapper = styled.div`
   grid-template-columns: repeat(13, 1fr);
   grid-template-rows: repeat(8, 1fr);
   grid-gap: 1.5rem;
+  & > .progress-grid {
+    grid-column: 9/12;
+    grid-row: 4/9;
+    opacity: 0;
+    animation: fadeIn 1s 0s ease-in-out forwards;
+    margin: 1rem;
+  }
+
   & > .number-display-grid {
     grid-column: 1/9;
     grid-row: 1/9;
     margin-bottom: 0.5rem;
     position: relative;
     opacity: 0;
-    animation: fadeIn 1s 1s ease-in-out forwards;
+    animation: fadeIn 1s 0.5s ease-in-out forwards;
   }
   
-  & > .progress-grid {
-    grid-column: 9/12;
-    grid-row: 4/9;
-    opacity: 0;
-    animation: fadeIn 1s .5s ease-in-out forwards;
-    margin: 1rem;
-  }
 `;
 class SlideshowUI extends Component {
   constructor(props) {
