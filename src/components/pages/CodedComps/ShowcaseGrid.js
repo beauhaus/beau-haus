@@ -11,9 +11,34 @@ const ShowCaseGridWrapper = styled.div`
   grid-template-columns: repeat(34, 1fr);
   grid-template-rows: repeat(21, 1fr) 15vh 15vh;
   position: relative;
-  .grid-description {
+  .grid-description {  
     grid-row: 9/22;
     grid-column: 1/14;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    padding: 2%;
+    background: #7a7a7a;
+    opacity: 0;
+    animation: fadeIn 2s 1.5s ease-in-out forwards;
+    text-align: justify;
+    & > h3 {
+      text-align: center;
+      margin-top: 1vh;
+      font-size: 2.8rem;
+      font-weight: 300;
+    }
+    & > p {
+      margin-top: 1.8rem;
+      line-height: 2.4vh;
+      font-size: 1vw;
+      color: #ddd;
+      font-weight: 300;
+      
+    }
   }
   .grid-slideshow-container {
     grid-row: 1/22;
@@ -22,7 +47,6 @@ const ShowCaseGridWrapper = styled.div`
   }
 `;
 const ShowCaseGrid = props => {
-  // console.log('p>shCase: ', props);
   const btnFill = 'hsl(0, 0%, 38.5%)';
   const currentSlide = props.slides[props.current];
   const { proj_icon, proj_title, proj_tech, proj_desc, proj_links } = currentSlide;

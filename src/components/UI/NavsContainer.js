@@ -18,7 +18,7 @@ const NavsWrapper = styled.div`
     font-family: 'Lato', Tahoma, sans-serif;
     font-size: 4.5rem;
     font-weight: 400;
-    opacity: 0;
+    fill: #ddd;
   }
   & > .menu-link {
     z-index: 20;

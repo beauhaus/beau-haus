@@ -2,9 +2,8 @@
   "slides": [
     {
       "id": 100,
-      "url": "./img/test/blank.png",
-      "alt": "blank",
-      "proj_icon": "./img/proj/projicons/blank.png",
+      "url": "./img/proj/blank.png",
+      "alt": "slideshow start image",
       "proj_title": "",
       "proj_tech": [],
       "proj_desc": "",
@@ -17,47 +16,11 @@
     },
     {
       "id": 101,
-      "url": "./img/proj/wireframes.jpg",
-      "alt": "lo & hifi wireframes depicted",
-      "proj_icon": "mag6.jpg",
-      "proj_title": "From napkin to node.",
-      "proj_tech": ["Sketch", "Illustrator", "Pen & Paper", "Post-its"],
-
-      "proj_desc":
-        "Coding is 80% planning, 20% typing. Most projects are planned and iterated on with an eye toward learning and implementing something yet untried. Full Low-Fidelity & high-fidelity prototypes are an integral part of my workflow.",
-      "proj_links": [
-        {
-          "url": "",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "id": 102,
-      "url": "./img/proj/plumtree.jpg",
-      "alt": "plumtree",
-      "proj_icon": "./img/proj/projicons/react.png",
-      "proj_title": "Plumtree",
-      "proj_tech": ["react", "gsap", "illustrator", "audacity"],
-      "proj_desc":
-        "Animated opacity on radial-gradients to simulate waves & ripples. React state is used to trigger a pissed-off chickadee's <audio> element as it files away.",
-
-      "proj_links": [
-        {
-          "url": "https://codepen.io/beauhaus/full/QQqgrp/",
-          "text": "codepen"
-        }
-      ]
-    },
-    {
-      "id": 103,
       "url": "./img/proj/setinterval.jpg",
       "alt": "setinterval",
-      "proj_icon": "./img/proj/projicons/gsap.png",
       "proj_title": "Turbulent Time",
       "proj_tech": ["svg turbulence", "gsap", "jquery"],
       "proj_desc": "FeTurbulence is looped to slowly degrade the integrity of an svg and my laptop's heat-sink fan.",
-
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/GyVJyO/",
@@ -66,32 +29,14 @@
       ]
     },
     {
-      "id": 104,
-      "url": "./img/proj/statepicker.jpg",
-      "alt": "state picker alternative to dropdown menu",
-      "proj_icon": "mag3.jpg",
-      "proj_title": "Retro Telescreen",
-      "proj_tech": ["react/gsap", "validator.js", "scss", "css animation"],
-      "proj_desc":
-        "Multi-layered SVG to create a 50's retro-monitor glitch animation. Project's aim is to mitigate the alienating & brutalist user experience of clicking through a state-picker drop-down menu.",
-
-      "proj_links": [
-        {
-          "url": "https://codepen.io/beauhaus/full/NavWog/",
-          "text": "codepen"
-        }
-      ]
-    },
-    {
-      "id": 105,
+      "id": 102,
       "url": "./img/proj/cssconf.jpg",
       "alt":
-        "CSSConf17 Entry depicting a house on Bourbon Street with colorful and detailed CSS rendered street facades",
-      "proj_icon": "mag4.jpg",
+        "CSSConf17 Entry depicting a house on Bourbon Street with colorful and detailed CSS rendered street facades. This is animated & 'drawn' CSS",
       "proj_title": "Bourbon Street",
       "proj_tech": ["sass", "css grid", "pure css"],
       "proj_desc":
-        "This mid-century Bourbon Street scene was contest runner-up for CSSConf'17 & was featured in an article by Chris Coiyer. This took 3 weeks--day & night--to complete",
+        "A mid-century Bourbon Street scene was a contest entry at CSSConf'17 & received honorable mention in an article by codepen founder, Chris Coiyer. Completed in 3 weeks.",
       "proj_links": [
         {
           "url": "https://codepen.io/beauhaus/full/rwZPjm/",
@@ -103,11 +48,43 @@
         }
       ]
     },
+
     {
-      "id": 106,
+      "id": 103,
+      "url": "./img/proj/plumtree.jpg",
+      "alt": "plumtree",
+      "proj_title": "Plumtree",
+      "proj_tech": ["react", "gsap", "illustrator", "audacity"],
+      "proj_desc":
+        "Animated opacity on radial-gradients to simulate waves & ripples. React state is used to trigger a pissed-off chickadee's <audio> element as it files away.",
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/QQqgrp/",
+          "text": "codepen"
+        }
+      ]
+    },
+
+    {
+      "id": 104,
+      "url": "./img/proj/statepicker.jpg",
+      "alt": "state picker alternative to dropdown menu",
+      "proj_title": "Retro Telescreen",
+      "proj_tech": ["react", "gsap", "validator.js", "scss", "css animation"],
+      "proj_desc":
+        "Multi-layered SVG to create a 50's retro-monitor glitch animation. Project's aim is to mitigate the alienating & brutalist user experience of clicking through a state-picker drop-down menu.",
+      "proj_links": [
+        {
+          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "text": "codepen"
+        }
+      ]
+    },
+
+    {
+      "id": 105,
       "url": "./img/proj/curriculum.jpg",
       "alt": "image of the movie 'Up!' depicting a house flying away in with baloons on a sunny day",
-      "proj_icon": "mag5.jpg",
       "proj_title": "Up!",
       "proj_tech": ["illustrator", "gsap", "jquery", "javascript"],
       "proj_desc":
@@ -120,10 +97,26 @@
       ]
     },
     {
+      "id": 106,
+      "url": "./img/proj/wireframes.jpg",
+      "alt": "lo & hifi wireframes depicted",
+      "proj_title": "From napkin to node.",
+      "proj_tech": ["Sketch", "Illustrator", "Pen & Paper", "Post-its"],
+
+      "proj_desc":
+        "Coding is 80% planning, 20% typing. Most projects are planned and iterated on with an eye toward learning and implementing something yet untried. Full Low-Fidelity & high-fidelity prototypes are an integral part of my workflow.",
+      "proj_links": [
+        {
+          "url": "",
+          "text": ""
+        }
+      ]
+    },
+
+    {
       "id": 107,
       "url": "./img/proj/csswindows.jpg",
       "alt": ".",
-      "proj_icon": "./img/proj/projicons/css.png",
       "proj_title": "Pure CSS Windows",
       "proj_tech": ["css grid", "css drawing", "gsap"],
       "proj_desc":
@@ -139,12 +132,10 @@
       "id": 108,
       "url": "./img/proj/journal.jpg",
       "alt": "Code Journal image depicting SQL queries & tips and advice",
-      "proj_icon": "mag7.jpg",
       "proj_title": "Code Journal",
-      "proj_tech": ["angular.js", "node.js", "heroku"],
+      "proj_tech": ["angular.js", "node.js", "sass", "heroku"],
       "proj_desc":
         "Library of code, advice, recommendations & snippets in SASS, SQL Queries, Node, GSAP, ES6, Javascript, Angular & React (currently being overhauled)",
-
       "proj_links": [
         {
           "url": "https://codekaizen.herokuapp.com/#!/home",
@@ -158,12 +149,10 @@
     },
     {
       "id": 109,
-      "url": "./img/proj/robotsite.jpg",
+      "url": "./img/proj/robotsiterwd.jpg",
       "alt": "Retro styled panel for user inputs email, state, etc. Done in the style of Kubrick's 2001",
-      "proj_icon": "mag8.jpg",
       "proj_title": "Robot Companions",
-      "proj_tech": ["webpack", "react.js", "pure css", "RWD"],
-
+      "proj_tech": ["responsive", "webpack", "react", "styled components", "css drawing"],
       "proj_desc":
         "An aesthetic alternative to user input form & validation. This pure css panel, in tandem with the adjacent vector graphics 'monitor' is used to validate a user to a site for a company that sells robots in the private sector.",
       "proj_links": [
@@ -181,10 +170,24 @@
       "id": 110,
       "url": "./img/proj/goop.gif",
       "alt": "test/mag9",
-      "proj_icon": "mag9.jpg",
       "proj_title": "After Effects Work",
       "proj_tech": ["after effects", "mocha", "chroma screen", "audacity"],
-      "proj_desc": "Filming, compositing, rotoscoping, photo editing and sound editing was a passion of mine for years before learning to code.",
+      "proj_desc":
+        "In a previous life I was obsessed with Film production, compositing, rotoscoping, color grading and sound editing. Teaching myself After Effects was my 'gate-way drug' that got me interested in learning javascript.",
+      "proj_links": [
+        {
+          "url": "",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "url": "./img/proj/fish.gif",
+      "alt": "Javascript Fish with Greensock Animations",
+      "proj_title": "GSAP Fish",
+      "proj_tech": ["GSAP", "jQuery"],
+      "proj_desc": "An early experiment with GSAP",
       "proj_links": [
         {
           "url": "",

@@ -5,23 +5,26 @@ import gaugeDB from '../../../data/gaugeDB.json';
 
 const ProgressGaugeWrapper = styled.svg`
   position: relative;
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.8));
   svg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
+    -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    transform: translate(3px, -4px) rotate(25deg);
+    -webkit-transform: translate(0px, 0px) rotate(25deg);
+    transform: translate(0px, 0px) rotate(25deg);
   }
   svg#gauge-needle {
     stroke-width: 2px;
     stroke: #e4caa3;
     & line {
       transform-origin: 52% 50%;
+      -webkit-transform-origin: 52% 50%;
     }
     filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.8)); /* not taking effect? FIXME? */
   }
@@ -57,4 +60,3 @@ const ProgressGauge = props => {
 };
 
 export default ProgressGauge;
-// <line key={line.id} stroke={`hsl(36, ${55 - (idx)}%, ${77 - (idx)}%`} x1="50" y1="50" x2={line.x2} y2={line.y2} />

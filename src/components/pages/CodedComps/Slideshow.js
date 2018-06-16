@@ -24,6 +24,7 @@ const SlideshowFrame = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  margin-left: 1.5rem;
   .grid-image-view {
     grid-column: 1;
     grid-row: 1;
@@ -140,7 +141,7 @@ const Slideshow = props => {
   return (
     <SlideshowFrame className="slideshow-frame">
       <div className="grid-image-view">
-        <img src={props.currentSlide.url} alt="{props.currentSlide.alt}" />
+        <img src={props.currentSlide.url} alt={props.currentSlide.alt} />
         <svg id="frame-path" viewBox="0 0 200 200" preserveAspectRatio="none">
           <path d="M1.5 199h199V1H1.5v199" />
         </svg>
