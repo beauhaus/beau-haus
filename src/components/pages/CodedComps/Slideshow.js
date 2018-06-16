@@ -36,7 +36,7 @@ const SlideshowFrame = styled.div`
       width: 100%;
       height: 100%;
       opacity: 0;
-      animation: 2s 3s fadeIn linear forwards;
+      animation: 2s 4s fadeIn linear forwards;
     }
     & > #frame-path {
       position: absolute;
@@ -62,7 +62,7 @@ const SlideshowFrame = styled.div`
       height: 100%;
       box-shadow: inset -10px 10px 25px rgba(0, 0, 0, 0.5);
       opacity: 0;
-      animation: emboss 3s 4s ease-out forwards;
+      animation: emboss 3s 3s ease-out forwards;
     }
   }
   & > .reflected-div {
@@ -88,7 +88,7 @@ const SlideshowFrame = styled.div`
       height: 100%;
       width: 100%;
       opacity: 0;
-      animation: 2s 3s fadeIn linear forwards;
+      animation: 2s 4s fadeIn linear forwards;
     }
     & > #reflected-frame {
       height: 100%;
