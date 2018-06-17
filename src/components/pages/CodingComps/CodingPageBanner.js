@@ -5,12 +5,12 @@ const PageBannerWrapper = styled.div`
   grid-column: 3;
   grid-row: 1/4;
   position: relative;
-  filter: url(#lo-saturation);
+  filter: saturate(40%);
   svg {
     position: absolute;
     opacity: 1;
     top: 0;
-    right: 0;
+    right: -2vw;
     width: 20vh;
     height: 110%;
   }
@@ -22,7 +22,7 @@ const CodedPageBanner = props => {
   return (
     <PageBannerWrapper className="page-banner">
       <svg viewBox="0 180 200 800">
-      <g fill="grey" id="coding-banner-top">
+      <g fill="#777" id="coding-banner-top">
       <path d="M121.6 101.2c-7.4 7-19.2 10.5-35.5 10.5-16 0-27.8-3.8-35.2-11.4-7.4-7.6-11.1-17.7-11.1-30.5 0-8.6 1.6-15.6 4.7-21.1 3.2-5.5 7.7-9.4 13.6-11.7l-8.4-56.1c-10.2 3.4-18.6 8.5-25.2 15.3C18 3 13.2 11.5 10 21.9 6.9 32.2 5.3 47.7 5.3 68.5c0 21.6 2.5 38.7 7.6 51.5 6.6 16.3 16.2 28.8 29 37.2 12.7 8.5 27.7 12.7 44.8 12.7 12.2 0 23.3-2.1 33.4-6.4l1.5-62.3z" />
       <path d="M108 68V29h15.2c.1 0 .1.2.2.4l1.3-51.4H75v90h33z" />
       <polygon points="116 326 79 326 116.7 295.4 119.1 201 8 201 8 256 95.1 256 8 327 8 381 114.6 381" />

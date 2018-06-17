@@ -43,8 +43,15 @@ const CodingPageCompDiv = styled.div`
     }
   }
   hr {
+    color: brown;
     width: 70%;
     margin: 0 auto;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #b4a0a1;
+    margin: 1em 0;
+    padding: 0;
   }
   & > .grid-header {
     grid-column: 1/4;
@@ -62,15 +69,16 @@ const CodingPageCompDiv = styled.div`
     grid-template-rows: repeat(1fr 2px 1fr);
     opacity: 1; /* fixme: during testing this overrides app.css */
     & .coding-proj-desc {
-      color: #333;
+      color: #eee;
       padding: 2%;
       & h1 {
-        font-weight: 300;
+        font-weight: 100;
+        font-size: 3.5rem;
       }
       & h2 {
         margin: -2vh auto 1vh auto;
-        font-weight: 300;
-        font-size: 1.2em;
+        font-weight: 200;
+        font-size: 2rem;
         font-family: 'Lato', sans-serif;
       }
       & p {
@@ -84,7 +92,7 @@ const CodingPageCompDiv = styled.div`
       & li {
         margin: 2vh 1vw;
         display: inline-block;
-        color: black;
+        color: #aaa;
       }
     }
     .project-img {
@@ -144,7 +152,7 @@ class Coding extends Component {
 
   render() {
     const { fill } = this.props.profile.pageStyles;
-    const { pageStyles} = this.props.profile;
+    const { pageStyles } = this.props.profile;
     return (
       <CodingPageCompDiv className="page coding-container" style={pageStyles}>
         <PageBanner themeFill={fill} />
@@ -178,7 +186,7 @@ class Coding extends Component {
               <h1>Code Journal</h1>
               <h2>
                 Large library of code, advice and tutorials. <br />
-                <i>(Portage from Angular.js to React)</i>
+                <i>(Porting from Angular.js to React)</i>
               </h2>
               <p>This project is curently being ported from Angular.js to React into beau.haus/learning.</p>
               <ul>

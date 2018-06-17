@@ -19,7 +19,7 @@
       "x": "515",
       "y": "148",
       "r": "33.5",
-      "fill": "#bb383f",
+      "fill": "#ac5e61",
       "txtPos": "translate(80 165)",
       "hoverPos": "-210"
     },
@@ -31,7 +31,7 @@
       "x": "515",
       "y": "248",
       "r": "33.5",
-      "fill": "#5f6d58",
+      "fill": "#799e69",
       "txtPos": "translate(120 266)",
       "hoverPos": "-180"
     },
@@ -43,7 +43,7 @@
       "x": "515",
       "y": "348",
       "r": "33.5",
-      "fill": "#2a37e8",
+      "fill": "#a0e9fc",
       "txtPos": "translate(34.3608 365)",
       "hoverPos": "-240"
     },
@@ -55,7 +55,7 @@
       "x": "515",
       "y": "448",
       "r": "33.5",
-      "fill": "#caaad4",
+      "fill": "#fff493",
       "txtPos": "translate(70 465)",
       "hoverPos": "-210"
     }
@@ -105,9 +105,9 @@
     },
     "coding": {
       "pageStyles": {
-        "background": "linear-gradient(0deg, #bfbfbf 0%, #838383 100%)",
+        "background": "linear-gradient(45deg, #999 0%, #555 100%)",
         "color": "black",
-        "fill": "#bb383f"
+        "fill": "#ac5e61"
       },
       "water": {
         "bgGradient": {
@@ -146,9 +146,9 @@
 
     "coded": {
       "pageStyles": {
-        "background": "linear-gradient(45deg, #444 0%, #a1a1a1 100%)",
+        "background": "linear-gradient(45deg, #aaa 0%, #333d 100%)",
         "color": "black",
-        "fill": "#5f6d58"
+        "fill": "#799e69"
       },
       "water": {
         "bgGradient": {
@@ -185,11 +185,12 @@
       }
     },
 
+
     "learning": {
       "pageStyles": {
-        "background": "linear-gradient(225deg, #4a4a4a 0%, #9c9c9c 100%)",
+        "background": "linear-gradient(45deg, #4a4a4a 0%, #aaa 100%)",
         "color": "black",
-        "fill": "#2a37e8"
+        "fill": "#a0e9fc"
       },
       "water": {
         "bgGradient": {
@@ -228,9 +229,9 @@
 
     "connect": {
       "pageStyles": {
-        "background": "linear-gradient(135deg, #757575 0%, #838383 100%)",
+        "background": "linear-gradient(135deg, #757575 0%, #ccc 100%)",
         "color": "black",
-        "fill": "#9c78a8"
+        "fill": "#fff493"
       },
       "water": {
         "bgGradient": {

@@ -13,6 +13,7 @@
 html {
   font-size: 62.5%;
 }
+
 body {
   margin: 0;
   position: fixed;
@@ -108,6 +109,16 @@ h4 {
   }
 }
 
+/* MEDIA QUERIES GLOBAL*/
+
+/* @media screen and (max-width: 768px) {
+  width: 12vw;
+  height: 10vh;
+  top: 2vh;
+  left: 50%;
+  margin-left: -7vw;
+} */
+
 /******* PAGE TRANSITION STYLES END**********/
 
 /* .page {
@@ -122,24 +133,15 @@ h4 {
 }
 
 .testing-colors {
-  color: #3f463c;
+  color: #799e69;
 
-  color: #c7bba2;
+  color: #727272;
 
   color: #d18080;
 
-  color: #4f2020;
+  color: #b4a0a1;
   cursor: pointer;
 
-  color: #545454;
+  color: #9c9c9c;
 }
 
-/* MEDIA QUERIES GLOBAL*/
-
-@media screen and (max-width: 768px) {
-  width: 12vw;
-  height: 10vh;
-  top: 2vh;
-  left: 50%;
-  margin-left: -7vw;
-}

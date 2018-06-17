@@ -34,14 +34,14 @@ const NavsWrapper = styled.div`
     height: 22vh;
   }
   & .lo-sat {
+    circle {
       filter: url(#lo-saturation);
+    }
   }
   & .current-link {
     stroke-width: 1px;
     & .nav-txt {
       fill: #fff;
-      stroke-width: 1px;
-      stroke: #fff;
       filter: url(#txt-shad);
     }
     & .nav-link-dot {
@@ -187,7 +187,7 @@ class NavsContainer extends Component {
               <feDropShadow dx="3" dy="3" stdDeviation="2" />
             </filter>
             <filter id="lo-saturation">
-              <feColorMatrix type="saturate" values=".2" />
+              <feColorMatrix type="saturate" values=".1" />
             </filter>
           </defs>
           {navBtns.map(this.renderLinks)}

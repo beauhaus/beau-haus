@@ -36,7 +36,7 @@ const SlideshowFrame = styled.div`
       width: 100%;
       height: 100%;
       opacity: 0;
-      animation: 2s 4s fadeIn linear forwards;
+      animation: 2s 3s fadeIn linear forwards;
     }
     & > #frame-path {
       position: absolute;
@@ -44,13 +44,13 @@ const SlideshowFrame = styled.div`
       top: 0;
       width: 100%;
       height: 100%;
-      stroke: white;
       stroke-width: 1;
       fill: none;
-      stroke: transparent;
+      
+      stroke: white;
       stroke-dasharray: 794;
       stroke-dashoffset: 793;
-      animation: 2s 1s dash linear forwards;
+      animation: 1.5s 1s dash linear forwards;
       
     }
     & > .shad-layer::after {
@@ -62,7 +62,7 @@ const SlideshowFrame = styled.div`
       height: 100%;
       box-shadow: inset -10px 10px 25px rgba(0, 0, 0, 0.5);
       opacity: 0;
-      animation: emboss 3s 3s ease-out forwards;
+      animation: emboss 3s 2s ease-out forwards;
     }
   }
   & > .reflected-div {
@@ -82,13 +82,13 @@ const SlideshowFrame = styled.div`
       height: 100%;
       box-shadow: inset -10px 10px 25px 0px rgba(0, 0, 0, 0.2);
       opacity: 0;
-      animation: emboss 3s 3s ease-out forwards;
+      animation: emboss 3s 2s ease-out forwards;
     }
     & > svg.reflected-image {
       height: 100%;
       width: 100%;
       opacity: 0;
-      animation: 2s 4s fadeIn linear forwards;
+      animation: 2s 3s fadeIn linear forwards;
     }
     & > #reflected-frame {
       height: 100%;
@@ -109,7 +109,7 @@ const SlideshowFrame = styled.div`
         stroke: transparent;
         stroke-dasharray: 794;
         stroke-dashoffset: 793;
-        animation: 2s 1s dash linear forwards;
+        animation: 1.5s 1s dash linear forwards;
       }
     }
   }
@@ -142,7 +142,7 @@ const Slideshow = props => {
     <SlideshowFrame className="slideshow-frame">
       <div className="grid-image-view">
         <img src={props.currentSlide.url} alt={props.currentSlide.alt} />
-        <svg id="frame-path" viewBox="0 0 200 200" preserveAspectRatio="none">
+        <svg id="frame-path" viewBox="0 0 200.5 200" preserveAspectRatio="none">
           <path d="M1.5 199h199V1H1.5v199" />
         </svg>
         <div className="shad-layer img-infolink-container" />
@@ -165,7 +165,7 @@ const Slideshow = props => {
           </defs>
           <rect id="reflected-rect" mask="url(#mask1)" width="100%" height="100%" y="0" fill="url(#pattern1)" />
         </svg>
-        <svg id="reflected-frame" viewBox="0 0 200 200" preserveAspectRatio="none">
+        <svg id="reflected-frame" viewBox="0 0 201 200" preserveAspectRatio="none">
           <path id="frame-path-reflected" fill="none" stroke="#000" strokeWidth="2" d="M1.5 199h199V1H1.5v199" />
         </svg>
         {/*
