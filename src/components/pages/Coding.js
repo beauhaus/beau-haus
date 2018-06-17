@@ -9,6 +9,7 @@ import WaterBody from '../scene/water/WaterBody';
 import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
+import PageBanner from './CodingComps/CodingPageBanner';
 
 /***NOTES
  * FIXME: There should be an H1 in the JSX
@@ -139,20 +140,15 @@ class Coding extends Component {
       init: 'state',
       profile: props.pageStyles
     };
-
   }
 
   render() {
-    const { pageStyles, tree, water } = this.props.profile;
-    const { fill } = this.props.profile.pageStyles.fill;
-   
-
+    const { fill } = this.props.profile.pageStyles;
+    const { pageStyles} = this.props.profile;
     return (
       <CodingPageCompDiv className="page coding-container" style={pageStyles}>
+        <PageBanner themeFill={fill} />
         <div className="grid-header" />
-        <div className="page-banner-container">
-          <img src="./img/pagesimg/codingbanner.svg" alt="current coding" />
-        </div>
         <div className="grid-ctr">
           <div className="ctr-row-top">
             <div className="coding-proj-desc top-text">
@@ -181,7 +177,8 @@ class Coding extends Component {
             <div className="coding-proj-desc mid-text">
               <h1>Code Journal</h1>
               <h2>
-                Large library of code, advice and tutorials. <br /><i>(Portage from Angular.js to React)</i>
+                Large library of code, advice and tutorials. <br />
+                <i>(Portage from Angular.js to React)</i>
               </h2>
               <p>This project is curently being ported from Angular.js to React into beau.haus/learning.</p>
               <ul>

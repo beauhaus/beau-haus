@@ -13,6 +13,7 @@ import LogoTheme from '../scene/LogoTheme';
 
 import SlidesData from '../../data/SlideShowData.json';
 import PageBanner from './CodedComps/CodedPageBanner';
+
 import CycleButton from './CodedComps/CycleButton';
 import ShowCaseGrid from './CodedComps/ShowCaseGrid';
 
@@ -62,7 +63,6 @@ class Coded extends Component {
   }
   componentDidMount() {}
   onStepFwdHandler() {
-    console.log('stepFwd');
     this.setState({
       current: this.state.current + 1 === this.state.total ? 0 : this.state.current + 1,
       slidesEngage: true
@@ -75,8 +75,9 @@ class Coded extends Component {
     const { fill } = this.props.profile.pageStyles;
     const {total, current, slides}= this.state;
     return (
+      // <PageBanner fill={fill} />
       <CodedPageCompDiv className="page coded-container" style={pageStyles}>
-        <PageBanner fill={fill} />
+      <PageBanner themeFill={fill} />
         <div className="grid-ctr-tall">
           <div id="cycle-btn-container" onClick={() => this.onStepFwdHandler()}>
             <CycleButton />

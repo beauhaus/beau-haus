@@ -197,7 +197,7 @@
     },
     {
       "id": 112,
-      "url": "./img/proj/thisapprwd.jpg",
+      "url": "./img/proj/thisapprwd.png",
       "alt": "This application responsive web design in desktop, iPad & mobile",
       "proj_title": "this portfolio in rwd",
       "proj_tech": ["nginx", "linux(ubuntu)", "react", "svg", "node.js", "styled components"],

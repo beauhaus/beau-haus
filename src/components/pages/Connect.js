@@ -9,6 +9,8 @@ import WaterBody from '../scene/water/WaterBody';
 import Shore from '../scene/water/Shore';
 import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
+import PageBanner from './ConnectComps/ConnectPageBanner';
+
 
 const ConnectPageCompDiv = styled.div`
   position: absolute;
@@ -62,9 +64,11 @@ class Connect extends Component {
 
   render() {
     const { pageStyles, tree, water } = this.props.profile;
-    const { fill } = this.props.profile.pageStyles.fill;
+    const { fill } = this.props.profile.pageStyles;
+
     return (
       <ConnectPageCompDiv className="page connect-container" style={pageStyles}>
+      <PageBanner themeFill={fill} />
         <div className="grid-ctr">
           <div className="ctr-row-top">
             <p className="q1">Learn fast and fix things.</p>
