@@ -13,6 +13,7 @@ import LogoTheme from '../scene/LogoTheme';
 
 import SlidesData from '../../data/SlideShowData.json';
 import PageBanner from './CodedComps/CodedPageBanner';
+import CodedScene from './CodedComps/CodedScene';
 
 import CycleButton from './CodedComps/CycleButton';
 import ShowCaseGrid from './CodedComps/ShowCaseGrid';
@@ -75,7 +76,6 @@ class Coded extends Component {
     const { fill } = this.props.profile.pageStyles;
     const {total, current, slides}= this.state;
     return (
-      // <PageBanner fill={fill} />
       <CodedPageCompDiv className="page coded-container" style={pageStyles}>
       <PageBanner themeFill={fill} />
         <div className="grid-ctr-tall">
@@ -89,6 +89,7 @@ class Coded extends Component {
         <MuteBtn />
         <LogoTheme themeFill={fill} />
         <Shore />
+        <CodedScene/>
         </CodedPageCompDiv>
       );
     }
