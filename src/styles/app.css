@@ -73,7 +73,7 @@ h4 {
 }
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 2000ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 .fade-enter-active::after {
   font-size: 3rem;
@@ -89,7 +89,7 @@ h4 {
 }
 .fade-exit.fade-exit-active {
   opacity: 0;
-  transition: opacity 2000ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -137,7 +137,7 @@ h4 {
 
   color: #727272;
 
-  color: #d18080;
+  color: #ff6156;
 
   color: #b4a0a1;
   cursor: pointer;

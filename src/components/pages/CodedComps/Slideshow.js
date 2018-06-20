@@ -46,12 +46,10 @@ const SlideshowFrame = styled.div`
       height: 100%;
       stroke-width: 1;
       fill: none;
-      
       stroke: white;
       stroke-dasharray: 794;
       stroke-dashoffset: 793;
-      animation: 1.5s 1s dash linear forwards;
-      
+      animation: 1s 1s dash linear forwards;
     }
     & > .shad-layer::after {
       content: '';
@@ -109,7 +107,7 @@ const SlideshowFrame = styled.div`
         stroke: transparent;
         stroke-dasharray: 794;
         stroke-dashoffset: 793;
-        animation: 1.5s 1s dash linear forwards;
+        animation: 1s 1s dash linear forwards;
       }
     }
   }

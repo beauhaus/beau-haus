@@ -43,7 +43,6 @@ const CodingPageCompDiv = styled.div`
     }
   }
   hr {
-    color: brown;
     width: 70%;
     margin: 0 auto;
     display: block;
@@ -69,7 +68,7 @@ const CodingPageCompDiv = styled.div`
     grid-template-rows: repeat(1fr 2px 1fr);
     opacity: 1; /* fixme: during testing this overrides app.css */
     & .coding-proj-desc {
-      color: #eee;
+      color: #333;
       padding: 2%;
       & h1 {
         font-weight: 100;

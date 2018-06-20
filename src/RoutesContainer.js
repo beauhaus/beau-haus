@@ -29,7 +29,7 @@ class App extends Component {
           render={({ location }) => (
             <div location={{ location }} className="App">
               <TransitionGroup>
-                <CSSTransition key={location.key} timeout={4000} classNames="fade">
+                <CSSTransition key={location.key} timeout={1000} classNames="fade">
                   <Switch className="switch" location={location}>
                     <Route
                       className="route"

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import SocIconData from '../../data/SocIconData.json';
 
 /**NavMenu combines static BtnDB data with state so that colors can be manipulated from state
- * while keeping the component's code clean & readable
+ * while keeping the components code clean & readable
 */
 const SocIconWrapper = styled.svg`
 position: absolute;
