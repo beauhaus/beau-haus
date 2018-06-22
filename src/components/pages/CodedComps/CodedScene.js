@@ -14,10 +14,7 @@ const CodedSceneWrapper = styled.div`
     width: 100vw;
     height: 100vh;
   }
-  #blinker {
-    opacity: 0;
-    animation: blink 30s 5s linear infinite;
-  }
+
   #house-light,
   #halo {
     opacity: 0;
@@ -51,64 +48,6 @@ const CodedSceneWrapper = styled.div`
   twinkler6 {
     opacity: 0;
     animation: 20s 15s twinkle ease-in-out infinite;
-  }
-  #boatShad {
-    animation: sailing 120s ease-out forwards;
-  }
-  
-#boatShad {
-  opacity: 0;
-  animation: shadCast 20s 10s ease-in-out infinite; 
-}
-#boatShad, #boat, #boatReflect, #blinker circle, #port-light{
-  /*
-  animation: sailing 120s ease-out forwards;
-  */
-}
-
-#boatReflect, #boat-clip-path  {
-  /*
-  animation: sailing2 120s ease-out forwards;
-  */
-}
-
-@keyframes sailing {
-  0% {
-    transform: translateX(200px);
-  }
-  100% {
-    transform: translateX(-200px);
-  }
-}
-@keyframes sailing2 {
-  0% {
-    transform: translateX(200px);
-  }
-  100% {
-    transform: translateX(-200px);
-  }
-}
- 
-@keyframes shadCast {
-    0% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  #boatReflect {
-    mix-blend-mode: soft-light;
   }
 
   @keyframes twinkle {
@@ -168,329 +107,6 @@ const CodedSceneWrapper = styled.div`
       opacity: 1;
     }
   }
-  @keyframes blink {
-    1.0% {
-      opacity: 1;
-    }
-    1.5% {
-      opacity: 0;
-    }
-    2.0% {
-      opacity: 1;
-    }
-    2.5% {
-      opacity: 1;
-    }
-    3.0% {
-      opacity: 1;
-    }
-    3.5% {
-      opacity: 0;
-    }
-    4.0% {
-      opacity: 1;
-    }
-    4.5% {
-      opacity: 1;
-    }
-    5.0% {
-      opacity: 1;
-    }
-    5.5% {
-      opacity: 0;
-    }
-    6.0% {
-      opacity: 1;
-    }
-    6.5% {
-      opacity: 0;
-    }
-    7.0% {
-      opacity: 0;
-    }
-    7.5% {
-      opacity: 0;
-    }
-    8.0% {
-      opacity: 1;
-    }
-    8.5% {
-      opacity: 0;
-    }
-    9.0% {
-      opacity: 1;
-    }
-    9.5% {
-      opacity: 1;
-    }
-    10.0% {
-      opacity: 1;
-    }
-    10.5% {
-      opacity: 0;
-    }
-    11.0% {
-      opacity: 1;
-    }
-    11.5% {
-      opacity: 0;
-    }
-    12.0% {
-      opacity: 1;
-    }
-    12.5% {
-      opacity: 0;
-    }
-    13.0% {
-      opacity: 0;
-    }
-    13.5% {
-      opacity: 0;
-    }
-    14.0% {
-      opacity: 1;
-    }
-    14.5% {
-      opacity: 0;
-    }
-    15.0% {
-      opacity: 0;
-    }
-    15.5% {
-      opacity: 0;
-    }
-    16.0% {
-      opacity: 1;
-    }
-    16.5% {
-      opacity: 0;
-    }
-    17.0% {
-      opacity: 1;
-    }
-    17.5% {
-      opacity: 1;
-    }
-    18.0% {
-      opacity: 1;
-    }
-    18.5% {
-      opacity: 0;
-    }
-    19.0% {
-      opacity: 0;
-    }
-    19.5% {
-      opacity: 0;
-    }
-    20.0% {
-      opacity: 1;
-    }
-    20.5% {
-      opacity: 0;
-    }
-    21.0% {
-      opacity: 1;
-    }
-    21.5% {
-      opacity: 0;
-    }
-    22.0% {
-      opacity: 1;
-    }
-    22.5% {
-      opacity: 0;
-    }
-    23.0% {
-      opacity: 0;
-    }
-    23.5% {
-      opacity: 0;
-    }
-    24.0% {
-      opacity: 1;
-    }
-    24.5% {
-      opacity: 0;
-    }
-    25.0% {
-      opacity: 0;
-    }
-    25.5% {
-      opacity: 0;
-    }
-    26.0% {
-      opacity: 0;
-    }
-    26.5% {
-      opacity: 0;
-    }
-    27.0% {
-      opacity: 0;
-    }
-    27.5% {
-      opacity: 0;
-    }
-    28.0% {
-      opacity: 1;
-    }
-    28.5% {
-      opacity: 0;
-    }
-    29.0% {
-      opacity: 1;
-    }
-    29.5% {
-      opacity: 0;
-    }
-    30.0% {
-      opacity: 1;
-    }
-    30.5% {
-      opacity: 0;
-    }
-    31.0% {
-      opacity: 1;
-    }
-    31.5% {
-      opacity: 0;
-    }
-    32.0% {
-      opacity: 0;
-    }
-    32.5% {
-      opacity: 0;
-    }
-    33.0% {
-      opacity: 1;
-    }
-    33.5% {
-      opacity: 0;
-    }
-    34.0% {
-      opacity: 1;
-    }
-    34.5% {
-      opacity: 0;
-    }
-    35.0% {
-      opacity: 0;
-    }
-    35.5% {
-      opacity: 0;
-    }
-    36.0% {
-      opacity: 1;
-    }
-    36.5% {
-      opacity: 0;
-    }
-    37.0% {
-      opacity: 1;
-    }
-    37.5% {
-      opacity: 1;
-    }
-    38.0% {
-      opacity: 1;
-    }
-    38.5% {
-      opacity: 0;
-    }
-    39.0% {
-      opacity: 1;
-    }
-    39.5% {
-      opacity: 0;
-    }
-    40.0% {
-      opacity: 0;
-    }
-    40.5% {
-      opacity: 0;
-    }
-    41.0% {
-      opacity: 1;
-    }
-    41.5% {
-      opacity: 0;
-    }
-    42.0% {
-      opacity: 0;
-    }
-    42.5% {
-      opacity: 0;
-    }
-    43.0% {
-      opacity: 0;
-    }
-    43.5% {
-      opacity: 0;
-    }
-    44.0% {
-      opacity: 0;
-    }
-    44.5% {
-      opacity: 0;
-    }
-    45.0% {
-      opacity: 1;
-    }
-    45.5% {
-      opacity: 1;
-    }
-    46.0% {
-      opacity: 1;
-    }
-    46.5% {
-      opacity: 0;
-    }
-    47.0% {
-      opacity: 1;
-    }
-    47.5% {
-      opacity: 1;
-    }
-    48.0% {
-      opacity: 1;
-    }
-    48.5% {
-      opacity: 0;
-    }
-    49.0% {
-      opacity: 0;
-    }
-    49.5% {
-      opacity: 0;
-    }
-    50.0% {
-      opacity: 1;
-    }
-    50.5% {
-      opacity: 0;
-    }
-    51.0% {
-      opacity: 0;
-    }
-    51.5% {
-      opacity: 0;
-    }
-    52.0% {
-      opacity: 0;
-    }
-    52.5% {
-      opacity: 0;
-    }
-    53.0% {
-      opacity: 0;
-    }
-    53.5% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
 `;
 
 const CodedScene = props => {
@@ -502,22 +118,95 @@ const CodedScene = props => {
             <desc>FIXME BLUR NOT WORKING</desc>
             <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
           </filter>
+          <linearGradient id="boatShad-grad" x1="1489" x2="1907" y1="894.6494" y2="894.6494" gradientUnits="userSpaceOnUse">
+          <stop offset="0" />
+          <stop offset=".3313" stopColor="#030303" stopOpacity=".6687" />
+          <stop offset=".5785" stopColor="#0d0d0d" stopOpacity=".4215" />
+          <stop offset=".7976" stopColor="#1d1d1d" stopOpacity=".2024" />
+          <stop offset="1" stopColor="#333" stopOpacity="0" />
+        </linearGradient>
+          <linearGradient
+            id="SVGID_1_"
+            x1="-1649.0352"
+            x2="-1624.8492"
+            y1="9003.9746"
+            y2="8979.7891"
+            gradientTransform="matrix(.7761 .0756 .0903 -.7981 523.7434 7388.6411)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="#e6e6e6" />
+            <stop offset=".1322" stopColor="#e0e0e0" />
+            <stop offset=".3017" stopColor="#d0d0d0" />
+            <stop offset=".4916" stopColor="#b6b6b6" />
+            <stop offset=".6963" stopColor="#919191" />
+            <stop offset=".9106" stopColor="#636363" />
+            <stop offset="1" stopColor="#4d4d4d" />
+          </linearGradient>
+          <linearGradient
+            id="SVGID_2_"
+            x1="-1702.2227"
+            x2="-1661.4376"
+            y1="8987.0254"
+            y2="8946.2402"
+            gradientTransform="matrix(.7761 .0756 .0903 -.7981 523.7434 7388.6411)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="#e6e6e6" />
+            <stop offset=".1322" stopColor="#e0e0e0" />
+            <stop offset=".3017" stopColor="#d0d0d0" />
+            <stop offset=".4916" stopColor="#b6b6b6" />
+            <stop offset=".6963" stopColor="#919191" />
+            <stop offset=".9106" stopColor="#636363" />
+            <stop offset="1" stopColor="#4d4d4d" />
+          </linearGradient>
+          <linearGradient
+            id="SVGID_3_"
+            x1="-479.4702"
+            x2="-454.8168"
+            y1="-1044.0337"
+            y2="-1068.6871"
+            gradientTransform="matrix(.7761 -.0815 .0903 .8606 523.7434 925.5043)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="#e6e6e6" />
+            <stop offset=".1322" stopColor="#e0e0e0" />
+            <stop offset=".3017" stopColor="#d0d0d0" />
+            <stop offset=".4916" stopColor="#b6b6b6" />
+            <stop offset=".6963" stopColor="#919191" />
+            <stop offset=".9106" stopColor="#636363" />
+            <stop offset="1" stopColor="#4d4d4d" />
+          </linearGradient>
+          <linearGradient
+            id="SVGID_4_"
+            x1="-533.6582"
+            x2="-492.5652"
+            y1="-1061.2852"
+            y2="-1102.3782"
+            gradientTransform="matrix(.7761 -.0815 .0903 .8606 523.7434 925.5043)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="#e6e6e6" />
+            <stop offset=".1322" stopColor="#e0e0e0" />
+            <stop offset=".3017" stopColor="#d0d0d0" />
+            <stop offset=".4916" stopColor="#b6b6b6" />
+            <stop offset=".6963" stopColor="#919191" />
+            <stop offset=".9106" stopColor="#636363" />
+            <stop offset="1" stopColor="#4d4d4d" />
+          </linearGradient>
 
-          <filter id="boat-spec-light">
-            <desc>blur-effect</desc>
+          <clipPath id="boat-clipPath">
+            <path d="M1505 903l-2 7.1-3.8 2.9-38.2 30.5-51 25.6 24.3-56h-8.3v-8s8.1-1 7-1.3c-10-2.7-8-5.7-8-5.7V891l7 .1-22-60 51 24.5 40 35.5s3.4 1 4 2c1.3 2 0 9.9 0 9.9z" />
+          </clipPath>
+          <filter id="boat-spec-light" width="110%">
             <feGaussianBlur stdDeviation="5" result="blur4" />
-            <desc>Lighting effect</desc>
-            <feSpecularLighting result="spec4" in="blur4" specularExponent="45" lightingColor="#ddd">
-              <desc>Light source effect</desc>
-              <fePointLight x="1460" y="880" z="400">
-                <desc>Lighting Animation</desc>
-                <animate attributeName="x" values="1375;650;1375" dur="20s" repeatCount="indefinite" />
+            <feSpecularLighting result="spec4" in="blur4" specularExponent="45" lightingColor="#ccc">
+              <fePointLight x="1460" y="880" z="500">
+                <animate attributeName="x" values="1200;450;1200" dur="20s" repeatCount="indefinite" />
               </fePointLight>
             </feSpecularLighting>
-            <desc>Composition of inputs</desc>
             <feComposite in="SourceGraphic" in2="spec4" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
           </filter>
-         
+          
         </defs>
         <g id="night-scene" />
 
@@ -667,16 +356,7 @@ const CodedScene = props => {
           <path fill="#666" d="M130.5 760h7.3l-3.9-3h-1z" />
           <path fill="#777" d="M124 760h20v1h-20z" />
           <path fill="#666" d="M132.2 755h1.9v2h-1.9z" />
-          <ellipse
-            id="cap-light"
-            cx="133.6"
-            cy="753.8"
-            fill="#fff"
-            rx="1"
-            ry="1"
-            strokeWidth="3"
-            stroke="#c92323"
-          />
+          <ellipse id="cap-light" cx="133.6" cy="753.8" fill="#fff" rx="1" ry="1" strokeWidth="3" stroke="#c92323" />
           <g id="lighthouse-halo">
             <radialGradient
               id="halo-grad"
@@ -695,7 +375,7 @@ const CodedScene = props => {
             <ellipse id="halo" cx="133" cy="766.5" fill="url(#halo-grad)" rx="48" ry="13.5" />
           </g>
         </g>
-        <BoatSVG/>
+        <BoatSVG />
       </svg>
     </CodedSceneWrapper>
   );

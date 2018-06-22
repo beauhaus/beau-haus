@@ -84,11 +84,13 @@ class Coded extends Component {
           </div>
           {this.state.slidesEngage && <ShowCaseGrid {...this.props} current={current} slides={slides} total={total}/>}
         </div>
-        <WaterBg {...water} />
-        <WaterBody />
-        <MuteBtn />
-        <LogoTheme themeFill={fill} />
-        <Shore />
+        {/*
+        */}
+          <WaterBg {...water} />
+          <WaterBody />
+          <MuteBtn />
+          <LogoTheme themeFill={fill} />
+          <Shore />
         <CodedScene/>
         </CodedPageCompDiv>
       );
