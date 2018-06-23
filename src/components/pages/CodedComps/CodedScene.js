@@ -15,6 +15,21 @@ const CodedSceneWrapper = styled.div`
     height: 100vh;
   }
 
+  .cruise {
+    transform: translateX(450px);
+    animation: cruising 960s ease-out forwards;
+    
+  }
+
+  @keyframes cruising {
+    0% {
+      transform: translateX(450px);
+    }
+    100% {
+      transform: translateX(-500px);
+    }
+  }
+
   #house-light,
   #halo {
     opacity: 0;
@@ -118,95 +133,80 @@ const CodedScene = props => {
             <desc>FIXME BLUR NOT WORKING</desc>
             <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
           </filter>
-          <linearGradient id="boatShad-grad" x1="1489" x2="1907" y1="894.6494" y2="894.6494" gradientUnits="userSpaceOnUse">
-          <stop offset="0" />
-          <stop offset=".3313" stopColor="#030303" stopOpacity=".6687" />
-          <stop offset=".5785" stopColor="#0d0d0d" stopOpacity=".4215" />
-          <stop offset=".7976" stopColor="#1d1d1d" stopOpacity=".2024" />
-          <stop offset="1" stopColor="#333" stopOpacity="0" />
+          <linearGradient
+            id="boatShad-grad"
+            x1="1489"
+            x2="1907"
+            y1="894.6494"
+            y2="894.6494"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" />
+            <stop offset=".3313" stopColor="#030303" stopOpacity=".6687" />
+            <stop offset=".5785" stopColor="#0d0d0d" stopOpacity=".4215" />
+            <stop offset=".7976" stopColor="#1d1d1d" stopOpacity=".2024" />
+            <stop offset="1" stopColor="#333" stopOpacity="0" />
+          </linearGradient>
+          <linearGradient
+          id="ketch-sail-grad"
+          x1="1442.9785"
+          x2="1467.6312"
+          y1="891.7266"
+          y2="867.0738"
+          gradientTransform="matrix(.7761 -.0815 .0903 .8606 263.9783 246.2671)"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#e6e6e6" />
+          <stop offset="1" stopColor="#4d4d4d" />
         </linearGradient>
+        <linearGradient
+        id="main-sail-grad"
+        x1="1388.792"
+        x2="1429.885"
+        y1="874.4795"
+        y2="833.3865"
+        gradientTransform="matrix(.7761 -.0815 .0903 .8606 263.9783 246.2671)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#e6e6e6" />
+        <stop offset="1" stopColor="#4d4d4d" />
+      </linearGradient>
           <linearGradient
-            id="SVGID_1_"
-            x1="-1649.0352"
-            x2="-1624.8492"
-            y1="9003.9746"
-            y2="8979.7891"
-            gradientTransform="matrix(.7761 .0756 .0903 -.7981 523.7434 7388.6411)"
+            id="ketch-sail-ref-grad"
+            x1="1447.335"
+            x2="1471.5216"
+            y1="850.2686"
+            y2="826.0819"
+            gradientTransform="matrix(.7761 .0756 .0903 -.7981 263.9783 1477.082)"
             gradientUnits="userSpaceOnUse"
           >
             <stop offset="0" stopColor="#e6e6e6" />
-            <stop offset=".1322" stopColor="#e0e0e0" />
-            <stop offset=".3017" stopColor="#d0d0d0" />
-            <stop offset=".4916" stopColor="#b6b6b6" />
-            <stop offset=".6963" stopColor="#919191" />
-            <stop offset=".9106" stopColor="#636363" />
-            <stop offset="1" stopColor="#4d4d4d" />
+            <stop offset=".8" stopColor="#4d4d4d" />
           </linearGradient>
           <linearGradient
-            id="SVGID_2_"
-            x1="-1702.2227"
-            x2="-1661.4376"
-            y1="8987.0254"
-            y2="8946.2402"
-            gradientTransform="matrix(.7761 .0756 .0903 -.7981 523.7434 7388.6411)"
+            id="main-sail-ref-grad"
+            x1="1394.1494"
+            x2="1434.9337"
+            y1="833.3193"
+            y2="792.535"
+            gradientTransform="matrix(.7761 .0756 .0903 -.7981 263.9783 1477.082)"
             gradientUnits="userSpaceOnUse"
           >
             <stop offset="0" stopColor="#e6e6e6" />
-            <stop offset=".1322" stopColor="#e0e0e0" />
-            <stop offset=".3017" stopColor="#d0d0d0" />
-            <stop offset=".4916" stopColor="#b6b6b6" />
-            <stop offset=".6963" stopColor="#919191" />
-            <stop offset=".9106" stopColor="#636363" />
             <stop offset="1" stopColor="#4d4d4d" />
           </linearGradient>
-          <linearGradient
-            id="SVGID_3_"
-            x1="-479.4702"
-            x2="-454.8168"
-            y1="-1044.0337"
-            y2="-1068.6871"
-            gradientTransform="matrix(.7761 -.0815 .0903 .8606 523.7434 925.5043)"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0" stopColor="#e6e6e6" />
-            <stop offset=".1322" stopColor="#e0e0e0" />
-            <stop offset=".3017" stopColor="#d0d0d0" />
-            <stop offset=".4916" stopColor="#b6b6b6" />
-            <stop offset=".6963" stopColor="#919191" />
-            <stop offset=".9106" stopColor="#636363" />
-            <stop offset="1" stopColor="#4d4d4d" />
-          </linearGradient>
-          <linearGradient
-            id="SVGID_4_"
-            x1="-533.6582"
-            x2="-492.5652"
-            y1="-1061.2852"
-            y2="-1102.3782"
-            gradientTransform="matrix(.7761 -.0815 .0903 .8606 523.7434 925.5043)"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0" stopColor="#e6e6e6" />
-            <stop offset=".1322" stopColor="#e0e0e0" />
-            <stop offset=".3017" stopColor="#d0d0d0" />
-            <stop offset=".4916" stopColor="#b6b6b6" />
-            <stop offset=".6963" stopColor="#919191" />
-            <stop offset=".9106" stopColor="#636363" />
-            <stop offset="1" stopColor="#4d4d4d" />
-          </linearGradient>
-
           <clipPath id="boat-clipPath">
             <path d="M1505 903l-2 7.1-3.8 2.9-38.2 30.5-51 25.6 24.3-56h-8.3v-8s8.1-1 7-1.3c-10-2.7-8-5.7-8-5.7V891l7 .1-22-60 51 24.5 40 35.5s3.4 1 4 2c1.3 2 0 9.9 0 9.9z" />
           </clipPath>
           <filter id="boat-spec-light" width="110%">
             <feGaussianBlur stdDeviation="5" result="blur4" />
             <feSpecularLighting result="spec4" in="blur4" specularExponent="45" lightingColor="#ccc">
-              <fePointLight x="1460" y="880" z="500">
-                <animate attributeName="x" values="1200;450;1200" dur="20s" repeatCount="indefinite" />
+              <fePointLight x="1460" y="880" z="400">
+                <animate attributeName="x" values="1400;450;1400" dur="20s" repeatCount="indefinite" />
               </fePointLight>
             </feSpecularLighting>
             <feComposite in="SourceGraphic" in2="spec4" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
           </filter>
-          
         </defs>
         <g id="night-scene" />
 

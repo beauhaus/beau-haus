@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import ProgressGauge from './ProgressGauge';
+// import ProgressGauge from './ProgressGauge';
+import Moon from './Moon';
 import NumberDisplay from './NumberDisplay';
 
 const SlideshowUIWrapper = styled.div`
@@ -42,7 +43,7 @@ class SlideshowUI extends Component {
     return (
       <SlideshowUIWrapper className="slideshow-ui-wrapper">
         <div className="progress-grid">
-          <ProgressGauge {...this.props} />
+          <Moon {...this.props} />
         </div>
         <div className="number-display-grid">
           <NumberDisplay {...this.props} />
