@@ -12,6 +12,7 @@ const ShowCaseGridWrapper = styled.div`
   grid-template-rows: repeat(21, 1fr) 15vh 15vh;
   position: relative;
   .grid-description {  
+    display: none;
     grid-row: 9/22;
     grid-column: 1/14;
     position: absolute;

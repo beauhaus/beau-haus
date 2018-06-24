@@ -17,7 +17,7 @@ const SlideshowFrame = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50vh 15vh 15vh;
-  z-index: 20;
+  z-index: 30;
   /* 
   margin: 1.5rem; FIXME: adjust later 
   */
@@ -49,7 +49,7 @@ const SlideshowFrame = styled.div`
       stroke: white;
       stroke-dasharray: 794;
       stroke-dashoffset: 793;
-      animation: 1s 1s dash linear forwards;
+      animation: 500ms 1s dash linear forwards;
     }
     & > .shad-layer::after {
       content: '';
@@ -107,7 +107,7 @@ const SlideshowFrame = styled.div`
         stroke: transparent;
         stroke-dasharray: 794;
         stroke-dashoffset: 793;
-        animation: 1s 1s dash linear forwards;
+        animation: 500ms 1s dash linear forwards;
       }
     }
   }

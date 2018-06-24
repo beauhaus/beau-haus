@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // import ProgressGauge from './ProgressGauge';
 import Moon from './Moon';
-import NumberDisplay from './NumberDisplay';
+// import NumberDisplay from './NumberDisplay';
 
 const SlideshowUIWrapper = styled.div`
   grid-row: 1/9;
@@ -14,13 +14,14 @@ const SlideshowUIWrapper = styled.div`
   grid-template-rows: repeat(8, 1fr);
   grid-gap: 1.5rem;
   & > .progress-grid {
-    grid-column: 9/12;
-    grid-row: 4/9;
+    grid-column: 1/11;
+    grid-row: 6/31;
     opacity: 0;
     animation: fadeIn 1s 0s ease-in-out forwards;
     margin: 1rem;
+    z-index: 1;
   }
-
+/*
   & > .number-display-grid {
     grid-column: 1/9;
     grid-row: 1/9;
@@ -28,8 +29,9 @@ const SlideshowUIWrapper = styled.div`
     position: relative;
     opacity: 0;
     animation: fadeIn 1s 0.5s ease-in-out forwards;
+    display: none;
   }
-  
+  */
 `;
 class SlideshowUI extends Component {
   constructor(props) {
@@ -45,13 +47,13 @@ class SlideshowUI extends Component {
         <div className="progress-grid">
           <Moon {...this.props} />
         </div>
-        <div className="number-display-grid">
-          <NumberDisplay {...this.props} />
-        </div>
-      </SlideshowUIWrapper>
-    );
+        </SlideshowUIWrapper>
+      );
+    }
   }
-}
+  // <div className="number-display-grid">
+  //   <NumberDisplay {...this.props} />
+  // </div>
 
 export default SlideshowUI;
 

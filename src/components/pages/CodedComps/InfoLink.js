@@ -6,7 +6,7 @@ const InfoWrapper = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: 2s 6s fadeIn linear forwards;
+  animation: 1s 4s fadeIn linear forwards;
 
   & > div,
   svg {
@@ -58,11 +58,11 @@ const InfoWrapper = styled.div`
   &:hover {
     .info-list-container {
       opacity: 0;
-      animation: fadeIn 0.5s 0.3s ease-in-out forwards;
+      animation: fadeIn 0.5s  ease-in-out forwards;
     }
     #info-icon {
       opacity: 1;
-      animation: fadeOut 0.5s 0.3s ease-in-out forwards;
+      animation: fadeOut 0.5s  ease-in-out forwards;
     }
   }
   a,
@@ -87,8 +87,8 @@ const InfoLink = props => {
     <div className="info-icon-container">
         <svg className="infolink-container" viewBox="0 0 620 400" preserveAspectRatio="none">
           <g id="info-icon">
-            <polyline fill="#E8BE62" points="26 0 0 0 0 26" />
-            <polyline fill="#3F4E36" points="8 0 17 9 26 0" />
+            <polyline fill="#BB3D3D" points="26 0 0 0 0 26" />
+            <polyline fill="#ddd" points="8 0 17 9 26 0" />
             <rect fill="black" width="5" height="10" x="1" y="0" transform="rotate(-155 5.5 8.5)" />
             <circle cx="12" cy="6" r="3.5" fill="black" />
             <rect fill="#6B6B6B" width="5" height="10" x="0" y="1" transform="rotate(-155 5.5 8.5)" />

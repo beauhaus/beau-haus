@@ -16,17 +16,17 @@ const CodedSceneWrapper = styled.div`
   }
 
   .cruise {
-    transform: translateX(450px);
+    transform: translate(20rem);
     animation: cruising 960s ease-out forwards;
     
   }
 
   @keyframes cruising {
     0% {
-      transform: translateX(450px);
+      transform: translateX(20rem);
     }
     100% {
-      transform: translateX(-500px);
+      transform: translateX(-75rem);
     }
   }
 
