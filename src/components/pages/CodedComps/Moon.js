@@ -1,490 +1,51 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-// import gaugeDB from '../../../data/gaugeDB.json';
 import moonDB from '../../../data/moonDB.json';
 
-
-const MoonWrapper = styled.div`  /*wrapper SVG? or Div? */
-  position: relative;
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.8));
-  opacity: 0.5;
-  svg {
+const MoonWrapper = styled.svg`
     position: absolute;
-    top: -40vh;
-    left: -8vw;
-    width: 200%;
-    height: 200%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    fill: #000;
   }
-  #rt-r3-1 {
-    transform-origin: 5% 50%;
-  }
-
-  #rt-r3-2 {
-    transform-origin: 15% 50%;
-  }
-
-  #rt-r3-3 {
-    transform-origin: 25% 50%;
-  }
-
-  #rt-r3-4 {
-    transform-origin: 35% 50%;
-  }
-
-  #rt-r4-1 {
-    transform-origin: 5% 70%;
-  }
-
-  #rt-r4-2 {
-    transform-origin: 15% 70%;
-  }
-
-  #rt-r4-3 {
-    transform-origin: 25% 70%;
-  }
-
-  #rt-r4-4 {
-    transform-origin: 35% 70%;
-  }
-  #rt-r4-5 {
-    transform-origin: 45% 70%;
-  }
-
-  #rt-r4-6 {
-    transform-origin: 55% 70%;
-  }
-
-  #rt-r4-7 {
-    transform-origin: 65% 70%;
-  }
-
-  #rt-r4-8 {
-    transform-origin: 75% 70%;
-  }
-
-  #rt-r4-9 {
-    transform-origin: 85% 70%;
-  }
-
-  #rt-r4-10 {
-    transform-origin: 95% 70%;
-  }
-
-  #rt-r1-1 {
-    transform-origin: 5% 10%;
-  }
-
-  #rt-r1-2 {
-    transform-origin: 15% 10%;
-  }
-
-  #rt-r1-3 {
-    transform-origin: 25% 10%;
-  }
-
-  #rt-r1-4 {
-    transform-origin: 35% 10%;
-  }
-
-  #rt-r2-1 {
-    transform-origin: 5% 30%;
-  }
-
-  #rt-r2-2 {
-    transform-origin: 15% 30%;
-  }
-
-  #rt-r2-3 {
-    transform-origin: 25% 30%;
-  }
-
-  #rt-r2-4 {
-    transform-origin: 35% 30%;
-  }
-
-  #rt-r3-5 {
-    transform-origin: 45% 50%;
-  }
-
-  #rt-r3-6 {
-    transform-origin: 55% 50%;
-  }
-
-  #rt-r3-7 {
-    transform-origin: 65% 50%;
-  }
-
-  #rt-r3-8 {
-    transform-origin: 75% 50%;
-  }
-
-  #rt-r3-9 {
-    transform-origin: 85% 50%;
-  }
-
-  #rt-r1-6 {
-    transform-origin: 55% 10%;
-  }
-
-  #rt-r1-7 {
-    transform-origin: 65% 10%;
-  }
-
-  #rt-r1-8 {
-    transform-origin: 75% 10%;
-  }
-
-  #rt-r2-5 {
-    transform-origin: 45% 30%;
-  }
-
-  #rt-r2-6 {
-    transform-origin: 55% 30%;
-  }
-
-  #rt-r2-7 {
-    transform-origin: 65% 30%;
-  }
-
-  #rt-r2-8 {
-    transform-origin: 75% 30%;
-  }
-
-  #rt-r3-10 {
-    transform-origin: 95% 50%;
-  }
-
-  #rt-r1-5 {
-    transform-origin: 45% 10%;
-  }
-
-  #rt-r1-9 {
-    transform-origin: 85% 10%;
-  }
-
-  #rt-r1-10 {
-    transform-origin: 95% 10%;
-  }
-
-  #rt-r2-9 {
-    transform-origin: 85% 30%;
-  }
-
-  #rt-r2-10 {
-    transform-origin: 95% 30%;
-  }
-
-  #rt-r5-1 {
-    transform-origin: 05% 90%;
-  }
-
-  #rt-r5-2 {
-    transform-origin: 15% 90%;
-  }
-
-  #rt-r5-3 {
-    transform-origin: 25% 90%;
-  }
-
-  #rt-r5-4 {
-    transform-origin: 35% 90%;
-  }
-
-  #rt-r5-5 {
-    transform-origin: 45% 90%;
-  }
-
-  #rt-r5-6 {
-    transform-origin: 55% 90%;
-  }
-
-  #rt-r5-7 {
-    transform-origin: 65% 90%;
-  }
-
-  #rt-r5-8 {
-    transform-origin: 75% 90%;
-  }
-
-  #rt-r5-9 {
-    transform-origin: 85% 90%;
-  }
-
-  #rt-r5-10 {
-    transform-origin: 95% 90%;
-  }
-
-  #lt-r1-1 {
-    transform-origin: 5% 0%;
-  }
-
-  #lt-r1-2 {
-    transform-origin: 15% 0%;
-  }
-
-  #lt-r1-3 {
-    transform-origin: 25% 0%;
-  }
-
-  #lt-r1-4 {
-    transform-origin: 35% 0%;
-  }
-
-  #lt-r1-5 {
-    transform-origin: 45% 0%;
-  }
-
-  #lt-r1-6 {
-    transform-origin: 55% 0%;
-  }
-
-  #lt-r1-7 {
-    transform-origin: 65% 0%;
-  }
-
-  #lt-r1-8 {
-    transform-origin: 75% 0%;
-  }
-
-  #lt-r1-9 {
-    transform-origin: 85% 0%;
-  }
-
-  #lt-r1-10 {
-    transform-origin: 95% 0%;
-  }
-
-  #lt-r2-8 {
-    transform-origin: 75% 20%;
-  }
-
-  #lt-r2-7 {
-    transform-origin: 65% 20%;
-  }
-
-  #lt-r2-6 {
-    transform-origin: 55% 20%;
-  }
-
-  #lt-r2-5 {
-    transform-origin: 45% 20%;
-  }
-
-  #lt-r4-8 {
-    transform-origin: 75% 60%;
-  }
-
-  #lt-r4-7 {
-    transform-origin: 65% 60%;
-  }
-
-  #lt-r4-6 {
-    transform-origin: 55% 60%;
-  }
-
-  #lt-r4-5 {
-    transform-origin: 45% 60%;
-  }
-
-  #lt-r3-8 {
-    transform-origin: 75% 40%;
-  }
-
-  #lt-r3-7 {
-    transform-origin: 65% 40%;
-  }
-
-  #lt-r2-10 {
-    transform-origin: 95% 20%;
-  }
-
-  #lt-r2-9 {
-    transform-origin: 85% 20%;
-  }
-
-  #lt-r4-10 {
-    transform-origin: 95% 60%;
-  }
-
-  #lt-r4-9 {
-    transform-origin: 85% 60%;
-  }
-
-  #lt-r3-10 {
-    transform-origin: 95% 40%;
-  }
-
-  #lt-r3-9 {
-    transform-origin: 85% 40%;
-  }
-
-  #lt-r3-6 {
-    transform-origin: 55% 40%;
-  }
-
-  #lt-r3-5 {
-    transform-origin: 45% 40%;
-  }
-
-  #lt-r2-4 {
-    transform-origin: 35% 20%;
-  }
-
-  #lt-r2-3 {
-    transform-origin: 25% 20%;
-  }
-
-  #lt-r2-2 {
-    transform-origin: 15% 20%;
-  }
-
-  #lt-r2-1 {
-    transform-origin: 5% 20%;
-  }
-
-  #lt-r4-4 {
-    transform-origin: 35% 60%;
-  }
-
-  #lt-r4-3 {
-    transform-origin: 25% 60%;
-  }
-
-  #lt-r4-2 {
-    transform-origin: 15% 60%;
-  }
-
-  #lt-r4-1 {
-    transform-origin: 5% 60%;
-  }
-
-  #lt-r3-4 {
-    transform-origin: 35% 40%;
-  }
-
-  #lt-r3-3 {
-    transform-origin: 25% 40%;
-  }
-
-  #lt-r3-2 {
-    transform-origin: 15% 40%;
-  }
-
-  #lt-r3-1 {
-    transform-origin: 5% 40%;
-  }
-
-  #lt-r5-8 {
-    transform-origin: 75% 80%;
-  }
-
-  #lt-r5-7 {
-    transform-origin: 65% 80%;
-  }
-
-  #lt-r5-10 {
-    transform-origin: 95% 80%;
-  }
-
-  #lt-r5-9 {
-    transform-origin: 85% 80%;
-  }
-
-  #lt-r5-6 {
-    transform-origin: 55% 80%;
-  }
 
-  #lt-r5-5 {
-    transform-origin: 45% 80%;
+  #moon-bg {
+    fill: #ddd;
   }
-
-  #lt-r5-4 {
-    transform-origin: 35% 80%;
-  }
-
-  #lt-r5-3 {
-    transform-origin: 25% 80%;
-  }
-
-  #lt-r5-2 {
-    transform-origin: 15% 80%;
-  }
-
-  #lt-r5-1 {
-    transform-origin: 5% 80%;
-  }
-
-  #lt-r6-8 {
-    transform-origin: 75% 100%;
-  }
-
-  #lt-r6-7 {
-    transform-origin: 65% 100%;
-  }
-
-  #lt-r6-10 {
-    transform-origin: 95% 100%;
+ 
+  #progress-needle {
+    opacity: 0;
+    stroke-width: 2;
+    stroke: #000;
   }
 
-  #lt-r6-9 {
-    transform-origin: 85% 100%;
-  }
-
-  #lt-r6-6 {
-    transform-origin: 55% 100%;
-  }
-
-  #lt-r6-5 {
-    transform-origin: 45% 100%;
-  }
-
-  #lt-r6-4 {
-    transform-origin: 35% 100%;
-  }
-
-  #lt-r6-3 {
-    transform-origin: 25% 100%;
-  }
-
-  #lt-r6-2 {
-    transform-origin: 15% 100%;
-  }
-
-  #lt-r6-1 {
-    transform-origin: 5% 100%;
-  }
-  #geometry {
-    clip-path: url(#moon-clip);
-    transform-origin: 100% 100%;
-    transform: scale(1);
-  }
   polygon[id^="rt"] {
-  fill: #61869e;
-  
+    fill: #61869e;  
     stroke-width: 1;
     stroke: #000;
   }
+
   polygon[id^="lt"] {
     fill: #aaa;
     stroke-width: 1;
     stroke: #000;
   }
-  #moon-bg {
-    fill: #ddd;
-  }
+#progress-group {
+  opacity: 0.2;
+}
   `;
-  // filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.8)); /* not taking effect? FIXME? */
+// transform-origin: 100 100;
+
+// filter: drop-shadow(-2px 2px 2px rgba(0, 0, 0, 0.8)); /* not taking effect? FIXME? */
 
 const Moon = props => {
-console.log("P>Moon: ", props);
-
+  console.log('P>Moon: ', props);
   const progressDeg = (props.current / props.total) * 360;
   return (
-    <MoonWrapper>
-      <svg viewBox="00 00 400 400">
+    <MoonWrapper className="moon-wrapper-svg" viewBox="0 0 300 300">
       <defs>
         <filter id="number-grain">
           <feTurbulence type="turbulence" numOctaves="1" baseFrequency="1" result="turb" />
@@ -492,26 +53,78 @@ console.log("P>Moon: ", props);
           <feComposite operator="in" in="result1" in2="SourceGraphic" result="finalFilter" />
           <feBlend mode="multiply" in="finalFilter" in2="SourceGraphic" />
         </filter>
-        <filter id="gauge-shad" x="0" y="0">
-          <feDropShadow dx="-4" dy="4" stdDeviation="2" />
-        </filter>
         <clipPath id="moon-clip">
-          <circle cx="200" cy="200" r="100"  />
+          <circle cx="100" cy="100" r="100" />
         </clipPath>
       </defs>
-      <circle id="moon-bg" cx="200" cy="200" r="100" filter="url(#number-grain)" />
-      <g id="geometry" opacity="0.2">
-          {moonDB.moon.map((item, idx) => (
-            <polygon transform={`rotate(${progressDeg})`} key={item.id} id={item.id} points={item.points} />
-          ))}
-        </g>
-      </svg>
+      <circle id="moon-bg" cx="100" cy="100" r="100" filter="url(#number-grain)" />
+
+      <g id="progress-group" filter="url(#number-grain)" clipPath="url(#moon-clip)">
+        <polygon id="rt-r1-1" points="0 80 0 0 40 40" transform={`rotate(${progressDeg}, 0, 40)`} />
+        <polygon id="rt-r1-2" points="40 80 40 0 80 40" transform={`rotate(${progressDeg}, 40, 40)`} />
+        <polygon id="rt-r1-3" points="80 80 80 0 120 40" transform={`rotate(${progressDeg}, 80, 40)`} />
+        <polygon id="rt-r1-4" points="120 80 120 0 160 40" transform={`rotate(${progressDeg}, 120, 40)`} />
+        <polygon id="rt-r1-5" points="160 80 160 0 200 40" transform={`rotate(${progressDeg}, 160, 40)`} />
+        <polygon id="rt-r1-6" points="200 80 200 0 240 40" transform={`rotate(${progressDeg}, 200, 40)`} />
+
+        <polygon id="rt-r2-1" points="0 160 0 80 40 120" transform={`rotate(${progressDeg}, 0, 120)`} />
+        <polygon id="rt-r2-2" points="40 160 40 80 80 120" transform={`rotate(${progressDeg}, 40, 120)`} />
+        <polygon id="rt-r2-3" points="80 160 80 80 120 120" transform={`rotate(${progressDeg}, 80, 120)`} />
+        <polygon id="rt-r2-4" points="120 160 120 80 160 120" transform={`rotate(${progressDeg}, 120, 120)`} />
+        <polygon id="rt-r2-5" points="160 160 160 80 200 120" transform={`rotate(${progressDeg}, 160, 120)`} />
+        <polygon id="rt-r2-6" points="200 160 200 80 240 120" transform={`rotate(${progressDeg}, 200, 120)`} />
+
+        <polygon id="rt-r3-1" points="0 240 0 160 40 200" transform={`rotate(${progressDeg}, 0, 200)`} />
+        <polygon id="rt-r3-2" points="40 240 40 160 80 200" transform={`rotate(${progressDeg}, 40, 200)`} />
+        <polygon id="rt-r3-3" points="80 240 80 160 120 200" transform={`rotate(${progressDeg}, 80, 200)`} />
+        <polygon id="rt-r3-4" points="120 240 120 160 160 200" transform={`rotate(${progressDeg}, 120, 200)`} />
+        <polygon id="rt-r3-5" points="160 240 160 160 200 200" transform={`rotate(${progressDeg}, 160, 200)`} />
+        <polygon id="rt-r3-6" points="200 240 200 160 240 200" transform={`rotate(${progressDeg}, 200, 200)`} />
+      </g>
+      <line
+        id="progress-needle"
+        x1="100"
+        x2="100"
+        y1="100"
+        fill="none"
+        transform={`rotate(${progressDeg}, 100, 100)`}
+      />
     </MoonWrapper>
   );
 };
 
-// <svg id="gauge-needle" viewBox="0 0 100 100">
-//         <line transform={`rotate(${progressDeg})`} x1="52" x2="46" y1="50" y2="2" />
-//       </svg>
+// {moonDB.moon.map((item, idx) => (
+//     <polygon
+//       transform={`rotate(${progressDeg}, ${item.transX}, ${item.transY})`}
+//       key={item.id}
+//       id={item.id}
+//       points={item.points}
+//     />
+// ))}
+
+/*
+<defs>
+  <filter id="number-grain">
+    <feTurbulence type="turbulence" numOctaves="1" baseFrequency="1" result="turb" />
+    <feComposite in="turb" operator="arithmetic" k1="1.3" k2=".5" k3=".5" result="result1" />
+    <feComposite operator="in" in="result1" in2="SourceGraphic" result="finalFilter" />
+    <feBlend mode="multiply" in="finalFilter" in2="SourceGraphic" />
+  </filter>
+</defs>
+
+*/
+
+// <g id="progress-group">
+//   <circle cx="100" cy="100" r="100" fill="#FF931E" />
+//   <line id="progress-needle" x1="100" x2="100" y1="100" fill="none" transform={`rotate(${progressDeg}, 100, 100)`} />
+// </g>
+
+// <g id="geometry" opacity="0.2" >
+// </g>
+// <transform="rotate(deg, cx, cy)"
+
+// <filter id="gauge-shad" x="0" y="0">
+//   <feDropShadow dx="-4" dy="4" stdDeviation="2" />
+// </filter>
 
 export default Moon;

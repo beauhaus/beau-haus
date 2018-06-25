@@ -21,7 +21,6 @@ const BoatSVGWrapper = styled.g`
     animation: blink 30s 5s linear infinite;
   }
 
-
   @keyframes shadCast {
     0% {
       opacity: 0;
@@ -366,7 +365,7 @@ const BoatSVGWrapper = styled.g`
 `;
 const BoatSVG = props => {
   return (
-    <BoatSVGWrapper id="boat-svg" className="cruise">
+    <BoatSVGWrapper id="boat-svg" className="cruise" >
       <polygon
         id="boatShad"
         fill="url(#boatShad-grad)"

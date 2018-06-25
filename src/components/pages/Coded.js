@@ -37,8 +37,8 @@ const CodedPageCompDiv = styled.div`
     grid-template-rows: repeat(21, 1fr) 15vh 15vh;
   }
   & #cycle-btn-container {
-    grid-column: 9/14;
-    grid-row: 1/6;
+    grid-column: 1/14;
+    grid-row: 1/22;
     position: relative;
     z-index: 30;
   }
@@ -84,8 +84,6 @@ class Coded extends Component {
           </div>
           {this.state.slidesEngage && <ShowCaseGrid {...this.props} current={current} slides={slides} total={total}/>}
         </div>
-        {/*
-        */}
           <WaterBg {...water} />
           <WaterBody />
           <MuteBtn />

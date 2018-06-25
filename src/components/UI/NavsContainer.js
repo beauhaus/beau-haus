@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 import PageData from '../../data/PageData.json';
 
-
 const NavsWrapper = styled.div`
   position: absolute;
   top: 2vh;
@@ -71,12 +70,13 @@ class NavsContainer extends Component {
     this.handleMenuHoverOff = this.handleMenuHoverOff.bind(this);
     this.handleLinkHoverOn = this.handleLinkHoverOn.bind(this);
     this.handleLinkHoverOff = this.handleLinkHoverOff.bind(this);
-
+    
     this.playMenuHoverOn = this.playMenuHoverOn.bind(this);
     this.playMenuHoverOff = this.playMenuHoverOff.bind(this);
     this.hoverMenuOnTL = new TimelineMax({ pause: true });
     this.hoverMenuOffTL = new TimelineMax({ pause: true });
     
+    console.log("P> Navscont: ", props)
   }
   componentDidMount(arg) {
     this.setState(() => ({

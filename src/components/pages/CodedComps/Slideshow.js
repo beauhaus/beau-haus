@@ -155,7 +155,7 @@ const Slideshow = props => {
               <stop stopColor="white" stopOpacity="0" offset="1" />
             </linearGradient>
             <mask id="mask1">
-              <rect fill="url(#grad)" height="100%" width="100%" y="0vh" />
+              <rect fill="url(#grad)" height="100%" width="100%" y="0" />
             </mask>
             <pattern id="pattern1" height="1" width="1" patternContentUnits="objectBoundingBox">
               <image height="1" width="1" preserveAspectRatio="none" y="0" xlinkHref={props.currentSlide.url} />

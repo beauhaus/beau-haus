@@ -20,7 +20,6 @@ const CodedSceneWrapper = styled.div`
     animation: cruising 960s ease-out forwards;
     
   }
-
   @keyframes cruising {
     0% {
       transform: translateX(20rem);
@@ -208,7 +207,7 @@ const CodedScene = props => {
             <feComposite in="SourceGraphic" in2="spec4" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
           </filter>
         </defs>
-        <g id="night-scene" />
+        <g id="night-scene"  transform='translate(-70 10)'>
 
         <g id="stars">
           <circle cx="94" cy="642" r="2" fill="#CCC" />
@@ -305,7 +304,7 @@ const CodedScene = props => {
           <desc>END OF ROCK</desc>
         </g>
 
-        <g id="lighthouse">
+        <g id="lighthouse"  >
           <path fill="#1A1A1A" d="M158 860h-11.3l-6.4-76h5.3z" />
           <path fill="#666" d="M146.9 860H128l2.5-76h9.8z" />
           <path fill="#B3B3B3" d="M128 860h-15.4l9.8-76h7.9z" />
@@ -375,7 +374,10 @@ const CodedScene = props => {
             <ellipse id="halo" cx="133" cy="766.5" fill="url(#halo-grad)" rx="48" ry="13.5" />
           </g>
         </g>
+        </g>
+        <g transform='translate(0 -25)'>
         <BoatSVG />
+        </g>
       </svg>
     </CodedSceneWrapper>
   );

@@ -6,8 +6,8 @@ const CycleButtonSVG = styled.svg`
   position: absolute;
   top: 14vh;
   left: 0;
-  width: 200%;
-  transform-origin: 50% 50%;
+  width: 100%;
+  height: 100%;
   opacity: 0.6;
   transform: translate(-50px, 0) rotate(-8deg);
   &:hover {
@@ -27,7 +27,7 @@ const CycleButton = props => {
         <feBlend mode="multiply" in="finalFilter" in2="SourceGraphic" />
       </filter>
 
-      <g id="face" stroke="#000" strokeMiterlimit="10">
+      <g id="btn-face" stroke="#000" strokeMiterlimit="10">
       <polygon fill="#BB3D3D" strokeWidth="3" points="1.5 3.6 197.8 200 1.5 396.4"/>
       <line x1="38.1" x2="71.9" y1="154.9" y2="121.1" fill="none" strokeWidth="6"/>
       <line x1="194.3" x2="136.5" y1="202.3" y2="144.5" fill="none" strokeWidth="10.2879"/>
