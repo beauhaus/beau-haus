@@ -105,7 +105,7 @@
     },
     "coding": {
       "pageStyles": {
-        "background": "linear-gradient(45deg, #fff 0%, #fff 100%)",
+        "background": "linear-gradient(45deg, #ddd 0%, #bbb 50%, #989898 100%)",
         "color": "black",
         "fill": "#ac5e61"
       },

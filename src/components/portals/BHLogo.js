@@ -10,8 +10,6 @@ const BHLogoWrapper = styled.svg`
   width: 80px;
   height: 65px;
   filter: invert(25%);
-
-
    & > #logo-h {
     fill: #4e4d4d;
   }

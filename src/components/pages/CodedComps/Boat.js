@@ -29,7 +29,7 @@ const BoatSVGWrapper = styled.g`
       opacity: 0;
     }
     52% {
-      opacity: 1;
+      opacity: .7;
     }
     60% {
       opacity: 0;

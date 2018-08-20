@@ -13,10 +13,9 @@ const NavsWrapper = styled.div`
   width: 16vw;
   height: 26vh;
   text {
-    font-family: 'Lato', Tahoma, sans-serif;
     font-size: 4.5rem;
     font-weight: 400;
-    fill: #000;
+    fill: white;
   }
   & > .menu-link {
     z-index: 20;
@@ -163,6 +162,7 @@ class NavsContainer extends Component {
       </Link>
     );
   }
+  
 
   render() {
     const { navBtns } = PageData;

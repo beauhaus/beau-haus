@@ -4,10 +4,10 @@ import styled from 'styled-components';
 const CycleButtonSVG = styled.svg`
   filter: drop-shadow(-2px 2px 1px black);
   position: absolute;
-  top: 14vh;
+  top: 0vh;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   opacity: 0.6;
   transform: translate(-50px, 0) rotate(-8deg);
   &:hover {

@@ -91,7 +91,8 @@ const CodingPageCompDiv = styled.div`
       & li {
         margin: 2vh 1vw;
         display: inline-block;
-        color: #aaa;
+        color: #eee;
+        letter-spacing: .2rem;
       }
     }
     .project-img {

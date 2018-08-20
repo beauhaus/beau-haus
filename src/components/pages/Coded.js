@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import ShortTree from '../scene/trees/ShortTree';
-import MediumTree from '../scene/trees/MediumTree';
-import TallTree from '../scene/trees/TallTree';
 import WaterBg from '../scene/water/WaterBg';
 import WaterBody from '../scene/water/WaterBody';
 
@@ -17,6 +14,7 @@ import CodedScene from './CodedComps/CodedScene';
 
 import CycleButton from './CodedComps/CycleButton';
 import ShowCaseGrid from './CodedComps/ShowCaseGrid';
+
 
 const CodedPageCompDiv = styled.div`
   position: absolute;
@@ -96,9 +94,3 @@ class Coded extends Component {
   }
 
 export default Coded;
-
-/*
-    <ShortTree db={tree.short} />
-    <MediumTree db={tree.medium} />
-    <TallTree db={tree.tall} />
-  */
