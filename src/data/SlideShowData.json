@@ -75,7 +75,7 @@
         "Multi-layered SVG to create a 50's retro-monitor glitch animation. Project's aim is to mitigate the alienating & brutalist user experience of clicking through a state-picker drop-down menu.",
       "proj_links": [
         {
-          "url": "https://codepen.io/beauhaus/full/NavWog/",
+          "url": "https://codepen.io/beauhaus/full/VyVYwd/",
           "text": "codepen"
         }
       ]
@@ -101,7 +101,7 @@
       "url": "./img/proj/wireframes.jpg",
       "alt": "lo & hifi wireframes depicted",
       "proj_title": "From napkin to node.",
-      "proj_tech": ["Sketch", "Illustrator", "Pen & Paper", "Post-its"],
+      "proj_tech": ["Sketch", "Illustrator"],
 
       "proj_desc":
         "Coding is 80% planning, 20% typing. Most projects are planned and iterated on with an eye toward learning and implementing something yet untried. Full Low-Fidelity & high-fidelity prototypes are an integral part of my workflow.",
