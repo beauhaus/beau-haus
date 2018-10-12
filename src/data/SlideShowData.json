@@ -171,7 +171,7 @@
       "url": "./img/proj/goop.gif",
       "alt": "test/mag9",
       "proj_title": "After Effects Work",
-      "proj_tech": ["after effects", "mocha", "chroma screen", "audacity"],
+      "proj_tech": ["after effects", "mocha", "compositing", "audacity"],
       "proj_desc":
         "In a previous life I was obsessed with Film production, compositing, rotoscoping, color grading and sound editing. Teaching myself After Effects was my 'gate-way drug' that got me interested in learning javascript.",
       "proj_links": [

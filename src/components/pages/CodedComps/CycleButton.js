@@ -8,11 +8,13 @@ const CycleButtonSVG = styled.svg`
   left: 0;
   width: 50%;
   height: 50%;
-  opacity: 0.6;
-  transform: translate(-50px, 0) rotate(-8deg);
+  
+  transform: translate(0, 0) rotate(45deg);
+  fill: rgb(187, 61, 61, 0);
   &:hover {
+    fill:#BB3D3D;
     cursor: pointer;
-    filter: saturate(150%)  drop-shadow(-4px 4px 2px rgba(0,0,0,0.8));
+    filter: saturate(120%)  drop-shadow(-8px 4px 2px rgba(0,0,0,0.8));
   }
 `;
 const CycleButton = props => {
@@ -34,7 +36,7 @@ const CycleButton = props => {
       </defs>
 
       <g id="btn-face" stroke="#000" strokeMiterlimit="10">
-      <polygon fill="#BB3D3D" strokeWidth="3" points="1.5 3.6 197.8 200 1.5 396.4" clipPath="url(#play-arrow-clip)"/>
+      <polygon strokeWidth="3" points="1.5 3.6 197.8 200 1.5 396.4" clipPath="url(#play-arrow-clip)"/>
       <line x1="38.1" x2="71.9" y1="154.9" y2="121.1" fill="none" strokeWidth="6"/>
       <line x1="194.3" x2="136.5" y1="202.3" y2="144.5" fill="none" strokeWidth="10.2879"/>
       <line x1="118.8" x2="140.4" y1="163.2" y2="141.6" fill="none" strokeWidth="3"/>

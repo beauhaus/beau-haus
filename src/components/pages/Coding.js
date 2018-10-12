@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import ShortTree from '../scene/trees/ShortTree';
-import MediumTree from '../scene/trees/MediumTree';
-import TallTree from '../scene/trees/TallTree';
-import WaterBg from '../scene/water/WaterBg';
-import WaterBody from '../scene/water/WaterBody';
-import Shore from '../scene/water/Shore';
-import MuteBtn from '../scene/MuteBtn';
+// import ShortTree from '../scene/trees/ShortTree';
+// import MediumTree from '../scene/trees/MediumTree';
+// import TallTree from '../scene/trees/TallTree';
+// import WaterBg from '../scene/water/WaterBg';
+// import WaterBody from '../scene/water/WaterBody';
+// import Shore from '../scene/water/Shore';
+// import MuteBtn from '../scene/MuteBtn';
 import LogoTheme from '../scene/LogoTheme';
 import PageBanner from './CodingComps/CodingPageBanner';
 
@@ -52,13 +52,14 @@ const CodingPageCompDiv = styled.div`
     margin: 1em 0;
     padding: 0;
   }
-  & > .grid-header {
-    grid-column: 1/4;
-    grid-row: 1;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(5, 4vh);
-  }
+  // & > .grid-header {
+  //   grid-column: 1/4;
+  //   grid-row: 1;
+  //   display: grid;
+  //   grid-template-columns: repeat(8, 1fr);
+  //   grid-template-rows: repeat(5, 4vh);
+  //   border: 1px solid brown;
+  // }
   & > .grid-ctr {
     grid-column: 2;
     grid-row: 2;
@@ -91,7 +92,7 @@ const CodingPageCompDiv = styled.div`
       & li {
         margin: 2vh 1vw;
         display: inline-block;
-        color: #eee;
+        color: #fff;
         letter-spacing: .2rem;
       }
     }

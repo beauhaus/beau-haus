@@ -82,10 +82,10 @@ class Connect extends Component {
         </div>
         <WaterBg {...water} />
         <WaterBody />
+        <ShortTree db={tree.short} />
         <Shore />
         <MediumTree db={tree.medium} />
         <TallTree db={tree.tall} />
-        <ShortTree db={tree.short} />
         <MuteBtn />
         <LogoTheme themeFill={fill} />
       </ConnectPageCompDiv>
