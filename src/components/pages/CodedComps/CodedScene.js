@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import BoatSVG from './Boat';
-
+/* CodedScene contains lighthouse and twinkling stars*/
 const CodedSceneWrapper = styled.div`
   position: relative;
   width: 100vw;

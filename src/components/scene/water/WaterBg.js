@@ -11,11 +11,10 @@ const WaterBgWrapper = styled.svg`
 
 // NB: Height is 10vw!!!
 const WaterBg = props => {
-
   const { left } = props.bgGradient;
   const { right } = props.bgGradient;
   return (
-    <WaterBgWrapper className="water-bg">
+    <WaterBgWrapper className="water-bg" >
       <linearGradient id="bg-grad">
         <stop offset="0" stopColor={left} />
         <stop offset="1" stopColor={right} />

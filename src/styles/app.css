@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500'); */
 /* FOR NUMBERS */
-@import url('https://fonts.googleapis.com/css?family=Plaster');
+/* @import url('https://fonts.googleapis.com/css?family=Plaster'); */
 
 /* home TITLE TEXT */
-@import url('https://fonts.googleapis.com/css?family=Limelight');
+/* @import url('https://fonts.googleapis.com/css?family=Limelight'); */
 
 * {
   padding: 0;
@@ -143,7 +143,7 @@ h4 {
   cursor: pointer;
 
   color: #aaaaaa;
-  color: #666666;
+  color: rgba(187, 61, 61, 0.5);
 }
 
 .page-banner {
