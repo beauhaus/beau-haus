@@ -35,7 +35,7 @@ const LearningPageCompDiv = styled.div`
   }
   a:hover {
     text-shadow: -2px 2px 0px black;
-    color: #fff;
+    color: #a0e9fc;
   }
   
   & > .grid-ctr {

@@ -26,25 +26,29 @@ const ConnectPageCompDiv = styled.div`
   grid-template-rows: 20vh 60vh 20vh;
   z-index: 1;
   & > .grid-ctr {
+    display: none;
     grid-column: 2;
     grid-row: 2;
     z-index: 20;
-    border: 2px solid navy;
+    /* border: 2px solid navy; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
     & > .ctr-row-top {
+      display: none;
       grid-column: 1/4;
       grid-row: 1;
       border: 2px solid green;
     }
     & > .ctr-row-mid {
+      display: none;
       grid-column: 1/4;
       grid-row: 2;
       border: 2px solid yellow;
     }
     & > .ctr-row-bot {
+      display: none;
       grid-column: 1/4;
       grid-row: 3;
       border: 2px solid orangered;
