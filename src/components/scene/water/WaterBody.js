@@ -224,12 +224,7 @@ class WaterBody extends React.Component {
 
   render() {
 
-    // viewBox="0 0 1920 200"
     return (
-        // <linearGradient id="pond-base-grad"  x1="1920" x2="0" y1="100" y2="100" gradientUnits="userSpaceOnUse">
-        //   <stop id="pond-stop1" offset="0" stopColor={"green"} stopOpacity="1" />
-        //   <stop id="pond-stop2" offset="1" stopColor={"red"} stopOpacity="0" />
-        // </linearGradient>
       <WaterBodyWrapper id="pond">
         <defs>
 

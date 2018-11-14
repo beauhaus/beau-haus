@@ -88,17 +88,6 @@ class Home extends Component {
     const { tree, water } = InitialLoad.profile;
     return (
       <HomePageCompDiv className="home-container page" style={this.state.profile.pageStyles}>
-        <div className="grid-ctr">
-          <div className="ctr-row-top">
-            <p className="q1">Learn fast and fix things.</p>
-          </div>
-          <div className="ctr-row-mid">
-            <p className="q2">Learn fast and fix things.</p>
-          </div>
-          <div className="ctr-row-bot">
-            <p className="q3">Learn fast and fix things.</p>
-          </div>
-        </div>
         <HomeTitle/>
         <LogoTheme themeFill={this.props.stylesDB} />
         </HomePageCompDiv>

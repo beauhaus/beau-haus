@@ -69,7 +69,7 @@ const HomeTitleWrapper = styled.svg`
   #mast {
     fill: #c95f00;
     transform: translateY(200vh);
-    animation: slideFromBotLong 0.6s ease-in-out forwards;
+    animation: slideFromBotLong 1s ease-in-out forwards;
 
   }
   #center-dot {

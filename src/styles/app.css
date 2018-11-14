@@ -1,9 +1,9 @@
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500'); */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500');
 /* FOR NUMBERS */
-/* @import url('https://fonts.googleapis.com/css?family=Plaster'); */
+@import url('https://fonts.googleapis.com/css?family=Plaster');
 
 /* home TITLE TEXT */
-/* @import url('https://fonts.googleapis.com/css?family=Limelight'); */
+@import url('https://fonts.googleapis.com/css?family=Limelight');
 
 * {
   padding: 0;
@@ -54,16 +54,18 @@ li {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 0.5rem; 
+  /*look for size elsewhere */
+  font-weight: 100;
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.8rem;
 }
 h3 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 h4 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /******* PAGE TRANSITION STYLES **********/
@@ -129,11 +131,11 @@ h4 {
 /*********TESTING FOR EACH PAGES GRID*********/
 
 .grid-ctr {
-  opacity: 0;
+  opacity: 1;
 }
 
 .testing-colors {
-  color: #61869e;
+  color: #a0e9fc;
 
   color: #727272;
 
@@ -142,7 +144,7 @@ h4 {
   color: #b4a0a1;
   cursor: pointer;
 
-  color: #aaaaaa;
+  color: rgba(201, 200, 200, 0.726);
   color: rgba(187, 61, 61, 0.5);
 }
 

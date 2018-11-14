@@ -47,7 +47,7 @@ class WhiteCaps extends React.Component {
       tl
       .from(refs[item.id], 1, {
         opacity: 0,
-        delay: randomNum(0,5),
+        delay: randomNum(0,5)
        }, `-=${randomNum((len*.2),len)}`)
       .to(refs[item.id], 2, {
         opacity: 1,
@@ -67,7 +67,6 @@ class WhiteCaps extends React.Component {
     return <polygon fill="white" ref={item.id} key={item.id} points={item.coords} />;
   }
 
-  // viewBox="0 0 1920 200"
   render() {
     return (
       <WhiteCapsWrapper id="white-caps" >
@@ -79,3 +78,7 @@ class WhiteCaps extends React.Component {
 
 export default WhiteCaps;
 
+/* 
+removed a stray comma from one of the timelines
+it may fix something, it may screw it all up
+*/

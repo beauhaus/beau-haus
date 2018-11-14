@@ -25,30 +25,45 @@ const LearningPageCompDiv = styled.div`
   display: grid;
   grid-template-columns: 25vw 50vw 25vw;
   grid-template-rows: 20vh 60vh 20vh;
+  a,
+  a:visited,
+  a:link,
+  a:active {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100;
+  }
+  a:hover {
+    text-shadow: -2px 2px 0px black;
+    color: #fff;
+  }
   
   & > .grid-ctr {
+    padding: 2%;
     grid-column: 2;
     grid-row: 2;
-    
-    border: 2px solid navy;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-
+    font-family: "Montserrat", Tahoma, Geneva, Verdana, sans-serif;
+    h1 {
+      font-size: 2.5rem;
+      span {
+        font-style: italic;
+        font-weight: 200;
+      }
+    }
     & > .ctr-row-top {
       grid-column: 1/4;
       grid-row: 1;
-      border: 2px solid green;
     }
     & > .ctr-row-mid {
       grid-column: 1/4;
       grid-row: 2;
-      border: 2px solid yellow;
     }
     & > .ctr-row-bot {
       grid-column: 1/4;
       grid-row: 3;
-      border: 2px solid orangered;
     }
   }
 `;
@@ -72,13 +87,16 @@ class Learning extends Component {
       <PageBanner themeFill={fill} />
         <div className="grid-ctr">
           <div className="ctr-row-top">
-            <p className="q1">Learn fast and fix things.</p>
+          <h1><span>Studying:</span> <br/>SXYWU's <a href="https://frontendmasters.com/courses/d3-js-react/">Data Vis for React Developers</a> </h1>
+            <p className="q1">A comprehensive and comprensible walkthrough of D3.js–Its powers and proper application as a complement to React.</p>
           </div>
           <div className="ctr-row-mid">
-            <p className="q2">Learn fast and fix things.</p>
+          <h1><span>Re-doing:</span> <br/>Brian Holt's <a href="https://frontendmasters.com/courses/complete-react-v4/">Complete Intro to React IV</a></h1>
+            <p className="q1">Brian's Holt's yearly walkthrough of react–this time, using the context API, Portals and an alternative tool for Webpack, Parcel.</p>          
           </div>
           <div className="ctr-row-bot">
-            <p className="q3">Learn fast and fix things.</p>
+          <h1><span>Reading:</span> <br/> <a href="https://svgjs.com/docs/2.7/">SVGJS.com</a></h1>
+            <p className="q1">An interesting site/project that is updated with reasonable frequency providing exercises and tutorials on SVG and it's peculiarities.</p>
           </div>
         </div>
         <WaterBg {...water} />
@@ -89,9 +107,6 @@ class Learning extends Component {
       );
     }
   }
-  // <MediumTree db={tree.medium} />
-  // <TallTree db={tree.tall} />
-  // <ShortTree db={tree.short} />
-  // <MuteBtn />
+
 
 export default Learning;
