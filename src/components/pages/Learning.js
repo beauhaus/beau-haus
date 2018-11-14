@@ -46,11 +46,13 @@ const LearningPageCompDiv = styled.div`
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     font-family: "Montserrat", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
     h1 {
       font-size: 2.5rem;
       span {
         font-style: italic;
-        font-weight: 200;
+        font-size: 1.5rem;
+        font-weight: 400;
       }
     }
     & > .ctr-row-top {
@@ -58,6 +60,7 @@ const LearningPageCompDiv = styled.div`
       grid-row: 1;
     }
     & > .ctr-row-mid {
+      text-align: left;
       grid-column: 1/4;
       grid-row: 2;
     }
@@ -87,15 +90,15 @@ class Learning extends Component {
       <PageBanner themeFill={fill} />
         <div className="grid-ctr">
           <div className="ctr-row-top">
-          <h1><span>Studying:</span> <br/>SXYWU's <a href="https://frontendmasters.com/courses/d3-js-react/">Data Vis for React Developers</a> </h1>
+          <h1><span>Studying:</span> <br/>SXYWU's <a href="https://frontendmasters.com/courses/d3-js-react/">Data Vis for React Devs</a> </h1>
             <p className="q1">A comprehensive and comprensible walkthrough of D3.js–Its powers and proper application as a complement to React.</p>
           </div>
           <div className="ctr-row-mid">
-          <h1><span>Re-doing:</span> <br/>Brian Holt's <a href="https://frontendmasters.com/courses/complete-react-v4/">Complete Intro to React IV</a></h1>
+          <h1><span>Re-Doing:</span> <br/>Brian Holt's <a href="https://frontendmasters.com/courses/complete-react-v4/">Complete Intro to React IV</a></h1>
             <p className="q1">Brian's Holt's yearly walkthrough of react–this time, using the context API, Portals and an alternative tool for Webpack, Parcel.</p>          
           </div>
           <div className="ctr-row-bot">
-          <h1><span>Reading:</span> <br/> <a href="https://svgjs.com/docs/2.7/">SVGJS.com</a></h1>
+          <h1><span>Reading:</span> <br/> This excellent site: <a href="https://svgjs.com/docs/2.7/">SVGJS.com</a></h1>
             <p className="q1">An interesting site/project that is updated with reasonable frequency providing exercises and tutorials on SVG and it's peculiarities.</p>
           </div>
         </div>
