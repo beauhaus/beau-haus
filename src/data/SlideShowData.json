@@ -197,6 +197,20 @@
     },
     {
       "id": 112,
+      "url": "./img/proj/nightScapeII.jpg",
+      "alt": "CSS Clouds rendered by Greensock within React",
+      "proj_title": "NightScape II",
+      "proj_tech": ["React", "Greensock", "svg", "CSS Drawing", "styled components"],
+      "proj_desc": "Experimental use of box-shadow to render clouds through SVG Filter.",
+      "proj_links": [
+        {
+          "url": "https://github.com/beauhaus/react-gsap-nightscape",
+          "text": "Github"
+        }
+      ]
+    },
+    {
+      "id": 113,
       "url": "./img/proj/thisapprwd.png",
       "alt": "This application responsive web design in desktop, iPad & mobile",
       "proj_title": "this portfolio in rwd",
