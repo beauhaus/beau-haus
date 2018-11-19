@@ -129,6 +129,10 @@ h4 {
 } */
 
 /*********TESTING FOR EACH PAGES GRID*********/
+#btn-mute {
+  display: none;
+}
+
 
 .grid-ctr {
   opacity: 1;

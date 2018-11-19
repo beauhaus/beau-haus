@@ -204,6 +204,10 @@
       "proj_desc": "Experimental use of box-shadow to render clouds through SVG Filter.",
       "proj_links": [
         {
+          "url": "https://codepen.io/beauhaus/full/OaRwbm/",
+          "text": "codepen"
+        },
+        {
           "url": "https://github.com/beauhaus/react-gsap-nightscape",
           "text": "Github"
         }

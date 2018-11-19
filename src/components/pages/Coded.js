@@ -73,6 +73,7 @@ class Coded extends Component {
     const { pageStyles, tree, water } = this.props.profile;
     const { fill } = this.props.profile.pageStyles;
     const {total, current, slides}= this.state;
+    console.log("curr: ", current);
     return (
       <CodedPageCompDiv className="page coded-container" style={pageStyles}>
       <PageBanner themeFill={fill} />

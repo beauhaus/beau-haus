@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-// import SlideshowUI from './SlideshowUI';
 import Slideshow from './Slideshow';
 
 const ShowCaseGridWrapper = styled.div`
@@ -11,6 +10,7 @@ const ShowCaseGridWrapper = styled.div`
   grid-template-columns: repeat(34, 1fr);
   grid-template-rows: repeat(21, 1fr) 15vh 15vh;
   position: relative;
+  border: 1px solid yellow;
   .grid-description {
     display: none;
     grid-row: 9/22;
@@ -45,6 +45,7 @@ const ShowCaseGridWrapper = styled.div`
     grid-row: 1/22;
     grid-column: 14/-1;
     position: relative;
+    border: 1px solid fuchsia;
   }
 `;
 const ShowCaseGrid = props => {
@@ -53,7 +54,6 @@ const ShowCaseGrid = props => {
   const { proj_icon, proj_title, proj_tech, proj_desc, proj_links } = currentSlide;
 
   return (
-    // <SlideshowUI current={props.current} total={props.total} engage={props.slidesEngage} />
     <ShowCaseGridWrapper id="triggered-slides">
       <div className="grid-description fader">
         <h3 className="text-copy">{proj_title}</h3>
