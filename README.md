@@ -17,17 +17,18 @@ portfolio site
 | **TabIndex Attrs** | a-tags and btns          | *Pending*       |
 
 -----------------
+<!-- https://github.com/beauhaus/react-hooks-todo-app/blob/master/readmeRefImg/goodKarmaSrn1.jpg?raw=true  -->
 
 ### LoFi Landing Wireframe Desktop
 
-![Lofi landing](https://github.com/beauhaus/beau-haus/blob/master/readmeRefImg/lofi_landing.jpg?raw=true "lofi landing")
+![Lofi landing](https://github.com/beauhaus/beau-haus/blob/master/refImg/lofi_landing.jpg?raw=true "lofi landing")
 
 ### Wireframe Draft
 
-![landing draft](https://github.com/beauhaus/beau-haus/blob/master/readmeRefImg/landing_Draft1.jpg?raw=true "landing draft")
+![landing draft](https://github.com/beauhaus/beau-haus/blob/master/refImg/landing_Draft1.jpg?raw=true "landing draft")
 
 ### wireframe draft iPad
-![ipad wireframe draft](https://github.com/beauhaus/beau-haus/blob/master/readmeRefImg/ipad_wiredraft.jpg?raw=true "ipad wireframe draft")
+![ipad wireframe draft](https://github.com/beauhaus/beau-haus/blob/master/refImg/ipad_wiredraft.jpg?raw=true "ipad wireframe draft")
 
 ### final landing
-![final landing](https://github.com/beauhaus/beau-haus/blob/master/readmeRefImg/final_landing.jpg?raw=true "final landing")
+![final landing](https://github.com/beauhaus/beau-haus/blob/master/refImg/final_landing.jpg?raw=true "final landing")
